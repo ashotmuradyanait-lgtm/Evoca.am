@@ -19,7 +19,9 @@ function Menu() {
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</p>
       </nav>
-      <p className="text-white bg-[#6c2db5] h-[40px] w-[120px] text-center">EvocaONLINE</p>
+      <div className="px-20">
+      <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-2">EvocaONLINE</p>
+      </div>
     </div>
   );
 }
