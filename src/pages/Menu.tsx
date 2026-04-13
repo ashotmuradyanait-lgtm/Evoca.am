@@ -20,7 +20,7 @@ function Menu() {
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</p>
       </nav>
       <div className="px-20">
-      <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-2">EvocaONLINE</p>
+      <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>
       </div>
     </div>
   );

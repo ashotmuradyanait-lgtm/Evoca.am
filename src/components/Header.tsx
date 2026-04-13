@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Header() {
-  const [activeTab, setActiveTab] = useState('Մեր մասին');
+  const [activeTab, setActiveTab] = useState('Անհատ');
 
   const navItems = [
     'Անհատ', 'Բիզնես', 'Ակնթարթային վճարումներ', 
@@ -20,7 +20,7 @@ function Header() {
               onClick={() => setActiveTab(item)}
             >
               <div className={`absolute top-[-32px] left-0 w-full h-[4px] bg-[#6c2db5] transition-all duration-300
-                ${activeTab === item ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} 
+                    ${activeTab === item ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} 
               />
               
               <p className={`font-medium text-[13px] transition-colors text-nowrap
