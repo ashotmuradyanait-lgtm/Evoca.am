@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <main>
         <Menu />
         <HeroSlider></HeroSlider>
-        <Anhat/>
+        <Anhat></Anhat>
       </main>
       </>
   )
