@@ -1,88 +1,43 @@
 import React, { useEffect, useState } from 'react';
 
-const COLORS = {
-  mainPurple: '#6C2AF5',
-  darkPurple: '#5119C2',
-  animatedCircle: '#F7E135',
-  animatedCircle2: '#E91E63',
-  textBlack: '#1A1A1A',
-  textGray: '#737373',
-  labelGray: '#F5F5F7',
-};
+// Վիդեոյի ճիշտ ֆոնտը՝ Plus Jakarta Sans
+const FontLink = () => (
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+);
 
 const GoddessComplexAnimation: React.FC<{ loaded: boolean }> = ({ loaded }) => {
   return (
     <div className={`relative flex w-full items-end justify-center lg:w-[40%] h-[40vh] lg:h-screen transition-all duration-1000 ease-out ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-      
       <style>
         {`
-          @keyframes rotateRing {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
-          .animate-ring-slow { animation: rotateRing 20s linear infinite; transform-origin: center; }
-          .animate-ring-fast { animation: rotateRing 10s linear infinite reverse; transform-origin: center; }
+          @keyframes rotateRing { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+          .animate-ring-slow { animation: rotateRing 30s linear infinite; transform-origin: center; }
+          .animate-ring-fast { animation: rotateRing 20s linear infinite reverse; transform-origin: center; }
           
-          @keyframes floatAndRotate {
-            0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
-            50% { transform: translateY(-15px) rotate(10deg); opacity: 1; }
-            100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+          @keyframes prismFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-30px) rotate(15deg) scale(1.1); }
           }
-          .animate-prism { animation: floatAndRotate infinite ease-in-out; transform-origin: center; }
+          .animate-prism { animation: prismFloat 6s infinite ease-in-out; }
         `}
       </style>
 
-      <div className="absolute inset-0 z-0 opacity-50">
+      {/* Background Circles */}
+      <div className="absolute inset-0 z-0 opacity-30">
         <svg viewBox="0 0 100 100" className="h-full w-full" preserveAspectRatio="xMidYMid slice">
-          <path id="ball-path" d="M 50,25 a 25,25 0 1,1 0,50 a 25,25 0 1,1 0,-50" fill="none" />
-
-          {[...Array(6)].map((_, i) => (
-            <circle
-              key={i}
-              cx="50"
-              cy="50"
-              r={38 - i * 6} 
-              stroke={COLORS.darkPurple}
-              strokeWidth="0.8" 
-              fill="none"
-              strokeDasharray="4 4" 
-              className={i % 2 === 0 ? 'animate-ring-slow' : 'animate-ring-fast'}
-              style={{ animationDuration: `${12 + i * 4}s` }}
-            />
+          <path id="orbit-path" d="M 50,35 a 15,15 0 1,1 0,30 a 15,15 0 1,1 0,-30" fill="none" />
+          {[...Array(8)].map((_, i) => (
+            <circle key={i} cx="50" cy="50" r={45 - i * 6} stroke="#FFFFFF" strokeWidth="0.5" fill="none" strokeDasharray="2 6" className={i % 2 === 0 ? 'animate-ring-slow' : 'animate-ring-fast'} />
           ))}
-
-          <circle r="2.8" fill={COLORS.animatedCircle}>
-            <animateMotion dur="7s" repeatCount="indefinite">
-              <mpath href="#ball-path" />
-            </animateMotion>
-          </circle>
-          
-          <circle r="2" fill={COLORS.animatedCircle2}>
-            <animateMotion dur="10s" repeatCount="indefinite" begin="1s">
-              <mpath href="#ball-path" />
-            </animateMotion>
-          </circle>
-
-          <circle r="1.4" fill="#FFFFFF">
-            <animateMotion dur="5s" repeatCount="indefinite" begin="2s">
-              <mpath href="#ball-path" />
-            </animateMotion>
-          </circle>
         </svg>
       </div>
 
-      <div className="absolute top-[15%] right-[5%] h-14 w-14 animate-prism">
-        <svg viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#F7E135" /></svg>
-      </div>
-      <div className="absolute bottom-[25%] left-0 h-10 w-10 animate-prism" style={{ animationDelay: '1s' }}>
-        <svg viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#E91E63" /></svg>
-      </div>
+      {/* Animated Prisms (Եռանկյունիներ) */}
+      <div className="absolute top-[15%] right-[-5%] h-16 w-16 animate-prism opacity-60"><svg viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#FFFFFF" /></svg></div>
+      <div className="absolute top-[30%] left-[-10%] h-10 w-10 animate-prism opacity-40" style={{ animationDelay: '1s' }}><svg viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#F7E135" /></svg></div>
+      <div className="absolute bottom-[20%] right-[10%] h-12 w-12 animate-prism opacity-50" style={{ animationDelay: '2s' }}><svg viewBox="0 0 100 100"><polygon points="50,0 100,100 0,100" fill="#E91E63" /></svg></div>
 
-      <img 
-        src="https://www.evoca.am/img/statue-1.png" 
-        alt="Evoca Statue"
-        className="relative z-10 h-[90%] object-contain object-bottom"
-      />
+      <img src="https://www.evoca.am/img/statue-1.png" alt="Statue" className="relative z-10 h-[85%] object-contain object-bottom" />
     </div>
   );
 };
@@ -99,36 +54,40 @@ const EvocaLandingPage: React.FC = () => {
   ];
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#6C2AF5] font-sans flex flex-col lg:flex-row items-center justify-start px-6 lg:px-12">
+    <div className="min-h-screen w-full bg-[#E5E7EB] p-4 lg:p-10 flex items-center justify-center font-['Plus_Jakarta_Sans',_sans-serif]">
+      <FontLink />
       
-      
-      <GoddessComplexAnimation loaded={loaded} />
-      
-     
-      <div className="flex w-full flex-col justify-center lg:w-[60%] lg:-ml-24 z-10 py-10">
-        <p className={`mb-12 text-3xl lg:text-4xl font-extrabold text-white transition-all duration-1000 ${loaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          Լավագույնը Evocabank-ից
-        </p>
+      <div className={`relative w-full max-w-[1500px] min-h-[85vh] bg-[#6C2AF5] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-1000 ${loaded ? 'rounded-[50px] lg:rounded-[90px]' : 'rounded-none'} overflow-hidden flex flex-col lg:flex-row items-center px-10 lg:px-24`}>
+        
+        <GoddessComplexAnimation loaded={loaded} />
+        
+        <div className="flex w-full flex-col justify-center lg:w-[65%] lg:-ml-24 z-20 py-12">
+          <h1 className={`flex mb-10 text-4xl lg:text-4xl font-[800] text-white tracking-tight leading-[1.1] transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            Լավագույնը <br/> Evocabank-ից
+          </h1>
 
-        {/* Քարտերի ցանց՝ Մեծացված չափսերով */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-          {cards.map((card, index) => (
-            <div 
-              key={index}
-              className={`group cursor-pointer rounded-2xl bg-white p-10 shadow-2xl transition-all duration-500 hover:-translate-y-3 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${500 + index * 150}ms` }}
-            >
-              <div className="mb-4 inline-block rounded-full bg-[#F5F5F7] px-4 py-1.5">
-                <span className="text-[12px] lg:text-[14px] font-bold text-[#6C2AF5]">{card.label}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+            {cards.map((card, index) => (
+              <div 
+                key={index}
+                className={`group cursor-pointer rounded-[40px] bg-white p-8 lg:p-10 h-[220px] lg:h-[240px] flex flex-col justify-between shadow-2xl transition-all duration-500 hover:-translate-y-4 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${400 + index * 150}ms` }}
+              >
+                <div>
+                  <div className="mb-4 inline-block rounded-full bg-[#F5F5F7] px-4 py-1.5">
+                    <span className="text-[11px] font-bold text-[#6C2AF5] uppercase tracking-widest">{card.label}</span>
+                  </div>
+
+                  <h2 className="mb-2 text-[20px] lg:text-[24px] font-[700] text-[#1A1A1A] transition-colors duration-300 group-hover:text-[#999999]">
+                    {card.title}
+                  </h2>
+                  <p className="text-[13px] lg:text-[15px] font-[500] leading-snug text-[#1A1A1A] transition-colors duration-300 group-hover:text-[#999999] line-clamp-2">
+                    {card.text}
+                  </p>
+                </div>
               </div>
-              <h2 className={`mb-3 text-[22px] lg:text-[26px] font-bold text-black transition-colors group-hover:text-gray-400`}>
-                {card.title}
-              </h2>
-              <p className={`text-[15px] lg:text-[17px] leading-relaxed text-black transition-colors group-hover:text-gray-400`}>
-                {card.text}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat"
 import HeroSlider from "./pages/HeroSlider";
 import EvocaBackground from './pages/EvocaBackground';
+import Card from "./pages/Card"
 
 
 // TypeScript-ում նախընտրելի է օգտագործել React.FC (Functional Component)
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <HeroSlider></HeroSlider>
         <Anhat></Anhat>
         <EvocaBackground/>
+        <Card/>
       </main>
       </>
   )
