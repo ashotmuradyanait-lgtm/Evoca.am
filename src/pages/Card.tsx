@@ -1,45 +1,133 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 
-const FontLink = () => (
+const FontLink: React.FC = () => (
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 );
 
-const EvocaCardShowcase = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Սահմանում ենք քարտի տվյալների կառուցվածքը
+interface CardType {
+  id: number;
+  name: string;
+  desc: string;
+  img: string;
+}
+
+const EvocaCardShowcase: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  
+  // Հստակ նշում ենք, որ սա HTMLDivElement է
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const allCards = [
-    { id: 1, name: 'Evoca Travel Card', desc: 'Բացառիկ սպասարկում և արտոնություններ ողջ աշխարհում:', img: 'https://www.evoca.am/images-cache/cards/1/17479817930565/415x261.jpg' },
-    { id: 2, name: 'Mastercard World Digital', desc: 'Ժամանակակից թվային լուծումներ Ձեր վճարումների համար:', img: 'https://www.evoca.am/images-cache/cards/1/17527569508235/415x261.png' },
-    { id: 3, name: 'UnionPay Business Platinum', desc: 'Պրեմիում դասի քարտ Ձեր բիզնեսի հաջողության համար:', img: 'https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png' },
-    { id: 4, name: 'Homplex Gift card', desc: 'Լավագույն նվերը տան հարմարավետության սիրահարներին:', img: 'https://www.evoca.am/images-cache/cards/1/17404717481136/415x261.png' },
-    { id: 5, name: 'MyLer Gift Card', desc: 'Անմոռանալի ժամանց և նվերներ MyLer-ից:', img: 'https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png' },
-    { id: 6, name: 'UnionPay Gold', desc: 'Ոսկե միջինը Ձեր միջազգային ճամփորդությունների համար:', img: 'https://www.evoca.am/images-cache/cards/1/17262129422977/415x261.png' },
-    { id: 7, name: '4U.am Gift card', desc: 'Ժպիտներ նվիրելու ամենահեշտ տարբերակը:', img: 'https://www.evoca.am/images-cache/cards/1/17249401821904/415x261.png' },
-    { id: 8, name: 'Mastercard Gold', desc: 'Հուսալիություն և հարմարավետություն Ձեր գնումների համար:', img: 'https://www.evoca.am/images-cache/cards/1/17149864970842/415x261.png' },
-    { id: 9, name: 'Mastercard Standard', desc: 'Պարզ և ապահով վճարային գործիք ամենուր:', img: 'https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png' },
-    { id: 10, name: 'Visa Digital', desc: 'Ակնթարթային քարտ Ձեր սմարթֆոնի մեջ:', img: 'https://www.evoca.am/images-cache/cards/1/17527569508235/415x261.png' },
-    { id: 11, name: 'Visa Classic', desc: 'Մատչելի և պարզ լուծում Ձեր ֆինանսների համար:', img: 'https://www.evoca.am/images-cache/cards/1/17282986912132/415x261.png' },
-    { id: 12, name: 'Arca Classic', desc: 'Տեղական վճարումների հուսալի գործիք:', img: 'https://www.evoca.am/images-cache/cards/1/17655348192361/415x261.png' },
-    { id: 13, name: 'Visa Business', desc: 'Լավագույն գործիքը Ձեր բիզնեսի ծախսերը կառավարելու համար:', img: 'https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png' },
-    { id: 14, name: 'Dalma Gift Card', desc: 'Շոփինգի հաճույքը Դալմա Գարդեն Մոլում:', img: 'https://www.evoca.am/images-cache/cards/1/17404717289057/415x261.png' },
-    { id: 15, name: 'Visa Platinum', desc: 'Պրեմիում հնարավորություններ ճամփորդողների համար:', img: 'https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png' }
+  const allCards: CardType[] = [
+    { 
+      id: 1, 
+      name: 'Evoca Travel Card',  
+      desc: 'FROM: HOME SWEET HOME. TO: NEXT DESTINATION. BOARDING PASS BUSINESS CLASS.',
+      img: 'https://www.evoca.am/images-cache/cards/1/17479817930565/415x261.jpg' 
+    },
+    { 
+      id: 2, 
+      name: 'Visa Vision', 
+      desc: '0% կանխիկացում Evoca-ի բոլոր բանկոմատներից, Cashback բոլոր անկանխիկ վճարումներից, դրական մնացորդի վրա գումարի կուտակում:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png' 
+    },
+    { 
+      id: 3, 
+      name: 'Mastercard World Digital', 
+      desc: 'Պատվիրիր թվային քարտը հիմա և այն հասանելի կլինի քո հավելվածում հաշված րոպեների ընթացքում:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17527569508235/415x261.png' 
+    },
+    { 
+      id: 4, 
+      name: 'Visa Infinite', 
+      desc: 'Ձեր բանալին՝ դեպի արտոնությունների մեծ աշխարհ: Քարտը կնվիրի Ձեզ բացառիկ հնարավորությունների փաթեթ:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png' 
+    },
+    { 
+      id: 5, 
+      name: 'Evoca Gift Card', 
+      desc: 'Evoca Gift Card-ը երբեք չի հիասթափեցնի. այն իդեալական նվեր է և լավագույն նվերը կլինի քոնը:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17404717481136/415x261.png' 
+    },
+    { 
+      id: 6, 
+      name: 'Visa Gold', 
+      desc: 'Քարտը ապահովում է Ձեր հարմարավետությունն ու հաճելի դարձնում ցանկացած գնում:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17262129422977/415x261.png' 
+    },
+    { 
+      id: 7, 
+      name: "Garage Masters' Mall Gift Card", 
+      desc: "Evocabank-ը ներկայացնում է իր նոր Garage Masters' Mall Gift Card-ը:", 
+      img: 'https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png' 
+    },
+    { 
+      id: 8, 
+      name: 'Rio Gift Card', 
+      desc: 'Մեզ հետ դու կարող ես խնայել ամենաթանկը՝ ժամանակը, բայց նույն պահին ունենալ նվերի լավագույն տարբերակը:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17249401821904/415x261.png' 
+    },
+    { 
+      id: 9, 
+      name: 'Dalma Gift Card', 
+      desc: 'Նվեր ընտրելն այլևս դժվար չէ: Dalma Gift Card-ը նվերի իդեալական տարբերակ է:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17404717289057/415x261.png' 
+    },
+    { 
+      id: 10, 
+      name: 'Visa Business', 
+      desc: 'Ձեր կազմակերպության դրամական միջոցները հասանելի են աշխարհի բոլոր կետերում:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png' 
+    },
+    { 
+      id: 11, 
+      name: 'Visa Classic', 
+      desc: 'Ունիվերսալ վճարային գործիք, որը հասանելի է աշխարհի ցանկացած կետում՝ 24/7:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17282986912132/415x261.png' 
+    },
+    { 
+      id: 12, 
+      name: 'Arca Classic', 
+      desc: 'Ձեռք բեր ArCa Classic քարտը և կատարիր քո գործարքները մեր նորաոճ քարտի օգնությամբ:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17655348192361/415x261.png' 
+    },
+    { 
+      id: 13, 
+      name: 'Mastercard Standard', 
+      desc: 'Ամենօրյա գնումներից մինչև անմոռանալի ճանապարհորդություն՝ Mastercard Standard-ը Ձեր հուսալի գործընկերն է:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png' 
+    },
+    { 
+      id: 14, 
+      name: 'Mastercard Gold', 
+      desc: 'Քարտը կընդգծի Ձեր կարգավիճակը և անմոռանալի կդարձնի Ձեր բոլոր ճանապարհորդությունները:', 
+      img: 'https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png' 
+    }
   ];
 
   const handlePrev = () => setCurrentIndex((p) => (p === 0 ? allCards.length - 1 : p - 1));
   const handleNext = () => setCurrentIndex((p) => (p === allCards.length - 1 ? 0 : p + 1));
 
   useEffect(() => {
-    if (scrollRef.current) {
-      const active = document.getElementById(`thumb-${currentIndex}`);
-      if (active) {
-        const offset = active.offsetTop - scrollRef.current.offsetTop - (scrollRef.current.clientHeight / 2) + (active.clientHeight / 2);
-        scrollRef.current.scrollTo({ top: offset, behavior: 'smooth' });
+    const scrollContainer = scrollRef.current;
+    if (scrollContainer) {
+      // Օգտագործում ենք "as HTMLElement", որպեսզի TS-ը թույլ տա կարդալ offset-ները
+      const activeItem = document.getElementById(`thumb-${currentIndex}`) as HTMLElement | null;
+      if (activeItem) {
+        const offsetTop = activeItem.offsetTop - scrollContainer.offsetTop - (scrollContainer.clientHeight / 2) + (activeItem.clientHeight / 2);
+        const offsetLeft = activeItem.offsetLeft - scrollContainer.offsetLeft - (scrollContainer.clientWidth / 2) + (activeItem.clientWidth / 2);
+
+        scrollContainer.scrollTo({
+          top: offsetTop,
+          left: offsetLeft,
+          behavior: 'smooth'
+        });
       }
     }
   }, [currentIndex]);
 
+  // Framer Motion-ի արժեքները (արդեն իսկ ճիշտ տիպավորված են գրադարանի կողմից)
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const mouseX = useSpring(x, { stiffness: 150, damping: 20 });
@@ -53,13 +141,18 @@ const EvocaCardShowcase = () => {
       
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         
-        {/* SIDEBAR - Ավելի կոմպակտ */}
+        {/* SIDEBAR */}
         <div className="relative w-full lg:w-48 flex flex-col items-center order-2 lg:order-1 h-[350px] lg:h-[550px]">
           <button onClick={handlePrev} className="mb-1 p-1 text-gray-400 hover:text-[#6C2AF5] transition-colors">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m18 15-6-6-6 6"/>
+            </svg>
           </button>
 
-          <div ref={scrollRef} className="w-full flex lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto scrollbar-hide py-2 px-1 transition-all">
+          <div 
+            ref={scrollRef} 
+            className="relative w-full flex lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto scrollbar-hide py-2 px-1 transition-all"
+          >
             {allCards.map((card, index) => (
               <motion.div
                 id={`thumb-${index}`}
@@ -76,15 +169,17 @@ const EvocaCardShowcase = () => {
           </div>
 
           <button onClick={handleNext} className="mt-1 p-1 text-gray-400 hover:text-[#6C2AF5] transition-colors">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
           </button>
         </div>
 
-        {/* MAIN 3D CARD - Չափսը փոքրացված է */}
+        {/* MAIN 3D CARD */}
         <div 
           className="flex-1 flex items-center justify-center order-1 lg:order-2"
           style={{ perspective: "1500px" }}
-          onMouseMove={(e) => {
+          onMouseMove={(e: React.MouseEvent) => {
             const rect = e.currentTarget.getBoundingClientRect();
             x.set((e.clientX - rect.left) / rect.width - 0.5);
             y.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -100,7 +195,6 @@ const EvocaCardShowcase = () => {
               transition={{ duration: 0.3 }}
               style={{ rotateX, rotateY }}
             >
-              {/* lg:w-[480px]՝ նախկին 620-ի փոխարեն */}
               <img 
                 src={allCards[currentIndex].img} 
                 alt="Selected" 
@@ -110,7 +204,7 @@ const EvocaCardShowcase = () => {
           </AnimatePresence>
         </div>
 
-        {/* TEXT CONTENT - Փոքրացված տեքստեր ու կոճակ */}
+        {/* TEXT CONTENT */}
         <div className="w-full lg:w-[32%] order-3 text-left px-2">
           <AnimatePresence mode="wait">
             <motion.div
@@ -120,8 +214,7 @@ const EvocaCardShowcase = () => {
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Տեքստի չափսը 60px-ից դարձրել եմ 45px */}
-              <h2 className="text-[32px] lg:text-[45px] font-[900] mb-3 tracking-tighter text-black leading-[1.1]">
+              <h2 className="text-[28px] lg:text-[40px] font-[900] mb-3 tracking-tighter text-black leading-[1.1]">
                 {allCards[currentIndex].name}
               </h2>
               
