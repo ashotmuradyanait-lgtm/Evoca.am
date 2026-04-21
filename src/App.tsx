@@ -5,7 +5,8 @@ import Anhat from "./pages/Anhat"
 import HeroSlider from "./pages/HeroSlider";
 import EvocaBackground from './pages/EvocaBackground';
 import Card from "./pages/Card";
-import Calculator from "./pages/Calculator"
+import Calculator from "./pages/Calculator";
+import Video from "./pages/Video"
 
 
 // TypeScript-ում նախընտրելի է օգտագործել React.FC (Functional Component)
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <EvocaBackground/>
         <Card/>
         <Calculator/>
+        <Video/>
       </main>
       </>
   )
