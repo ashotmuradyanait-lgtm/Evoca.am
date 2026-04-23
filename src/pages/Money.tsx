@@ -1,116 +1,204 @@
 import React, { useState } from 'react';
 
-const Money = () => {
-  const [activeTab, setActiveTab] = useState('կանխիկ');
+const Money: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('Կանխիկ');
+  const [showMore, setShowMore] = useState(false);
+  const [haveCurrency, setHaveCurrency] = useState('AMD');
+  const [getCurrency, setGetCurrency] = useState('USD');
+  const [openHave, setOpenHave] = useState(false);
+  const [openGet, setOpenGet] = useState(false);
 
-  const rates = [
-    { currency: 'USD', buy: 389, sell: 394, flag: '🇺🇸' },
-    { currency: 'EUR', buy: 418, sell: 428, flag: '🇪🇺' },
-    { currency: 'RUB', buy: 4.15, sell: 4.35, flag: '🇷🇺' },
-    { currency: 'GBP', buy: 485, sell: 505, flag: '🇬🇧' },
+  const baseRates = [
+    { currency: 'USD', buy: '369', sell: '374', flag: 'https://cdn-icons-png.flaticon.com/128/197/197484.png' },
+    { currency: 'EUR', buy: '428', sell: '439', flag: 'https://cdn-icons-png.flaticon.com/128/197/197615.png' },
+    { currency: 'RUB', buy: '4.85', sell: '5', flag: 'https://cdn-icons-png.flaticon.com/128/197/197408.png' },
   ];
 
-  return (
-    <section className="bg-white py-16 font-sans">
-      <div className="max-w-[1440px] mx-auto px-10 flex flex-col lg:flex-row gap-12">
-        
-        {/* Ձախ մաս - Փոխարժեքներ և Կալկուլյատոր */}
-        <div className="lg:w-2/3">
-          <h2 className="text-3xl font-black text-[#333] mb-8">Փոխարժեքներ</h2>
-          
-          <div className="bg-[#F8F9FB] rounded-[32px] p-8">
-            {/* Tabs */}
-            <div className="flex gap-8 border-b border-gray-200 mb-8">
-              {['կանխիկ', 'անկանխիկ', 'ոսկու փոխարժեք'].map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`pb-4 text-sm font-bold uppercase tracking-wider transition-all ${
-                    activeTab === tab ? 'text-[#6600CC] border-b-2 border-[#6600CC]' : 'text-gray-400'
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
+  const extraRates = [
+    { currency: 'GBP', buy: '492', sell: '505', flag: 'https://cdn-icons-png.flaticon.com/128/197/197374.png' },
+    { currency: 'CHF', buy: '463', sell: '480', flag: 'https://cdn-icons-png.flaticon.com/128/197/197540.png' },
+    { currency: 'CNY', buy: '51', sell: '56.5', flag: 'https://cdn-icons-png.flaticon.com/128/197/197375.png' },
+    { currency: 'AED', buy: '98', sell: '103', flag: 'https://cdn-icons-png.flaticon.com/512/197/197459.png' },
+    { currency: 'JPY', buy: '2.25', sell: '2.48', flag: 'https://cdn-icons-png.flaticon.com/512/197/197604.png' },
+    { currency: 'KZT', buy: '0.75', sell: '0.85', flag: 'https://cdn-icons-png.flaticon.com/512/197/197603.png' },
+    { currency: 'BYN', buy: '125', sell: '140', flag: 'https://cdn-icons-png.flaticon.com/512/197/197635.png' },
+  ];
 
-            <div className="flex flex-col md:flex-row gap-12">
-              {/* Table */}
-              <div className="flex-grow">
-                <div className="grid grid-cols-3 mb-4 text-[#B5B5B5] text-xs font-bold uppercase px-4">
-                  <span>Արժույթ</span>
-                  <span className="text-center">Առք</span>
-                  <span className="text-center">Վաճառք</span>
+  const allCurrencies = ['AMD', ...baseRates.map(r => r.currency), ...extraRates.map(r => r.currency)];
+
+  const getDropdownCurrencies = () => {
+    return activeTab === 'Կանխիկ' ? allCurrencies.slice(0, 5) : allCurrencies;
+  };
+
+  const goldRates = [
+    { purity: '375', price: '12,940' },
+    { purity: '500', price: '17,250' },
+    { purity: '583', price: '20,110' },
+    { purity: '750', price: '25,880' },
+    { purity: '875', price: '30,190' },
+    { purity: '900', price: '31,050' },
+    { purity: '916', price: '31,600' },
+    { purity: '958', price: '33,050' },
+    { purity: '999', price: '34,500' },
+  ];
+
+  const getDisplayRates = () => {
+    if (activeTab === 'Կանխիկ') return showMore ? [...baseRates, ...extraRates.slice(0, 2)] : baseRates;
+    if (activeTab === 'Անկանխիկ') return showMore ? [...baseRates, ...extraRates] : baseRates;
+    return [];
+  };
+
+  return (
+    <section className="bg-white py-12 font-sans max-w-[1240px] mx-auto px-4">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-10">
+        <div className="lg:w-[65%]">
+          <p className="text-[#333] text-[18px] font-bold leading-[1.4]">
+            20,000 ԱՄՆ դոլարից ավել կամ դրան համարժեք այլ արտարժույթի փոխարկման դեպքում գործարքը հաստատվում է Բանկի հայեցողությամբ և Բանկի կողմից որոշված փոխարժեքով: 100,000 դրամ կամ դրան համարժեք արտարժույթից ավելի փոխանակման գործարքների իրականացման համար անհրաժեշտ է ներկայացնել անձը հաստատող փաստաթուղթ:
+          </p>
+        </div>
+        
+        <div className="lg:w-[30%]">
+          <h3 className="text-[24px] font-black text-[#1A1A1A] mb-1">Մեր հասցեները</h3>
+          <p className="text-gray-400 text-sm font-medium mb-6">Բանկի հասցեները, աշխատանքային ժամերը, բանկոմատները</p>
+          
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="relative mb-4">
+              <img src="https://www.evoca.am/img/addresses.png" className="w-full max-w-[300px] rounded-[32px] shadow-lg" alt="Map" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#6600CC] w-14 h-20 rounded-full border-4 border-white flex items-center justify-center shadow-xl">
+                <span className="text-white text-3xl font-black italic">V</span>
+              </div>
+            </div>
+            <button className="bg-[#F0ECFF] text-[#6600CC] w-full max-w-[300px] py-4 rounded-full font-black text-[15px] flex items-center justify-center gap-3 hover:bg-[#6600CC] hover:text-white transition-all group">
+              Դիտել քարտեզը 
+              <span className="text-xl transition-transform group-hover:translate-x-1">›</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="shadow-[0_10px_40px_rgba(0,0,0,0.04)] rounded-[32px] overflow-hidden border border-gray-50 bg-white">
+        <div className="flex bg-[#F8F9FB] p-1">
+          {['Կանխիկ', 'Անկանխիկ', 'Ոսկու փոխարժեք'].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => { setActiveTab(tab); setShowMore(false); setOpenHave(false); setOpenGet(false); }}
+              className={`flex-1 py-4 text-sm font-bold rounded-2xl transition-all ${
+                activeTab === tab ? 'bg-white shadow-sm text-[#1A1A1A]' : 'text-gray-400'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <div className="p-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className={`${activeTab === 'Ոսկու փոխարժեք' ? 'lg:col-span-4' : 'lg:col-span-3'}`}>
+            {activeTab === 'Ոսկու փոխարժեք' ? (
+              <div className="px-4">
+                <div className="flex justify-between text-gray-300 text-[11px] font-bold uppercase tracking-widest mb-6 border-b pb-4">
+                  <span>Հարգ</span>
+                  <span>Սակագին (Արժեքը ՀՀ Դրամով 1 գրամի համար)</span>
                 </div>
-                <div className="space-y-2">
-                  {rates.map((r) => (
-                    <div key={r.currency} className="grid grid-cols-3 items-center bg-white p-4 rounded-2xl shadow-sm">
-                      <div className="flex items-center gap-3 font-bold text-[#333]">
-                        <span className="text-lg">{r.flag}</span> {r.currency}
-                      </div>
-                      <div className="text-center font-bold text-[#333]">{r.buy}</div>
-                      <div className="text-center font-bold text-[#333]">{r.sell}</div>
+                <div className="divide-y divide-gray-50">
+                  {goldRates.map((g, i) => (
+                    <div key={i} className="flex justify-between items-center py-4">
+                      <span className="font-black text-xl text-[#1A1A1A]">{g.purity}</span>
+                      <span className="font-black text-xl text-[#1A1A1A]">{g.price}</span>
                     </div>
                   ))}
                 </div>
-                <button className="mt-6 text-[#6600CC] font-bold text-sm hover:underline">Այլ արժույթներ</button>
+              </div>
+            ) : (
+              <>
+                <div className="flex text-gray-300 text-[11px] font-bold uppercase tracking-widest mb-8 px-4">
+                  <span className="w-40">Արժույթ</span>
+                  <div className="flex gap-20"><span>Առք</span><span>Վաճառք</span></div>
+                </div>
+                <div className="space-y-8">
+                  {getDisplayRates().map((r) => (
+                    <div key={r.currency} className="flex items-center px-4">
+                      <div className="flex items-center gap-4 w-40">
+                        <img src={r.flag} className="w-8 h-8 rounded-full object-cover shadow-sm" alt="" />
+                        <span className="font-bold text-[18px]">{r.currency}</span>
+                      </div>
+                      <div className="flex gap-14 items-center">
+                        <div className="flex items-center gap-2 w-24">
+                          <span className="text-red-500 text-[10px]">▼</span>
+                          <span className="font-black text-2xl tracking-tighter">{r.buy}</span>
+                        </div>
+                        <div className="flex items-center gap-2 w-24">
+                          <span className="text-green-500 text-[10px]">▲</span>
+                          <span className="font-black text-2xl tracking-tighter">{r.sell}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-10 pt-6 border-t border-gray-50 flex justify-between items-center px-4">
+                  <span className="text-gray-300 text-[13px]">Թարմացվել է՝ 23.04.26</span>
+                  <button onClick={() => setShowMore(!showMore)} className="text-[#6600CC] font-bold uppercase text-[12px] hover:underline">
+                    {showMore ? 'Թաքցնել' : 'Այլ արժույթներ'}
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+
+         
+          {activeTab !== 'Ոսկու փոխարժեք' && (
+            <div className="bg-[#F8F9FB] rounded-[24px] p-6 self-start space-y-4">
+            
+              <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm relative">
+                <label className="text-[11px] text-gray-400 font-bold uppercase block mb-1">Ունեմ</label>
+                <input type="text" className="w-full outline-none font-bold text-xl mb-2" placeholder="0" />
+                <button 
+                  onClick={() => { setOpenHave(!openHave); setOpenGet(false); }}
+                  className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2"
+                >
+                  {haveCurrency} <span className="text-[10px]">▼</span>
+                </button>
+                {openHave && (
+                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-10 max-h-40 overflow-y-auto p-2 space-y-1">
+                    {getDropdownCurrencies().map(c => (
+                      <div 
+                        key={c} 
+                        onClick={() => { setHaveCurrency(c); setOpenHave(false); }}
+                        className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm"
+                      >
+                        {c}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
-              {/* Calculator Block */}
-              <div className="w-full md:w-72 space-y-4">
-                <div className="bg-white p-4 rounded-2xl shadow-sm">
-                  <label className="text-[10px] text-gray-400 font-bold uppercase">Ունեմ</label>
-                  <div className="flex items-center justify-between mt-1">
-                    <input type="text" placeholder="0" className="w-full outline-none font-bold text-lg" />
-                    <select className="bg-transparent font-bold text-[#6600CC] outline-none">
-                      <option>AMD</option>
-                      <option>USD</option>
-                    </select>
+             
+              <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm relative">
+                <label className="text-[11px] text-gray-400 font-bold uppercase block mb-1">Կստանամ</label>
+                <input type="text" className="w-full outline-none font-bold text-xl mb-2" placeholder="0" />
+                <button 
+                  onClick={() => { setOpenGet(!openGet); setOpenHave(false); }}
+                  className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2"
+                >
+                  {getCurrency} <span className="text-[10px]">▼</span>
+                </button>
+                {openGet && (
+                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-10 max-h-40 overflow-y-auto p-2 space-y-1">
+                    {getDropdownCurrencies().map(c => (
+                      <div 
+                        key={c} 
+                        onClick={() => { setGetCurrency(c); setOpenGet(false); }}
+                        className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm"
+                      >
+                        {c}
+                      </div>
+                    ))}
                   </div>
-                </div>
-                <div className="bg-white p-4 rounded-2xl shadow-sm">
-                  <label className="text-[10px] text-gray-400 font-bold uppercase">Կստանամ</label>
-                  <div className="flex items-center justify-between mt-1">
-                    <input type="text" placeholder="0" className="w-full outline-none font-bold text-lg" />
-                    <select className="bg-transparent font-bold text-[#6600CC] outline-none">
-                      <option>USD</option>
-                      <option>AMD</option>
-                    </select>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
-            <p className="mt-8 text-[11px] text-gray-400 leading-relaxed">
-              * 100,000 ԱՄՆ դոլարից ավել կամ դրան համարժեք այլ արժույթի փոխանակման դեպքում գործարքը հաստատվում է Բանկի կողմից։
-            </p>
-          </div>
+          )}
         </div>
-
-        {/* Աջ մաս - Քարտեզի բլոկ */}
-        <div className="lg:w-1/3">
-          <h2 className="text-3xl font-black text-[#333] mb-8">Մեր հասցեները</h2>
-          <div className="relative rounded-[40px] overflow-hidden group cursor-pointer h-[400px]">
-            <img 
-              src="https://www.evoca.am/img/addresses.png" 
-              alt="Map" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            {/* Overlay and Content */}
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-              <div className="bg-white w-16 h-16 rounded-3xl flex items-center justify-center mb-6 shadow-xl">
-                <div className="text-[#6600CC] text-3xl font-bold italic">V</div>
-              </div>
-              <button className="bg-white text-[#6600CC] px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#6600CC] hover:text-white transition-all">
-                Դիտել քարտեզը ›
-              </button>
-            </div>
-          </div>
-          <p className="mt-6 text-[#333] text-sm leading-relaxed">
-            Բանկի հասցեները, աշխատանքային ժամերը և մոտակա բանկոմատները:
-          </p>
-        </div>
-
       </div>
     </section>
   );
