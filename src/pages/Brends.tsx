@@ -1,7 +1,6 @@
-import { useRef, useEffect } from 'react';
 
-const Video = () => {
-  // Քո ուղարկած բոլոր նկարները
+
+const Partners = () => {
   const partners = [
     "https://www.evoca.am/images-cache/partners/1/16104594273635/185x80_grayscale.png",
     "https://www.evoca.am/images-cache/partners/1/1610459808737/185x80_grayscale.png",
@@ -12,111 +11,108 @@ const Video = () => {
     "https://www.evoca.am/images-cache/partners/1/17104032198171/185x80_grayscale.png",
     "https://www.evoca.am/images-cache/partners/1/17077436606929/185x80_grayscale.png",
     "https://www.evoca.am/images-cache/partners/1/17107493820339/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/17072192942611/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/17072192635138/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/17072192435541/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/16104577054001/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/16104583322099/185x80_grayscale.png",
-    "https://www.evoca.am/images-cache/partners/1/17689930369925/185x80_grayscale.png"
+    "https://www.evoca.am/images-cache/partners/1/17072192942611/185x80_grayscale.png"
   ];
 
-  // Կրկնապատկում ենք ցանկը անվերջ սլայդերի համար
-  const doubledPartners = [...partners, ...partners];
+  const doubledPartners = [...partners, ...partners, ...partners];
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden font-sans">
-      
-      {/* Բաժին 1. Hero Section */}
-      <div className="p-4 md:p-8">
-        <div className="bg-[#6600cc] min-h-[600px] rounded-[60px] md:rounded-tl-[120px] md:rounded-br-[120px] relative overflow-hidden flex items-center p-8 md:p-16 shadow-2xl">
-          <div className="grid lg:grid-cols-2 gap-10 w-full relative z-10">
-            <div className="text-white space-y-6 self-center">
-              <h1 className="text-4xl md:text-6xl font-black italic uppercase leading-tight">
-                Օնլայն և <br /> մոբայլ բանկ
-              </h1>
-              <button className="bg-white text-[#6600cc] px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-lg">
-                Դառնալ հաճախորդ
-              </button>
-            </div>
-
-            <div className="flex justify-center items-center">
-              <div className="w-full max-w-[500px] bg-[#1a1a1a] p-2 rounded-2xl shadow-3xl border-t-4 border-gray-700">
-                <div className="aspect-video bg-black rounded-lg overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-gray-500">Video Player</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Բաժին 2. Գործընկերներ */}
-      <div className="py-24 relative overflow-hidden">
+    <section className="py-32 bg-white overflow-hidden font-sans">
+      <div className="max-w-[1500px] mx-auto px-10 relative">
         
-        {/* Դեղին պտտվող օղակներ */}
-        <div className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
-          <div className="relative w-[600px] h-[600px]">
-            <div className="absolute inset-0 border-[2px] border-dotted border-yellow-500 rounded-full animate-[spin_20s_linear_infinite]"></div>
-            <div className="absolute inset-20 border-[1px] border-dotted border-yellow-400 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+        {/* 6 ՀԱՏ ԴԵՂԻՆ ՕՂԱԿՆԵՐ - Դիրքավորված ձեռքի հետևում (Կենտրոն-ձախ) */}
+        <div className="absolute left-[33%] top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-0 scale-[0.7] origin-center">
+          <div className="relative w-[750px] h-[750px] flex items-center justify-center">
+            <div className="absolute inset-0 border-[10px] border-dotted border-yellow-400/40 rounded-full animate-spin-slow"></div>
+            <div className="absolute inset-12 border-[8px] border-dotted border-yellow-400/50 rounded-full animate-spin-reverse"></div>
+            <div className="absolute inset-24 border-[6px] border-dotted border-yellow-300/40 rounded-full animate-spin-slow"></div>
+            <div className="absolute inset-[140px] border-[5px] border-dotted border-yellow-300/50 rounded-full animate-spin-reverse"></div>
+            <div className="absolute inset-[180px] border-[4px] border-dotted border-yellow-200/40 rounded-full animate-spin-slow"></div>
+            <div className="absolute inset-[220px] border-[3px] border-dotted border-yellow-200/50 rounded-full animate-spin-reverse"></div>
           </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            
-            {/* Ձեռքը և Տեքստը */}
-            <div className="flex items-center gap-8 lg:w-1/3 shrink-0">
-              <img 
-                src="https://www.evoca.am/images/partners-hand.png" 
-                alt="Hand" 
-                className="w-32 md:w-44 h-auto drop-shadow-xl"
-              />
-              <div className="space-y-4">
-                <h2 className="text-4xl font-black text-gray-900 tracking-tighter uppercase italic">Գործընկերներ</h2>
-                <p className="text-gray-500 text-sm font-medium leading-relaxed">
-                  Եղեք մեր Գործընկերն ու եկեք միասին գտնենք նոր հաճախորդներ:
-                </p>
-                <button className="flex items-center gap-3 border border-gray-200 pl-5 pr-1 py-1 rounded-full group hover:border-[#6600cc] transition-all">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-gray-700">Բոլորը</span>
-                  <div className="w-8 h-8 bg-[#6600cc] rounded-full flex items-center justify-center text-white group-hover:translate-x-1 transition-transform">→</div>
-                </button>
-              </div>
+        <div className="flex flex-col lg:flex-row items-center justify-between relative z-10">
+          
+          {/* 1. ՏԵՔՍՏԱՅԻՆ ՄԱՍ (Ձախ կողմում) */}
+          <div className="lg:w-[400px] shrink-0 space-y-8 z-30">
+            <h2 className="text-[44px] font-black text-[#333333] tracking-tight leading-tight">
+              Գործընկերներ
+            </h2>
+            <div className="space-y-4 text-[#333333] text-[15px] leading-[1.6] font-medium opacity-90">
+              <p>Դարձեք Evocabank-ի Գործընկեր և եկեք միասին գնանք դեպի գունեղ նոր իրականություն: Դառնալով Evoca ընտանիքի անդամ՝ Դուք մուտք կգործեք ժամանակակից և յուրահատուկ աշխարհ: Մենք մշտապես բաց ենք հետաքրքիր առաջարկների ու համագործակցությունների համար:</p>
             </div>
+            
+            <button className="flex items-center gap-3 bg-[#f0eaff] hover:bg-[#6600cc] text-[#6600cc] hover:text-white px-8 py-3.5 rounded-full transition-all duration-300 group shadow-sm font-bold text-[15px]">
+              Բոլոր գործընկերները
+              <span className="text-xl group-hover:translate-x-1 transition-transform">›</span>
+            </button>
+          </div>
 
-            {/* Սահուն Անվերջ Սլայդեր */}
-            <div className="flex-1 w-full overflow-hidden">
-              <div className="flex w-fit gap-6 animate-infinite-scroll hover:[animation-play-state:paused] py-10">
+         
+          <div className="relative z-40 lg:absolute lg:left-[33%] lg:-translate-x-1/2 pointer-events-none">
+            <img 
+              src="https://www.evoca.am/img/hand.png" 
+              alt="Hand" 
+              className="w-60 md:w-42 h-auto drop-shadow-2xl translate-y-4"
+            />
+          </div>
+
+         
+          <div className="w-full lg:w-[65%] xl:w-[70%] mt-12 lg:mt-0 lg:ml-auto relative z-20 h-full">
+            <div className="bg-white/85 backdrop-blur-sm rounded-[50px] shadow-[0_15px_60px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden relative">
+              
+          
+              <button className="absolute inset-y-0 left-4 flex items-center z-50 text-[#6600cc] text-4xl font-light hover:scale-110 transition-transform">‹</button>
+              <button className="absolute inset-y-0 right-4 flex items-center z-50 text-[#6600cc] text-4xl font-light hover:scale-110 transition-transform">›</button>
+
+              <div className="flex animate-scroll-3-columns h-60 items-stretch pl-[120px]"> 
+              
                 {doubledPartners.map((logo, idx) => (
                   <div 
                     key={idx} 
-                    className="min-w-[180px] h-28 bg-[#f9fafb] rounded-[32px] flex items-center justify-center p-6 transition-all duration-300 hover:bg-white hover:shadow-xl group"
+                    className="w-[300px] flex-none flex items-center justify-center border-r border-gray-100/50 last:border-r-0 group cursor-pointer transition-all duration-300 hover:bg-white/40"
                   >
                     <img 
                       src={logo} 
-                      alt="Brand" 
-                      className="max-w-full max-h-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" 
+                      alt="Partner" 
+                      className="max-w-[60%] max-h-[45%] object-contain filter grayscale opacity-40 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 group-hover:contrast-125" 
                     />
                   </div>
                 ))}
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes infinite-scroll {
-          from { transform: translateX(0); }
-          to { transform: translateX(calc(-50% - 12px)); }
+        @keyframes scroll-3-columns {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-3000px); }
         }
-        .animate-infinite-scroll {
-          animation: infinite-scroll 40s linear infinite;
+        .animate-scroll-3-columns {
+          animation: scroll-3-columns 45s linear infinite;
+          display: flex;
         }
-        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .animate-scroll-3-columns:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes spin-reverse {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        .animate-spin-slow { animation: spin-slow 60s linear infinite; }
+        .animate-spin-reverse { animation: spin-reverse 45s linear infinite; }
       ` }} />
-    </div>
+    </section>
   );
 };
 
-export default Video;
+export default Partners;
