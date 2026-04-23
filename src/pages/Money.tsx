@@ -49,40 +49,42 @@ const Money: React.FC = () => {
   };
 
   return (
-    <section className="bg-white py-12 font-sans max-w-[1240px] mx-auto px-4">
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-10">
-        <div className="lg:w-[65%]">
-          <p className="text-[#333] text-[18px] font-bold leading-[1.4]">
-            20,000 ԱՄՆ դոլարից ավել կամ դրան համարժեք այլ արտարժույթի փոխարկման դեպքում գործարքը հաստատվում է Բանկի հայեցողությամբ և Բանկի կողմից որոշված փոխարժեքով: 100,000 դրամ կամ դրան համարժեք արտարժույթից ավելի փոխանակման գործարքների իրականացման համար անհրաժեշտ է ներկայացնել անձը հաստատող փաստաթուղթ:
+    <section className="bg-white py-8 md:py-12 font-sans max-w-[1240px] mx-auto px-4">
+      {/* Վերևի մաս - Տեքստ և Քարտեզ */}
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10 mb-10">
+        <div className="w-full lg:w-[65%]">
+          <p className="text-[#333] text-sm md:text-[18px] font-bold leading-[1.6]">
+            20,000 ԱՄՆ դոլարից ավել կամ դրան համարժեք այլ արտարժույթի փոխարկման դեպքում գործարքը հաստատվում է Բանկի հայեցողությամբ...
           </p>
         </div>
         
-        <div className="lg:w-[30%]">
-          <h3 className="text-[24px] font-black text-[#1A1A1A] mb-1">Մեր հասցեները</h3>
-          <p className="text-gray-400 text-sm font-medium mb-6">Բանկի հասցեները, աշխատանքային ժամերը, բանկոմատները</p>
+        <div className="w-full lg:w-[30%]">
+          <h3 className="text-xl md:text-[24px] font-black text-[#1A1A1A] mb-1">Մեր հասցեները</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-medium mb-6">Բանկի հասցեները, աշխատանքային ժամերը</p>
           
           <div className="flex flex-col items-center lg:items-start">
-            <div className="relative mb-4">
-              <img src="https://www.evoca.am/img/addresses.png" className="w-full max-w-[300px] rounded-[32px] shadow-lg" alt="Map" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#6600CC] w-14 h-20 rounded-full border-4 border-white flex items-center justify-center shadow-xl">
-                <span className="text-white text-3xl font-black italic">V</span>
+            <div className="relative mb-4 w-full max-w-[300px]">
+              <img src="https://www.evoca.am/img/addresses.png" className="w-full rounded-[32px] shadow-lg" alt="Map" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#6600CC] w-12 h-16 md:w-14 md:h-20 rounded-full border-4 border-white flex items-center justify-center shadow-xl">
+                <span className="text-white text-2xl md:text-3xl font-black italic">V</span>
               </div>
             </div>
-            <button className="bg-[#F0ECFF] text-[#6600CC] w-full max-w-[300px] py-4 rounded-full font-black text-[15px] flex items-center justify-center gap-3 hover:bg-[#6600CC] hover:text-white transition-all group">
-              Դիտել քարտեզը 
-              <span className="text-xl transition-transform group-hover:translate-x-1">›</span>
+            <button className="bg-[#F0ECFF] text-[#6600CC] w-full max-w-[300px] py-4 rounded-full font-black text-[14px] md:text-[15px] flex items-center justify-center gap-3 hover:bg-[#6600CC] hover:text-white transition-all">
+              Դիտել քարտեզը <span>›</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="shadow-[0_10px_40px_rgba(0,0,0,0.04)] rounded-[32px] overflow-hidden border border-gray-50 bg-white">
-        <div className="flex bg-[#F8F9FB] p-1">
+      {/* Հիմնական բլոկ (Աղյուսակ + Հաշվիչ) */}
+      <div className="shadow-[0_10px_40px_rgba(0,0,0,0.04)] rounded-[24px] md:rounded-[32px] overflow-hidden border border-gray-50 bg-white">
+        {/* Tab-եր */}
+        <div className="flex bg-[#F8F9FB] p-1 overflow-x-auto no-scrollbar">
           {['Կանխիկ', 'Անկանխիկ', 'Ոսկու փոխարժեք'].map((tab) => (
             <button
               key={tab}
-              onClick={() => { setActiveTab(tab); setShowMore(false); setOpenHave(false); setOpenGet(false); }}
-              className={`flex-1 py-4 text-sm font-bold rounded-2xl transition-all ${
+              onClick={() => { setActiveTab(tab); setShowMore(false); }}
+              className={`flex-1 min-w-[100px] py-3 md:py-4 text-[12px] md:text-sm font-bold rounded-xl md:rounded-2xl transition-all whitespace-nowrap ${
                 activeTab === tab ? 'bg-white shadow-sm text-[#1A1A1A]' : 'text-gray-400'
               }`}
             >
@@ -91,107 +93,92 @@ const Money: React.FC = () => {
           ))}
         </div>
 
-        <div className="p-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Աղյուսակի մաս */}
           <div className={`${activeTab === 'Ոսկու փոխարժեք' ? 'lg:col-span-4' : 'lg:col-span-3'}`}>
             {activeTab === 'Ոսկու փոխարժեք' ? (
-              <div className="px-4">
-                <div className="flex justify-between text-gray-300 text-[11px] font-bold uppercase tracking-widest mb-6 border-b pb-4">
+              <div className="px-0 md:px-4">
+                <div className="flex justify-between text-gray-300 text-[10px] font-bold uppercase tracking-widest mb-6 border-b pb-4">
                   <span>Հարգ</span>
-                  <span>Սակագին (Արժեքը ՀՀ Դրամով 1 գրամի համար)</span>
+                  <span>Սակագին (1գ)</span>
                 </div>
                 <div className="divide-y divide-gray-50">
                   {goldRates.map((g, i) => (
                     <div key={i} className="flex justify-between items-center py-4">
-                      <span className="font-black text-xl text-[#1A1A1A]">{g.purity}</span>
-                      <span className="font-black text-xl text-[#1A1A1A]">{g.price}</span>
+                      <span className="font-black text-lg md:text-xl text-[#1A1A1A]">{g.purity}</span>
+                      <span className="font-black text-lg md:text-xl text-[#1A1A1A]">{g.price} ֏</span>
                     </div>
                   ))}
                 </div>
               </div>
             ) : (
               <>
-                <div className="flex text-gray-300 text-[11px] font-bold uppercase tracking-widest mb-8 px-4">
-                  <span className="w-40">Արժույթ</span>
-                  <div className="flex gap-20"><span>Առք</span><span>Վաճառք</span></div>
+                <div className="flex text-gray-300 text-[10px] font-bold uppercase tracking-widest mb-6 md:mb-8 px-2 md:px-4">
+                  <span className="w-24 md:w-40">Արժույթ</span>
+                  <div className="flex flex-1 justify-around md:justify-start md:gap-20 uppercase">
+                    <span>Առք</span>
+                    <span>Վաճառք</span>
+                  </div>
                 </div>
-                <div className="space-y-8">
+                <div className="space-y-6 md:space-y-8">
                   {getDisplayRates().map((r) => (
-                    <div key={r.currency} className="flex items-center px-4">
-                      <div className="flex items-center gap-4 w-40">
-                        <img src={r.flag} className="w-8 h-8 rounded-full object-cover shadow-sm" alt="" />
-                        <span className="font-bold text-[18px]">{r.currency}</span>
+                    <div key={r.currency} className="flex items-center px-2 md:px-4">
+                      <div className="flex items-center gap-2 md:gap-4 w-24 md:w-40">
+                        <img src={r.flag} className="w-6 h-6 md:w-8 md:h-8 rounded-full object-cover" alt="" />
+                        <span className="font-bold text-sm md:text-[18px]">{r.currency}</span>
                       </div>
-                      <div className="flex gap-14 items-center">
-                        <div className="flex items-center gap-2 w-24">
-                          <span className="text-red-500 text-[10px]">▼</span>
-                          <span className="font-black text-2xl tracking-tighter">{r.buy}</span>
+                      <div className="flex flex-1 justify-around md:justify-start md:gap-14 items-center">
+                        <div className="flex items-center gap-1 md:gap-2 min-w-[70px] md:w-24">
+                          <span className="text-red-500 text-[8px] md:text-[10px]">▼</span>
+                          <span className="font-black text-lg md:text-2xl">{r.buy}</span>
                         </div>
-                        <div className="flex items-center gap-2 w-24">
-                          <span className="text-green-500 text-[10px]">▲</span>
-                          <span className="font-black text-2xl tracking-tighter">{r.sell}</span>
+                        <div className="flex items-center gap-1 md:gap-2 min-w-[70px] md:w-24">
+                          <span className="text-green-500 text-[8px] md:text-[10px]">▲</span>
+                          <span className="font-black text-lg md:text-2xl">{r.sell}</span>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className="mt-10 pt-6 border-t border-gray-50 flex justify-between items-center px-4">
-                  <span className="text-gray-300 text-[13px]">Թարմացվել է՝ 23.04.26</span>
-                  <button onClick={() => setShowMore(!showMore)} className="text-[#6600CC] font-bold uppercase text-[12px] hover:underline">
-                    {showMore ? 'Թաքցնել' : 'Այլ արժույթներ'}
+                <div className="mt-8 pt-6 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 px-2 md:px-4">
+                  <span className="text-gray-300 text-xs">Թարմացվել է՝ 23.04.26</span>
+                  <button onClick={() => setShowMore(!showMore)} className="text-[#6600CC] font-bold uppercase text-[11px] hover:underline">
+                    {showMore ? 'Թաքցնել' : 'Բոլոր արժույթները'}
                   </button>
                 </div>
               </>
             )}
           </div>
 
-         
+          {/* Հաշվիչի բլոկ - Mobile-ում դառնում է 100% լայնություն */}
           {activeTab !== 'Ոսկու փոխարժեք' && (
-            <div className="bg-[#F8F9FB] rounded-[24px] p-6 self-start space-y-4">
-            
+            <div className="bg-[#F8F9FB] rounded-[24px] p-5 md:p-6 self-start space-y-4 w-full">
+              <h4 className="text-[#1A1A1A] font-black text-sm uppercase mb-2">Փոխարկիչ</h4>
               <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm relative">
-                <label className="text-[11px] text-gray-400 font-bold uppercase block mb-1">Ունեմ</label>
-                <input type="text" className="w-full outline-none font-bold text-xl mb-2" placeholder="0" />
-                <button 
-                  onClick={() => { setOpenHave(!openHave); setOpenGet(false); }}
-                  className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2"
-                >
-                  {haveCurrency} <span className="text-[10px]">▼</span>
+                <label className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Ունեմ</label>
+                <input type="number" className="w-full outline-none font-bold text-lg md:text-xl mb-2 bg-transparent" placeholder="0" />
+                <button onClick={() => {setOpenHave(!openHave); setOpenGet(false)}} className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2 text-sm md:text-base">
+                  {haveCurrency} <span>▼</span>
                 </button>
                 {openHave && (
-                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-10 max-h-40 overflow-y-auto p-2 space-y-1">
+                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-20 max-h-40 overflow-y-auto p-1">
                     {getDropdownCurrencies().map(c => (
-                      <div 
-                        key={c} 
-                        onClick={() => { setHaveCurrency(c); setOpenHave(false); }}
-                        className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm"
-                      >
-                        {c}
-                      </div>
+                      <div key={c} onClick={() => {setHaveCurrency(c); setOpenHave(false)}} className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm">{c}</div>
                     ))}
                   </div>
                 )}
               </div>
 
-             
               <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm relative">
-                <label className="text-[11px] text-gray-400 font-bold uppercase block mb-1">Կստանամ</label>
-                <input type="text" className="w-full outline-none font-bold text-xl mb-2" placeholder="0" />
-                <button 
-                  onClick={() => { setOpenGet(!openGet); setOpenHave(false); }}
-                  className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2"
-                >
-                  {getCurrency} <span className="text-[10px]">▼</span>
+                <label className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Կստանամ</label>
+                <input type="number" className="w-full outline-none font-bold text-lg md:text-xl mb-2 bg-transparent" placeholder="0" />
+                <button onClick={() => {setOpenGet(!openGet); setOpenHave(false)}} className="flex items-center justify-between w-full text-[#6600CC] font-black border-t pt-2 text-sm md:text-base">
+                  {getCurrency} <span>▼</span>
                 </button>
                 {openGet && (
-                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-10 max-h-40 overflow-y-auto p-2 space-y-1">
+                  <div className="absolute left-0 right-0 top-full mt-1 bg-white border rounded-xl shadow-xl z-20 max-h-40 overflow-y-auto p-1">
                     {getDropdownCurrencies().map(c => (
-                      <div 
-                        key={c} 
-                        onClick={() => { setGetCurrency(c); setOpenGet(false); }}
-                        className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm"
-                      >
-                        {c}
-                      </div>
+                      <div key={c} onClick={() => {setGetCurrency(c); setOpenGet(false)}} className="p-2 hover:bg-[#F0ECFF] rounded-lg cursor-pointer font-bold text-sm">{c}</div>
                     ))}
                   </div>
                 )}

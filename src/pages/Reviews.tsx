@@ -1,133 +1,122 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Reviews: React.FC = () => {
-  const reviews = [
-    { 
-      name: "Կամո Թովմասյան", 
-      role: "KAMOBLOG մեդիա-հարթակի հիմնադիր, influencer", 
-      text: "Բանկ, որ իր ռեբրենդինգի շքեղ միջոցառմամբ ու աշխատանքային ձևաչափով բանկային ոլորտում ամրապնդեց որակ և ճաշակ թելադրող: Evocabank-ն առաջին իսկ վայրկյանից ստիպեց նորովի և ժամանակակից հայացքով նայել բանկային համակարգին:",
-      stars: 5 
-    },
-    { 
-      name: "Նունե Գևորգյան", 
-      role: "Հաճախորդ", 
-      text: "Գերազանց սպասարկում, ընտիր ու հավես անձնակազմ Ազատության մասնաճյուղում: Վարկային բաժնից շատ շնորհակալ եմ, վարկս ձևակերպվեց առանց ավելորդ քաշքշուկների՝ հեշտ, արագ, որակով: Սպասարկման լավագույն փորձառություն:",
-      stars: 5 
-    },
-    { 
-      name: "Սուսաննա Վանյան", 
-      role: "Հաճախորդ", 
-      text: "Հայաստանի իրականության մեջ բացառիկ հրաշք բանկ: Միայն այս հնարավորությունը ընձեռնելով երիտասարդ ընտանիքներին՝ նման ցածր տոկոսով բնակարան ձեռք բերել, արժանի է մեծ հարգանքի: Շնորհակալ ենք, որ Դուք կաք:",
-      stars: 5 
-    },
-    { 
-      name: "Արամ Ազարյան", 
-      role: "Indigo Branding-ի հիմնադիր", 
-      text: "Դեպի նոր իրականություն. ահա թե ուր ենք մենք շարժվում ամեն մի նախագիծ Evocabank-ի հետ հաջողությամբ ավարտելիս: Ավելի քան 5 տարի համագործակցելով՝ կարելի է ասել, որ միասին անցել ենք մի մեծ ճանապարհ:",
-      stars: 5 
-    }
-  ];
+const testimonials = [
+  {
+    id: 1,
+    text: "Բանկ, որ իր ռեբրենդինգի շքեղ միջոցառմամբ ու աշխատանքային ձևաչափով բանկային ոլորտում ամրապնդեց որակ և ճաշակ թելադրեց...",
+    author: "Կամո Թովմասյան",
+    role: "KAMOBLOG մեդիա-հարթակի հիմնադիր",
+    date: "22/04/2026 16:37"
+  },
+  {
+    id: 2,
+    text: "Գերազանց սպասարկում, ընտիր ու հավես անձնակազմ Ազատության մասնաճյուղում: Վարկային բաժնից շատ շնորհակալ եմ...",
+    author: "Նունե Գևորգյան",
+    role: "Հաճախորդ",
+    date: "22/04/2026 16:37"
+  },
+  {
+    id: 3,
+    text: "Հայաստանի իրականության մեջ բացառիկ հրաշք բանկ: Միայն այս հնարավորությունը ընձեռելով երիտասարդ ընտանիքներին...",
+    author: "Սուսաննա Վանյան",
+    role: "Հաճախորդ",
+    date: "22/04/2026 16:37"
+  }
+];
+
+const EvocaReviews: React.FC = () => {
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [isAuto, setIsAuto] = useState(true);
+
+  useEffect(() => {
+    if (!isAuto) return;
+    const interval = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isAuto]);
+
+  const handleDotClick = (index: number) => {
+    setCurrentIdx(index);
+    setIsAuto(false);
+  };
+
+  const review = testimonials[currentIdx];
 
   return (
-    <section className="bg-[#F8F9FB] py-20 px-4 overflow-hidden relative min-h-[650px] flex flex-col justify-center font-sans">
-      
-      {/* Ձեռքերի Անիմացիա - Absolute Positions */}
-      <div className="absolute top-10 left-[-30px] animate-hand-float-left hidden xl:block select-none pointer-events-none z-20">
-        <img src="https://www.evoca.am/img/reviews/hand2.png" alt="Hand Left" className="w-[280px] opacity-90" />
-      </div>
-      <div className="absolute bottom-10 right-[-30px] animate-hand-float-right hidden xl:block select-none pointer-events-none z-20">
-        <img src="https://www.evoca.am/img/reviews/hand1.png" alt="Hand Right" className="w-[280px] opacity-90" />
-      </div>
-
-      <div className="max-w-[1240px] mx-auto w-full relative z-10">
-        {/* Աստղիկները վերևում */}
-        <div className="flex justify-center gap-1 mb-6">
-          {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-[#FFC107] text-2xl">★</span>
-          ))}
+    <div className="w-full bg-[#F8F9FB] font-sans overflow-hidden">
+      <div className="relative max-w-7xl mx-auto min-h-[550px] md:h-[650px] flex items-center justify-center px-4 py-16 md:py-0">
+        
+        {/* === Անիմացիոն Ձեռքեր (Responsive դիրքավորում) === */}
+        {/* Ձախ ձեռք */}
+        <div className="absolute -left-6 md:left-10 top-10 md:top-16 flex flex-col items-center pointer-events-none select-none z-10 animate-float-slow scale-[0.6] md:scale-100">
+          <img src="https://www.evoca.am/img/reviews/hand2.png" alt="OK" className="w-[100px] md:w-[130px] mb-8 md:mb-14" />
+          <svg width="30" height="80" viewBox="0 0 30 80" className="opacity-70 hidden md:block">
+            <path d="M0 0 L15 15 L0 30 L15 45 L0 60 L15 75" stroke="#6121E1" strokeWidth="3" fill="none" />
+          </svg>
         </div>
 
-        {/* Կարուսելի հատվածը */}
-        <div className="relative flex overflow-hidden py-12 mask-sides">
-          <div className="flex animate-infinite-scroll gap-8 hover:pause">
-            {[...reviews, ...reviews].map((review, index) => (
-              <div 
-                key={index} 
-                className="min-w-[350px] md:min-w-[500px] lg:min-w-[600px] bg-white p-10 lg:p-14 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 flex flex-col relative"
-              >
-                {/* Չակերտներ */}
-                <span className="text-[#6600CC] text-6xl font-serif absolute top-8 left-6 opacity-20">“</span>
-                
-                <p className="text-[#1A1A1A] text-[16px] lg:text-[18px] leading-[1.6] mb-10 font-medium relative z-10 italic text-center">
-                  {review.text}
-                </p>
+        {/* Աջ ձեռք */}
+        <div className="absolute -right-6 md:right-10 top-10 md:top-16 flex flex-col items-center pointer-events-none select-none z-10 animate-float-delayed scale-[0.6] md:scale-100">
+          <img src="https://www.evoca.am/img/reviews/hand1.png" alt="Thumbs Up" className="w-[100px] md:w-[130px] mb-8 md:mb-24" />
+          <svg width="50" height="25" viewBox="0 0 50 25" className="opacity-90 hidden md:block">
+            <path d="M0 12 L8 0 L16 12 L24 0 L32 12 L40 0 L48 12" stroke="#FF00FF" strokeWidth="3" fill="none" />
+          </svg>
+        </div>
 
-                <div className="mt-auto text-center">
-                  <h4 className="font-black text-[#1A1A1A] text-[18px] mb-1 uppercase tracking-wide">
-                    {review.name}
-                  </h4>
-                  <p className="text-gray-400 text-[13px] font-bold uppercase tracking-wider">
-                    {review.role}
-                  </p>
-                </div>
+        {/* === Քարտ === */}
+        <div className="relative z-20 w-full max-w-3xl bg-white p-8 md:p-14 rounded-[30px] md:rounded-[35px] shadow-[0_15px_50px_rgba(0,0,0,0.04)] border border-gray-50 text-center transition-all duration-700">
+          
+          {/* Աստղեր */}
+          <div className="flex justify-center gap-1 mb-6 md:mb-10">
+            {[...Array(5)].map((_, i) => <span key={i} className="text-[#FFC107] text-xl md:text-3xl">★</span>)}
+          </div>
 
-                <span className="text-[#6600CC] text-6xl font-serif absolute bottom-4 right-6 opacity-20 rotate-180">“</span>
-              </div>
+          {/* Տեքստ */}
+          <div className="relative inline-block px-2 md:px-12 min-h-[140px] md:min-h-[160px] flex items-center justify-center">
+            <span className="absolute left-[-15px] md:left-0 top-[-20px] md:top-[-30px] text-[#6121E1] text-[60px] md:text-[100px] font-serif opacity-10">“</span>
+            <p className="text-[#333] text-lg md:text-2xl font-medium leading-[1.6] md:leading-[1.65] italic transition-all duration-500">
+              {review.text}
+            </p>
+            <span className="absolute right-[-15px] md:right-0 bottom-[-30px] md:bottom-[-50px] text-[#6121E1] text-[60px] md:text-[100px] font-serif opacity-10 rotate-180">“</span>
+          </div>
+
+          {/* Հեղինակ */}
+          <div className="mt-12 md:mt-20">
+            <h3 className="text-lg md:text-xl font-bold text-[#1A1A1A] mb-1">{review.author}</h3>
+            <p className="text-[#8E8E8E] text-[13px] md:text-[15px] font-medium uppercase tracking-wide">{review.role}</p>
+          </div>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2.5 mt-10 md:mt-14">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => handleDotClick(i)}
+                className={`h-2 md:h-2.5 rounded-full transition-all duration-300 ${
+                  currentIdx === i ? 'w-8 md:w-9 bg-[#6121E1]' : 'w-2 md:w-2.5 bg-gray-200'
+                }`}
+              />
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Pagination Dots (Դեկորատիվ) */}
-        <div className="flex justify-center gap-3 mt-8">
-          {[...Array(5)].map((_, i) => (
-            <div 
-              key={i} 
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${i === 2 ? 'bg-[#6600CC] w-6' : 'bg-gray-200'}`}
-            ></div>
-          ))}
-        </div>
+      {/* Footer info */}
+      <div className="w-full bg-white py-4 md:py-5 px-6 md:px-12 border-t border-gray-100 flex justify-center md:justify-end items-center">
+        <p className="text-[#8E8E8E] text-[10px] md:text-xs font-medium uppercase tracking-widest">Թարմացվել է՝ {review.date}</p>
       </div>
 
       <style>{`
-        @keyframes infinite-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-600px * 4 - 2rem * 4)); }
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-15px) rotate(1deg); }
         }
-
-        @keyframes hand-float-left {
-          0%, 100% { transform: translateY(0) rotate(-3deg) translateX(0); }
-          50% { transform: translateY(-30px) rotate(2deg) translateX(10px); }
-        }
-
-        @keyframes hand-float-right {
-          0%, 100% { transform: translateY(0) rotate(3deg) translateX(0); }
-          50% { transform: translateY(30px) rotate(-2deg) translateX(-10px); }
-        }
-
-        .animate-infinite-scroll {
-          display: flex;
-          animation: infinite-scroll 40s linear infinite;
-        }
-
-        .animate-hand-float-left {
-          animation: hand-float-left 8s ease-in-out infinite;
-        }
-
-        .animate-hand-float-right {
-          animation: hand-float-right 10s ease-in-out infinite;
-        }
-
-        .hover\\:pause:hover {
-          animation-play-state: paused;
-        }
-
-        .mask-sides {
-          mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-          -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-        }
+        .animate-float-slow { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 7s ease-in-out infinite reverse; animation-delay: -2s; }
       `}</style>
-    </section>
+    </div>
   );
 };
 
-export default Reviews;
+export default EvocaReviews;
