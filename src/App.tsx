@@ -10,7 +10,8 @@ import Video from "./pages/Video";
 import Brends from "./pages/Brends";
 import News from "./pages/News";
 import Money from "./pages/Money";
-import Reviews from "./pages/Reviews"
+import Reviews from "./pages/Reviews";
+import Gnahatakan from "./pages/Gnahatakan"
 
 
 // TypeScript-ում նախընտրելի է օգտագործել React.FC (Functional Component)
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <News></News>
         <Money></Money>
         <Reviews></Reviews>
+        <Gnahatakan></Gnahatakan>
       </main>
       </>
   )

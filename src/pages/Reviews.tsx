@@ -2,93 +2,128 @@ import React from 'react';
 
 const Reviews: React.FC = () => {
   const reviews = [
-    { name: "Անահիտ Ս.", text: "Շատ հարմար հավելված է, ամեն ինչ արագ ու պարզ է:", date: "12.03.2024" },
-    { name: "Արմեն Գ.", text: "Evoca-ն լավագույնն է իր տեսակի մեջ, սպասարկումը հիանալի է:", date: "10.03.2024" },
-    { name: "Լիլիթ Մ.", text: "Դիզայնը ուղղակի ֆանտաստիկ է, հաճույքով եմ օգտվում:", date: "08.03.2024" },
-    { name: "Կարեն Հ.", text: "Վերջապես մի բանկ, որը մտածում է օգտատիրոջ մասին:", date: "05.03.2024" },
-    { name: "Սոնա Ա.", text: "Ամեն ինչ շատ արագ է կատարվում, շնորհակալություն:", date: "01.03.2024" },
+    { 
+      name: "Կամո Թովմասյան", 
+      role: "KAMOBLOG մեդիա-հարթակի հիմնադիր, influencer", 
+      text: "Բանկ, որ իր ռեբրենդինգի շքեղ միջոցառմամբ ու աշխատանքային ձևաչափով բանկային ոլորտում ամրապնդեց որակ և ճաշակ թելադրող: Evocabank-ն առաջին իսկ վայրկյանից ստիպեց նորովի և ժամանակակից հայացքով նայել բանկային համակարգին:",
+      stars: 5 
+    },
+    { 
+      name: "Նունե Գևորգյան", 
+      role: "Հաճախորդ", 
+      text: "Գերազանց սպասարկում, ընտիր ու հավես անձնակազմ Ազատության մասնաճյուղում: Վարկային բաժնից շատ շնորհակալ եմ, վարկս ձևակերպվեց առանց ավելորդ քաշքշուկների՝ հեշտ, արագ, որակով: Սպասարկման լավագույն փորձառություն:",
+      stars: 5 
+    },
+    { 
+      name: "Սուսաննա Վանյան", 
+      role: "Հաճախորդ", 
+      text: "Հայաստանի իրականության մեջ բացառիկ հրաշք բանկ: Միայն այս հնարավորությունը ընձեռնելով երիտասարդ ընտանիքներին՝ նման ցածր տոկոսով բնակարան ձեռք բերել, արժանի է մեծ հարգանքի: Շնորհակալ ենք, որ Դուք կաք:",
+      stars: 5 
+    },
+    { 
+      name: "Արամ Ազարյան", 
+      role: "Indigo Branding-ի հիմնադիր", 
+      text: "Դեպի նոր իրականություն. ահա թե ուր ենք մենք շարժվում ամեն մի նախագիծ Evocabank-ի հետ հաջողությամբ ավարտելիս: Ավելի քան 5 տարի համագործակցելով՝ կարելի է ասել, որ միասին անցել ենք մի մեծ ճանապարհ:",
+      stars: 5 
+    }
   ];
 
   return (
-    <section className="bg-[#F8F9FB] py-20 px-4 overflow-hidden relative min-h-[600px] flex flex-col justify-center">
+    <section className="bg-[#F8F9FB] py-20 px-4 overflow-hidden relative min-h-[650px] flex flex-col justify-center font-sans">
       
-      {/* Ձեռքերի անիմացիա */}
-      <div className="absolute top-10 left-[-50px] animate-bounce-slow hidden lg:block select-none pointer-events-none">
-        <img src="https://www.evoca.am/img/reviews/hand2.png" alt="Hand Left" className="w-[200px]" />
+      {/* Ձեռքերի Անիմացիա - Absolute Positions */}
+      <div className="absolute top-10 left-[-30px] animate-hand-float-left hidden xl:block select-none pointer-events-none z-20">
+        <img src="https://www.evoca.am/img/reviews/hand2.png" alt="Hand Left" className="w-[280px] opacity-90" />
       </div>
-      <div className="absolute bottom-10 right-[-50px] animate-bounce-reverse hidden lg:block select-none pointer-events-none">
-        <img src="https://www.evoca.am/img/reviews/hand1.png" alt="Hand Right" className="w-[200px]" />
+      <div className="absolute bottom-10 right-[-30px] animate-hand-float-right hidden xl:block select-none pointer-events-none z-20">
+        <img src="https://www.evoca.am/img/reviews/hand1.png" alt="Hand Right" className="w-[280px] opacity-90" />
       </div>
 
-      <div className="max-w-[1240px] mx-auto w-full relative z-10 text-center">
-        <h2 className="text-[#1A1A1A] text-[32px] lg:text-[48px] font-black mb-12 uppercase tracking-tight">
-          Ինչ են ասում <span className="text-[#6600CC]">մեր մասին</span>
-        </h2>
+      <div className="max-w-[1240px] mx-auto w-full relative z-10">
+        {/* Աստղիկները վերևում */}
+        <div className="flex justify-center gap-1 mb-6">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className="text-[#FFC107] text-2xl">★</span>
+          ))}
+        </div>
 
-        {/* Կարուսելի կոնտեյներ */}
-        <div className="relative flex overflow-hidden py-10 mask-gradient">
-          <div className="flex animate-scroll gap-6 hover:pause">
+        {/* Կարուսելի հատվածը */}
+        <div className="relative flex overflow-hidden py-12 mask-sides">
+          <div className="flex animate-infinite-scroll gap-8 hover:pause">
             {[...reviews, ...reviews].map((review, index) => (
               <div 
                 key={index} 
-                className="min-w-[300px] lg:min-w-[380px] bg-white p-8 rounded-[32px] shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-gray-50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group"
+                className="min-w-[350px] md:min-w-[500px] lg:min-w-[600px] bg-white p-10 lg:p-14 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-gray-50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 flex flex-col relative"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className="font-black text-[#1A1A1A] text-[18px] group-hover:text-[#6600CC] transition-colors">
+                {/* Չակերտներ */}
+                <span className="text-[#6600CC] text-6xl font-serif absolute top-8 left-6 opacity-20">“</span>
+                
+                <p className="text-[#1A1A1A] text-[16px] lg:text-[18px] leading-[1.6] mb-10 font-medium relative z-10 italic text-center">
+                  {review.text}
+                </p>
+
+                <div className="mt-auto text-center">
+                  <h4 className="font-black text-[#1A1A1A] text-[18px] mb-1 uppercase tracking-wide">
                     {review.name}
                   </h4>
-                  <span className="text-gray-300 text-[12px] font-bold">{review.date}</span>
+                  <p className="text-gray-400 text-[13px] font-bold uppercase tracking-wider">
+                    {review.role}
+                  </p>
                 </div>
-                <p className="text-[#4D4D4D] text-[15px] leading-relaxed text-left font-medium">
-                  «{review.text}»
-                </p>
-                <div className="mt-6 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-[#FFC107] text-lg">★</span>
-                  ))}
-                </div>
+
+                <span className="text-[#6600CC] text-6xl font-serif absolute bottom-4 right-6 opacity-20 rotate-180">“</span>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Pagination Dots (Դեկորատիվ) */}
+        <div className="flex justify-center gap-3 mt-8">
+          {[...Array(5)].map((_, i) => (
+            <div 
+              key={i} 
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${i === 2 ? 'bg-[#6600CC] w-6' : 'bg-gray-200'}`}
+            ></div>
+          ))}
+        </div>
       </div>
 
       <style>{`
-        @keyframes scroll {
+        @keyframes infinite-scroll {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-300px * 5 - 1.5rem * 5)); }
+          100% { transform: translateX(calc(-600px * 4 - 2rem * 4)); }
         }
 
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0) rotate(-5deg); }
-          50% { transform: translateY(-20px) rotate(5deg); }
+        @keyframes hand-float-left {
+          0%, 100% { transform: translateY(0) rotate(-3deg) translateX(0); }
+          50% { transform: translateY(-30px) rotate(2deg) translateX(10px); }
         }
 
-        @keyframes bounce-reverse {
-          0%, 100% { transform: translateY(0) rotate(5deg); }
-          50% { transform: translateY(20px) rotate(-5deg); }
+        @keyframes hand-float-right {
+          0%, 100% { transform: translateY(0) rotate(3deg) translateX(0); }
+          50% { transform: translateY(30px) rotate(-2deg) translateX(-10px); }
         }
 
-        .animate-scroll {
+        .animate-infinite-scroll {
           display: flex;
-          animation: scroll 30s linear infinite;
+          animation: infinite-scroll 40s linear infinite;
         }
 
-        .animate-bounce-slow {
-          animation: bounce-slow 6s ease-in-out infinite;
+        .animate-hand-float-left {
+          animation: hand-float-left 8s ease-in-out infinite;
         }
 
-        .animate-bounce-reverse {
-          animation: bounce-reverse 7s ease-in-out infinite;
+        .animate-hand-float-right {
+          animation: hand-float-right 10s ease-in-out infinite;
         }
 
         .hover\\:pause:hover {
           animation-play-state: paused;
         }
 
-        .mask-gradient {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        .mask-sides {
+          mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
       `}</style>
     </section>
