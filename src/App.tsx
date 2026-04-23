@@ -8,7 +8,8 @@ import Card from "./pages/Card";
 import Calculator from "./pages/Calculator";
 import Video from "./pages/Video";
 import Brends from "./pages/Brends";
-import News from "./pages/News"
+import News from "./pages/News";
+import Money from "./pages/Money"
 
 
 // TypeScript-ում նախընտրելի է օգտագործել React.FC (Functional Component)
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Video/>
         <Brends></Brends>
         <News></News>
+        <Money></Money>
       </main>
       </>
   )
