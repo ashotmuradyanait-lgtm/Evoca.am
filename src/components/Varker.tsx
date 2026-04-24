@@ -13,7 +13,7 @@ const Varker: React.FC = () => {
   const filters = [
     { name: 'Բոլորը', path: '/varker' },
     { name: 'Գրավով ապահովված սպառողական վարկեր', path: '/grav' },
-    { name: 'Անգրավ սպառողական վարկեր', path: '/varker/angrav' },
+    { name: 'Անգրավ սպառողական վարկեր', path: '/angrav' },
     { name: 'Հիփոթեքային վարկեր', path: '/varker/hipotek' },
     { name: 'Ավտովարկ', path: '/varker/avto' },
     { name: 'Լիզինգ', path: '/varker/leasing' },
@@ -51,12 +51,12 @@ const Varker: React.FC = () => {
         <span className="text-gray-800">Վարկեր</span>
       </div>
 
-      {/* 3. Վերնագիր */}
+      
       <div className="max-w-[1400px] mx-auto px-6 mb-10">
         <h1 className="text-[48px] font-bold text-[#1a1a1a]">Վարկեր</h1>
       </div>
 
-      {/* 4. Ֆիլտրի կոճակները որպես Link */}
+     
       <div className="max-w-[1400px] mx-auto px-6 flex flex-wrap gap-3 mb-10">
         {filters.map((filter) => (
           <NavLink
@@ -351,7 +351,7 @@ const Varker: React.FC = () => {
         </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 mb-8">
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
         
         <div className="w-[415px] h-[261px] shrink-0">

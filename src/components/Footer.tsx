@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full">
-      {/* Main Footer Section */}
+      
       <div className="bg-white py-12 px-6 md:px-16 font-sans text-[14px]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                   <li key={i}>
                     <a 
                       href="#" 
-                      className="text-gray-900 hover:text-[#6400dc] font-semibold transition-colors duration-200"
+                      className="text-gray-900 hover:text-gray-600 font-semibold transition-colors duration-200"
                     >
                       {link}
                     </a>
@@ -70,11 +70,11 @@ const Footer: React.FC = () => {
 
           <div className="flex flex-col space-y-6">
             <div className="flex space-x-4 text-gray-400">
-              <FaFacebookF className="hover:text-[#6400dc] cursor-pointer text-lg transition-colors" />
-              <FaInstagram className="hover:text-[#6400dc] cursor-pointer text-lg transition-colors" />
-              <FaPinterestP className="hover:text-[#6400dc] cursor-pointer text-lg transition-colors" />
-              <FaYoutube className="hover:text-[#6400dc] cursor-pointer text-lg transition-colors" />
-              <FaLinkedinIn className="hover:text-[#6400dc] cursor-pointer text-lg transition-colors" />
+              <FaFacebookF className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              <FaInstagram className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              <FaPinterestP className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              <FaYoutube className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              <FaLinkedinIn className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
             </div>
 
             <div className="flex gap-4">

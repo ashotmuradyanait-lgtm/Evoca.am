@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Varker from "./components/Varker";
 import Grav from "./components/Grav";
+import Angrav from "./components/Angrav";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -24,7 +25,7 @@ const App: React.FC = () => {
 
       <main className="flex-grow">
         <Routes>
-          {/* Գլխավոր էջը (Home) */}
+         
           <Route path="/" element={
             <>
               <HeroSlider />
@@ -43,6 +44,7 @@ const App: React.FC = () => {
           {/* Վարկերի առանձին էջը */}
           <Route path="/varker" element={<Varker />} />
           <Route path="/grav" element={<Grav />} />
+          <Route path="/angrav" element={<Angrav />} />
         </Routes>
       </main>
 
