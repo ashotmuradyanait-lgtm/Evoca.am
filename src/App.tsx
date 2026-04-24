@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Routes, Route } from "react-router-dom"; // Ավելացրու սա
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Varker from "./components/Varker";
 import Menu from "./pages/Menu";
-import Anhat from "./pages/Anhat"
+import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
 import EvocaBackground from './pages/EvocaBackground';
 import Card from "./pages/Card";
@@ -13,30 +15,38 @@ import News from "./pages/News";
 import Money from "./pages/Money";
 import Reviews from "./pages/Reviews";
 
-
-
 const App: React.FC = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
+      <Menu />
 
-      <main>
-        <Menu />
-        <HeroSlider></HeroSlider>
-        <Anhat></Anhat>
-        <EvocaBackground/>
-        <Card/>
-        <Calculator/>
-        <Video/>
-        <Brends></Brends>
-        <News></News>
-        <Money></Money>
-        <Reviews></Reviews>
+      <main className="flex-grow">
+        <Routes>
+          {/* Գլխավոր էջը (Home) */}
+          <Route path="/" element={
+            <>
+              <HeroSlider />
+              <Anhat />
+              <EvocaBackground />
+              <Card />
+              <Calculator />
+              <Video />
+              <Brends />
+              <News />
+              <Money />
+              <Reviews />
+            </>
+          } />
+
+          {/* Վարկերի առանձին էջը */}
+          <Route path="/varker" element={<Varker />} />
+        </Routes>
       </main>
 
-      <Footer></Footer>
-      </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
