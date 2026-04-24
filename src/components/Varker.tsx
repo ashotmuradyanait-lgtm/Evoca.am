@@ -1,44 +1,48 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Varker: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Բոլորը');
 
   const subMenuItems = [
-    'Վարկեր', 
-    'Վարկային պատմություն և սքոր', 
-    'Կարևոր տեղեկատվություն'
+    { name: 'Վարկեր', path: '/varker' },
+    { name: 'Վարկային պատմություն և սքոր', path: '/varkayin-patmutyun' },
+    { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
   ];
 
   const filters = [
-    'Բոլորը', 
-    'Գրավով ապահովված սպառողական վարկեր', 
-    'Անգրավ սպառողական վարկեր', 
-    'Հիփոթեքային վարկեր', 
-    'Ավտովարկ', 
-    'Լիզինգ', 
-    'Օնլայն վարկեր'
+    { name: 'Բոլորը', path: '/varker' },
+    { name: 'Գրավով ապահովված սպառողական վարկեր', path: '/grav' },
+    { name: 'Անգրավ սպառողական վարկեր', path: '/varker/angrav' },
+    { name: 'Հիփոթեքային վարկեր', path: '/varker/hipotek' },
+    { name: 'Ավտովարկ', path: '/varker/avto' },
+    { name: 'Լիզինգ', path: '/varker/leasing' },
+    { name: 'Օնլայն վարկեր', path: '/varker/online' }
   ];
 
   return (
     <div className="w-full bg-white">
-      {/* 1. Մանուշակագույն Sub-menu */}
+      {/* 1. Submenu - Մանուշակագույն շերտը */}
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
-          {subMenuItems.map((item, index) => (
-            <div 
-              key={item}
-              className={`h-full flex items-center px-8 cursor-pointer transition-colors text-[14px] font-medium
-                ${index === 0 ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`}
+          {subMenuItems.map((item) => (
+            <NavLink 
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) => 
+                `h-full flex items-center px-8 transition-colors text-[14px] font-medium
+                ${isActive ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
+              }
             >
-              {item}
-            </div>
+              {item.name}
+            </NavLink>
           ))}
         </div>
       </div>
 
       {/* 2. Breadcrumbs (Հասցեի շղթա) */}
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
-        <span className="cursor-pointer hover:text-gray-600">🏠</span>
+        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Անհատ</span>
         <span>›</span>
@@ -52,19 +56,22 @@ const Varker: React.FC = () => {
         <h1 className="text-[48px] font-bold text-[#1a1a1a]">Վարկեր</h1>
       </div>
 
-      {/* 4. Ֆիլտրեր (Buttons) */}
+      {/* 4. Ֆիլտրի կոճակները որպես Link */}
       <div className="max-w-[1400px] mx-auto px-6 flex flex-wrap gap-3 mb-10">
         {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all
-              ${activeFilter === filter 
+          <NavLink
+            key={filter.path}
+            to={filter.path}
+            onClick={() => setActiveFilter(filter.name)}
+            className={({ isActive }) => 
+              `px-6 py-2.5 rounded-full text-[14px] font-medium transition-all
+              ${isActive 
                 ? 'bg-[#6c2db5] text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`
+            }
           >
-            {filter}
-          </button>
+            {filter.name}
+          </NavLink>
         ))}
       </div>
 

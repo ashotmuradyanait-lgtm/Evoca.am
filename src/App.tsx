@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"; // Ավելացրու սա
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Varker from "./components/Varker";
+import Grav from "./components/Grav";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -41,6 +42,7 @@ const App: React.FC = () => {
 
           {/* Վարկերի առանձին էջը */}
           <Route path="/varker" element={<Varker />} />
+          <Route path="/grav" element={<Grav />} />
         </Routes>
       </main>
 
