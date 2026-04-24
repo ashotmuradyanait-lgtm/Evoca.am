@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat"
 import HeroSlider from "./pages/HeroSlider";
@@ -13,7 +14,7 @@ import Money from "./pages/Money";
 import Reviews from "./pages/Reviews";
 
 
-// TypeScript-ում նախընտրելի է օգտագործել React.FC (Functional Component)
+
 const App: React.FC = () => {
   return (
     <>
@@ -32,6 +33,8 @@ const App: React.FC = () => {
         <Money></Money>
         <Reviews></Reviews>
       </main>
+
+      <Footer></Footer>
       </>
   )
 }
