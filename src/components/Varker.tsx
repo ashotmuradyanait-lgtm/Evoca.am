@@ -17,7 +17,7 @@ const Varker: React.FC = () => {
     { name: 'Հիփոթեքային վարկեր', path: '/hipotek' },
     { name: 'Ավտովարկ', path: '/avto' },
     { name: 'Լիզինգ', path: '/leasing' },
-    { name: 'Օնլայն վարկեր', path: '/varker/online' }
+    { name: 'Օնլայն վարկեր', path: '/online' }
   ];
 
   return (
