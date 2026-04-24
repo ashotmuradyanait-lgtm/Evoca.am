@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Varker from "./components/Varker";
 import Grav from "./components/Grav";
 import Angrav from "./components/Angrav";
+import Hipotek from "./components/Hipotek";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -41,10 +42,11 @@ const App: React.FC = () => {
             </>
           } />
 
-          {/* Վարկերի առանձին էջը */}
+          
           <Route path="/varker" element={<Varker />} />
           <Route path="/grav" element={<Grav />} />
           <Route path="/angrav" element={<Angrav />} />
+          <Route path="/hipotek" element={<Hipotek />} />
         </Routes>
       </main>
 
