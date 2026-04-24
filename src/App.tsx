@@ -6,6 +6,7 @@ import Varker from "./components/Varker";
 import Grav from "./components/Grav";
 import Angrav from "./components/Angrav";
 import Hipotek from "./components/Hipotek";
+import Avto from "./components/Avto";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -47,6 +48,7 @@ const App: React.FC = () => {
           <Route path="/grav" element={<Grav />} />
           <Route path="/angrav" element={<Angrav />} />
           <Route path="/hipotek" element={<Hipotek />} />
+          <Route path="/avto" element={<Avto />} />
         </Routes>
       </main>
 
