@@ -6,7 +6,7 @@ const Varker: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Վարկեր', path: '/varker' },
-    { name: 'Վարկային պատմություն և սքոր', path: '/varkayin-patmutyun' },
+    { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
     { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
   ];
 

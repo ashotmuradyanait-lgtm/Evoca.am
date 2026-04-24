@@ -173,12 +173,12 @@ const Online: React.FC = () => {
     </div>
 
 
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
         
         <div className="w-[415px] h-[261px] shrink-0">
           <img 
-            src="https://www.evoca.am/images-cache/loans/1/16142453688631/415x261.jpg" 
+            src="https://www.evoca.am/images-cache/loans/1/16131174467985/415x261.jpg" 
             alt="Bicycle Loan" 
             className="w-full h-full object-cover rounded-xl"
           />
@@ -188,31 +188,37 @@ const Online: React.FC = () => {
         <div className="flex flex-col justify-between flex-grow py-2">
           <div>
             <h2 className="text-[28px] font-bold  text-[#1a1a1a] mb-4">
-             Օվերդրաֆտ վճարային քարտով
+             Online և Տեղում Ապառիկ
             </h2>
             <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-            Վարկային սահմանաչափերից օգտվելն այսօր դարձել է չնախատեսված ծախսերը հոգալու ամենահարմար <br />
-             և արագ տարբերակը։ Ամսական նվազագույն մարման պահանջով վարկային սահմանաչափ՝ Evocabank-ից։
+            Ցանկանու՞մ ես ձեռք բերել քո ցանկալի ապրանքը կամ օգտվել որևէ ծառայությունից, բայց չունես <br />
+             բավարար ֆինանսական միջոցներ, օգտվիր Evoca-ի նորացված վարկավորումից։
           </p>
 
             
              <div className="flex gap-12">
               <div className="flex flex-col">
                 <span className="text-gray-400 text-[12px] mb-1">մինչև</span>
-                <span className="text-[#6c2db5] text-[24px] font-bold">10 մլն. ֏</span>
-                <span className="text-gray-400 text-[12px] mt-1">Գումար</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">3 մլն. ֏</span>
+                <span className="text-gray-400 text-[12px] mt-1">Սահմանաչափ</span>
               </div>
 
-              <div className="flex flex-col border-l border-gray-100 pl-8">
-                <span className="text-gray-400 text-[12px] mb-1">մինչև</span>
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
                 <span className="text-[#6c2db5] text-[24px] font-bold">36 ամիս</span>
                 <span className="text-gray-400 text-[12px] mt-1">Ժամկետ</span>
               </div>
 
                <div className="flex flex-col border-l border-gray-100 pl-8">
-                <span className="text-gray-400 text-[12px] mt-1">սկսած</span>
-                <span className="text-[#6c2db5] text-[24px] font-bold">16%-ից</span>
+                <span className="text-gray-400 text-[12px] mb-1">մինչև</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">21.5%</span>
                 <span className="text-gray-400 text-[12px] mt-1">Տոկոսադրույք</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 ">
+                <span className="text-gray-400 text-[12px] mb-1">առավելագույնը</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">5 րոպե</span>
+                <span className="text-gray-400 text-[12px] mt-1">Վարկի հաստատման <br />
+                 ժամկետ</span>
               </div>
             </div>
           </div>
@@ -224,6 +230,7 @@ const Online: React.FC = () => {
         </div>
       </div>
     </div>
+
 
       </div>
   )

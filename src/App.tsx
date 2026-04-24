@@ -7,6 +7,7 @@ import Grav from "./components/Grav";
 import Leasing from "./components/Leasing";
 import Online from "./components/Online";
 import Angrav from "./components/Angrav";
+import Sqor from "./components/Sqor";
 import Hipotek from "./components/Hipotek";
 import Avto from "./components/Avto";
 import Menu from "./pages/Menu";
@@ -53,6 +54,7 @@ const App: React.FC = () => {
           <Route path="/avto" element={<Avto />} />
           <Route path="/leasing" element={<Leasing />} />
           <Route path="/online" element={<Online />} />
+          <Route path="/sqor" element={<Sqor />} />
         </Routes>
       </main>
 
