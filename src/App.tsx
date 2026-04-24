@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Varker from "./components/Varker";
 import Grav from "./components/Grav";
+import Leasing from "./components/Leasing";
 import Angrav from "./components/Angrav";
 import Hipotek from "./components/Hipotek";
 import Avto from "./components/Avto";
@@ -49,6 +50,7 @@ const App: React.FC = () => {
           <Route path="/angrav" element={<Angrav />} />
           <Route path="/hipotek" element={<Hipotek />} />
           <Route path="/avto" element={<Avto />} />
+          <Route path="/leasing" element={<Leasing />} />
         </Routes>
       </main>
 
