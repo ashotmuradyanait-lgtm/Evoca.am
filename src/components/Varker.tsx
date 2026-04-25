@@ -7,7 +7,7 @@ const Varker: React.FC = () => {
   const subMenuItems = [
     { name: 'Վարկեր', path: '/varker' },
     { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
-    { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
+    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
   ];
 
   const filters = [
@@ -22,7 +22,6 @@ const Varker: React.FC = () => {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. Submenu - Մանուշակագույն շերտը */}
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
@@ -40,7 +39,6 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Breadcrumbs (Հասցեի շղթա) */}
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>

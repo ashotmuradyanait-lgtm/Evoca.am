@@ -11,7 +11,7 @@ const Sqor: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans relative">
       
-      {/* Social Sidebar */}
+     
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-6">
           <Link to="#" className="text-gray-400 hover:text-[#6c2db5] transition-all text-center font-bold">f</Link>
@@ -21,7 +21,7 @@ const Sqor: React.FC = () => {
         </div>
       </div>
 
-      {/* Submenu */}
+     
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
@@ -39,7 +39,7 @@ const Sqor: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+    
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -50,7 +50,7 @@ const Sqor: React.FC = () => {
         <span className="text-gray-800 font-medium">Վարկային պատմություն և սքոր</span>
       </div>
 
-      {/* Main Content */}
+      
       <div className="max-w-[1400px] mx-auto px-6 pb-24">
         <div className="max-w-[1000px] ml-0 md:ml-12 lg:ml-20">
           
@@ -60,7 +60,7 @@ const Sqor: React.FC = () => {
 
           <div className="space-y-16">
             
-            {/* Section 1: Introduction */}
+            
             <section>
               <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-6">
                 Կարևոր տեղեկատվություն վարկային պատմության վերաբերյալ
@@ -71,7 +71,7 @@ const Sqor: React.FC = () => {
               </p>
 
               <div className="space-y-10">
-                {/* 1. What is credit history */}
+                
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-2 h-2 bg-[#6c2db5] rounded-full"></span>
@@ -87,7 +87,7 @@ const Sqor: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 2. Formation sources */}
+               
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-2 h-2 bg-[#6c2db5] rounded-full"></span>
@@ -98,7 +98,7 @@ const Sqor: React.FC = () => {
                   </p>
                 </div>
 
-                {/* 3. Credit Bureau definition */}
+                
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-2 h-2 bg-[#6c2db5] rounded-full"></span>
@@ -114,7 +114,7 @@ const Sqor: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 4. Report definition & Time */}
+               
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-2 h-2 bg-[#6c2db5] rounded-full"></span>
@@ -134,7 +134,7 @@ const Sqor: React.FC = () => {
                   </div>
                 </div>
 
-                {/* 5. Improvement & Incorrect data */}
+               
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-2 h-2 bg-[#6c2db5] rounded-full"></span>
@@ -154,7 +154,7 @@ const Sqor: React.FC = () => {
               </div>
             </section>
 
-            {/* Section 2: Criteria */}
+            
             <section>
               <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-6">
                 Վարկի տրամադրման վերաբերյալ որոշման կայացման չափանիշները
@@ -183,7 +183,7 @@ const Sqor: React.FC = () => {
               </div>
             </section>
 
-            {/* Section 3: Credit Score & Documents (Your approved part) */}
+            
             <section>
               <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-6">Վարկային սքոր</h2>
               <div className="text-[16px] text-gray-700 leading-[1.8] space-y-6 text-justify">

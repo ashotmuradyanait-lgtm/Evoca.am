@@ -8,6 +8,7 @@ import Leasing from "./components/Leasing";
 import Online from "./components/Online";
 import Angrav from "./components/Angrav";
 import Sqor from "./components/Sqor";
+import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Avto from "./components/Avto";
 import Menu from "./pages/Menu";
@@ -55,6 +56,7 @@ const App: React.FC = () => {
           <Route path="/leasing" element={<Leasing />} />
           <Route path="/online" element={<Online />} />
           <Route path="/sqor" element={<Sqor />} />
+          <Route path="/nyut" element={<Nyut />} />
         </Routes>
       </main>
 
