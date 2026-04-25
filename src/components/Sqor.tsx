@@ -5,7 +5,7 @@ const Sqor: React.FC = () => {
   const subMenuItems = [
     { name: 'Վարկեր', path: '/varker' },
     { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
-    { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
+    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
   ];
 
   return (

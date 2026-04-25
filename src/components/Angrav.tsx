@@ -6,8 +6,8 @@ const Angrav: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Վարկեր', path: '/varker' },
-    { name: 'Վարկային պատմություն և սքոր', path: '/varkayin-patmutyun' },
-    { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
+    { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
+    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
   ];
 
   const filters = [
