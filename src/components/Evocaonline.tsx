@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EyeOff, Eye, QrCode, UserPlus, Phone, Mail, Globe, X, ArrowLeft, ArrowRight, CreditCard, Landmark, CircleDollarSign } from 'lucide-react';
+import { EyeOff, Eye, QrCode, UserPlus, Phone, Mail, Globe, X, ArrowLeft, ArrowRight, CreditCard, Landmark, CircleDollarSign, User } from 'lucide-react';
 
 const translations = {
   am: {
@@ -81,29 +81,36 @@ const Evocaonline: React.FC = () => {
   const [showQrModal, setShowQrModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [showRegisterView, setShowRegisterView] = useState(false);
-  const [regType, setRegType] = useState<'card' | 'account' | 'loan'>('card');
+  const [regStep, setRegStep] = useState(1); // 1: Ընտրություն, 2: Տվյալների մուտքագրում
+  const [regType, setRegType] = useState<'card' | 'account' | 'id' | 'loan'>('card');
 
   const t = translations[lang];
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [regValue, setRegValue] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   
   const [usernameTouched, setUsernameTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const [regTouched, setRegTouched] = useState(false);
 
   const usernameError = usernameTouched && username.trim() === '';
   const passwordError = passwordTouched && password.trim() === '';
+  const regError = regTouched && regValue.trim() === '';
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setUsernameTouched(true);
     setPasswordTouched(true);
-    
-    // Սիմուլյացիա՝ եթե դաշտերը լրացված են, ցույց տալ սխալի պատուհանը
     if (username.trim() && password.trim()) {
       setShowErrorModal(true);
     }
+  };
+
+  const handleRegisterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setRegTouched(true);
   };
 
   const handleLangChange = (newLang: Language) => {
@@ -198,7 +205,7 @@ const Evocaonline: React.FC = () => {
                 <QrCode size={18} className="text-[#5C1A8B]" />
                 <span>{t.loginQr}</span>
               </button>
-              <button onClick={() => setShowRegisterView(true)} className="flex items-center justify-center gap-2 bg-[#f9f9fa] rounded-2xl py-3 px-2 text-[13px] font-medium text-gray-700">
+              <button onClick={() => { setShowRegisterView(true); setRegStep(1); }} className="flex items-center justify-center gap-2 bg-[#f9f9fa] rounded-2xl py-3 px-2 text-[13px] font-medium text-gray-700">
                 <UserPlus size={18} className="text-[#5C1A8B]" />
                 <span>{t.register}</span>
               </button>
@@ -207,22 +214,89 @@ const Evocaonline: React.FC = () => {
         ) : (
           <div className="bg-white rounded-[2rem] shadow-xl w-full max-w-[500px] p-8 md:p-10">
             <div className="flex items-center gap-4 mb-8">
-              <button onClick={() => setShowRegisterView(false)} className="text-gray-400"><ArrowLeft size={24} /></button>
+              <button onClick={() => regStep === 2 ? setRegStep(1) : setShowRegisterView(false)} className="text-gray-400">
+                <ArrowLeft size={24} />
+              </button>
               <h1 className="text-2xl font-bold text-gray-900">{t.register}</h1>
             </div>
-            <div className="border border-gray-100 rounded-2xl p-4 flex items-center justify-between mb-8 cursor-pointer hover:bg-gray-50">
-              <div className="flex items-center gap-4">
-                <div className="bg-purple-50 p-2 rounded-xl text-[#5C1A8B]"><UserPlus size={24} /></div>
-                <span className="font-semibold text-gray-800">{t.regPhysical}</span>
+
+            {regStep === 1 ? (
+              <div 
+                onClick={() => setRegStep(2)}
+                className="border border-gray-100 rounded-2xl p-4 flex items-center justify-between mb-8 cursor-pointer hover:bg-gray-50"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-purple-50 p-2 rounded-xl text-[#5C1A8B]"><UserPlus size={24} /></div>
+                  <span className="font-semibold text-gray-800">{t.regPhysical}</span>
+                </div>
+                <ArrowRight size={20} className="text-[#5C1A8B]" />
               </div>
-              <ArrowRight size={20} className="text-[#5C1A8B]" />
+            ) : (
+              <div className="space-y-6">
+                {/* Registration Tabs */}
+                <div className="flex justify-between items-center gap-2 mb-6">
+                  <button 
+                    onClick={() => setRegType('card')}
+                    className={`flex-1 flex flex-col items-center py-3 rounded-xl border transition-all ${regType === 'card' ? 'border-[#5C1A8B] text-[#5C1A8B]' : 'border-gray-100 text-gray-400'}`}
+                  >
+                    <CreditCard size={20} className="mb-1" />
+                    <span className="text-[10px] font-bold">{t.cardNum}</span>
+                  </button>
+                  <button 
+                    onClick={() => setRegType('account')}
+                    className={`flex-1 flex flex-col items-center py-3 rounded-xl border transition-all ${regType === 'account' ? 'border-[#5C1A8B] text-[#5C1A8B]' : 'border-gray-100 text-gray-400'}`}
+                  >
+                    <Landmark size={20} className="mb-1" />
+                    <span className="text-[10px] font-bold">{t.accNum}</span>
+                  </button>
+                  <button 
+                    onClick={() => setRegType('id')}
+                    className={`w-14 flex flex-col items-center py-3 rounded-xl border transition-all ${regType === 'id' ? 'border-[#5C1A8B] text-[#5C1A8B]' : 'border-gray-100 text-gray-400'}`}
+                  >
+                    <User size={20} />
+                  </button>
+                  <button 
+                    onClick={() => setRegType('loan')}
+                    className={`flex-1 flex flex-col items-center py-3 rounded-xl border transition-all ${regType === 'loan' ? 'border-[#5C1A8B] text-[#5C1A8B]' : 'border-gray-100 text-gray-400'}`}
+                  >
+                    <CircleDollarSign size={20} className="mb-1" />
+                    <span className="text-[10px] font-bold">{t.loan}</span>
+                  </button>
+                </div>
+
+                <form onSubmit={handleRegisterSubmit} className="space-y-6">
+                  <div className="space-y-1 relative">
+                    <label className="text-xs text-gray-400 px-2">
+                      {regType === 'card' ? t.cardNum : regType === 'account' ? t.accNum : regType === 'loan' ? t.loan : "ՀԾՀ"}
+                    </label>
+                    <div className={`border rounded-2xl p-3 transition-colors ${regError ? 'border-red-400' : 'border-gray-200 focus-within:border-[#5C1A8B]'}`}>
+                      <input
+                        type="text"
+                        placeholder={regType === 'card' ? "XXXX XXXX XXXX XXXX" : ""}
+                        className="w-full bg-transparent outline-none text-gray-800"
+                        value={regValue}
+                        onChange={(e) => setRegValue(e.target.value)}
+                        onBlur={() => setRegTouched(true)}
+                      />
+                    </div>
+                    {regError && <p className="text-[#e25050] text-[11px] absolute -bottom-5 left-2">{t.requiredField}</p>}
+                  </div>
+
+                  <button type="submit" className="w-full bg-[#5C1A8B] text-white rounded-2xl py-4 font-semibold text-[15px]">
+                    {t.continue}
+                  </button>
+                </form>
+              </div>
+            )}
+            
+            <div className="mt-8 text-center">
+              <button onClick={() => setShowRegisterView(false)} className="text-[#5C1A8B] font-bold text-[14px]">{t.mainPage}</button>
             </div>
-            <button onClick={() => setShowRegisterView(false)} className="w-full text-[#5C1A8B] font-bold text-[14px]">{t.mainPage}</button>
           </div>
         )}
       </main>
 
-      {/* Error Modal (Սխալի պատուհան) */}
+      {/* Error Modal */}
       {showErrorModal && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-[100] p-4">
           <div className="bg-white rounded-[1.5rem] p-6 max-w-[450px] w-full relative shadow-2xl">
