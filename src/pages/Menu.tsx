@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Menu() {
   return (
     <div className="flex items-center gap-6 pt-14   ">
-      {/* Լոգոն */}
+      
       <a href="http://localhost:5174/">
       <img 
         className="h-[140px] w-[300px] object-contain" 
@@ -22,9 +22,9 @@ function Menu() {
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</p>
       </nav>
-      <div className="px-20">
+      <Link to="/evocaonline" className="px-20">
       <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>
-      </div>
+      </Link>
     </div>
   );
 }

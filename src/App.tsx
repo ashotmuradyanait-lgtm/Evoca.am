@@ -10,6 +10,7 @@ import Angrav from "./components/Angrav";
 import Sqor from "./components/Sqor";
 import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
+import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           <Route path="/online" element={<Online />} />
           <Route path="/sqor" element={<Sqor />} />
           <Route path="/nyut" element={<Nyut />} />
+          <Route path="/evocaonline" element={<Evocaonline />} />
         </Routes>
       </main>
 
