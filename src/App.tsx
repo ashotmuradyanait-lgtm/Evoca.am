@@ -8,6 +8,7 @@ import Leasing from "./components/Leasing";
 import Online from "./components/Online";
 import Angrav from "./components/Angrav";
 import Sqor from "./components/Sqor";
+import Evocatouch from "./components/Evocatouch";
 import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
@@ -59,6 +60,7 @@ const App: React.FC = () => {
           <Route path="/sqor" element={<Sqor />} />
           <Route path="/nyut" element={<Nyut />} />
           <Route path="/evocaonline" element={<Evocaonline />} />
+          <Route path="/evocatouch" element={<Evocatouch />} />
         </Routes>
       </main>
 
