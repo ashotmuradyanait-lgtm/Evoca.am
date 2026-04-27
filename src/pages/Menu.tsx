@@ -21,7 +21,7 @@ function Menu() {
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Փոխանցումներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթեր</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</p>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</p>
+        <Link to="/evocatouch" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</Link>
       </nav>
       <Link to="/evocaonline" className="px-20">
       <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>

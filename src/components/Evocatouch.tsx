@@ -1,10 +1,20 @@
 import React from 'react';
 import { FileText } from 'lucide-react'; 
+import { Link } from 'react-router-dom';
+
 
 interface DocumentItem {
   id: number;
   title: string;
 }
+
+<div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+        <span>›</span>
+        <span className="cursor-pointer hover:text-gray-600">Անհատ</span>
+        <span>›</span>
+        <span className="cursor-pointer hover:text-gray-600">Evocatouch</span>
+      </div>
 
 const Evocatouch: React.FC = () => {
   const documents: DocumentItem[] = [
@@ -28,11 +38,12 @@ const Evocatouch: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 font-sans text-[#333] bg-white selection:bg-purple-100">
+      
       <h1 className="text-3xl font-bold mb-8 text-black tracking-tight">
         EvocaTOUCH
       </h1>
 
-      
+   
       <div className="space-y-5 text-[15px] leading-relaxed text-gray-700">
         <p>
           Շատերին թվում է՝ դժվար ու անիրական է ֆինանսական ոլորտում լինել կրեատիվ, սակայն Evocabank-ին 
@@ -126,4 +137,4 @@ const Evocatouch: React.FC = () => {
   );
 };
 
-export default Evocatouch;
+export default Evocatouch
