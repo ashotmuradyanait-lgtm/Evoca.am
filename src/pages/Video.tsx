@@ -1,13 +1,11 @@
 const Video = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-hidden font-sans bg-gray-50">
-      
-      {/* Հիմնական կոնտեյներ - Ավելացված է responsive rounded corners և padding */}
       <div className="relative w-full bg-[#6600cc] min-h-[600px] lg:min-h-[650px] rounded-tl-[60px] sm:rounded-tl-[120px] rounded-br-[60px] sm:rounded-br-[120px] flex items-center p-6 sm:p-10 md:p-16 shadow-[0_20px_50px_rgba(102,0,204,0.3)] overflow-hidden">
         
-        {/* --- Ֆոնային Ակտիվ Անիմացիաներ --- */}
+      
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Թաքցնում ենք որոշ էլեմենտներ mobile-ում, որ չխանգարեն տեքստին */}
+         
           <div className="hidden md:block absolute top-10 left-[5%] w-12 h-12 bg-pink-400/20 rounded-lg rotate-12 animate-bounce" style={{ animationDuration: '3s' }}></div>
           <div className="absolute top-[60%] left-[5%] w-8 h-8 bg-pink-500/30 rounded rotate-45 animate-pulse" style={{ animationDuration: '4s' }}></div>
           <div className="absolute bottom-20 right-[5%] w-12 h-12 md:w-16 md:h-16 bg-pink-300/20 rounded-2xl animate-spin" style={{ animationDuration: '8s' }}></div>
@@ -15,15 +13,15 @@ const Video = () => {
           <div className="hidden lg:block absolute top-[15%] right-[25%] w-10 h-10 bg-amber-400/20 rounded-lg animate-bounce" style={{ animationDuration: '5.5s' }}></div>
           <div className="absolute bottom-[5%] left-[10%] w-10 h-10 bg-amber-300/20 rounded-xl rotate-12 animate-pulse" style={{ animationDuration: '3.5s' }}></div>
 
-          {/* Glow Effects */}
+          
           <div className="absolute -top-24 -left-24 w-64 h-64 md:w-96 md:h-96 bg-pink-500/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse"></div>
           <div className="absolute -bottom-24 -right-24 w-64 h-64 md:w-96 md:h-96 bg-amber-400/15 rounded-full blur-[80px] md:blur-[120px] animate-pulse" style={{ animationDuration: '8s' }}></div>
         </div>
 
-        {/* Grid System - Փոխվում է ըստ էկրանի լայնության */}
+      
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full relative z-10">
           
-          {/* 1. Notebook Section */}
+        
           <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[550px]">
               <div className="bg-black p-[1.5%] rounded-t-xl border-x-[3px] md:border-x-[6px] border-t-[3px] md:border-t-[6px] border-[#222] shadow-2xl">

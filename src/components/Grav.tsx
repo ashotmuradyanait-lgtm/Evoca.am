@@ -22,8 +22,7 @@ const Grav: React.FC = () => {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. Submenu - Մանուշակագույն շերտը */}
-      <div className="w-full bg-[#6c2db5] text-white">
+        <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
             <NavLink 

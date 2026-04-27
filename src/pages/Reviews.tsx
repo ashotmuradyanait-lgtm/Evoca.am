@@ -55,7 +55,7 @@ const Reviews: React.FC = () => {
 
   const handleDotClick = (index: number) => {
     setCurrentIdx(index);
-    setIsAuto(false); // Եթե ձեռքով սեղմում է, ավտոմատը անջատում ենք
+    setIsAuto(false); 
   };
 
   const review = testimonials[currentIdx];
