@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function Header() {
-  const [activeTab, setActiveTab] = useState('Անհատ');
-
+const Header: React.FC = () => {
   const navItems = [
-    'Անհատ', 'Բիզնես', 'Ակնթարթային վճարումներ', 
-    'Մեր մասին', 'Նորություններ', 'Բլոգ', 'Կարիերա'
+    { name: 'Անհատ', path: '/' },
+    { name: 'Բիզնես', path: '/biznes' },
+    { name: 'Ակնթարթային վճարումներ', path: '/payments' },
+    { name: 'Մեր մասին', path: '/about' },
+    { name: 'Նորություններ', path: '/news' },
+    { name: 'Բլոգ', path: '/blog' },
+    { name: 'Կարիերա', path: '/careers' }
   ];
 
   return (
@@ -14,20 +18,25 @@ function Header() {
         
         <nav className="flex items-center gap-8">
           {navItems.map((item) => (
-            <div 
-              key={item} 
+            <NavLink 
+              key={item.path} 
+              to={item.path}
               className="relative cursor-pointer group"
-              onClick={() => setActiveTab(item)}
             >
-              <div className={`absolute top-[-32px] left-0 w-full h-[4px] bg-[#6c2db5] transition-all duration-300
-                    ${activeTab === item ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} 
-              />
+              {({ isActive }) => (
+                <>
+                  <div className={`absolute top-[-32px] left-0 w-full h-[4px] bg-[#6c2db5] transition-all duration-300
+                    ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} 
+                  />
+                  
               
-              <p className={`font-medium text-[13px] transition-colors text-nowrap
-                ${activeTab === item ? 'text-[#6c2db5]' : 'text-gray-800 hover:text-gray-500'}`}>
-                {item}
-              </p>
-            </div>
+                  <p className={`font-medium text-[13px] transition-colors text-nowrap
+                    ${isActive ? 'text-[#6c2db5]' : 'text-gray-800 hover:text-gray-500'}`}>
+                    {item.name}
+                  </p>
+                </>
+              )}
+            </NavLink>
           ))}
         </nav>
 

@@ -13,6 +13,7 @@ import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
+import Biznes from "./components/Biznes";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -61,6 +62,7 @@ const App: React.FC = () => {
           <Route path="/nyut" element={<Nyut />} />
           <Route path="/evocaonline" element={<Evocaonline />} />
           <Route path="/evocatouch" element={<Evocatouch />} />
+          <Route path="/biznes" element={<Biznes />} />
         </Routes>
       </main>
 
