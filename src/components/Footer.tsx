@@ -78,8 +78,12 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex gap-4">
+              <a href="https://apps.apple.com/am/app/evocatouch/id970309076">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="w-32 cursor-pointer" />
+             </a>
+             <a href="https://play.google.com/store/apps/details?id=am.prometeybank.mobilebank&hl=en&gl=US">
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="w-32 cursor-pointer" />
+            </a> 
             </div>
 
             <div className="space-y-2">

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Menu from '../pages/Menu';
 
 const Biznes: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Բոլորը');
@@ -12,7 +11,31 @@ const Biznes: React.FC = () => {
 
   return (
     <div className="w-full bg-white">
-      <Menu />
+      <div className="flex items-center gap-6 pt-14   ">
+      
+      <Link to="/">
+      <img 
+        className="h-[140px] w-[300px] object-contain" 
+        src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
+        alt="Evocabank Logo" 
+      />
+      </Link>
+     
+      
+      <nav className="flex gap-4 text-gray-800 font-medium text-[15px]">
+        <Link to="/varker" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</p>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</p>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</p>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
+        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
+        <Link to="/evocatouch" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
+      </nav>
+      <Link to="/evocaonline" className="px-20">
+      <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>
+      </Link>
+    </div>
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
