@@ -1,9 +1,33 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Qarter: React.FC = () => {
+     const subMenuItems = [
+    { name: 'Վարկեր', path: '/varker' },
+    { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
+    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
+  ];
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
-      
+      <div className="w-full bg-white">
+      {/* 1. Submenu - Մանուշակագույն շերտը */}
+      <div className="w-full bg-[#6c2db5] text-white">
+        <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
+          {subMenuItems.map((item) => (
+            <NavLink 
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) => 
+                `h-full flex items-center px-8 transition-colors text-[14px] font-medium
+                ${isActive ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+      </div>
       <nav className="bg-[#7122e2] w-full flex text-white text-[15px] font-medium font-sans">
         <div className="bg-[#5612b4] px-8 py-5 cursor-pointer">
           Քարտեր
@@ -41,31 +65,30 @@ const Qarter: React.FC = () => {
             Բոլորը
           </button>
           {['Պրեմիում', 'Նվեր քարտեր', 'Թվային քարտեր'].map((tag) => (
-            <button key={tag} className="bg-[#f0f0f5] text-gray-800 hover:bg-gray-200 px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors">
+            <button key={tag} className="bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors">
               {tag}
             </button>
           ))}
           
           
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
-            <span className="text-green-500">ar</span>ca
+            <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
           </button>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-extrabold text-blue-900 italic transition-colors">
-            VISA
+            <img src="https://www.evoca.am/images-cache/menu/1/16137249251612/50x24.png" alt="" />
           </button>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold transition-colors flex items-center gap-[-4px]">
-            <span className="w-4 h-4 rounded-full bg-red-600 opacity-90 inline-block -mr-2 relative z-10"></span>
-            <span className="w-4 h-4 rounded-full bg-yellow-500 opacity-90 inline-block"></span>
+            <img src="https://www.evoca.am/images-cache/menu/1/16137249504065/50x24.png" alt="" />
           </button>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-red-600 transition-colors">
-            UnionPay
+           <img src="https://www.evoca.am/images-cache/menu/1/17288945044615/50x24.png" alt="" />
           </button>
         </div>
 
-        {/* 5. Product Card Component */}
+      
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           
-          {/* Card Image Placeholder (Left) */}
+   
           <div className="w-full lg:w-[420px] shrink-0 h-[260px] bg-gradient-to-br from-[#7122e2] to-[#4a148c] rounded-[24px] p-6 text-white shadow-lg relative overflow-hidden flex flex-col justify-between">
             {/* Background design elements to mimic the boarding pass */}
             <div className="absolute top-4 left-6 text-xs font-bold tracking-widest opacity-80">FROM: <br/><span className="text-lg">HOME</span><br/><span className="text-[10px] font-normal">SWEET HOME</span></div>
@@ -82,7 +105,7 @@ const Qarter: React.FC = () => {
             </div>
           </div>
 
-          {/* Card Details (Right) */}
+        \
           <div className="flex-1 w-full flex flex-col h-full justify-between">
             <div>
               <h2 className="text-3xl font-extrabold text-[#222] mb-4">Evoca Travel Card</h2>
@@ -90,7 +113,7 @@ const Qarter: React.FC = () => {
                 Սիրո՞ւմ ես ճամփորդել. ուրեմն ժամանակն է ձեռք բերելու Evoca Mastercard Travel Card, որը կդառնա քո ճամփորդական անբաժան ընկերը:
               </p>
 
-              {/* Stats Grid */}
+           
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Stat 1 */}
                 <div>

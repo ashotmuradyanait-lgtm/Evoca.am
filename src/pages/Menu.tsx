@@ -15,7 +15,7 @@ function Menu() {
       
       <nav className="flex gap-6 text-gray-800 font-medium text-[15px]">
         <Link to="/varker" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Քարտեր</p>
+        <Link to="/qarter" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Քարտեր</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Փոխանցումներ</p>
