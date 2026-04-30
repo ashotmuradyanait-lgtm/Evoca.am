@@ -15,6 +15,7 @@ import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
 import Biznes from "./components/Biznes";
 import Search from "./components/Search";
+import Qarter from "./components/Qarter";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -65,6 +66,7 @@ const App: React.FC = () => {
           <Route path="/evocatouch" element={<Evocatouch />} />
           <Route path="/biznes" element={<Biznes />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/qarter" element={<Qarter />} />
         </Routes>
       </main>
 
