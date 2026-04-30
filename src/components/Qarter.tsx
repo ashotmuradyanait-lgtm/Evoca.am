@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {Link, NavLink } from 'react-router-dom';
 
 const Qarter: React.FC = () => {
      const subMenuItems = [
@@ -10,7 +10,6 @@ const Qarter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
       <div className="w-full bg-white">
-      {/* 1. Submenu - Մանուշակագույն շերտը */}
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
@@ -27,7 +26,7 @@ const Qarter: React.FC = () => {
           ))}
         </div>
       </div>
-      </div>
+    </div>
       <nav className="bg-[#7122e2] w-full flex text-white text-[15px] font-medium font-sans">
         <div className="bg-[#5612b4] px-8 py-5 cursor-pointer">
           Քարտեր
@@ -44,17 +43,15 @@ const Qarter: React.FC = () => {
       </nav>
 
       <div className="max-w-7xl mx-auto px-8 mt-6">
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-10">
-          <svg className="w-4 h-4 cursor-pointer hover:text-[#7122e2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg>
-          <span>›</span>
-          <span className="cursor-pointer hover:text-[#7122e2]">Անհատ</span>
-          <span>›</span>
-          <span className="cursor-pointer hover:text-[#7122e2]">Քարտեր</span>
-          <span>›</span>
-          <span className="text-gray-900">Քարտեր</span>
-        </div>
+        <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+        <span>›</span>
+        <span className="cursor-pointer hover:text-gray-600">Անհատ</span>
+        <span>›</span>
+        <span className="cursor-pointer hover:text-gray-600">Քարտեր</span>
+        <span>›</span>
+        <span className="text-gray-800">Քարտեր</span>
+      </div>
 
        
         <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Քարտեր</h1>
@@ -115,19 +112,18 @@ const Qarter: React.FC = () => {
 
            
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Stat 1 */}
                 <div>
                   <div className="text-gray-500 text-sm mb-1">Մինչև</div>
                   <div className="text-[#7122e2] text-4xl font-bold mb-2">1.5%</div>
                   <div className="text-gray-600 text-sm leading-tight">Cashback արտասահմանում</div>
                 </div>
-                {/* Stat 2 */}
+              
                 <div>
                   <div className="text-gray-500 text-sm mb-1">Անվճար</div>
                   <div className="text-[#7122e2] text-4xl font-bold mb-2">6 մուտք</div>
                   <div className="text-gray-600 text-sm leading-tight">Lounge Key սրահներ քեզ և <br/> քո ուղեկցին</div>
                 </div>
-                {/* Stat 3 */}
+                
                 <div>
                   <div className="text-gray-500 text-sm mb-1">Անվճար</div>
                   <div className="text-[#7122e2] text-4xl font-bold mb-2">6 անգամ</div>
@@ -136,7 +132,7 @@ const Qarter: React.FC = () => {
               </div>
             </div>
 
-            {/* Price */}
+          
             <div className="flex justify-end mt-10 md:mt-4">
                <span className="text-4xl font-extrabold text-[#7122e2]">16.000 ֏</span>
             </div>
@@ -144,17 +140,6 @@ const Qarter: React.FC = () => {
         </div>
       </div>
 
-      {/* 6. Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
-        <button className="w-14 h-14 bg-[#d8b4fe] hover:bg-[#c084fc] rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110">
-          <svg className="w-6 h-6 text-[#7122e2]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.4-1.2-.6-2.4-.6-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2a9 9 0 00-9-9v2c3.9 0 7.1 3.1 7 7z" />
-          </svg>
-        </button>
-        <div className="bg-[#7122e2] text-white px-6 py-3 rounded-l-full rounded-tr-full shadow-2xl font-medium cursor-pointer animate-pulse hover:bg-[#5612b4] transition-colors">
-          Գրեք մեզ, մենք օնլայն ենք !
-        </div>
-      </div>
 
     </div>
   );
