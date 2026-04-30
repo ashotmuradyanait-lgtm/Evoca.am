@@ -14,6 +14,7 @@ import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
 import Biznes from "./components/Biznes";
+import Search from "./components/Search";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -30,13 +31,13 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <Menu />
 
       <main className="flex-grow">
         <Routes>
          
           <Route path="/" element={
             <>
+             <Menu />
               <HeroSlider />
               <Anhat />
               <EvocaBackground />
@@ -63,6 +64,7 @@ const App: React.FC = () => {
           <Route path="/evocaonline" element={<Evocaonline />} />
           <Route path="/evocatouch" element={<Evocatouch />} />
           <Route path="/biznes" element={<Biznes />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </main>
 
