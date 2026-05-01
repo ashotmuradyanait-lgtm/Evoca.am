@@ -17,6 +17,7 @@ import Avto from "./components/Avto";
 import Biznes from "./components/Biznes";
 import Search from "./components/Search";
 import Qarter from "./components/Qarter";
+import Premium from "./components/Premium";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -69,6 +70,7 @@ const App: React.FC = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/qarter" element={<Qarter />} />
           <Route path="/erku" element={<Erku />} />
+          <Route path="/premium" element={<Premium />} />
         </Routes>
       </main>
 

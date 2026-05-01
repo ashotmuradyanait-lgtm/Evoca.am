@@ -158,7 +158,7 @@ const Varker: React.FC = () => {
                 ճկուն պայմաններով և մատչելի գնով:  
           </p>
 
-            {/* Թվային տվյալներ */}
+           
             <div className="flex gap-12">
               <div className="flex flex-col">
                 <span className="text-gray-400 text-[12px] mb-1">Մինչև</span>

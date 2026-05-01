@@ -1,16 +1,19 @@
 import React from 'react';
 import {Link, NavLink } from 'react-router-dom';
+import Menu from '../pages/Menu';
 
 const Qarter: React.FC = () => {
      const subMenuItems = [
-    { name: 'Վարկեր', path: '/varker' },
-    { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
-    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
-  ];
+    { name: 'Քարտեր', path: '' },
+    { name: 'Քարտերի տրամադրում և սպասարկում', path: '' },
+    { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '' },
+    { name: 'Evoca Benefits', path: '' }
+  ];    
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
+        <Menu />
       <div className="w-full bg-white">
-      <div className="w-full bg-[#6c2db5] text-white">
+      <div className="w-full bg-[#6c2db5] text-white ">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
             <NavLink 
@@ -18,7 +21,7 @@ const Qarter: React.FC = () => {
               to={item.path}
               className={({ isActive }) => 
                 `h-full flex items-center px-8 transition-colors text-[14px] font-medium
-                ${isActive ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
+                ${isActive ? 'bg-[#6c2db5]' : 'hover:bg-[#530498]'}`
               }
             >
               {item.name}
@@ -27,20 +30,6 @@ const Qarter: React.FC = () => {
         </div>
       </div>
     </div>
-      <nav className="bg-[#7122e2] w-full flex text-white text-[15px] font-medium font-sans">
-        <div className="bg-[#5612b4] px-8 py-5 cursor-pointer">
-          Քարտեր
-        </div>
-        <div className="px-8 py-5 hover:bg-[#853af0] cursor-pointer transition-colors">
-          Քարտերի տրամադրում և սպասարկում
-        </div>
-        <div className="px-8 py-5 hover:bg-[#853af0] cursor-pointer transition-colors">
-          Սոցիալական ապահովության վճարային քարտեր
-        </div>
-        <div className="px-8 py-5 hover:bg-[#853af0] cursor-pointer transition-colors">
-          Evoca Benefits
-        </div>
-      </nav>
 
       <div className="max-w-7xl mx-auto px-8 mt-6">
         <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
@@ -61,11 +50,19 @@ const Qarter: React.FC = () => {
           <button className="bg-[#7122e2] text-white px-6 py-2.5 rounded-full font-semibold text-[15px]">
             Բոլորը
           </button>
-          {['Պրեմիում', 'Նվեր քարտեր', 'Թվային քարտեր'].map((tag) => (
-            <button key={tag} className="bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors">
-              {tag}
-            </button>
-          ))}
+            {[
+            { name: 'Պրեմիում', path: '/premium' },
+            { name: 'Նվեր քարտեր', path: '/cards/gift-cards' },
+            { name: 'Թվային քարտեր', path: '/cards/digital-cards' }
+            ].map((tag) => (
+            <Link 
+                key={tag.name} 
+                to={tag.path} 
+                className="bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors inline-block text-center"
+            >
+                {tag.name}
+            </Link>
+            ))}
           
           
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">

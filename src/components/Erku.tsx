@@ -1,5 +1,10 @@
+
+import Menu from '../pages/Menu';
+
 function Erku (){
     return(
+        <div>
+       <Menu />
         <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
 
@@ -56,6 +61,7 @@ function Erku (){
           </button>
         </div>
       </div>
+    </div>
     </div>
     );
 }
