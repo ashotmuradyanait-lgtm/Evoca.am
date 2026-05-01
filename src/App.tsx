@@ -9,6 +9,7 @@ import Online from "./components/Online";
 import Angrav from "./components/Angrav";
 import Sqor from "./components/Sqor";
 import Evocatouch from "./components/Evocatouch";
+import Erku from "./components/Erku";
 import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
@@ -67,6 +68,7 @@ const App: React.FC = () => {
           <Route path="/biznes" element={<Biznes />} />
           <Route path="/search" element={<Search />} />
           <Route path="/qarter" element={<Qarter />} />
+          <Route path="/erku" element={<Erku />} />
         </Routes>
       </main>
 
