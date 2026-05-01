@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Menu from '../pages/Menu';
 
 const Avto: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Բոլորը');
@@ -22,7 +23,7 @@ const Avto: React.FC = () => {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. Submenu - Մանուշակագույն շերտը */}
+      <Menu/>
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
