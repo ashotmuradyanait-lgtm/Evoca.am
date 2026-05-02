@@ -20,6 +20,7 @@ import Search from "./components/Search";
 import Qarter from "./components/Qarter";
 import Tvayin from "./components/Tvayin";
 import Premium from "./components/Premium";
+import Visa from "./components/Visa";
 import Arca from "./components/Arca";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -77,6 +78,7 @@ const App: React.FC = () => {
           <Route path="/nverqart" element={<Nverqart />} />
           <Route path="/tvayin" element={<Tvayin />} />
           <Route path="/arca" element={<Arca />} />
+          <Route path="/visa" element={<Visa />} />
         </Routes>
       </main>
 

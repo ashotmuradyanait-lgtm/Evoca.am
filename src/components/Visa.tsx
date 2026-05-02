@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
-const Arca: React.FC = () => {
+const Visa: React.FC = () => {
   const subMenuItems = [
     { name: 'Քարտեր', path: '' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '' },
@@ -66,15 +66,14 @@ const Arca: React.FC = () => {
               {tag.name}
             </NavLink>
           ))}
-
+        <Link to="/arca">
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
             <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
           </button>
-        <Link to="">
+        </Link>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-extrabold text-blue-900 italic transition-colors">
             <img src="https://www.evoca.am/images-cache/menu/1/16137249251612/50x24.png" alt="" />
           </button>
-        </Link>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold transition-colors flex items-center gap-[-4px]">
             <img src="https://www.evoca.am/images-cache/menu/1/16137249504065/50x24.png" alt="" />
           </button>
@@ -83,13 +82,13 @@ const Arca: React.FC = () => {
           </button>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 mb-8">
+         <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
         
         
         <div className="w-[415px] h-[261px] shrink-0">
           <img 
-            src="https://www.evoca.am/images-cache/cards/1/17767720288483/415x261.png" 
+            src="https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png" 
             alt="Bicycle Loan" 
             className="w-full h-full object-cover rounded-xl"
           />
@@ -99,176 +98,193 @@ const Arca: React.FC = () => {
         <div className="flex flex-col justify-between flex-grow py-2">
           <div>
             <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-              Evoca Gift Card
+              Visa Infinite
             </h2>
             <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Գնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը:
+              Visa Infinite-ը Visa վճարային համակարգի ամենաբարձր դասի քարտն է։
             </p>
 
-          </div>
-
-        
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
-        
-        
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17527569508235/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-
-        
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-              Homplex Gift card
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Թե՛ սրճեփ, թե՛ սրճարան, թե՛ կարուսել, թե՛ կառուցել, թե՛ տան կահավորում, <br />
-              թե՛ ուղղակի ժամանց ընկերների հետ։ Evoca-ի նոր նվեր քարտը՝ Homplex-ից։
-            </p>
-
-          </div>
-
-        
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
-        
-        
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17655348192361/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-
-        
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-              MyLer Gift Card
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Մեկ քարտ, անսահմանափակ արկածներ:
-            </p>
-
-          </div>
-
-        
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
-        
-        
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17485032554482/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-
-        
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-             4U.am Gift card
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Երբ ժամանակակիցն ու կրեատիվը հանդիպում են, ստեղծվում է իդեալական նվեր։
-            </p>
-
-          </div>
-
-        
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
-
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17404717644263/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-        
-
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-            Arca Classic
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Evocabank-ի հետ ցանկացած գնում և վճարում ապահով է և հուսալի։
-            </p>
-
+            
             <div className="flex gap-12">
-              <div className="flex flex-col">
-                <span className="text-gray-400 text-[12px] mt-1">Արտարժույթ</span>
-                <span className="text-[#6c2db5] text-[24px] font-bold">0.5%</span>
-                <span className="text-gray-400 text-[12px] mt-1">Քարտերով կանխիկի <br />
-                 տրամադրում Բանկի ATM-ով</span>
-              </div>
-
-              <div className="flex flex-col border-l border-gray-100 pl-8">
-                <span className="text-gray-400 text-[12px] mt-1">մինչև 300,000 ֏` անվճար</span> 
-                <span className="text-[#6c2db5] text-[24px] font-bold">0.2%</span>
-                <span className="text-gray-400 text-[12px] mt-1">Քարտերով կանխիկի <br />
-                 տրամադրում Բանկի ATM-ով</span>   
-              </div>
-
-              <div className="flex flex-col border-l border-gray-100 pl-8">
+              <div className="flex flex-col mt-5">
                 <span className="text-[#6c2db5] text-[24px] font-bold">1%</span>
-                <span className="text-gray-400 text-[12px] mt-1">Քարտերով կանխիկի <br />
-                 տրամադրում «ԱրՔա» <br />
-                  համակարգի այլ բանկերի <br />
-                   ATM-ով և POS-ով</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում բանկի <br />
+                  կանխիկացման կետերում</span>
               </div>
 
               <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
-                <span className="text-[#6c2db5] text-[24px] font-bold">1500 ֏</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">1.2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                  բանկերի կանխիկացման <br />
+                   կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-gray-400 text-[12px] mb-1">min 2,500 ֏</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">1.5%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                  չհանդիսացող բանկերի <br />
+                   կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 max-w-[180px] mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">100,000֏</span>
+                <span className="text-gray-400 text-[12px] mt-1">Տարեկան սպասարկում</span>
+              </div>
+            </div>
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+              Visa Vision
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Կյանքին նայիր մանուշակագույն ակնոցով ու տես Visa Vision քարտի <br />
+               բազմաթիվ առավելությունները:
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17485025148319/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+            Visa Digital
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Պատվիրիր Evoca Digital քարտը հիմա EvocaTOUCH հավելվածով, և քարտը <br />
+               կակտիվանա րոպեների ընթացքում:
+            </p>
+
+            <div className="flex gap-12">
+              <div className="flex flex-col mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում բանկի <br />
+                 կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">4%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Քարտային հաշվի դրական <br />
+                 մնացորդի նկատմամբ <br />
+                  հաշվարկվող տարեկան <br />
+                   տոկոսադրույք</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">1000 ֏</span>
+                <span className="text-gray-400 text-[12px] mt-1">Միանվագ սպասարկում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-gray-400 text-[12px] mt-1">մինչև</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.5%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Քեշբեք</span>
+              </div>
+            </div>
+          </div>
+
+
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/1714986642953/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+            Visa Classic
+            </h2>
+
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Կատարիր մինչև 20,000 ՀՀ դրամի անհպում գործարքներ Visa Classic <br />
+               քարտով՝ առանց PIN կոդի մուտքագրման:
+            </p>
+
+            <div className="flex gap-12">
+              <div className="flex flex-col mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում բանկի <br />
+                 կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.8%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 բանկերի կանխիկացման <br />
+                  կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-gray-400 text-[12px] mt-1">min 1,500 ֏</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">1%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 չհանդիսացող բանկերի <br />
+                  կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">5,000 ֏</span>
                 <span className="text-gray-400 text-[12px] mt-1">Տարեկան սպասարկում</span>
               </div>
             </div>
@@ -283,91 +299,63 @@ const Arca: React.FC = () => {
     </div>
 
 
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
 
         <div className="w-[415px] h-[261px] shrink-0">
           <img 
-            src="https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png" 
+            src="https://www.evoca.am/images-cache/cards/1/17149865475676/415x261.png" 
             alt="Bicycle Loan" 
             className="w-full h-full object-cover rounded-xl"
           />
         </div>
-
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-            Dalma Gift Card
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Նվեր ընտրելն այլևս դժվար չէ:
-            </p>
-          </div>
-
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
-
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17404717289057/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-
-        <div className="flex flex-col justify-between flex-grow py-2">
-          <div>
-
-            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-            Rio Gift Card
-            </h2>
-            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-              Ամեն ինչ մեկ նվեր քարտում
-            </p>
-          </div>
-
-          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
-            Մանրամասն
-            <span className="text-[18px]">›</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-    <div className="max-w-[1400px] mx-auto px-6 mb-8">
-      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
 
         
-        <div className="w-[415px] h-[261px] shrink-0">
-          <img 
-            src="https://www.evoca.am/images-cache/cards/1/17404717481136/415x261.png" 
-            alt="Bicycle Loan" 
-            className="w-full h-full object-cover rounded-xl"
-          />
-        </div>
-
 
         <div className="flex flex-col justify-between flex-grow py-2">
           <div>
             <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
-            Garage Masters' Mall Gift Card
+            Visa Business
             </h2>
             <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
-             Հաճելին, հետաքրքիրն ու օգտակարը մեկ նվեր քարտում։
+              Գործուղման մեկնելիս Ձեր ներկայացուցչական ծախսերը կարող եք հոգալ Visa <br />
+               Business քարտով։
             </p>
+            <div className="flex gap-12">
+              <div className="flex flex-col">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում բանկի <br />
+                 կանխիկացման կետերում</span>
+              </div>
+
+
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.8%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 բանկերի կանխիկացման <br />
+                  կետերում</span>   
+              </div>
+
+
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-gray-400 text-[12px] mt-1">min 1,500 ֏</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">1%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 չհանդիսացող բանկերի <br />
+                  կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Բանկի տարածքում <br />
+                 քարտային հաշվից կանխիկի <br />
+                  տրամադրում</span>
+              </div>
+            </div>
           </div>
+
           <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
             Մանրամասն
             <span className="text-[18px]">›</span>
@@ -376,8 +364,67 @@ const Arca: React.FC = () => {
       </div>
     </div>
 
+
+    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
         </div>
+        
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+           Visa Gold
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Նոր քարտերի թողարկումը դադարեցված է 25.11.2024 թվականից
+            </p>
+
+            <div className="flex gap-12">
+              <div className="flex flex-col">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.2%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում բանկի <br />
+                 կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-[#6c2db5] text-[24px] font-bold">0.8%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 բանկերի կանխիկացման <br />
+                  կետերում</span>   
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8">
+                <span className="text-gray-400 text-[12px] mt-1">min 1,500 ֏</span>
+                <span className="text-[#6c2db5] text-[24px] font-bold">1%</span>
+                <span className="text-gray-400 text-[12px] mt-1">Կանխիկացում ԱրՔա անդամ <br />
+                 չհանդիսացող բանկերի <br />
+                  կանխիկացման կետերում</span>
+              </div>
+
+              <div className="flex flex-col border-l border-gray-100 pl-8 mt-5">
+                <span className="text-[#6c2db5] text-[24px] font-bold">15,000 ֏</span>
+                <span className="text-gray-400 text-[12px] mt-1">Տարեկան սպասարկում</span>
+              </div>
+            </div>
+          </div>
+
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
         </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
   )
 }
-export default Arca
+export default Visa
