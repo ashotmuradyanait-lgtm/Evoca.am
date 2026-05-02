@@ -22,6 +22,7 @@ import Tvayin from "./components/Tvayin";
 import Premium from "./components/Premium";
 import Visa from "./components/Visa";
 import Arca from "./components/Arca";
+import Bank from "./components/Bank";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -79,6 +80,7 @@ const App: React.FC = () => {
           <Route path="/tvayin" element={<Tvayin />} />
           <Route path="/arca" element={<Arca />} />
           <Route path="/visa" element={<Visa />} />
+          <Route path="/bank" element={<Bank />} />
         </Routes>
       </main>
 
