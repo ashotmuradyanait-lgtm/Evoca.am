@@ -17,7 +17,7 @@ const Premium: React.FC = () => {
           <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
             {subMenuItems.map((item) => (
               <NavLink
-                key={item.name} // Օգտագործում ենք name-ը որպես key, քանի որ path-երը դատարկ են
+                key={item.name}
                 to={item.path}
                 className={({ isActive }) =>
                   `h-full flex items-center px-8 transition-colors text-[14px] font-medium

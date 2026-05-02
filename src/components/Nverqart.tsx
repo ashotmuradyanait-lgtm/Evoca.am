@@ -3,7 +3,7 @@ import Menu from '../pages/Menu';
 
 const Nverqart: React.FC = () => {
   const subMenuItems = [
-    { name: 'Քարտեր', path: '' },
+    { name: 'Քարտեր', path: '/qarter' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '' },
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '' },
     { name: 'Evoca Benefits', path: '' }
@@ -17,7 +17,7 @@ const Nverqart: React.FC = () => {
           <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
             {subMenuItems.map((item) => (
               <NavLink
-                key={item.name} // Օգտագործում ենք name-ը որպես key, քանի որ path-երը դատարկ են
+                key={item.name} 
                 to={item.path}
                 className={({ isActive }) =>
                   `h-full flex items-center px-8 transition-colors text-[14px] font-medium
@@ -42,9 +42,9 @@ const Nverqart: React.FC = () => {
           <span className="text-gray-800">Քարտեր</span>
         </div>
 
-        <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Պրեմիում</h1>
+        <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Նվեր քարտեր</h1>
 
-        {/* Ֆիլտրների հատվածը՝ թարմացված isActive տրամաբանությամբ */}
+       
         <div className="flex flex-wrap items-center gap-3 mb-12">
           {[
             { name: 'Բոլորը', path: '/qarter' },
@@ -55,13 +55,12 @@ const Nverqart: React.FC = () => {
             <NavLink
               key={tag.name}
               to={tag.path}
-              // end={true} միայն "Բոլորը" կոճակի համար, որպեսզի այն չլինի ակտիվ մյուս էջերում
               end={tag.path === '/qarter'}
               className={({ isActive }) =>
                 `px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors inline-block text-center ${
                   isActive
-                    ? 'bg-[#7122e2] text-white' // Ակտիվ վիճակ
-                    : 'bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white' // Ոչ ակտիվ
+                    ? 'bg-[#7122e2] text-white' 
+                    : 'bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white' 
                 }`
               }
             >
@@ -82,6 +81,274 @@ const Nverqart: React.FC = () => {
             <img src="https://www.evoca.am/images-cache/menu/1/17288945044615/50x24.png" alt="" />
           </button>
         </div>
+
+
+        <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17767720288483/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+              Evoca Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Գնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը:
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+          <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17282986912132/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+              Digital Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Սիրելի մարդկանց համար նվեր ընտրելը պատասխանատու ու հաճելի գործ է, <br />
+               բայց նաև ժամանակատար ու նյարդայնացնող, հատկապես երբ չգիտես՝ <br />
+              կհավանի՞, թե՞ ոչ։ Մենք առաջարկում ենք իդեալական նվերի տարբերակ։
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17527569508235/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+              Homplex Gift card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Թե՛ սրճեփ, թե՛ սրճարան, թե՛ կարուսել, թե՛ կառուցել, թե՛ տան կահավորում, <br />
+              թե՛ ուղղակի ժամանց ընկերների հետ։ Evoca-ի նոր նվեր քարտը՝ Homplex-ից։
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+           <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17655348192361/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+              MyLer Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Մեկ քարտ, անսահմանափակ արկածներ:
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+          <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+        
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17485032554482/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+             4U.am Gift card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Երբ ժամանակակիցն ու կրեատիվը հանդիպում են, ստեղծվում է իդեալական նվեր։
+            </p>
+
+          </div>
+
+        
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+          <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+            Dalma Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Նվեր ընտրելն այլևս դժվար չէ:
+            </p>
+          </div>
+
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17404717289057/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+            Rio Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+              Ամեն ինչ մեկ նվեր քարտում
+            </p>
+          </div>
+
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+     <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
+
+        
+        <div className="w-[415px] h-[261px] shrink-0">
+          <img 
+            src="https://www.evoca.am/images-cache/cards/1/17404717481136/415x261.png" 
+            alt="Bicycle Loan" 
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+
+        <div className="flex flex-col justify-between flex-grow py-2">
+          <div>
+            <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-4">
+            Garage Masters' Mall Gift Card
+            </h2>
+            <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
+             Հաճելին, հետաքրքիրն ու օգտակարը մեկ նվեր քարտում։
+            </p>
+          </div>
+          <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
+            Մանրամասն
+            <span className="text-[18px]">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     </div>
     </div>

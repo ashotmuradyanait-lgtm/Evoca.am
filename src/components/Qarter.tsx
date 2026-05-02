@@ -52,7 +52,7 @@ const Qarter: React.FC = () => {
           </button>
             {[
             { name: 'Պրեմիում', path: '/premium' },
-            { name: 'Նվեր քարտեր', path: '/cards/gift-cards' },
+            { name: 'Նվեր քարտեր', path: '/nverqart' },
             { name: 'Թվային քարտեր', path: '/cards/digital-cards' }
             ].map((tag) => (
             <Link 
