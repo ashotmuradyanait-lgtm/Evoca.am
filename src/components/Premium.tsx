@@ -67,9 +67,11 @@ const Premium: React.FC = () => {
             </NavLink>
           ))}
 
+        <Link to="/arca">
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
             <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
           </button>
+        </Link>
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-extrabold text-blue-900 italic transition-colors">
             <img src="https://www.evoca.am/images-cache/menu/1/16137249251612/50x24.png" alt="" />
           </button>

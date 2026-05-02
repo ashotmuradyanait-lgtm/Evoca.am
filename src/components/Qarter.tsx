@@ -53,7 +53,7 @@ const Qarter: React.FC = () => {
             {[
             { name: 'Պրեմիում', path: '/premium' },
             { name: 'Նվեր քարտեր', path: '/nverqart' },
-            { name: 'Թվային քարտեր', path: '' }
+            { name: 'Թվային քարտեր', path: '/tvayin' }
             ].map((tag) => (
             <Link 
                 key={tag.name} 
@@ -64,7 +64,7 @@ const Qarter: React.FC = () => {
             </Link>
             ))}
           
-          
+        
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
             <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
           </button>
