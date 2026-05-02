@@ -14,6 +14,7 @@ import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
+import Nverqart from "./components/Nverqart";
 import Biznes from "./components/Biznes";
 import Search from "./components/Search";
 import Qarter from "./components/Qarter";
@@ -71,6 +72,7 @@ const App: React.FC = () => {
           <Route path="/qarter" element={<Qarter />} />
           <Route path="/erku" element={<Erku />} />
           <Route path="/premium" element={<Premium />} />
+          <Route path="/nverqart" element={<Nverqart />} />
         </Routes>
       </main>
 
