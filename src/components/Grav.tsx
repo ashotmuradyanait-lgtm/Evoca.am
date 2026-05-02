@@ -14,11 +14,11 @@ const Grav: React.FC = () => {
   const filters = [
     { name: 'Բոլորը', path: '/varker' },
     { name: 'Գրավով ապահովված սպառողական վարկեր', path: '/grav' },
-    { name: 'Անգրավ սպառողական վարկեր', path: '/varker/angrav' },
-    { name: 'Հիփոթեքային վարկեր', path: '/varker/hipotek' },
-    { name: 'Ավտովարկ', path: '/varker/avto' },
-    { name: 'Լիզինգ', path: '/varker/leasing' },
-    { name: 'Օնլայն վարկեր', path: '/varker/online' }
+    { name: 'Անգրավ սպառողական վարկեր', path: '/angrav' },
+    { name: 'Հիփոթեքային վարկեր', path: '/hipotek' },
+    { name: 'Ավտովարկ', path: '/avto' },
+    { name: 'Լիզինգ', path: '/leasing' },
+    { name: 'Օնլայն վարկեր', path: '/online' }
   ];
 
   return (

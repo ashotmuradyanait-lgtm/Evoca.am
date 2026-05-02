@@ -16,9 +16,9 @@ const Hipotek: React.FC = () => {
     { name: 'Գրավով ապահովված սպառողական վարկեր', path: '/grav' },
     { name: 'Անգրավ սպառողական վարկեր', path: '/angrav' },
     { name: 'Հիփոթեքային վարկեր', path: '/hipotek' },
-    { name: 'Ավտովարկ', path: '/varker/avto' },
-    { name: 'Լիզինգ', path: '/varker/leasing' },
-    { name: 'Օնլայն վարկեր', path: '/varker/online' }
+    { name: 'Ավտովարկ', path: '/avto' },
+    { name: 'Լիզինգ', path: '/leasing' },
+    { name: 'Օնլայն վարկեր', path: '/online' }
   ];
 
   return (

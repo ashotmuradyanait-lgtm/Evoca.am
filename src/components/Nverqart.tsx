@@ -49,8 +49,8 @@ const Nverqart: React.FC = () => {
           {[
             { name: 'Բոլորը', path: '/qarter' },
             { name: 'Պրեմիում', path: '/premium' },
-            { name: 'Նվեր քարտեր', path: '/cards/gift-cards' },
-            { name: 'Թվային քարտեր', path: '/cards/digital-cards' }
+            { name: 'Նվեր քարտեր', path: '/nverqart' },
+            { name: 'Թվային քարտեր', path: '/tvayin' }
           ].map((tag) => (
             <NavLink
               key={tag.name}

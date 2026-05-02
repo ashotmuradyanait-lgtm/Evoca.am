@@ -53,7 +53,7 @@ const Qarter: React.FC = () => {
             {[
             { name: 'Պրեմիում', path: '/premium' },
             { name: 'Նվեր քարտեր', path: '/nverqart' },
-            { name: 'Թվային քարտեր', path: '/cards/digital-cards' }
+            { name: 'Թվային քարտեր', path: '' }
             ].map((tag) => (
             <Link 
                 key={tag.name} 

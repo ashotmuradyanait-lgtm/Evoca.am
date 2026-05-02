@@ -18,6 +18,7 @@ import Nverqart from "./components/Nverqart";
 import Biznes from "./components/Biznes";
 import Search from "./components/Search";
 import Qarter from "./components/Qarter";
+import Tvayin from "./components/Tvayin";
 import Premium from "./components/Premium";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -73,6 +74,7 @@ const App: React.FC = () => {
           <Route path="/erku" element={<Erku />} />
           <Route path="/premium" element={<Premium />} />
           <Route path="/nverqart" element={<Nverqart />} />
+          <Route path="/tvayin" element={<Tvayin />} />
         </Routes>
       </main>
 

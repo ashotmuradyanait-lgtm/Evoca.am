@@ -44,24 +44,22 @@ const Premium: React.FC = () => {
 
         <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Պրեմիում</h1>
 
-        {/* Ֆիլտրների հատվածը՝ թարմացված isActive տրամաբանությամբ */}
         <div className="flex flex-wrap items-center gap-3 mb-12">
           {[
             { name: 'Բոլորը', path: '/qarter' },
             { name: 'Պրեմիում', path: '/premium' },
-            { name: 'Նվեր քարտեր', path: '/cards/gift-cards' },
-            { name: 'Թվային քարտեր', path: '/cards/digital-cards' }
+            { name: 'Նվեր քարտեր', path: '/nverqart' },
+            { name: 'Թվային քարտեր', path: '/tvayin' }
           ].map((tag) => (
             <NavLink
               key={tag.name}
               to={tag.path}
-              // end={true} միայն "Բոլորը" կոճակի համար, որպեսզի այն չլինի ակտիվ մյուս էջերում
               end={tag.path === '/qarter'}
               className={({ isActive }) =>
                 `px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors inline-block text-center ${
                   isActive
-                    ? 'bg-[#7122e2] text-white' // Ակտիվ վիճակ
-                    : 'bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white' // Ոչ ակտիվ
+                    ? 'bg-[#7122e2] text-white' 
+                    : 'bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white' 
                 }`
               }
             >
