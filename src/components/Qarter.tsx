@@ -5,7 +5,7 @@ import Menu from '../pages/Menu';
 const Qarter: React.FC = () => {
      const subMenuItems = [
     { name: 'Քարտեր', path: '' },
-    { name: 'Քարտերի տրամադրում և սպասարկում', path: '' },
+    { name: 'Քարտերի տրամադրում և սպասարկում', path: '/spasarkum' },
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '' },
     { name: 'Evoca Benefits', path: '' }
   ];    
