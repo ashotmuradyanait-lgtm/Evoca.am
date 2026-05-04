@@ -20,7 +20,7 @@ function Menu() {
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Փոխանցումներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթեր</p>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</p>
+        <Link to="/salary" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</Link>
         <Link to="/evocatouch" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</Link>
       </nav>
       <Link to="/evocaonline" className="px-20">

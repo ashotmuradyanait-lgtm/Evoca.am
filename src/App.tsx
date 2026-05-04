@@ -26,6 +26,8 @@ import Pay from "./components/Pay";
 import Spasarkum from "./components/Spasarkum";
 import Social from "./components/Social";
 import Bank from "./components/Bank";
+import Salary from "./components/Salary";
+import Providers from "./components/Providers";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -87,6 +89,8 @@ const App: React.FC = () => {
           <Route path="/pay" element={<Pay />} />
           <Route path="/spasarkum" element={<Spasarkum />} />
           <Route path="/social" element={<Social />} />
+          <Route path="/salary" element={<Salary />} />
+          <Route path="/providers" element={<Providers />} />
         </Routes>
       </main>
 

@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'Անհատ', path: '/' },
     { name: 'Բիզնես', path: '/biznes' },
-    { name: 'Ակնթարթային վճարումներ', path: '/payments' },
+    { name: 'Ակնթարթային վճարումներ', path: '/providers' },
     { name: 'Մեր մասին', path: '/about' },
     { name: 'Նորություններ', path: '/news' },
     { name: 'Բլոգ', path: '/blog' },
