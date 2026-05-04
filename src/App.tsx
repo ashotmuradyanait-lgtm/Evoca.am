@@ -14,6 +14,7 @@ import Nyut from "./components/Nyut";
 import Hipotek from "./components/Hipotek";
 import Evocaonline from "./components/Evocaonline";
 import Avto from "./components/Avto";
+import Trans from "./components/Trans";
 import Nverqart from "./components/Nverqart";
 import Biznes from "./components/Biznes";
 import Search from "./components/Search";
@@ -91,6 +92,7 @@ const App: React.FC = () => {
           <Route path="/social" element={<Social />} />
           <Route path="/salary" element={<Salary />} />
           <Route path="/providers" element={<Providers />} />
+          <Route path="/trans" element={<Trans />} />
         </Routes>
       </main>
 
