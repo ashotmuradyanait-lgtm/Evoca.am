@@ -13,6 +13,22 @@ const Spasarkum: React.FC = () => {
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
       <Menu />
       <div className="w-full bg-white">
+        <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
+                 <div className="flex flex-col gap-1">
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/fb-icon.png" alt="Facebook" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/twitter-icon.png" alt="Twitter" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold font-serif italic">
+                    <img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" alt="LinkedIn" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" alt="Pinterest" />
+                  </Link>
+                </div>
+              </div>
         <div className="w-full bg-[#6c2db5] text-white ">
           <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
             {subMenuItems.map((item) => (
@@ -39,55 +55,323 @@ const Spasarkum: React.FC = () => {
           <span>›</span>
           <span className="cursor-pointer hover:text-gray-600">Քարտեր</span>
           <span>›</span>
-          <span className="text-gray-800">Քարտեր</span>
+          <span className="text-gray-800">Քարտերի տրամադրում և սպասարկում</span>
         </div>
 
-        <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Պրեմիում</h1>
+        <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Քարտերի տրամադրում և սպասարկում</h1>
 
-        <div className="flex flex-wrap items-center gap-3 mb-12">
-          {[
-            { name: 'Բոլորը', path: '/qarter' },
-            { name: 'Պրեմիում', path: '/premium' },
-            { name: 'Նվեր քարտեր', path: '/nverqart' },
-            { name: 'Թվային քարտեր', path: '/tvayin' }
-          ].map((tag) => (
-            <NavLink
-              key={tag.name}
-              to={tag.path}
-              end={tag.path === '/qarter'}
-              className={({ isActive }) =>
-                `px-6 py-2.5 rounded-full font-medium text-[15px] transition-colors inline-block text-center ${
-                  isActive
-                    ? 'bg-[#7122e2] text-white' 
-                    : 'bg-[#f0f0f5] text-gray-800 hover:bg-[#7122e2] hover:text-white' 
-                }`
-              }
-            >
-              {tag.name}
-            </NavLink>
-          ))}
 
-        <Link to="/arca">
-          <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
-            <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
-          </button>
-        </Link>
-          <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-extrabold text-blue-900 italic transition-colors">
-            <img src="https://www.evoca.am/images-cache/menu/1/16137249251612/50x24.png" alt="" />
-          </button>
-        <Link to="nverqart">
-          <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold transition-colors flex items-center gap-[-4px]">
-            <img src="https://www.evoca.am/images-cache/menu/1/16137249504065/50x24.png" alt="" />
-          </button>
-        </Link>
-        <Link to="tvayin">
-          <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-red-600 transition-colors">
-            <img src="https://www.evoca.am/images-cache/menu/1/17288945044615/50x24.png" alt="" />
-          </button>
-        </Link>
-        </div>
 
+       <div className="max-w-[1400px] mx-auto px-6 mt-12 flex flex-col gap-3">
+  <h2 className="text-[28px] font-extrabold text-[#222] mb-3">Փաստաթղթեր</h2>
+
+  
+  <a 
+    href="https://www.evoca.am/files/global_files/1/pention-cards.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
     </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Կենսաթոշակային քարտեր</span>
+  </a>
+
+  
+  <a 
+    href="https://www.evoca.am/files/global_files/1/evoca-gift-tariffs.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Evoca Gift քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+ 
+  <a 
+    href="https://www.evoca.am/files/global_files/1/bank-account-19-02-26.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Տեղեկատվական ամփոփագիր (Բանկային հաշիվներ) 19.02.26</span>
+  </a>
+
+  
+  <a 
+    href="https://www.evoca.am/files/global_files/1/visa-digital-03-25.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Visa Digital քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  
+  <a 
+    href="https://www.evoca.am/files/global_files/1/digital-cards-terms-and-conditions.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">«ԷՎՈԿԱԲԱՆԿ» ԲԲԸ վճարային քարտերի կիրառմամբ EvocaTouch բջջային հավելվածով թվայնաց...</span>
+  </a>
+
+  
+  <a 
+    href="https://www.evoca.am/files/global_files/1/visa-infinite2024.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Visa Infinite քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/union-pay-17-03-26.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">UnionPay Business Platinum քարտեր (Տեղեկատվական ամփոփոգիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/union-pay-gold-17-03-26.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">UnionPay UPI Gold քարտեր (Տեղեկատվական ամփոփոգիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/vision-03-2026.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Visa Vision քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/mastercard-world.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Mastercard World Digital (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/dalma-gift-cards.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Dalma Gift քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+   <a 
+    href="https://www.evoca.am/files/global_files/1/garage-master-mall-gifts.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Garage Masters' Mall Gift քարտեր</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/digital-gift-cards.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Digital Gift քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/rio-gift-cards.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Rio Gift քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/mbg-gift-cards.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">MBG Gift քարտեր (Տեղեկատվական ամփոփագիր)</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/card-operation-procedure-2026.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Վճարային քարտերի տրամադրման և սպասարկման պայմաններ 01.02.2026թ</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/provision-terms-for-general-banking-services-arm.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Համալիր բանկային ծառայությունների մատուցման պայմաններ 16.05.2025</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/credit-and-debit-cards-17-03-26.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Դեբետային և վարկային քարտեր (Տեղեկատվական ամփոփագիր) 17.03.2026</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/evoca-travel-17-03-26.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">Evoca Travel (Տեղեկատվական ամփոփագիր) 17.03.2026</span>
+  </a>
+
+  <a 
+    href="https://www.evoca.am/files/global_files/1/16169977265869.pdf" 
+    className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-5 group cursor-pointer"
+  >
+    <div className="mr-4 text-[#6c2db5]">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <circle cx="16" cy="18" r="3" />
+        <path d="m14 17 2 2 2-2" />
+      </svg>
+    </div>
+    <span className="text-[16px] font-bold text-[#222] tracking-tight">USSD և 3D Secure ծառայություն</span>
+  </a>
+</div>
+</div>
     </div>
   )
 }

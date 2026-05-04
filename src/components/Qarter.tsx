@@ -13,6 +13,8 @@ const Qarter: React.FC = () => {
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
         <Menu />
       <div className="w-full bg-white">
+        <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
+              </div>
       <div className="w-full bg-[#6c2db5] text-white ">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (

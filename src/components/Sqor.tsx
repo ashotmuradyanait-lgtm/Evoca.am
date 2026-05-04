@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Menu from '../pages/Menu';
 
 const Sqor: React.FC = () => {
   const subMenuItems = [
@@ -10,15 +11,23 @@ const Sqor: React.FC = () => {
 
   return (
     <div className="w-full bg-white font-sans relative">
-      
+      <Menu/>
      
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
-        <div className="flex flex-col gap-6">
-          <Link to="#" className="text-gray-400 hover:text-[#6c2db5] transition-all text-center font-bold">f</Link>
-          <Link to="#" className="text-gray-400 hover:text-[#6c2db5] transition-all text-center font-bold">t</Link>
-          <Link to="#" className="text-gray-400 hover:text-[#6c2db5] transition-all text-center font-bold font-serif italic">in</Link>
-          <Link to="#" className="text-gray-400 hover:text-[#6c2db5] transition-all text-center font-bold">p</Link>
-        </div>
+        <div className="flex flex-col gap-1">
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/fb-icon.png" alt="Facebook" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/twitter-icon.png" alt="Twitter" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold font-serif italic">
+                    <img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" alt="LinkedIn" />
+                  </Link>
+                  <Link to="#" className="text-gray-400 hover:text-gray-200 transition-all text-center font-bold">
+                    <img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" alt="Pinterest" />
+                  </Link>
+          </div>
       </div>
 
      
