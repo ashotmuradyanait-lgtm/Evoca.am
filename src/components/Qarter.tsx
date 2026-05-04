@@ -6,7 +6,7 @@ const Qarter: React.FC = () => {
      const subMenuItems = [
     { name: 'Քարտեր', path: '' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '/spasarkum' },
-    { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '' },
+    { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '/social' },
     { name: 'Evoca Benefits', path: '' }
   ];    
   return (

@@ -55,7 +55,6 @@ const Video = () => {
             </div>
           </div>
 
-          {/* 3. Content Section */}
           <div className="lg:col-span-4 space-y-6 md:space-y-8 text-white text-center lg:text-left order-1 lg:order-3">
             <div className="space-y-3 md:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-[1.1] tracking-tight">

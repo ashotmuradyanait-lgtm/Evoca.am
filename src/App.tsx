@@ -24,6 +24,7 @@ import Visa from "./components/Visa";
 import Arca from "./components/Arca";
 import Pay from "./components/Pay";
 import Spasarkum from "./components/Spasarkum";
+import Social from "./components/Social";
 import Bank from "./components/Bank";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -85,6 +86,7 @@ const App: React.FC = () => {
           <Route path="/bank" element={<Bank />} />
           <Route path="/pay" element={<Pay />} />
           <Route path="/spasarkum" element={<Spasarkum />} />
+          <Route path="/social" element={<Social />} />
         </Routes>
       </main>
 
