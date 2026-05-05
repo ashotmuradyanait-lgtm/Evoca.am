@@ -106,47 +106,14 @@ const Karevor: React.FC = () => {
           <span className="text-gray-800">Կարևոր տեղեկատվություն</span>
         </div>
 
-        <h1 className="text-4xl font-extrabold mb-10 text-[#222]">Կարևոր տեղեկատվություն</h1>
 
 
-            <div className="w-full bg-white pb-20">
-      <Menu />
       
-      {/* Sub Header */}
-      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto">
-        <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-4 md:px-6 min-w-max">
-          {subMenuItems.map((item) => (
-            <NavLink 
-              key={item.name}
-              to={item.path}
-              className={({ isActive }) => 
-                `h-full flex items-center px-4 md:px-8 transition-colors text-[14px] font-medium
-                ${isActive || item.name === 'Կարևոր տեղեկատվություն' ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
-              }
-            >
-              {item.name}
-            </NavLink>
-          ))}
-        </div>
-      </div>
-
-      {/* Breadcrumbs */}
-      <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[13px]">
-        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
-        <span>›</span>
-        <span className="cursor-pointer hover:text-gray-600">Անհատ</span>
-        <span>›</span>
-        <span className="cursor-pointer hover:text-gray-600">Ավանդներ</span>
-        <span>›</span>
-        <span className="text-gray-800">Կարևոր տեղեկատվություն</span>
-      </div>
-
-      {/* Page Title */}
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 mb-8 md:mb-12">
         <h1 className="text-[32px] md:text-[42px] font-bold text-[#1a1a1a]">Կարևոր տեղեկատվություն</h1>
       </div>
 
-      {/* General Provisions Section */}
+      
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 mb-12">
         <h2 className="text-[24px] md:text-[28px] font-bold text-[#1a1a1a] mb-6">Ընդհանուր դրույթներ</h2>
         <div className="space-y-4 text-gray-700 text-[15px] leading-relaxed">
@@ -158,7 +125,7 @@ const Karevor: React.FC = () => {
         </div>
       </div>
 
-      {/* Accordion Section */}
+     
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 mb-16">
         <div className="border-t border-gray-200">
           {accordionData.map((item, index) => (
@@ -184,7 +151,6 @@ const Karevor: React.FC = () => {
         </div>
       </div>
 
-      {/* Documents Section */}
       <div className="max-w-[1400px] mx-auto px-4 md:px-6">
         <h2 className="text-[24px] md:text-[28px] font-bold text-[#1a1a1a] mb-6">Փաստաթղթեր</h2>
         <div className="flex flex-col gap-4">
@@ -195,7 +161,7 @@ const Karevor: React.FC = () => {
               className="flex items-center gap-4 bg-white border border-gray-100 rounded-[16px] p-4 md:p-5 hover:shadow-md transition-shadow group"
             >
               <div className="w-10 h-10 rounded-full bg-[#f2ecf9] flex items-center justify-center shrink-0 group-hover:bg-[#6c2db5] transition-colors">
-                {/* Document SVG Icon */}
+              
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#6c2db5] group-hover:text-white transition-colors">
                   <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -214,7 +180,7 @@ const Karevor: React.FC = () => {
 
     </div>
         </div>
-        </div>
+        
   )
 }
 export default Karevor
