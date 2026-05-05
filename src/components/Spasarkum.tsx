@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
@@ -8,6 +9,8 @@ const Spasarkum: React.FC = () => {
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '/social' },
     { name: 'Evoca Benefits', path: '' }
   ];
+
+  
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">

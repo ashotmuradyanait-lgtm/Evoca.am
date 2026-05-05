@@ -31,6 +31,7 @@ import Social from "./components/Social";
 import Bank from "./components/Bank";
 import Avandner from "./components/Avandner";
 import Salary from "./components/Salary";
+import Karevor from "./components/Karevor";
 import Providers from "./components/Providers";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -97,6 +98,7 @@ const App: React.FC = () => {
           <Route path="/providers" element={<Providers />} />
           <Route path="/trans" element={<Trans />} />
           <Route path="/avandner" element={<Avandner />} />
+          <Route path="/karevor" element={<Karevor />} />
         </Routes>
       </main>
 
