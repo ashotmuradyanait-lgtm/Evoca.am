@@ -1,5 +1,7 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom"; // Ավելացրու սա
+import { Routes, Route } from "react-router-dom"; 
+import { useTranslation } from 'react-i18next'; // 1. Ներմուծում ենք useTranslation
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Varker from "./components/Varker";
@@ -27,6 +29,7 @@ import Pay from "./components/Pay";
 import Spasarkum from "./components/Spasarkum";
 import Social from "./components/Social";
 import Bank from "./components/Bank";
+import Avandner from "./components/Avandner";
 import Salary from "./components/Salary";
 import Providers from "./components/Providers";
 import Menu from "./pages/Menu";
@@ -42,16 +45,17 @@ import Money from "./pages/Money";
 import Reviews from "./pages/Reviews";
 
 const App: React.FC = () => {
+  const { t } = useTranslation(); 
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
 
       <main className="flex-grow">
         <Routes>
-         
           <Route path="/" element={
             <>
-             <Menu />
+              <Menu />
               <HeroSlider />
               <Anhat />
               <EvocaBackground />
@@ -65,7 +69,6 @@ const App: React.FC = () => {
             </>
           } />
 
-          
           <Route path="/varker" element={<Varker />} />
           <Route path="/grav" element={<Grav />} />
           <Route path="/angrav" element={<Angrav />} />
@@ -93,6 +96,7 @@ const App: React.FC = () => {
           <Route path="/salary" element={<Salary />} />
           <Route path="/providers" element={<Providers />} />
           <Route path="/trans" element={<Trans />} />
+          <Route path="/avandner" element={<Avandner />} />
         </Routes>
       </main>
 

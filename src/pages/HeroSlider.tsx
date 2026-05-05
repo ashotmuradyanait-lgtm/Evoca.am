@@ -8,7 +8,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-// Սահմանում ենք սլայդի տիպը, որ սխալներ չլինեն
 interface Slide {
   title: string;
   description: string;
@@ -118,44 +117,43 @@ const HeroSlider = () => {
         onSlideChange={(s: SwiperClass) => setActiveIndex(s.realIndex)}
         navigation={{ nextEl: '.nav-next', prevEl: '.nav-prev' }}
         pagination={{ clickable: true, el: '.custom-dots' }}
-        className="w-full h-[85vh] rounded-bl-[120px] md:rounded-bl-[220px] transition-colors duration-1000"
+        className="w-full h-[100vh] lg:h-[85vh] rounded-bl-[60px] md:rounded-bl-[220px] transition-colors duration-1000"
         style={{ backgroundColor: currentSlide.bgColor }}
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             {({ isActive }) => (
-              <div className="w-full h-full flex items-center justify-center px-6 md:px-24">
-                <div className="max-w-[1440px] w-full flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="w-full h-full flex items-center justify-center px-6 md:px-24 pt-20 lg:pt-0">
+                <div className="max-w-[1440px] w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
                   
-                  {/* Content */}
-                  <div className={`flex-1 z-20 text-center md:text-left transition-all duration-1000 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                  <div className={`flex-1 z-20 text-center lg:text-left transition-all duration-1000 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h3 
-                      className="text-4xl md:text-[45px] lg:text-[28px] font-semibold leading-[1.1] mb-6 uppercase tracking-tighter"
+                      className="text-3xl md:text-4xl lg:text-[45px] font-semibold leading-[1.1] mb-4 lg:mb-6 uppercase tracking-tighter"
                       style={{ color: slide.uiColor }}
                     >
                       {slide.title}
                     </h3>
                     
                     <p 
-                      className="text-lg md:text-xl mb-12 max-w-xl font-normal leading-relaxed tracking-tight"
+                      className="text-base md:text-lg lg:text-xl mb-8 lg:mb-12 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed tracking-tight"
                       style={{ color: slide.uiColor, opacity: 0.8 }}
                     >
                       {slide.description}
                     </p>
 
                     <button 
-                      className="px-14 py-4 rounded-full font-black text-[15px] uppercase shadow-2xl transition-all hover:scale-105 active:scale-95"
+                      className="px-10 lg:px-14 py-3 lg:py-4 rounded-full font-black text-[13px] lg:text-[15px] uppercase shadow-2xl transition-all hover:scale-105 active:scale-95 mb-10 lg:mb-0"
                       style={{ backgroundColor: slide.btnBg, color: slide.btnText }}
                     >
                       {slide.buttonText}
                     </button>
                   </div>
 
-                  {/* Image */}
-                  <div className={`flex-1 flex justify-center md:justify-end transition-all duration-1000 ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                 
+                  <div className={`flex-1 flex justify-center lg:justify-end transition-all duration-1000 ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                     <img 
                       src={slide.image} 
-                      className="max-h-[350px] md:max-h-[500px] lg:max-h-[550px] w-auto object-contain drop-shadow-2xl" 
+                      className="max-h-[250px] sm:max-h-[350px] md:max-h-[450px] lg:max-h-[550px] w-auto object-contain drop-shadow-2xl" 
                       alt={slide.title} 
                     />
                   </div>
@@ -165,15 +163,14 @@ const HeroSlider = () => {
           </SwiperSlide>
         ))}
 
-        {/* Buttons & Pagination */}
-        <div className="absolute bottom-12 left-0 w-full z-50 flex justify-center">
-          <div className="flex items-center gap-8">
+        <div className="absolute bottom-6 lg:bottom-12 left-0 w-full z-50 flex justify-center">
+          <div className="flex items-center gap-4 lg:gap-8">
             <button className="nav-prev cursor-pointer transition-transform hover:scale-125 p-2" style={{ color: currentSlide.uiColor }}>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <svg width="24" height="24" className="lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             </button>
-            <div className="custom-dots flex gap-4"></div>
+            <div className="custom-dots flex gap-2 lg:gap-4"></div>
             <button className="nav-next cursor-pointer transition-transform hover:scale-125 p-2" style={{ color: currentSlide.uiColor }}>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7 7 7-7-7-7"/></svg>
+              <svg width="24" height="24" className="lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7 7 7-7-7-7"/></svg>
             </button>
           </div>
         </div>

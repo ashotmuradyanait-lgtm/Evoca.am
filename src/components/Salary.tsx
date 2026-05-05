@@ -2,6 +2,7 @@
 import {Link, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import Menu from '../pages/Menu';
+import { useTranslation } from 'react-i18next';
 
 const Salary: React.FC = () => { 
    const [openFAQ, setOpenFAQ] = useState<number | null>(null);
