@@ -16,7 +16,7 @@ function Menu() {
         <Link to="/varker" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
         <Link to="/qarter" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Քարտեր</Link>
         <Link to="/avandner" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
+        <Link to="/hashivner" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Փոխանցումներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթեր</p>
         <Link to="/salary" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</Link>
