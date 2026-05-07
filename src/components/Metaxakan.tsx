@@ -41,8 +41,8 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
 const Metaxakan: React.FC = () => {
   const subMenuItems = [
     { name: 'Հաշիվների բացում և սպասարկում', path: '/hashivner' },
-    { name: 'Առարկայազուրկ մետաղական հաշիվներ', path: '/metaxakan' },
-    { name: 'Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում', path: '/remote' }
+    { name: 'Առարկայազուրկ մետաղական հաշիվներ', path: '' },
+    { name: 'Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում', path: '/rezident' }
   ];
 
   return (

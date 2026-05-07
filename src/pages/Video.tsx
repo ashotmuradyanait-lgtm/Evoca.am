@@ -1,11 +1,12 @@
+import React from 'react';
+
 const Video = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-hidden font-sans bg-gray-50">
       <div className="relative w-full bg-[#6600cc] min-h-[600px] lg:min-h-[650px] rounded-tl-[60px] sm:rounded-tl-[120px] rounded-br-[60px] sm:rounded-br-[120px] flex items-center p-6 sm:p-10 md:p-16 shadow-[0_20px_50px_rgba(102,0,204,0.3)] overflow-hidden">
         
-      
+        {/* Background Decorations */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-         
           <div className="hidden md:block absolute top-10 left-[5%] w-12 h-12 bg-pink-400/20 rounded-lg rotate-12 animate-bounce" style={{ animationDuration: '3s' }}></div>
           <div className="absolute top-[60%] left-[5%] w-8 h-8 bg-pink-500/30 rounded rotate-45 animate-pulse" style={{ animationDuration: '4s' }}></div>
           <div className="absolute bottom-20 right-[5%] w-12 h-12 md:w-16 md:h-16 bg-pink-300/20 rounded-2xl animate-spin" style={{ animationDuration: '8s' }}></div>
@@ -13,15 +14,14 @@ const Video = () => {
           <div className="hidden lg:block absolute top-[15%] right-[25%] w-10 h-10 bg-amber-400/20 rounded-lg animate-bounce" style={{ animationDuration: '5.5s' }}></div>
           <div className="absolute bottom-[5%] left-[10%] w-10 h-10 bg-amber-300/20 rounded-xl rotate-12 animate-pulse" style={{ animationDuration: '3.5s' }}></div>
 
-          
           <div className="absolute -top-24 -left-24 w-64 h-64 md:w-96 md:h-96 bg-pink-500/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse"></div>
           <div className="absolute -bottom-24 -right-24 w-64 h-64 md:w-96 md:h-96 bg-amber-400/15 rounded-full blur-[80px] md:blur-[120px] animate-pulse" style={{ animationDuration: '8s' }}></div>
         </div>
 
-      
+        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full relative z-10">
           
-        
+          {/* Laptop Video Mockup */}
           <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[550px]">
               <div className="bg-black p-[1.5%] rounded-t-xl border-x-[3px] md:border-x-[6px] border-t-[3px] md:border-t-[6px] border-[#222] shadow-2xl">
@@ -40,7 +40,7 @@ const Video = () => {
             </div>
           </div>
 
-       
+          {/* Phone Mockup */}
           <div className="hidden sm:flex lg:col-span-3 justify-center lg:pt-20 order-3 lg:order-2">
             <div className="relative w-32 h-[260px] md:w-44 md:h-[350px] bg-black rounded-[25px] md:rounded-[30px] border-[5px] md:border-[7px] border-[#1a1a1a] overflow-hidden shadow-2xl">
               <img 
@@ -55,6 +55,7 @@ const Video = () => {
             </div>
           </div>
 
+          {/* Text & Actions */}
           <div className="lg:col-span-4 space-y-6 md:space-y-8 text-white text-center lg:text-left order-1 lg:order-3">
             <div className="space-y-3 md:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-[1.1] tracking-tight">
@@ -105,6 +106,27 @@ const Video = () => {
           </div>
         </div>
       </div>
+
+      {/* 🛑 MEDIA QUERIES (Ավելացված է միայն ադապտիվության համար) 🛑 */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 1024px) {
+          .grid {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+          }
+          h1 { font-size: 2.2rem !important; }
+          .lg\\:col-span-5 { width: 100%; order: 2; }
+          .lg\\:col-span-4 { width: 100%; order: 1; }
+          .lg\\:col-span-3 { display: none; }
+        }
+        @media (max-width: 640px) {
+          .relative.w-full { min-h-fit !important; padding: 2rem 1rem !important; }
+          h1 { font-size: 1.8rem !important; }
+          button { width: 100%; padding: 1rem !important; }
+          .flex-col.items-center { gap: 1.5rem !important; }
+        }
+      `}} />
     </div>
   );
 };

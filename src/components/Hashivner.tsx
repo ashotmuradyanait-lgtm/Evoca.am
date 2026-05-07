@@ -42,7 +42,7 @@ const Hashivner: React.FC = () => {
   const subMenuItems = [
     { name: 'Հաշիվների բացում և սպասարկում', path: '' },
     { name: 'Առարկայազուրկ մետաղական հաշիվներ', path: '/metaxakan' },
-    { name: 'Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում', path: '' }
+    { name: 'Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում', path: '/rezident' }
   ];
 
   return (
@@ -79,7 +79,6 @@ const Hashivner: React.FC = () => {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 pb-20">
-        {/* Floating Social Icons */}
         <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
           <div className="flex flex-col gap-3">
             <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>

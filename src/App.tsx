@@ -36,6 +36,7 @@ import Ereqgic from "./components/Ereqgic";
 import Providers from "./components/Providers";
 import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
+import Rezident from "./components/Rezident";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -105,6 +106,7 @@ const App: React.FC = () => {
           <Route path="/ereqgic" element={<Ereqgic />} />
           <Route path="/hashivner" element={<Hashivner />} />
           <Route path="/metaxakan" element={<Metaxakan />} />
+          <Route path="/rezident" element={<Rezident />} />
         </Routes>
       </main>
 
