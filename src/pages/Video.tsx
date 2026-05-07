@@ -40,7 +40,7 @@ const Video = () => {
             </div>
           </div>
 
-          {/* 2. Phone Section - Թաքցված է փոքր mobile-ների վրա, որ տեղ ազատվի */}
+       
           <div className="hidden sm:flex lg:col-span-3 justify-center lg:pt-20 order-3 lg:order-2">
             <div className="relative w-32 h-[260px] md:w-44 md:h-[350px] bg-black rounded-[25px] md:rounded-[30px] border-[5px] md:border-[7px] border-[#1a1a1a] overflow-hidden shadow-2xl">
               <img 

@@ -34,6 +34,7 @@ import Salary from "./components/Salary";
 import Karevor from "./components/Karevor";
 import Ereqgic from "./components/Ereqgic";
 import Providers from "./components/Providers";
+import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -103,6 +104,7 @@ const App: React.FC = () => {
           <Route path="/karevor" element={<Karevor />} />
           <Route path="/ereqgic" element={<Ereqgic />} />
           <Route path="/hashivner" element={<Hashivner />} />
+          <Route path="/metaxakan" element={<Metaxakan />} />
         </Routes>
       </main>
 
