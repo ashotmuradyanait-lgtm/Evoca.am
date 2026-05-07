@@ -32,7 +32,9 @@ import Bank from "./components/Bank";
 import Avandner from "./components/Avandner";
 import Salary from "./components/Salary";
 import Karevor from "./components/Karevor";
+import Ereqgic from "./components/Ereqgic";
 import Providers from "./components/Providers";
+import Hashivner from "./components/Hashivner";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -99,6 +101,8 @@ const App: React.FC = () => {
           <Route path="/trans" element={<Trans />} />
           <Route path="/avandner" element={<Avandner />} />
           <Route path="/karevor" element={<Karevor />} />
+          <Route path="/ereqgic" element={<Ereqgic />} />
+          <Route path="/hashivner" element={<Hashivner />} />
         </Routes>
       </main>
 

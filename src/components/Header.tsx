@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
               </svg>
             </button>
-
+          
             <button className="hover:text-gray-600 transition-colors outline-none">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10" />
@@ -88,12 +88,13 @@ const Header: React.FC = () => {
               </button>
             </Link>
 
-          
+          <Link to="/ereqgic">
             <button className="hover:text-[#6c2db5] transition-colors flex flex-col items-end gap-1 group outline-none ml-1">
               <div className="w-6 h-[2px] bg-current"></div>
               <div className="w-4 h-[2px] bg-current transition-all group-hover:w-6"></div>
               <div className="w-6 h-[2px] bg-current"></div>
             </button>
+          </Link>
           </div>
         </div>
       </div>
