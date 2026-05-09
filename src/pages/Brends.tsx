@@ -1,6 +1,4 @@
-
-
-const Partners = () => {
+const Brends = () => {
   const partners = [
     "https://www.evoca.am/images-cache/partners/1/16104594273635/185x80_grayscale.png",
     "https://www.evoca.am/images-cache/partners/1/1610459808737/185x80_grayscale.png",
@@ -17,10 +15,14 @@ const Partners = () => {
   const doubledPartners = [...partners, ...partners, ...partners];
 
   return (
-    <section className="py-32 bg-white overflow-hidden font-sans">
+    <section className="py-32 bg-white overflow-hidden font-sans relative">
+      
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-50 rounded-full blur-[120px] -z-10 opacity-60"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-50 rounded-full blur-[100px] -z-10 opacity-50"></div>
+
       <div className="max-w-[1500px] mx-auto px-10 relative">
         
-        {/* 6 ՀԱՏ ԴԵՂԻՆ ՕՂԱԿՆԵՐ - Դիրքավորված ձեռքի հետևում (Կենտրոն-ձախ) */}
+       
         <div className="absolute left-[33%] top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-0 scale-[0.7] origin-center">
           <div className="relative w-[750px] h-[750px] flex items-center justify-center">
             <div className="absolute inset-0 border-[10px] border-dotted border-yellow-400/40 rounded-full animate-spin-slow"></div>
@@ -34,7 +36,7 @@ const Partners = () => {
 
         <div className="flex flex-col lg:flex-row items-center justify-between relative z-10">
           
-          {/* 1. ՏԵՔՍՏԱՅԻՆ ՄԱՍ (Ձախ կողմում) */}
+         
           <div className="lg:w-[400px] shrink-0 space-y-8 z-30">
             <h2 className="text-[44px] font-black text-[#333333] tracking-tight leading-tight">
               Գործընկերներ
@@ -62,7 +64,6 @@ const Partners = () => {
           <div className="w-full lg:w-[65%] xl:w-[70%] mt-12 lg:mt-0 lg:ml-auto relative z-20 h-full">
             <div className="bg-white/85 backdrop-blur-sm rounded-[50px] shadow-[0_15px_60px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden relative">
               
-          
               <button className="absolute inset-y-0 left-4 flex items-center z-50 text-[#6600cc] text-4xl font-light hover:scale-110 transition-transform">‹</button>
               <button className="absolute inset-y-0 right-4 flex items-center z-50 text-[#6600cc] text-4xl font-light hover:scale-110 transition-transform">›</button>
 
@@ -115,4 +116,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default Brends;

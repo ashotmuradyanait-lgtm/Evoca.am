@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 interface PaymentSchedule {
   month: number;
   remainingPrincipal: number;
@@ -13,7 +12,6 @@ const Calculator: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'loan' | 'deposit'>('loan');
   const [showResults, setShowResults] = useState(false);
   
-  
   const [amount, setAmount] = useState<number>(13340000);
   const [rate, setRate] = useState<number>(1);
   const [term, setTerm] = useState<number>(36); 
@@ -21,12 +19,10 @@ const Calculator: React.FC = () => {
   const [schedule, setSchedule] = useState<PaymentSchedule[]>([]);
   const [totalPayment, setTotalPayment] = useState<number>(0);
 
- 
   const dailyInterest = amount > 0 && rate > 0 ? (amount * (rate / 100)) / 365 : 0;
   const totalDepositInterest = dailyInterest * (activeTab === 'deposit' ? term : 0);
   const netIncome = totalDepositInterest * 0.9;
 
- 
   const calculateLoan = () => {
     if (amount <= 0 || rate <= 0 || term <= 0) return;
 
@@ -76,7 +72,6 @@ const Calculator: React.FC = () => {
     return Math.round(num).toLocaleString('en-US').replace(/,/g, ' ');
   };
 
-  // Ֆունկցիա՝ սլայդերի տոկոսը հաշվելու համար (եռանկյան դիրքի համար)
   const getPercent = (val: number, max: number) => (val / max) * 100;
 
   if (showResults) {
@@ -90,7 +85,13 @@ const Calculator: React.FC = () => {
             ← ՀԵՏ ԳՆԱԼ
           </button>
           
-          <h2 className="text-[28px] font-bold mb-8">Վարկի մարման գրաֆիկ</h2>
+          <div className="flex justify-between items-center mb-8">
+             <h2 className="text-[28px] font-bold">Վարկի մարման գրաֆիկ</h2>
+             {/* ՄԵԴԻԱ: Լոգո կամ փոքրիկ պատկեր արդյունքների էջում */}
+             <div className="w-12 h-12 bg-[#6001D3]/10 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#6001D3] rounded-sm rotate-45" />
+             </div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 bg-[#F9F9FB] p-8 rounded-2xl border border-[#F1F1F4]">
             <div>
@@ -140,19 +141,28 @@ const Calculator: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#FDFCFE] flex flex-col items-center p-6 select-none" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <div className="w-full max-w-[940px] bg-white rounded-[12px] shadow-[0_2px_15px_rgba(0,0,0,0.03)] p-10 border border-[#F1F1F4]">
+      <div className="w-full max-w-[940px] bg-white rounded-[12px] shadow-[0_2px_15px_rgba(0,0,0,0.03)] p-10 border border-[#F1F1F4] relative overflow-hidden">
         
-        <h1 className="text-[32px] font-bold text-[#1A1A1A] mb-8 tracking-tight">Հաշվիչներ</h1>
+        {/* ՄԵԴԻԱ: Ֆոնային դեկորատիվ էլեմենտ կամ նկար վերևի անկյունում */}
+        <div className="absolute top-[-20px] right-[-20px] w-40 h-40 bg-[#6001D3]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="flex justify-between items-start mb-8">
+            <h1 className="text-[32px] font-bold text-[#1A1A1A] tracking-tight">Հաշվիչներ</h1>
+            {/* ՄԵԴԻԱ: Այստեղ կարող ես դնել քո լոգոն կամ վիդեո/նկար (օրինակ՝ բանկի կամ ոսկու նկար) */}
+            <div className="hidden md:block w-24 h-12 bg-gray-100 rounded-lg flex items-center justify-center border border-dashed border-gray-300 text-[10px] text-gray-400">
+               MEDIA HERE
+            </div>
+        </div>
 
         <div className="flex mb-10 border-b border-[#F2F2F5]">
           <button 
-            onClick={() => { setActiveTab('loan'); }}
+            onClick={() => setActiveTab('loan')}
             className={`px-12 py-3.5 font-bold text-[15px] transition-all ${activeTab === 'loan' ? 'border-b-2 border-[#6001D3] text-[#1A1A1A]' : 'text-[#B8B8B8]'}`}
           >
             Վարկ
           </button>
           <button 
-            onClick={() => { setActiveTab('deposit'); }}
+            onClick={() => setActiveTab('deposit')}
             className={`px-12 py-3.5 font-bold text-[15px] transition-all ${activeTab === 'deposit' ? 'border-b-2 border-[#6001D3] text-[#1A1A1A]' : 'text-[#B8B8B8]'}`}
           >
             Ավանդ
@@ -161,7 +171,6 @@ const Calculator: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-7 flex flex-col gap-10">
-            {/* Գումար Input & Slider */}
             <div className="relative">
               <div className="flex flex-col border border-[#E0E0E0] rounded-lg px-4 py-2.5 bg-white focus-within:border-[#6001D3] mb-2">
                 <label className="text-[#828282] text-[11px] font-bold uppercase mb-1">{activeTab === 'loan' ? 'Վարկի գումար' : 'Ներդրվող գումար'}</label>
@@ -174,7 +183,6 @@ const Calculator: React.FC = () => {
               <div className="relative h-1 bg-[#EEEEEE] mx-1">
                 <div className="absolute top-0 left-0 h-full bg-[#6001D3]" style={{ width: `${getPercent(amount, 50000000)}%` }} />
                 <input type="range" min="0" max="50000000" value={amount} onChange={(e) => setAmount(Number(e.target.value))} className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-30" />
-                {/* Մանուշակագույն եռանկյունի */}
                 <div className="absolute top-1 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[10px] border-b-[#6001D3] z-20 pointer-events-none transition-all duration-75" style={{ left: `${getPercent(amount, 50000000)}%`, transform: 'translateX(-50%)' }} />
               </div>
               <div className="flex justify-between text-[11px] text-[#BDBDBD] mt-4 font-bold">
@@ -183,7 +191,6 @@ const Calculator: React.FC = () => {
               </div>
             </div>
 
-            {/* Տոկոս կամ Ժամկետ Slider */}
             <div className="relative">
               <div className="flex flex-col border border-[#E0E0E0] rounded-lg px-4 py-2.5 bg-white focus-within:border-[#6001D3] mb-2">
                 <label className="text-[#828282] text-[11px] font-bold uppercase mb-1">{activeTab === 'loan' ? 'Տարեկան տոկոսադրույք' : 'Ավանդի ժամկետ (օր)'}</label>
@@ -194,7 +201,6 @@ const Calculator: React.FC = () => {
               </div>
               
               <div className="relative h-1 bg-[#EEEEEE] mx-1">
-                {/* Դինամիկ Max արժեքը ըստ Tab-ի */}
                 {(() => {
                   const maxVal = activeTab === 'loan' ? 36 : 1095;
                   const currentVal = activeTab === 'loan' ? rate : term;
@@ -254,23 +260,28 @@ const Calculator: React.FC = () => {
                 <div>
                   <label className="text-[#828282] text-[10px] font-bold uppercase tracking-widest mb-4 block">Մարման ձև</label>
                   <div className="flex flex-row gap-6">
-                    <label className="flex items-center cursor-pointer gap-2" onClick={() => setRepaymentType('declining')}>
+                    <div className="flex items-center cursor-pointer gap-2" onClick={() => setRepaymentType('declining')}>
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${repaymentType === 'declining' ? 'border-[#6001D3]' : 'border-[#E0E0E0]'}`}>
                         {repaymentType === 'declining' && <div className="w-2.5 h-2.5 bg-[#6001D3] rounded-full" />}
                       </div>
                       <span className="text-[14px] font-bold text-[#1A1A1A]">Զսպանակաձև</span>
-                    </label>
-                    <label className="flex items-center cursor-pointer gap-2" onClick={() => setRepaymentType('annuity')}>
+                    </div>
+                    <div className="flex items-center cursor-pointer gap-2" onClick={() => setRepaymentType('annuity')}>
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${repaymentType === 'annuity' ? 'border-[#6001D3]' : 'border-[#E0E0E0]'}`}>
                         {repaymentType === 'annuity' && <div className="w-2.5 h-2.5 bg-[#6001D3] rounded-full" />}
                       </div>
                       <span className="text-[14px] font-bold text-[#1A1A1A]">Անուիտետ</span>
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>
             ) : (
               <div className="flex flex-col gap-7 pt-2">
+                {/* ՄԵԴԻԱ: Ավելացված նկար Ավանդի դեպքում */}
+                <div className="w-full h-32 bg-gradient-to-br from-[#6001D3]/5 to-[#6001D3]/10 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden border border-[#F1F1F4]">
+                   <span className="text-[#6001D3] text-4xl opacity-20">֏</span>
+                   <div className="absolute bottom-0 right-0 p-2 text-[10px] text-[#6001D3]/40 font-bold uppercase italic">Deposit Bonus</div>
+                </div>
                 <div className="flex justify-between items-center border-b border-[#F2F2F5] pb-5">
                   <span className="text-[#4F4F4F] font-medium text-[14px]">Օրական տոկոսագումար</span>
                   <span className="text-[18px] font-bold">{dailyInterest.toLocaleString('en-US', {maximumFractionDigits: 2})}</span>

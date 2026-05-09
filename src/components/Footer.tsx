@@ -70,20 +70,30 @@ const Footer: React.FC = () => {
 
           <div className="flex flex-col space-y-6">
             <div className="flex space-x-4 text-gray-400">
-              <FaFacebookF className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
-              <FaInstagram className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
-              <FaPinterestP className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
-              <FaYoutube className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
-              <FaLinkedinIn className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              <a href="https://www.facebook.com/evocabank" target="_blank" rel="noreferrer">
+                <FaFacebookF className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              </a>
+              <a href="https://www.instagram.com/evocabank" target="_blank" rel="noreferrer">
+                <FaInstagram className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              </a>
+              <a href="https://www.pinterest.com/evocabank" target="_blank" rel="noreferrer">
+                <FaPinterestP className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              </a>
+              <a href="https://www.youtube.com/evocabank" target="_blank" rel="noreferrer">
+                <FaYoutube className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/company/evocabank" target="_blank" rel="noreferrer">
+                <FaLinkedinIn className="hover:text-gray-300 cursor-pointer text-lg transition-colors" />
+              </a>
             </div>
 
             <div className="flex gap-4">
               <a href="https://apps.apple.com/am/app/evocatouch/id970309076">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="w-32 cursor-pointer" />
-             </a>
-             <a href="https://play.google.com/store/apps/details?id=am.prometeybank.mobilebank&hl=en&gl=US">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="w-32 cursor-pointer" />
-            </a> 
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="w-32 cursor-pointer" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=am.prometeybank.mobilebank&hl=en&gl=US">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="w-32 cursor-pointer" />
+              </a> 
             </div>
 
             <div className="space-y-2">
@@ -120,7 +130,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-     
       <div className="fixed bottom-6 right-6 z-50 flex items-center group cursor-pointer">
         <div className="bg-[#6400dc] text-white px-4 py-2 rounded-l-full text-sm font-medium shadow-lg transform translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
           Գրեք մեզ, մենք օնլայն ենք !

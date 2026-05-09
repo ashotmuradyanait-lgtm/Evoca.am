@@ -22,7 +22,7 @@ const GoddessComplexAnimation: React.FC<{ loaded: boolean }> = ({ loaded }) => {
         `}
       </style>
 
-      {/* Background Circles */}
+  
       <div className="absolute inset-0 z-0 opacity-30">
         <svg viewBox="0 0 100 100" className="h-full w-full" preserveAspectRatio="xMidYMid slice">
           <path id="orbit-path" d="M 50,35 a 15,15 0 1,1 0,30 a 15,15 0 1,1 0,-30" fill="none" />
