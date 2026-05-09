@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // 1. Ներմուծում ենք Link-ը
 
 const Footer: React.FC = () => {
   const sections = [
@@ -130,7 +131,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="fixed bottom-6 right-6 z-50 flex items-center group cursor-pointer">
+      
+      <Link to="/messenger" className="fixed bottom-6 right-6 z-50 flex items-center group cursor-pointer">
         <div className="bg-[#6400dc] text-white px-4 py-2 rounded-l-full text-sm font-medium shadow-lg transform translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
           Գրեք մեզ, մենք օնլայն ենք !
         </div>
@@ -139,7 +141,7 @@ const Footer: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
         </div>
-      </div>
+      </Link>
     </footer>
   );
 };

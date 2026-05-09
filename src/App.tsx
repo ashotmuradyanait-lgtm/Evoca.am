@@ -37,8 +37,7 @@ import Providers from "./components/Providers";
 import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
 import Rezident from "./components/Rezident";
-import Sidebar from "./components/Sidebar";
-import Chat from "./components/Chat";
+import Messenger from "./components/Messenger";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -112,21 +111,7 @@ const App: React.FC = () => {
           <Route path="/hashivner" element={<Hashivner />} />
           <Route path="/metaxakan" element={<Metaxakan />} />
           <Route path="/rezident" element={<Rezident />} />
-          
-          <Route path="/sidebar" element={
-            <div className="flex h-[80vh] max-w-7xl mx-auto my-10 border rounded-lg overflow-hidden bg-white shadow-xl">
-              <Sidebar onSelectUser={setSelectedUser} />
-              <div className="flex-1">
-                {selectedUser ? (
-                  <Chat selectedUser={selectedUser} />
-                ) : (
-                  <div className="h-full flex items-center justify-center bg-gray-50 text-gray-400 italic">
-                    Ընտրեք կոնտակտ՝ նամակագրություն սկսելու համար
-                  </div>
-                )}
-              </div>
-            </div>
-          } />
+          <Route path="/messenger" element={<Messenger />} />
         </Routes>
       </main>
 
