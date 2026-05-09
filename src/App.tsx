@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react'; // Ավելացրինք useState
 import { Routes, Route } from "react-router-dom"; 
-import { useTranslation } from 'react-i18next'; // 1. Ներմուծում ենք useTranslation
+import { useTranslation } from 'react-i18next';
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -37,6 +37,8 @@ import Providers from "./components/Providers";
 import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
 import Rezident from "./components/Rezident";
+import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -51,6 +53,9 @@ import Reviews from "./pages/Reviews";
 
 const App: React.FC = () => {
   const { t } = useTranslation(); 
+  
+
+  const [selectedUser, setSelectedUser] = useState<any>(null);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -107,6 +112,21 @@ const App: React.FC = () => {
           <Route path="/hashivner" element={<Hashivner />} />
           <Route path="/metaxakan" element={<Metaxakan />} />
           <Route path="/rezident" element={<Rezident />} />
+          
+          <Route path="/sidebar" element={
+            <div className="flex h-[80vh] max-w-7xl mx-auto my-10 border rounded-lg overflow-hidden bg-white shadow-xl">
+              <Sidebar onSelectUser={setSelectedUser} />
+              <div className="flex-1">
+                {selectedUser ? (
+                  <Chat selectedUser={selectedUser} />
+                ) : (
+                  <div className="h-full flex items-center justify-center bg-gray-50 text-gray-400 italic">
+                    Ընտրեք կոնտակտ՝ նամակագրություն սկսելու համար
+                  </div>
+                )}
+              </div>
+            </div>
+          } />
         </Routes>
       </main>
 
