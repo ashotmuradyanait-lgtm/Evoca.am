@@ -375,7 +375,7 @@ const Nyut: React.FC = () => {
 
           <hr className="my-10 border-gray-200" />
 
-          {/* ԱՂՅՈՒՍԱԿ 2: ԱՊԱՀՈՎԱԳՐԱԿԱՆ ԸՆԿԵՐՈՒԹՅՈՒՆՆԵՐ */}
+         
           <section>
             <h2 className="text-[22px] font-bold text-[#1a1a1a] mb-6">Բանկի հետ համագործակցող ապահովագրական ընկերությունների ցանկ</h2>
             <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm">
@@ -412,7 +412,7 @@ const Nyut: React.FC = () => {
             </div>
           </section>
 
-          {/* ԱՂՅՈՒՍԱԿ 3: ԳՆԱՀԱՏՈՂ ԿԱԶՄԱԿԵՐՊՈՒԹՅՈՒՆՆԵՐ */}
+         
           <section className="mt-10">
             <h2 className="text-[22px] font-bold text-[#1a1a1a] mb-6">Բանկի հետ համագործակցող գնահատող կազմակերպությունների ցանկ</h2>
             <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm">
@@ -449,7 +449,7 @@ const Nyut: React.FC = () => {
             </div>
           </section>
 
-          {/* ԲԱՆԿԻ ՀԵՏ ԿԱՊԻ FOOTER */}
+        
           <div className="mt-16 bg-[#6c2db5] text-white p-8 md:p-12 rounded-[2rem] text-center shadow-lg relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10"></div>
             <div className="relative z-10">
