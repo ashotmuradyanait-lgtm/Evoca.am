@@ -12,7 +12,7 @@ const Poxancum: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Դրամական փոխանցումներ', path: '' },
-    { name: 'Վճարային համակարգեր', path: '' },
+    { name: 'Վճարային համակարգեր', path: '/vchar' },
   ];
 
   const accordionData = [
@@ -137,7 +137,7 @@ const Poxancum: React.FC = () => {
           </div>
         </section>
 
-        {/* Ավելի տեղեկատվություն բաժինը սլաքով */}
+        
         <section className="mt-16">
           <h2 className="text-[20px] font-bold text-[#555] mb-6 uppercase tracking-wider">Ավելի տեղեկատվություն</h2>
           <div className="space-y-1">
@@ -149,7 +149,7 @@ const Poxancum: React.FC = () => {
                     ${openSection === item.id ? 'bg-[#6c2db5] text-white' : 'bg-[#f4f4f4] text-[#333] hover:bg-[#ececec]'}`}
                 >
                   <span className="text-[16px] font-medium">{item.title}</span>
-                  {/* Սլաքի պատկերակը */}
+                 
                   <svg 
                     className={`w-4 h-4 transition-transform duration-300 ${openSection === item.id ? 'rotate-180' : ''}`} 
                     fill="none" 

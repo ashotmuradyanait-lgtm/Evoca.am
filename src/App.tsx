@@ -31,6 +31,7 @@ import Social from "./components/Social";
 import Bank from "./components/Bank";
 import Avandner from "./components/Avandner";
 import Salary from "./components/Salary";
+import Arcanc from "./components/Arcanc";
 import Karevor from "./components/Karevor";
 import Ereqgic from "./components/Ereqgic";
 import Providers from "./components/Providers";
@@ -116,6 +117,7 @@ const App: React.FC = () => {
           <Route path="/messenger" element={<Messenger />} />
           <Route path="/poxancum" element={<Poxancum />} />
           <Route path="/vchar" element={<Vchar />} />
+          <Route path="/arcanc" element={<Arcanc />} />
         </Routes>
       </main>
 
