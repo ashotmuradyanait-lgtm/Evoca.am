@@ -41,6 +41,7 @@ import Infinite from "./components/Infinite";
 import Messenger from "./components/Messenger";
 import Poxancum from "./components/Poxancum";
 import Vchar from "./components/Vchar";
+import Visagold from "./components/Visagold";
 import Gold from "./components/Gold";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
@@ -120,6 +121,7 @@ const App: React.FC = () => {
           <Route path="/vchar" element={<Vchar />} />
           <Route path="/infinite" element={<Infinite />} />
           <Route path="/gold" element={<Gold />} />
+          <Route path="/visagold" element={<Visagold />} />
         </Routes>
       </main>
 
