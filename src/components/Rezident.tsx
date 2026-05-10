@@ -10,7 +10,7 @@ interface AccordionProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
-  // Վիդեոյում բաց վիճակում են
+
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -99,7 +99,6 @@ const Rezident: React.FC = () => {
           </div>
         </div>
 
-        {/* ԼՐԱՑՈՒՑԻՉ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ Section */}
         <div className="mb-20">
           <h2 className="text-[26px] font-bold text-[#6c2db5] mb-12 uppercase tracking-wide text-center md:text-left">ԼՐԱՑՈՒՑԻՉ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -161,15 +160,19 @@ const Rezident: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-12 pt-10 border-t border-gray-100">
-          <h3 className="font-bold text-gray-800 text-[22px] mb-8 lowercase">փաստաթղթեր</h3>
-          <div className="space-y-4">
-            <Link to="#" className="flex items-center gap-4 group w-fit">
-              <div className="w-10 h-10 flex items-center justify-center text-red-500 font-bold border border-red-100 rounded">PDF</div>
-              <span className="text-gray-700 font-medium group-hover:text-[#6c2db5] transition-colors">Համալիր բանկային ծառայությունների մատուցման պայմաններ 16.05.2025</span>
-            </Link>
-          </div>
-        </div>
+       <div className="mt-16">
+                <h2 className="text-[28px] font-bold text-[#1a1a1a] mb-8">Փաստաթղթեր</h2>
+                <div className="w-full bg-[#f8f5fd] rounded-xl p-4 flex items-center justify-between cursor-pointer hover:bg-[#f1ebfa] transition-colors">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6c2db5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><polyline points="9 15 12 18 15 15"></polyline></svg>
+                    </div>
+                    <span className="text-[15px] font-semibold text-gray-800">
+                      Համալիր բանկային ծառայությունների մատուցման պայմաններ 16.05.2025
+                    </span>
+                  </div>
+                </div>
+              </div>
 
       </div>
     </div>
