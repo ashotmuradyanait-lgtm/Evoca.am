@@ -39,6 +39,7 @@ import Hashivner from "./components/Hashivner";
 import Rezident from "./components/Rezident";
 import Messenger from "./components/Messenger";
 import Poxancum from "./components/Poxancum";
+import Vchar from "./components/Vchar";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -114,6 +115,7 @@ const App: React.FC = () => {
           <Route path="/rezident" element={<Rezident />} />
           <Route path="/messenger" element={<Messenger />} />
           <Route path="/poxancum" element={<Poxancum />} />
+          <Route path="/vchar" element={<Vchar />} />
         </Routes>
       </main>
 

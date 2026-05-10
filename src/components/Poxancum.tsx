@@ -193,6 +193,7 @@ const Poxancum: React.FC = () => {
         </div>
       </div>
 
+        <div className="max-w-[1400px] mx-auto px-6 mt-12 flex flex-col gap-3">
             <h2 className="text-[28px] font-extrabold text-[#222] mb-3">Փաստաթղթեր</h2>
 
              <a 
@@ -224,6 +225,7 @@ const Poxancum: React.FC = () => {
                 </div>
                 <span className="text-[16px] font-bold text-[#222] tracking-tight">Համալիր բանկային ծառայությունների մատուցման պայմաններ 16.05.2025</span>
             </a>
+        </div>
 
     </div>
   );
