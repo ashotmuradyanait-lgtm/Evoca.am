@@ -38,6 +38,7 @@ import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
 import Rezident from "./components/Rezident";
 import Messenger from "./components/Messenger";
+import Poxancum from "./components/Poxancum";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -112,6 +113,7 @@ const App: React.FC = () => {
           <Route path="/metaxakan" element={<Metaxakan />} />
           <Route path="/rezident" element={<Rezident />} />
           <Route path="/messenger" element={<Messenger />} />
+          <Route path="/poxancum" element={<Poxancum />} />
         </Routes>
       </main>
 
