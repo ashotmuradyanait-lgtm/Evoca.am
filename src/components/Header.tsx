@@ -1,9 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import Trans from '../components/Trans';
+import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  
+  const [isOnlineAppsOpen, setIsOnlineAppsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
   const navItems = [
     { name: 'Անհատ', path: '/' },
     { name: 'Բիզնես', path: '/biznes' },
@@ -14,11 +16,22 @@ const Header: React.FC = () => {
     { name: 'Կարիերա', path: '/careers' }
   ];
 
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOnlineAppsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <header className="w-full bg-white border-b border-gray-100 pt-4 lg:pt-8 pb-4 px-4 lg:px-6 fixed top-0 left-0 z-50">
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
         
-     
+       
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <NavLink 
@@ -41,24 +54,53 @@ const Header: React.FC = () => {
           ))}
         </nav>
 
-       
+      
         <div className="flex items-center gap-3 lg:gap-6">
           
-          
+        
+          <div className="relative" ref={dropdownRef}>
+            <button 
+              onClick={() => setIsOnlineAppsOpen(!isOnlineAppsOpen)}
+              className="hidden sm:flex items-center gap-1 cursor-pointer text-[#6c2db5] font-bold text-[12px] lg:text-[14px] outline-none"
+            >
+              <span className="whitespace-nowrap font-bold">Առցանց հայտեր</span>
+              <svg 
+                className={`w-4 h-4 transition-transform duration-300 ${isOnlineAppsOpen ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+           
+            {isOnlineAppsOpen && (
+              <div className="absolute right-0 mt-4 w-[260px] bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 z-[60] animate-in fade-in slide-in-from-top-2">
+                <Link to="/biznes" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                  ՓՄՁ վարկավորում
+                </Link>
+                <Link to="/infinite" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                  Visa Infinite
+                </Link>
+                <Link to="/gold-mc" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                  MasterCard Gold
+                </Link>
+                <Link to="/visa-gold" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px] border-b border-gray-50">
+                  Visa Gold
+                </Link>
+              </div>
+            )}
+          </div>
+
           <div className="hidden sm:flex items-center gap-1 cursor-pointer text-[#6c2db5] font-bold text-[12px] lg:text-[14px]">
-            <p className="whitespace-nowrap">Առցանց հայտեր</p>
+            <p className="whitespace-nowrap font-bold">Հետադարձ կապ</p>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
             </svg>
           </div>
 
-          <div className="hidden sm:flex items-center gap-1 cursor-pointer text-[#6c2db5] font-bold text-[12px] lg:text-[14px]">
-            <p className="whitespace-nowrap">Հետադարձ կապ</p>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-
+         
           <div className="flex items-center gap-2 lg:gap-4 text-black">
             <button className="hover:text-gray-600 transition-colors outline-none">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -88,13 +130,13 @@ const Header: React.FC = () => {
               </button>
             </Link>
 
-          <Link to="/ereqgic">
-            <button className="hover:text-[#6c2db5] transition-colors flex flex-col items-end gap-1 group outline-none ml-1">
-              <div className="w-6 h-[2px] bg-current"></div>
-              <div className="w-4 h-[2px] bg-current transition-all group-hover:w-6"></div>
-              <div className="w-6 h-[2px] bg-current"></div>
-            </button>
-          </Link>
+            <Link to="/ereqgic">
+              <button className="hover:text-[#6c2db5] transition-colors flex flex-col items-end gap-1 group outline-none ml-1">
+                <div className="w-6 h-[2px] bg-current"></div>
+                <div className="w-4 h-[2px] bg-current transition-all group-hover:w-6"></div>
+                <div className="w-6 h-[2px] bg-current"></div>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

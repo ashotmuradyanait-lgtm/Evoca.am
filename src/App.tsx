@@ -31,16 +31,17 @@ import Social from "./components/Social";
 import Bank from "./components/Bank";
 import Avandner from "./components/Avandner";
 import Salary from "./components/Salary";
-import Arcanc from "./components/Arcanc";
 import Karevor from "./components/Karevor";
 import Ereqgic from "./components/Ereqgic";
 import Providers from "./components/Providers";
 import Metaxakan from "./components/Metaxakan";
 import Hashivner from "./components/Hashivner";
 import Rezident from "./components/Rezident";
+import Infinite from "./components/Infinite";
 import Messenger from "./components/Messenger";
 import Poxancum from "./components/Poxancum";
 import Vchar from "./components/Vchar";
+import Gold from "./components/Gold";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -117,7 +118,8 @@ const App: React.FC = () => {
           <Route path="/messenger" element={<Messenger />} />
           <Route path="/poxancum" element={<Poxancum />} />
           <Route path="/vchar" element={<Vchar />} />
-          <Route path="/arcanc" element={<Arcanc />} />
+          <Route path="/infinite" element={<Infinite />} />
+          <Route path="/gold" element={<Gold />} />
         </Routes>
       </main>
 
