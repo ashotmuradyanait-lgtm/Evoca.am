@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                 <Link to="/infinite" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
                   Visa Infinite
                 </Link>
-                <Link to="/gold-mc" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                <Link to="/gold" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
                   MasterCard Gold
                 </Link>
                 <Link to="/visa-gold" onClick={() => setIsOnlineAppsOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px] border-b border-gray-50">

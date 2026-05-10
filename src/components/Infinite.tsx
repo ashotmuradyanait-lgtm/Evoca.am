@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
 const Infinite: React.FC = () => {
@@ -34,15 +34,6 @@ const Infinite: React.FC = () => {
     </div>
 
       <div className="max-w-7xl mx-auto px-8 mt-6">
-        <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
-        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
-        <span>›</span>
-        <span className="cursor-pointer hover:text-gray-600">Անհատ</span>
-        <span>›</span>
-        <span className="cursor-pointer hover:text-gray-600">Քարտեր</span>
-        <span>›</span>
-        <span className="text-gray-800">Քարտեր</span>
-      </div>
 
 
        <div className="max-w-[1400px] mx-auto px-6 mb-8">
