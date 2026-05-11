@@ -44,6 +44,7 @@ import Vchar from "./components/Vchar";
 import Visagold from "./components/Visagold";
 import Gold from "./components/Gold";
 import Arzetxter from "./components/Arzetxter"
+import Partatoms from "./components/Partatoms";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -124,6 +125,7 @@ const App: React.FC = () => {
           <Route path="/gold" element={<Gold />} />
           <Route path="/visagold" element={<Visagold />} />
           <Route path="/arzetxter" element={<Arzetxter />} />
+          <Route path="/partatoms" element={<Partatoms />} />
         </Routes>
       </main>
 
