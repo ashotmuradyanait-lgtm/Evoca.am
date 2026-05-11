@@ -23,14 +23,14 @@ const Biznes: React.FC = () => {
      
       
       <nav className="flex gap-4 text-gray-800 font-medium text-[15px]">
-        <Link to="/varker" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
+        <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
-        <Link to="/evocatouch" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
+        <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
       </nav>
       <Link to="/evocaonline" className="px-20">
       <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>

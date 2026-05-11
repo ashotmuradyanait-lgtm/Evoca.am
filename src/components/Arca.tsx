@@ -70,17 +70,17 @@ const Arca: React.FC = () => {
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-blue-700 transition-colors flex items-center gap-1">
             <img src="https://www.evoca.am/images-cache/menu/1/17485004055849/50x24.png" alt="" />
           </button>
-        <Link to="premium">
+        <Link to="/visa">
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-extrabold text-blue-900 italic transition-colors">
             <img src="https://www.evoca.am/images-cache/menu/1/16137249251612/50x24.png" alt="" />
           </button>
         </Link>
-        <Link to="nverqart">
+        <Link to="/bank">
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold transition-colors flex items-center gap-[-4px]">
             <img src="https://www.evoca.am/images-cache/menu/1/16137249504065/50x24.png" alt="" />
           </button>
         </Link>
-        <Link to="tvayin">
+        <Link to="/pay">
           <button className="bg-[#f0f0f5] hover:bg-gray-200 px-6 py-2.5 rounded-full font-bold text-red-600 transition-colors">
             <img src="https://www.evoca.am/images-cache/menu/1/17288945044615/50x24.png" alt="" />
           </button>
