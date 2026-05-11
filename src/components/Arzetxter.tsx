@@ -15,7 +15,7 @@ const Arzetxter: React.FC = () => {
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/hkd' },
     { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/repo' },
-    { name: 'EvocaINVEST', path: '' },
+    { name: 'EvocaINVEST', path: '/invest' },
   ];
   const newsItems = [
   {

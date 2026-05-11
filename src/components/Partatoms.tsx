@@ -14,7 +14,7 @@ const Partatoms: React.FC = () => {
     { name: 'Պարտատոմսեր', path: '' },
     { name: 'ՀԿԴ ծառայություններ', path: '/hkd' },
     { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/repo' },
-    { name: 'EvocaINVEST', path: '' },
+    { name: 'EvocaINVEST', path: '/invest' },
   ];
 
   const accordions = [

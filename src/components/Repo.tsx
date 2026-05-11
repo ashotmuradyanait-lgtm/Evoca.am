@@ -13,8 +13,8 @@ const Repo: React.FC = () => {
     { name: 'Ներդրումային ծառայություններ', path: '/arzetxter' },
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/hkd' },
-    { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/repo' },
-    { name: 'EvocaINVEST', path: '' },
+    { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '' },
+    { name: 'EvocaINVEST', path: '/invest' },
   ];
 
   return (
