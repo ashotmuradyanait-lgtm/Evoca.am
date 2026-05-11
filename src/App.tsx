@@ -47,6 +47,7 @@ import Arzetxter from "./components/Arzetxter"
 import Partatoms from "./components/Partatoms";
 import Hkd from "./components/Hkd";
 import Repo from "./components/Repo";
+import Invest from "./components/Invest";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -130,6 +131,7 @@ const App: React.FC = () => {
           <Route path="/partatoms" element={<Partatoms />} />
           <Route path="/hkd" element={<Hkd />} />
           <Route path="/repo" element={<Repo />} />
+          <Route path="/invest" element={<Invest />} />
         </Routes>
       </main>
 
