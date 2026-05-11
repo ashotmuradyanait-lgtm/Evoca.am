@@ -2,25 +2,25 @@ import React from 'react';
 
 const newsItems = [
   {
+    image: 'https://www.evoca.am/images-cache/news/1/17782305453949/439x320.png',
+    category: 'Մրցանակներ',
+    categoryColor: '#e7d321', 
+    title: 'Evocabank-ը՝ լավագույն ՓՄՁ բանկը Հայաստանում՝ երկրորդ տարին…',
+    date: '08.05.2026',
+  },
+  {
+    image: 'https://www.evoca.am/images-cache/news/1/17780463751358/439x320.png',
+    category: 'Բանկային',
+    categoryColor: '#784BDD', 
+    title: 'Evocabank-ը  և Proparco-AFD-ն ստորագրել են 20միլիոն եվրոյի...',
+    date: '06.05.2026',
+  },
+  {
     image: 'https://www.evoca.am/images-cache/news/1/1776423301974/439x320.png',
     category: 'Կենսակերպ',
-    categoryColor: '#BEE553', // Lime green
+    categoryColor: '#BEE553', 
     title: 'Evocabank-ը մասնակցում է CCF 2026-ին',
     date: '17.04.2026',
-  },
-  {
-    image: 'https://www.evoca.am/images-cache/news/1/1776162446379/439x320.png',
-    category: 'Բանկային',
-    categoryColor: '#784BDD', // Purple
-    title: 'Կարեն Եղիազարյանը` IMF և WBG Spring Meetings 2026-ին',
-    date: '13.04.2026',
-  },
-  {
-    image: 'https://www.evoca.am/images-cache/news/1/17758068998241/439x320.png',
-    category: 'Կենսակերպ',
-    categoryColor: '#BEE553', 
-    title: 'Evoca-ն մասնակցում է Leasing Expo 2026-ին',
-    date: '09.04.2026',
   },
 ];
 

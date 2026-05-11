@@ -43,6 +43,7 @@ import Poxancum from "./components/Poxancum";
 import Vchar from "./components/Vchar";
 import Visagold from "./components/Visagold";
 import Gold from "./components/Gold";
+import Arzetxter from "./components/Arzetxter"
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -122,6 +123,7 @@ const App: React.FC = () => {
           <Route path="/infinite" element={<Infinite />} />
           <Route path="/gold" element={<Gold />} />
           <Route path="/visagold" element={<Visagold />} />
+          <Route path="/arzetxter" element={<Arzetxter />} />
         </Routes>
       </main>
 

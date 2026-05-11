@@ -18,7 +18,7 @@ function Menu() {
         <Link to="/avandner" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
         <Link to="/hashivner" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
         <Link to="/poxancum" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Փոխանցումներ</Link>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթեր</p>
+        <Link to="/arzetxter" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթեր</Link>
         <Link to="/salary" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaSALARY</Link>
         <Link to="/evocatouch" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">EvocaTOUCH</Link>
       </nav>
