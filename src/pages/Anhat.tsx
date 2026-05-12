@@ -53,7 +53,7 @@ export default function Anhat() {
         </div>
       </div>
 
-      {/* Աջ մաս - Տեքստային հատված */}
+   
       <div className="text-center lg:text-left max-w-full sm:max-w-[500px] lg:max-w-[600px]">
         <h2 className="font-bold text-xl sm:text-3xl lg:text-4xl text-gray-800 pb-4 leading-tight lg:leading-[1.2]">
           Դարձիր Evocabank-ի հաճախորդ <br className="hidden sm:block" />
@@ -67,7 +67,7 @@ export default function Anhat() {
         </p>
 
         <div className='flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 lg:gap-14'>
-          {/* QR Code */}
+         
           <div className="relative group">
             <img 
               className="h-[140px] w-[140px] lg:h-[180px] lg:w-[180px] bg-white p-2 rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105" 
@@ -76,7 +76,7 @@ export default function Anhat() {
             />
           </div>
           
-          {/* Action Button */}
+         
           <button className='bg-[#6400dc] hover:bg-[#541d93] text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 whitespace-nowrap text-sm sm:text-base'>
             Իմանալ ավելին
           </button>

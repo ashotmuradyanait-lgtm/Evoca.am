@@ -72,7 +72,7 @@ const Repo: React.FC = () => {
             </p>
           </div>
           
-          {/* Right Image Content */}
+         
           <div className="w-full md:w-1/2 h-[300px] md:h-[500px] relative">
             <img 
               src="https://www.evoca.am/images-cache/menu/1/16783548886405/780x585.jpg" 
@@ -83,7 +83,7 @@ const Repo: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Content Body */}
+     
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-16">
         <div className="max-w-[900px] space-y-8 text-[#4a4a4a] text-[16px] md:text-[18px] leading-8">
           <p>
