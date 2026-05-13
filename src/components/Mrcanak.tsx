@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Kensakerp: React.FC = () => {
+const Mrcanak: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Մրցանակներ');
   
   const categories = [
@@ -10,8 +10,8 @@ const Kensakerp: React.FC = () => {
     { name: "Նորարարություններ", path: "/nor" },
     { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "" },
-    { name: "CSR", path: "" },
-    { name: "Այլ", path: "" }
+    { name: "CSR", path: "/csr" },
+    { name: "Այլ", path: "/ayl" }
   ];
 
   const newsItems = [
@@ -171,7 +171,7 @@ const Kensakerp: React.FC = () => {
                 </Link>
                 ))}
             </div>
-          <button className="w-fit flex items-center gap-2 md:gap-3 bg-[#f3e8ff] text-[#97FF00] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-[12px] md:text-[14px] font-black hover:bg-[#ebd5ff] transition-colors uppercase tracking-wider">
+          <button className="w-fit flex items-center gap-2 md:gap-3 bg-[#f3e8ff] text-[#730D8D] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-[12px] md:text-[14px] font-black hover:bg-[#ebd5ff] transition-colors uppercase tracking-wider">
             Բոլորը <span className="text-[20px] md:text-[24px] leading-none mb-1">›</span>
           </button>
         </div>
@@ -240,4 +240,4 @@ const Kensakerp: React.FC = () => {
   );
 }
 
-export default Kensakerp;
+export default Mrcanak;

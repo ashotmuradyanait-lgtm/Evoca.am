@@ -56,6 +56,8 @@ import Erkrord from "./components/Erkrord";
 import Avand from "./components/Avand";
 import Kensakerp from "./components/Kensakerp";
 import Mrcanak from "./components/Mrcanak";
+import CSR from "./components/CSR";
+import Ayl from "./components/Ayl";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -148,6 +150,8 @@ const App: React.FC = () => {
           <Route path="/avand" element={<Avand/>} />
           <Route path="/kensakerp" element={<Kensakerp/>} />
           <Route path="/mrcanak" element={<Mrcanak/>} />
+          <Route path="/csr" element={<CSR/>} />
+          <Route path="/ayl" element={<Ayl/>} />
         </Routes>
       </main>
 

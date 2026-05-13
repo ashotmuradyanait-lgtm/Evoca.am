@@ -10,8 +10,8 @@ const Nor: React.FC = () => {
     { name: "Նորարարություններ", path: "" },
     { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "/mrcanak" },
-    { name: "CSR", path: "" },
-    { name: "Այլ", path: "" }
+    { name: "CSR", path: "/csr" },
+    { name: "Այլ", path: "/ayl" }
   ];    
 
   const newsItems = [

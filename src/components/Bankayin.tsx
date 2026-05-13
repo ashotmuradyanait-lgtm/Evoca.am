@@ -10,8 +10,8 @@ const Bankayin: React.FC = () => {
     { name: "Նորարարություններ", path: "/nor" },
     { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "/mrcanak" },
-    { name: "CSR", path: "" },
-    { name: "Այլ", path: "" }
+    { name: "CSR", path: "/csr" },
+    { name: "Այլ", path: "/ayl" }
   ];
 
   const newsItems = [
