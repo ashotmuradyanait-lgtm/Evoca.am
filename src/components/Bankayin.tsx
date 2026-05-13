@@ -140,7 +140,7 @@ const Bankayin: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden mt-20">
+    <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden">
       
     
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">

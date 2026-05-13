@@ -95,6 +95,11 @@ const Erkrord: React.FC = () => {
                  <p className='text-gray-400 ml-10'>23.03.2016</p>
             </div>
 
+            <div className="flex items-center gap-4 text-gray-400 font-black text-[16px] pb-24 border-t border-gray-100 pt-10">
+                       <Link to="/nor" className="text-black bg-[#f2f2f2] px-3 py-1 rounded-md cursor-pointer">1</Link>
+                       <Link to="/erkrord" className="hover:text-black cursor-pointer transition-colors px-2">2</Link>
+                       <span className="text-[#730D8D] text-[24px] font-black cursor-pointer ml-4 transition-transform hover:translate-x-2">→</span>
+                    </div>
         </div>
         </div>
   )
