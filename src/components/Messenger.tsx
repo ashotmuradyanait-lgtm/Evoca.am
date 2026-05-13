@@ -8,7 +8,7 @@ import {
 } from 'firebase/auth';
 import { 
   collection, addDoc, query, where, orderBy, onSnapshot, 
-  serverTimestamp, doc, setDoc 
+  serverTimestamp, doc, setDoc, updateDoc 
 } from 'firebase/firestore';
 
 const storage = getStorage(); 
@@ -25,23 +25,48 @@ const Messenger = () => {
   const [messages, setMessages] = useState<any[]>([]);
   const [newMessage, setNewMessage] = useState("");
   const [imageFile, setImageFile] = useState<File | null>(null);
-  const [uploading, setUploading] = useState(false); // Նկարի բեռնման status
+  const [uploading, setUploading] = useState(false); 
   
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Ձայնի ֆունկցիան
   const playSound = () => {
     const audio = new Audio('/notification.mp3');
-    audio.play().catch(() => {}); // Լռելյայն բռնում ենք սխալը, եթե բրաուզերը թույլ չտա
+    audio.play().catch(() => {});
   };
 
-  // 1. Ավտորիզացիա
+ 
+  useEffect(() => {
+    if (!currentUser) return;
+
+   
+    const updateUserStatus = async (status: 'online' | 'offline') => {
+      const userDoc = doc(db, "users", currentUser.uid);
+      await updateDoc(userDoc, {
+        status: status,
+        lastSeen: serverTimestamp()
+      });
+    };
+
+    
+    updateUserStatus('online');
+
+    
+    const handleTabClose = () => updateUserStatus('offline');
+    window.addEventListener('beforeunload', handleTabClose);
+
+    return () => {
+      updateUserStatus('offline');
+      window.removeEventListener('beforeunload', handleTabClose);
+    };
+  }, [currentUser]);
+
+ 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => setCurrentUser(user));
     return () => unsub();
   }, []);
 
-  // 2. Օգտատերերի ցուցակը (Real-time)
+ 
   useEffect(() => {
     if (!currentUser) return;
     const q = query(collection(db, "users"), where("uid", "!=", currentUser.uid));
@@ -51,10 +76,10 @@ const Messenger = () => {
     return () => unsub();
   }, [currentUser]);
 
-  // 3. Նամակների Real-time լսումը (ՍԱ Է ՈՒՂՂՎԱԾ)
+
   useEffect(() => {
     if (!currentUser || !selectedUser) {
-      setMessages([]); // Մաքրում ենք չատը, եթե մարդ ընտրված չէ
+      setMessages([]);
       return;
     }
 
@@ -69,7 +94,6 @@ const Messenger = () => {
       const msgs = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setMessages(msgs);
 
-      // Ձայնի տրամաբանությունը
       if (!snapshot.metadata.hasPendingWrites) {
         snapshot.docChanges().forEach((change) => {
           if (change.type === "added") {
@@ -80,14 +104,13 @@ const Messenger = () => {
           }
         });
       }
-      // Ավտոմատ scroll
       scrollRef.current?.scrollIntoView({ behavior: "smooth" });
     });
 
     return () => unsub();
   }, [currentUser, selectedUser]);
 
-  // 4. Login / Register
+ 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -98,6 +121,7 @@ const Messenger = () => {
           uid: res.user.uid, 
           displayName: name, 
           email: email,
+          status: 'online', // Սկզբից online
           lastSeen: serverTimestamp() 
         });
       } else {
@@ -106,14 +130,13 @@ const Messenger = () => {
     } catch (error: any) { alert(error.message); }
   };
 
-  // 5. Նամակ ուղարկելը
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newMessage.trim() && !imageFile) return;
 
     const chatId = [currentUser.uid, selectedUser.uid].sort().join('_');
-    const textToSend = newMessage; // Պահում ենք տեքստը
-    setNewMessage(""); // Մաքրում ենք input-ը արագության համար
+    const textToSend = newMessage;
+    setNewMessage("");
     const currentFile = imageFile;
     setImageFile(null);
 
@@ -163,7 +186,7 @@ const Messenger = () => {
     <div className="max-h-screen flex flex-col h-screen">
       <Menu/>
       <div className="flex flex-1 overflow-hidden bg-gray-100 p-2 sm:p-4 gap-4">
-        {/* Ձախ մաս - Ցուցակ */}
+        
         <div className="w-1/3 min-w-[250px] bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden border">
            <div className="p-4 bg-[#6400dc] text-white flex justify-between items-center">
              <span className="font-bold truncate">{currentUser.displayName}</span>
@@ -173,22 +196,36 @@ const Messenger = () => {
              {users.map(u => (
                 <div key={u.uid} onClick={() => setSelectedUser(u)} 
                      className={`p-4 border-b cursor-pointer transition flex items-center gap-3 ${selectedUser?.uid === u.uid ? 'bg-purple-100' : 'hover:bg-gray-50'}`}>
-                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    {u.displayName?.[0].toUpperCase()}
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {u.displayName?.[0].toUpperCase()}
+                    </div>
+                   
+                    <div className={`absolute bottom-0 right-0 w-3 h-3 border-2 border-white rounded-full ${u.status === 'online' ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                   </div>
-                  <span className="font-medium text-gray-700">{u.displayName}</span>
+                  <div className="flex flex-col">
+                    <span className="font-medium text-gray-700">{u.displayName}</span>
+                    <span className={`text-[10px] ${u.status === 'online' ? 'text-green-600 font-bold' : 'text-gray-400'}`}>
+                      {u.status === 'online' ? 'օնլայն' : 'օֆլայն'}
+                    </span>
+                  </div>
                 </div>
              ))}
            </div>
         </div>
 
-        {/* Աջ մաս - Չատ */}
+      
         <div className="flex-1 bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden border">
           {selectedUser ? (
             <>
               <div className="p-4 bg-white border-b flex items-center gap-3 shadow-sm">
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs">👤</div>
-                <span className="font-bold text-gray-800">{selectedUser.displayName}</span>
+                <div className="flex flex-col">
+                  <span className="font-bold text-gray-800 leading-none">{selectedUser.displayName}</span>
+                  <span className={`text-[11px] mt-1 ${selectedUser.status === 'online' ? 'text-green-500 font-bold' : 'text-gray-400'}`}>
+                    {selectedUser.status === 'online' ? 'օնլայն' : 'օֆլայն'}
+                  </span>
+                </div>
               </div>
               
               <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#f0f2f5]">
@@ -209,7 +246,6 @@ const Messenger = () => {
                 <div ref={scrollRef} />
               </div>
 
-              {/* Գրելու դաշտ */}
               <form onSubmit={handleSendMessage} className="p-3 bg-white flex gap-2 items-center border-t">
                 <label className="p-2 hover:bg-gray-100 rounded-full cursor-pointer transition">
                   🖼️
