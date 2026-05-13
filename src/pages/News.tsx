@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const newsItems = [
   {
@@ -35,10 +36,12 @@ const News: React.FC = () => {
           <h2 className="text-4xl font-black text-[#1A1A1A] tracking-tight">
             Վերջին նորությունները
           </h2>
+        <Link to="/norutyun">
           <button className="flex items-center gap-2 bg-[#F3EEFF] text-[#6600CC] px-7 py-3 rounded-full hover:bg-[#6600CC] hover:text-white transition-all duration-300 font-bold shadow-sm">
             Բոլոր նորությունները
             <span className="text-xl font-bold">›</span>
           </button>
+        </Link>
         </div>
 
       

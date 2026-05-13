@@ -103,11 +103,13 @@ const Header: React.FC = () => {
 
          
           <div className="flex items-center gap-2 lg:gap-4 text-black">
+          <a href="https://www.evoca.am/hy/branches-and-atms/">
             <button className="hover:text-gray-600 transition-colors outline-none">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
               </svg>
             </button>
+          </a>
 
             <button className="hover:text-gray-600 transition-colors outline-none">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

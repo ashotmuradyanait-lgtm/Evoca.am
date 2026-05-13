@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const images = [
   "https://www.evoca.am/img/temp/biometric/face1.png",
@@ -76,10 +77,11 @@ export default function Anhat() {
             />
           </div>
           
-         
+         <Link to="/evocatouch">
           <button className='bg-[#6400dc] hover:bg-[#541d93] text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 whitespace-nowrap text-sm sm:text-base'>
             Իմանալ ավելին
           </button>
+        </Link>
         </div>
       </div>
     </div>

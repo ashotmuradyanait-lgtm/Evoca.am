@@ -87,7 +87,7 @@ const Calculator: React.FC = () => {
           
           <div className="flex justify-between items-center mb-8">
              <h2 className="text-[28px] font-bold">Վարկի մարման գրաֆիկ</h2>
-             {/* ՄԵԴԻԱ: Լոգո կամ փոքրիկ պատկեր արդյունքների էջում */}
+           
              <div className="w-12 h-12 bg-[#6001D3]/10 rounded-full flex items-center justify-center">
                 <div className="w-6 h-6 bg-[#6001D3] rounded-sm rotate-45" />
              </div>
@@ -143,12 +143,12 @@ const Calculator: React.FC = () => {
     <div className="min-h-screen bg-[#FDFCFE] flex flex-col items-center p-6 select-none" style={{ fontFamily: "'Inter', sans-serif" }}>
       <div className="w-full max-w-[940px] bg-white rounded-[12px] shadow-[0_2px_15px_rgba(0,0,0,0.03)] p-10 border border-[#F1F1F4] relative overflow-hidden">
         
-        {/* ՄԵԴԻԱ: Ֆոնային դեկորատիվ էլեմենտ կամ նկար վերևի անկյունում */}
+       
         <div className="absolute top-[-20px] right-[-20px] w-40 h-40 bg-[#6001D3]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex justify-between items-start mb-8">
             <h1 className="text-[32px] font-bold text-[#1A1A1A] tracking-tight">Հաշվիչներ</h1>
-            {/* ՄԵԴԻԱ: Այստեղ կարող ես դնել քո լոգոն կամ վիդեո/նկար (օրինակ՝ բանկի կամ ոսկու նկար) */}
+          
             <div className="hidden md:block w-24 h-12 bg-gray-100 rounded-lg flex items-center justify-center border border-dashed border-gray-300 text-[10px] text-gray-400">
                MEDIA HERE
             </div>
@@ -277,7 +277,7 @@ const Calculator: React.FC = () => {
               </div>
             ) : (
               <div className="flex flex-col gap-7 pt-2">
-                {/* ՄԵԴԻԱ: Ավելացված նկար Ավանդի դեպքում */}
+               
                 <div className="w-full h-32 bg-gradient-to-br from-[#6001D3]/5 to-[#6001D3]/10 rounded-xl mb-4 flex items-center justify-center relative overflow-hidden border border-[#F1F1F4]">
                    <span className="text-[#6001D3] text-4xl opacity-20">֏</span>
                    <div className="absolute bottom-0 right-0 p-2 text-[10px] text-[#6001D3]/40 font-bold uppercase italic">Deposit Bonus</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Menu from '../pages/Menu';
+
 
 const Norutyun: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Բանկային');
@@ -8,7 +8,7 @@ const Norutyun: React.FC = () => {
   const categories = [
     { name: "Բանկային", path: "/bankayin" },
     { name: "Պրոդուկտներ", path: "/product" },
-    { name: "Նորարարություններ", path: "" },
+    { name: "Նորարարություններ", path: "/nor" },
     { name: "Կենսակերպ", path: "" },
     { name: "Մրցանակներ", path: "" },
     { name: "CSR", path: "" },
@@ -49,8 +49,8 @@ const Norutyun: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden">
-      <Menu />
+    <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden mt-20">
+      
     
     
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
