@@ -21,7 +21,7 @@ const Invest: React.FC = () => {
     <div className="w-full bg-white font-sans min-h-screen relative">
       <Menu />
       
-      {/* Sub-Navigation Bar */}
+     
       <div className="w-full bg-[#6c2db5] text-white sticky top-0 z-40 overflow-x-auto no-scrollbar">
         <div className="max-w-[1400px] mx-auto flex items-center h-[50px] md:h-[60px] px-4 md:px-6 whitespace-nowrap">
           {subMenuItems.map((item, index) => (
@@ -39,7 +39,7 @@ const Invest: React.FC = () => {
         </div>
       </div>
 
-      {/* Social Sidebar */}
+      
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
@@ -49,7 +49,7 @@ const Invest: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+     
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center gap-2 text-gray-400 text-[11px] md:text-[13px] overflow-x-auto no-scrollbar whitespace-nowrap">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -60,10 +60,10 @@ const Invest: React.FC = () => {
         <span className="text-gray-800 font-medium">EvocaINVEST</span>
       </div>
 
-      {/* Hero Banner Section */}
+      
       <section className="w-full bg-[#f6f2ff] overflow-hidden">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center">
-          {/* Left Content Area (White background style) */}
+         
           <div className="w-full md:w-1/2 px-6 md:px-12 py-12 md:py-20 z-10 bg-white md:bg-transparent">
             <h1 className="text-[#333] text-2xl md:text-4xl font-bold leading-tight mb-8">
               Կատարիր ներդրումներ և <br className="hidden md:block"/> ստացիր եկամուտ <br className="hidden md:block"/> EvocaINVEST հավելվածով
@@ -73,20 +73,20 @@ const Invest: React.FC = () => {
             </p>
           </div>
           
-          {/* Right Image Area (Light Purple background style) */}
+         
           <div className="w-full md:w-1/2 h-[300px] md:h-[450px] relative flex items-center justify-center">
              <img 
                src="https://www.evoca.am/images-cache/menu/1/16783549134256/780x585.jpg" 
                alt="EvocaINVEST money tree growth" 
                className="h-[90%] w-auto object-contain z-10"
              />
-             {/* Gradient/Pattern overlay from original design */}
+           
              <div className="absolute inset-0 bg-[#f6f2ff] md:bg-transparent -z-10"></div>
           </div>
         </div>
       </section>
 
-      {/* Main Content Body */}
+     
       <main className="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-16">
         <div className="max-w-[900px] space-y-6 text-[#4a4a4a] text-[16px] md:text-[17px] leading-relaxed">
           

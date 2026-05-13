@@ -20,10 +20,10 @@ export default function Anhat() {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-transparent py-10 sm:py-20 lg:py-0 px-4 sm:px-6 lg:px-8 gap-10 lg:gap-20 overflow-hidden">
       
-      {/* Ձախ մաս - Պատկերների հատված */}
+     
       <div className="relative w-full max-w-[300px] h-[280px] sm:max-w-[400px] sm:h-[350px] lg:max-w-[420px] lg:h-[480px] flex items-center justify-center">
         
-        {/* Եռանկյուն ֆոն (SVG) */}
+      
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           <svg viewBox="0 0 100 100" className="w-[120%] h-[120%] sm:w-[130%] sm:h-[130%] drop-shadow-2xl">
             <path 
@@ -36,7 +36,7 @@ export default function Anhat() {
           </svg>
         </div>
 
-        {/* Անիմացիոն նկարներ */}
+      
         <div className="relative z-10 w-full h-full mt-[-10px] lg:mt-[-20px]">
           <AnimatePresence mode="wait">
             <motion.img

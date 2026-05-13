@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     { name: 'Բիզնես', path: '/biznes' },
     { name: 'Ակնթարթային վճարումներ', path: '/providers' },
     { name: 'Մեր մասին', path: '/about' },
-    { name: 'Նորություններ', path: '/news' },
+    { name: 'Նորություններ', path: '/norutyun' },
     { name: 'Բլոգ', path: '/blog' },
     { name: 'Կարիերա', path: '/careers' }
   ];
@@ -26,6 +26,7 @@ const Header: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+  
 
   return (
     <header className="w-full bg-white border-b border-gray-100 pt-4 lg:pt-8 pb-4 px-4 lg:px-6 fixed top-0 left-0 z-50">

@@ -113,7 +113,7 @@ const Vchar: React.FC = () => {
               key={sys.id} 
               className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 flex flex-col items-center text-center transition-shadow hover:shadow-md"
             >
-              {/* Նկարի դաշտը */}
+              
               <div className="h-[80px] flex items-center justify-center mb-6 w-full">
                 <img 
                   src={sys.logoImage} 

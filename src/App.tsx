@@ -49,6 +49,8 @@ import Hkd from "./components/Hkd";
 import Repo from "./components/Repo";
 import Invest from "./components/Invest";
 import Norutyun from "./components/Norutyun";
+import Bankayin from "./components/Bankayin";
+import Product from "./components/Product";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -134,6 +136,8 @@ const App: React.FC = () => {
           <Route path="/repo" element={<Repo />} />
           <Route path="/invest" element={<Invest />} />
           <Route path="/norutyun" element={<Norutyun />} />
+          <Route path="/bankayin" element={<Bankayin />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </main>
 
