@@ -144,6 +144,6 @@ const Footer: React.FC = () => {
       </Link>
     </footer>
   );
-};
+};  
 
 export default Footer;
