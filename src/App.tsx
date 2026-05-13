@@ -52,6 +52,7 @@ import Norutyun from "./components/Norutyun";
 import Bankayin from "./components/Bankayin";
 import Product from "./components/Product";
 import Nor from "./components/Nor";
+import Erkrord from "./components/Erkrord";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -140,6 +141,7 @@ const App: React.FC = () => {
           <Route path="/bankayin" element={<Bankayin />} />
           <Route path="/product" element={<Product />} />
           <Route path="/nor" element={<Nor />} />
+          <Route path="/erkrord" element={<Erkrord/>} />
         </Routes>
       </main>
 
