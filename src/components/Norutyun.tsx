@@ -9,7 +9,7 @@ const Norutyun: React.FC = () => {
     { name: "Բանկային", path: "/bankayin" },
     { name: "Պրոդուկտներ", path: "/product" },
     { name: "Նորարարություններ", path: "/nor" },
-    { name: "Կենսակերպ", path: "" },
+    { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "" },
     { name: "CSR", path: "" },
     { name: "Այլ", path: "" }

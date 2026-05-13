@@ -8,7 +8,7 @@ const Nor: React.FC = () => {
     { name: "Բանկային", path: "/bankayin" },
     { name: "Պրոդուկտներ", path: "/product" },
     { name: "Նորարարություններ", path: "" },
-    { name: "Կենսակերպ", path: "" },
+    { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "" },
     { name: "CSR", path: "" },
     { name: "Այլ", path: "" }
@@ -146,7 +146,7 @@ const Nor: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden mt-10 md:mt-20">
       
-      {/* Breadcrumbs */}
+      
       <div className="max-w-[1400px] mx-auto px-4 md:px-10 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[11px] md:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -160,7 +160,7 @@ const Nor: React.FC = () => {
           Նորություններ
         </h1>
         
-        {/* Categories & Filter Button */}
+        
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-10 md:mb-16">
           <div className="flex flex-wrap gap-2 md:gap-3">
             {categories.map((cat) => (
@@ -182,7 +182,7 @@ const Nor: React.FC = () => {
           </button>
         </div>
 
-        {/* Featured News Item */}
+       
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 mb-16 md:mb-24 group cursor-pointer">
           <div className="flex-1 order-2 lg:order-1 w-full">
              <div className="flex items-center gap-3 mb-4 md:mb-6">
@@ -211,7 +211,7 @@ const Nor: React.FC = () => {
           </div>
         </div>
 
-        {/* News Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 md:gap-y-16 mb-16 md:mb-24">
           {newsItems.slice(1).map((item, idx) => (
             <div key={idx} className="group cursor-pointer flex flex-col">
@@ -234,7 +234,7 @@ const Nor: React.FC = () => {
           ))}
         </div>
 
-        {/* Pagination */}
+      
         <div className="flex items-center gap-4 text-gray-400 font-black text-[14px] md:text-[16px] pb-16 md:pb-24 border-t border-gray-100 pt-8 md:pt-10">
            <span className="text-black bg-[#f2f2f2] px-3 py-1 rounded-md cursor-pointer">1</span>
            <Link to="/erkrord" className="hover:text-black cursor-pointer transition-colors px-2">2</Link>

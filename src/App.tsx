@@ -54,6 +54,7 @@ import Product from "./components/Product";
 import Nor from "./components/Nor";
 import Erkrord from "./components/Erkrord";
 import Avand from "./components/Avand";
+import Kensakerp from "./components/Kensakerp";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -144,6 +145,7 @@ const App: React.FC = () => {
           <Route path="/nor" element={<Nor />} />
           <Route path="/erkrord" element={<Erkrord/>} />
           <Route path="/avand" element={<Avand/>} />
+          <Route path="/kensakerp" element={<Kensakerp/>} />
         </Routes>
       </main>
 

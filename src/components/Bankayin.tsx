@@ -8,7 +8,7 @@ const Bankayin: React.FC = () => {
     { name: "Բանկային", path: "" },
     { name: "Պրոդուկտներ", path: "/product" },
     { name: "Նորարարություններ", path: "/nor" },
-    { name: "Կենսակերպ", path: "" },
+    { name: "Կենսակերպ", path: "/kensakerp" },
     { name: "Մրցանակներ", path: "" },
     { name: "CSR", path: "" },
     { name: "Այլ", path: "" }
@@ -166,11 +166,11 @@ const Bankayin: React.FC = () => {
                   ${activeCategory === cat.name 
                     ? 'hover:bg-[#A70ECD] text-black shadow-sm bg-[#f2f2f2]' 
                     : 'bg-transparent text-gray-500 hover:text-black'}`}
-              >
-                {cat.name}
-              </Link>
-            ))}
-          </div>
+                >
+                    {cat.name}
+                </Link>
+                ))}
+            </div>
           <button className="w-fit flex items-center gap-2 md:gap-3 bg-[#f3e8ff] text-[#730D8D] px-6 md:px-8 py-2.5 md:py-3 rounded-full text-[12px] md:text-[14px] font-black hover:bg-[#ebd5ff] transition-colors uppercase tracking-wider">
             Բոլորը <span className="text-[20px] md:text-[24px] leading-none mb-1">›</span>
           </button>
