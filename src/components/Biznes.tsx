@@ -33,7 +33,7 @@ const Biznes: React.FC = () => {
         <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
       </nav>
       <Link to="/evocaonline" className="px-20">
-      <p className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</p>
+      <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</Link>
       </Link>
     </div>
       <div className="w-full bg-[#6c2db5] text-white">
