@@ -9,7 +9,7 @@ const Bankayin: React.FC = () => {
     { name: "Պրոդուկտներ", path: "/product" },
     { name: "Նորարարություններ", path: "/nor" },
     { name: "Կենսակերպ", path: "/kensakerp" },
-    { name: "Մրցանակներ", path: "" },
+    { name: "Մրցանակներ", path: "/mrcanak" },
     { name: "CSR", path: "" },
     { name: "Այլ", path: "" }
   ];

@@ -9,7 +9,7 @@ const Nor: React.FC = () => {
     { name: "Պրոդուկտներ", path: "/product" },
     { name: "Նորարարություններ", path: "" },
     { name: "Կենսակերպ", path: "/kensakerp" },
-    { name: "Մրցանակներ", path: "" },
+    { name: "Մրցանակներ", path: "/mrcanak" },
     { name: "CSR", path: "" },
     { name: "Այլ", path: "" }
   ];    
