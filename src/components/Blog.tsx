@@ -6,7 +6,7 @@ const Blog: React.FC = () => {
   
   const categories = [
     { name: "Բիզնես", path: "/bussines" },
-    { name: "Կենսակերպ", path: "" },
+    { name: "Կենսակերպ", path: "/kens" },
     { name: "Ներդրումներ", path: "" },
   ];
 
