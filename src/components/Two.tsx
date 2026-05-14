@@ -16,124 +16,46 @@ const Two: React.FC = () => {
 
   const newsItems = [
     {
-      img: "https://www.evoca.am/images-cache/news/1/16183823394046/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16120315634577/510x383.jpg",
       category: "Այլ",
-      title: "Հաճախորդների սպասարկման ժամեր",
-      date: "10.12.2020"
+      title: "Ռուսաստանում Հայաստանի մշակույթի օրեր",
+      date: "15.11.2017"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16183848935683/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16120694485726/510x383.png",
       category: "Այլ",
-      title: "Evoca-ն միանում է Զինծառայողների ապահովագրության…",
-      date: "22.11.2020"
+      title: "EvocaLAB",
+      date: "09.11.2017"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16929548288114/510x383.jpg",
+      img: "https://www.evoca.am/images-cache/news/1/16120720079643/510x383.png",
       category: "Այլ",
-      title: "Բացօթյա բարեգործական համերգ-դրամահավաք",
-      date: "02.11.2020"
+      title: "Վերաբացվեց Բանկի Գարեգին Նժդեհ մասնաճյուղը",
+      date: "09.10.2017"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16183878191416/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16184079052961/510x383.png",
       category: "Այլ",
-      title: "Փոփոխություններ Evocabank-ի հաճախորդների սպասարկման ժամերում",
-      date: "16.10.2020"
+      title: "Համատեղ սոցիալական ծրագիր COAF-ի հետ",
+      date: "02.05.2017"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16183857705231/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16120810480612/510x383.png",
       category: "Այլ",
-      title: "50 մլն դրամ Hayastan All Armenian Fund-ին Evocabank-ի կողմից",
-      date: "09.10.2020"
+      title: "Վճարային տերմինալներ` Բանկի բոլոր մասնաճյուղերում",
+      date: "26.07.2016"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16104316577652/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16120819542661/510x383.png",
       category: "Այլ",
-      title: "Փոփոխություններ Evocabank-ի հաճախորդների սպասարկման աշխատանքային…",
-      date: "04.09.2020"
+      title: "Evocabank-ը ստացել է ISO27001:2013 միջազգային հավաստագիր",
+      date: "03.09.2015"
     },
     {
-      img: "https://www.evoca.am/images-cache/news/1/16106089552228/510x383.png",
+      img: "https://www.evoca.am/images-cache/news/1/16120822521947/510x383.png",
       category: "Այլ",
-      title: "Evocabank-ի «Թումանյան» մասնաճյուղը գործում է նոր՝ Թումանյան 15 հասցեում",
-      date: "03.08.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16106234052244/510x383.png",
-      category: "Այլ",
-      title: "Evocabank-ն ընդլայնվում է՝ շարունակելով մոտիվացնել ու զարգացնել թիմը",
-      date: "03.07.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16206393286192/510x383.jpg",
-      category: "Այլ",
-      title: "Evocabank-ը նոր մասնաճյուղ է բացել Երևանում",
-      date: "15.06.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16106918386913/510x383.png",
-      category: "Այլ",
-      title: "Անհրաժեշտ է պահպահնել 1.5 մետր սոցիալական հեռավորություն",
-      date: "04.06.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16107742335408/510x383.png",
-      category: "Այլ",
-      title: "Կանխարգելիչ ախտահանում` Evocabank-ի բոլոր գրասենյակներում",
-      date: "14.04.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16107766803641/510x383.png",
-      category: "Այլ",
-      title: "ՊԱՐԶԱԲԱՆՈՒՄ",
-      date: "01.04.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16107821445879/510x383.png",
-      category: "Այլ",
-      title: "«Էրեբունի» մասնաճյուղը ժամանակավորապես չի գործելու",
-      date: "25.03.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16108083510392/510x383.png",
-      category: "Այլ",
-      title: "Ոչ աշխատանքային օրեր",
-      date: "20.03.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16107824534762/510x383.png",
-      category: "Այլ",
-      title: "Evocabank-ը 10։00-12։00 սպասարկելու է միայն 60 տարեկանից բարձր անձանց",
-      date: "03.03.2020"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16119831112076/510x383.png",
-      category: "Այլ",
-      title: "Հաճախորդների սպասարկում շաբաթ օրերին",
-      date: "19.10.2018"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16119832563891/510x383.png",
-      category: "Այլ",
-      title: "Վերաբացվեց Բանկի «Կոտայք» մասնաճյուղը",
-      date: "18.10.2018"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/1611987211088/510x383.png",
-      category: "Այլ",
-      title: "Իվետա Մուկուչյանի մենահամերգը",
-      date: "17.09.2018"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16184040636341/510x383.png",
-      category: "Այլ",
-      title: "Տոնական բացօթյա համերգ",
-      date: "11.09.2018"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/16120143492752/510x383.png",
-      category: "Այլ",
-      title: "Համագործակցության նոր համաձայնագիր",
-      date: "31.01.2018"
+      title: "Հայաստանի «Լավագույն ենթապահառու բանկ»",
+      date: "18.05.2011"
     },
   ];
 
@@ -228,9 +150,9 @@ const Two: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-500 font-bold text-[14px] md:text-[15px] pb-10 md:pb-20">
-           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">1</span>
-           <Link to="" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-500 font-bold text-[14px] md:text-[15px] pb-10 md:pb-20">
+            <Link to="/ayl" className="hover:text-black cursor-pointer transition-colors px-1">1</Link>
+           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">2</span>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
 
