@@ -7,7 +7,7 @@ const Kens: React.FC = () => {
   const categories = [
     { name: "Բիզնես", path: "/bussines" },
     { name: "Կենսակերպ", path: "" },
-    { name: "Ներդրումներ", path: "" },
+    { name: "Ներդրումներ", path: "/nerdrum" },
   ];
 
    const newsItems = [
@@ -37,7 +37,7 @@ const Kens: React.FC = () => {
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10">
         <h1 className="text-[32px] sm:text-[40px] md:text-[68px] font-black text-[#1a1a1a] mb-6 md:mb-10 tracking-[-0.04em] leading-tight md:leading-none">
-          Կենսակերպ
+          Բլոգ
         </h1>
         
        

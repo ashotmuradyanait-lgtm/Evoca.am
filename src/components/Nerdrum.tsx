@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Bussines: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('Բիզնես');
+const Nerdrum: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('Ներդրումներ');
   
   const categories = [
-    { name: "Բիզնես", path: "" },
+    { name: "Բիզնես", path: "/bussines" },
     { name: "Կենսակերպ", path: "/kens" },
-    { name: "Ներդրումներ", path: "/nerdrum" },
+    { name: "Ներդրումներ", path: "" },
   ];
 
    const newsItems = [
     {
-      img: "https://www.evoca.am/images-cache/blogs/1/16679076091685/510x383.jpg",
-      title: "Ամեն ինչ բանկոմատների մասին",
-      date: "31.01.2024"
+      img: "https://www.evoca.am/images-cache/blogs/1/17248413426642/510x383.png",
+      title: "Ֆիլմեր ֆինանսական աշխարհի էնտուզիաստների համար Մաս 1",
+      date: "28.08.2024"
+    },
+    {
+      img: "https://www.evoca.am/images-cache/blogs/1/17186317173483/510x383.jpg",
+      title: "EvocaINVEST. ինչպե՞ս կատարել գործարքներ",
+      date: "17.06.2024"
+    },
+    {
+      img: "https://www.evoca.am/images-cache/blogs/1/17159356763697/510x383.jpg",
+      title: "Ինչպե՞ս կառավարել պորտֆելը։ Պորտֆելի կառավարման 3 փուլերը",
+      date: "17.05.2024"
     },
    ]
 
@@ -27,7 +37,7 @@ const Bussines: React.FC = () => {
         <span>›</span>
         <span className="text-gray-800">Բլոգ</span>
         <span>›</span>
-        <span className="text-gray-800 font-bold">Բիզնես</span>
+        <span className="text-gray-800 font-bold">Ներդրումներ</span>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10">
@@ -62,22 +72,22 @@ const Bussines: React.FC = () => {
           <div className="flex-[1.2] order-2 lg:order-1 text-left">
             <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="w-4 md:w-5 h-4 md:h-5 bg-[#23004d]"></div>
-              <span className="text-[#1a1a1a] font-bold text-[13px] md:text-[15px]">Բիզնես</span>
+              <span className="text-[#1a1a1a] font-bold text-[13px] md:text-[15px]">Ներդրումներ</span>
             </div>
             <h2 className="text-[24px] sm:text-[30px] md:text-[46px] font-black leading-tight md:leading-[1.1] mb-4 md:mb-6 tracking-[-0.03em] hover:text-[#730D8D] transition-colors cursor-pointer">
-              Ինչպե՞ս սկսել բիզնես։ Guide from A to Z
+              Ներդրումների կարելիներն ու չի կարելիները
             </h2>
             <p className="text-[#4a4a4a] text-[15px] md:text-[18px] leading-[1.6] max-w-2xl font-medium">
-            Եթե ուզում եք ունենալ այն, ինչը երբեք չեք ունեցել, սկսեք անել այն, ինչը երբեք չեք արել:
+            Ներդրումներ կատարելիս՝ դժվար է կողմնորոշվել՝ որտեղի՞ց սկսել, ինչպե՞ս կայացնել որոշումներ: Այսօր կխոսենք ներդրումների կարելիների և չի կարելիների մասին:
             </p>
-            <p className='mt-5 text-gray-500'>05.01.2024</p>
+            <p className='mt-5 text-gray-500'>23.04.2024</p>
           </div>
 
           <div className="flex-1 order-1 lg:order-2 relative w-full group cursor-pointer">
             <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-8 md:w-12 h-8 md:h-12 border-t-[4px] md:border-t-[8px] border-l-[4px] md:border-l-[8px] border-[#23004d] z-10 transition-transform group-hover:scale-110"></div>
             <div className="relative overflow-hidden shadow-lg rounded-sm">
                <img 
-                 src="https://www.evoca.am/images-cache/blogs/1/16691870758279/780x585.jpg" 
+                 src="https://www.evoca.am/images-cache/blogs/1/17138737784517/780x585.jpg" 
                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" 
                  alt="Gyumri Branch" 
                />
@@ -108,18 +118,14 @@ const Bussines: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-500 font-bold text-[14px] md:text-[15px] pb-10 md:pb-20">
-           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">1</span>
-           <Link to="/berku" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
-           <Link to="/bereq" className="hover:text-black cursor-pointer transition-colors px-1">3</Link>
-           <Link to="/bchors" className="hover:text-black cursor-pointer transition-colors px-1">4</Link>
-           <Link to="/bhing" className="hover:text-black cursor-pointer transition-colors px-1">5</Link>
-           <Link to="/bvec" className="hover:text-black cursor-pointer transition-colors px-1">6</Link>
+           <span className="hover:text-black cursor-pointer transition-colors px-1">1</span>
+           <Link to="/erkus" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
 
-    </div>
+    </div>  
     </div>
   );
 }
 
-export default Bussines
+export default Nerdrum

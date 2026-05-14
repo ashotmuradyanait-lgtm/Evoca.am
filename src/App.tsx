@@ -67,6 +67,8 @@ import Bchors from "./components/Bchors";
 import Bhing from "./components/Bhing";
 import Bvec from "./components/Bvec";
 import Kens from "./components/Kens";
+import Nerdrum from "./components/Nerdrum";
+import Erkus from "./components/Erkus";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -170,6 +172,8 @@ const App: React.FC = () => {
           <Route path="/bhing" element={<Bhing/>} />
           <Route path="/bvec" element={<Bvec/>} />
           <Route path="/kens" element={<Kens/>} />
+          <Route path="/nerdrum" element={<Nerdrum/>} />
+          <Route path="/erkus" element={<Erkus/>} />
         </Routes>
       </main>
 
