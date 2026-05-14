@@ -113,7 +113,7 @@ const Bchors: React.FC = () => {
            <Link to="/bereq" className="hover:text-black cursor-pointer transition-colors px-1">3</Link>
            <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">4</span>
            <Link to="/bhing" className="hover:text-black cursor-pointer transition-colors px-1">5</Link>
-           <span className="hover:text-black cursor-pointer transition-colors px-1">6</span>
+           <Link to="/bvec" className="hover:text-black cursor-pointer transition-colors px-1">6</Link>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
 

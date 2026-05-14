@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Bhing: React.FC = () => {
+const Bvec: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Բիզնես');
   
   const categories = [
@@ -12,9 +12,9 @@ const Bhing: React.FC = () => {
 
    const newsItems = [
     {
-      img: "https://www.evoca.am/images-cache/blogs/1/16336898810327/510x383.png",
-      title: "15 համաշխարհային բիզնեսներ, որոնք ծնվել են ավտոտնակներում և…",
-      date: "18.06.2020"
+      img: "https://www.evoca.am/images-cache/blogs/1/16339589553963/510x383.png",
+      title: "Բիզնես էթիկա",
+      date: "16.06.2020"
     },
    ]
 
@@ -112,8 +112,8 @@ const Bhing: React.FC = () => {
            <Link to="/berku" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
            <Link to="/bereq" className="hover:text-black cursor-pointer transition-colors px-1">3</Link>
            <Link to="/bchors" className="hover:text-black cursor-pointer transition-colors px-1">4</Link>
-           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">5</span>
-           <Link to="/bvec" className="hover:text-black cursor-pointer transition-colors px-1">6</Link>
+           <Link to="/bhing" className="hover:text-black cursor-pointer transition-colors px-1">5</Link>
+           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">6</span>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
 
@@ -122,4 +122,4 @@ const Bhing: React.FC = () => {
   );
 }
 
-export default Bhing
+export default Bvec

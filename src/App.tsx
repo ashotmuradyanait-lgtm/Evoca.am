@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Ավելացրինք useState
+import React, { useState } from 'react'; 
 import { Routes, Route } from "react-router-dom"; 
 import { useTranslation } from 'react-i18next';
 
@@ -65,6 +65,7 @@ import Bussines from "./components/Bussines";
 import Bereq from "./components/Bereq";
 import Bchors from "./components/Bchors";
 import Bhing from "./components/Bhing";
+import Bvec from "./components/Bvec";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -166,6 +167,7 @@ const App: React.FC = () => {
           <Route path="/bereq" element={<Bereq/>} />
           <Route path="/bchors" element={<Bchors/>} />
           <Route path="/bhing" element={<Bhing/>} />
+          <Route path="/bvec" element={<Bvec/>} />
         </Routes>
       </main>
 
