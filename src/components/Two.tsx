@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Ayl: React.FC = () => {
+const Two: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Այլ');
   
   const categories = [
@@ -230,7 +230,7 @@ const Ayl: React.FC = () => {
 
         <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-500 font-bold text-[14px] md:text-[15px] pb-10 md:pb-20">
            <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">1</span>
-           <Link to="/two" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
+           <Link to="" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
 
@@ -239,4 +239,4 @@ const Ayl: React.FC = () => {
   );
 }
 
-export default Ayl;
+export default Two;
