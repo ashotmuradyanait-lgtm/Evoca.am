@@ -125,11 +125,11 @@ const Blog: React.FC = () => {
 
         
         <div className="flex flex-col-reverse md:flex-row bg-white rounded-[40px] overflow-hidden mb-16 shadow-sm hover:shadow-xl transition-shadow duration-500 border border-gray-50 min-h-[500px] cursor-pointer group">
-          <div className="w-full md:w-[45%] p-10 md:p-16 flex flex-col justify-center">
+          <div className="w-full md:w-[45%] p-6 sm:p-10 md:p-16 flex flex-col justify-center">
             <span className="text-[#a70ecd] text-[14px] font-black uppercase tracking-widest mb-6 block">
               {heroBlog.category}
             </span>
-            <h2 className="text-[40px] md:text-[56px] font-[900] leading-[1.05] mb-6 tracking-tight group-hover:text-[#740fb3] transition-colors">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[56px] font-[900] leading-[1.05] mb-6 tracking-tight group-hover:text-[#740fb3] transition-colors">
               {heroBlog.title}
             </h2>
             <p className="text-gray-500 text-[18px] leading-relaxed mb-8 font-medium">
@@ -153,7 +153,7 @@ const Blog: React.FC = () => {
           {blogItems.map((item, index) => (
             <div 
               key={index} 
-              className={`group cursor-pointer flex flex-col ${item.isWide ? 'lg:col-span-3 md:col-span-2 flex-col md:flex-row gap-8 items-center bg-white rounded-[32px] p-6 shadow-sm hover:shadow-xl transition-all' : ''}`}
+              className={`group cursor-pointer flex flex-col ${item.isWide ? 'lg:col-span-3 md:col-span-2 flex-col md:flex-row gap-8 items-center bg-white rounded-[32px] p-4 sm:p-6 shadow-sm hover:shadow-xl transition-all' : ''}`}
             >
               
               <div className={`relative overflow-hidden rounded-[32px] ${item.isWide ? 'w-full md:w-1/2 aspect-[16/9] mb-0' : 'aspect-[4/3] mb-6'} shadow-sm group-hover:shadow-2xl transition-all duration-500`}>
@@ -166,7 +166,7 @@ const Blog: React.FC = () => {
               </div>
               
               
-              <div className={`px-2 ${item.isWide ? 'w-full md:w-1/2 p-6' : ''}`}>
+              <div className={`px-2 ${item.isWide ? 'w-full md:w-1/2 p-4 sm:p-6' : ''}`}>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-[18px] h-[6px] bg-[#1a1a1a]"></div>
                   <span className="text-[#1a1a1a] text-[12px] font-black uppercase tracking-[0.15em]">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Berku: React.FC = () => {
+const Bereq: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Բիզնես');
   
   const categories = [
@@ -111,7 +111,7 @@ const Berku: React.FC = () => {
            <Link to="/bussines" className="hover:text-black cursor-pointer transition-colors px-1">1</Link>
            <Link to="/berku" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
            <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">3</span>
-           <span className="hover:text-black cursor-pointer transition-colors px-1">4</span>
+           <Link to="/bchors" className="hover:text-black cursor-pointer transition-colors px-1">4</Link>
            <span className="hover:text-black cursor-pointer transition-colors px-1">5</span>
            <span className="hover:text-black cursor-pointer transition-colors px-1">6</span>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
@@ -122,4 +122,4 @@ const Berku: React.FC = () => {
   );
 }
 
-export default Berku
+export default Bereq
