@@ -23,8 +23,8 @@ const Biznes: React.FC = () => {
      
       
       <nav className="flex gap-4 text-gray-800 font-medium text-[15px]">
-        <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</p>
+        <Link to="/varker" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
+        <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
         <Link to="/avand" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</p>
