@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Blog: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('Բոլորը');
+  const [activeCategory, setActiveCategory] = useState('Բլոգ');
   
   const categories = [
-    { name: "Բոլորը", path: "" },
-    { name: "Բիզնես", path: "" },
+    { name: "Բիզնես", path: "/bussines" },
     { name: "Կենսակերպ", path: "" },
     { name: "Ներդրումներ", path: "" },
   ];
 
-  // 1. Առաջին մեծ բլոկը (Hero) - Monthly Recap
+ 
   const heroBlog = {
     img: "https://www.evoca.am/images-cache/blogs/1/17683779856926/780x585.png",
     category: "Կենսակերպ",
@@ -20,7 +19,6 @@ const Blog: React.FC = () => {
     date: "14.05.2026"
   };
 
-  // 2. Մնացած բոլոր նկարները՝ իրենց բաժիններով և վերնագրերով (ըստ վիդեոյի)
   const blogItems = [
     {
       img: "https://www.evoca.am/images-cache/blogs/1/17186317173483/616x462.jpg",
@@ -57,7 +55,7 @@ const Blog: React.FC = () => {
       category: "Կենսակերպ",
       title: "Ամանորի քո Evoca երազանքը",
       date: "21.12.2023",
-      isWide: true // Սա վիդեոյում լայն բլոկ էր
+      isWide: true 
     },
     {
       img: "https://www.evoca.am/images-cache/blogs/1/16329119822114/438x328.jpg",
@@ -82,26 +80,26 @@ const Blog: React.FC = () => {
       category: "Կենսակերպ",
       title: "Evoca-գույնի հոգեբանական նկարագիրը",
       date: "15.05.2020",
-      isWide: true // Սա էլ է լայն բլոկ
+      isWide: true 
     }
   ];
 
   return (
     <div className="w-full bg-[#f8f9fa] font-sans text-[#1a1a1a] min-h-screen pb-24 pt-20">
       
-      {/* Breadcrumbs */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-10 flex items-center gap-3 text-[13px] font-medium uppercase tracking-wider">
-        <Link to="/" className="text-gray-400 hover:text-[#6c2db5] transition-colors">Գլխավոր</Link>
-        <span className="text-gray-300">/</span>
-        <span className="text-[#1a1a1a]">Բլոգ</span>
-      </div>
+     
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-4 md:py-6 flex items-center gap-2 text-gray-400 text-[11px] md:text-[13px]">
+              <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+              <span>›</span>
+              <span className="text-gray-800">Բլոգ</span>
+            </div>
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <h1 className="text-[48px] md:text-[80px] font-[900] text-[#1a1a1a] mb-14 tracking-[-0.05em] leading-[0.9]">
           Բլոգ
         </h1>
         
-        {/* Navigation Categories */}
+        
         <div className="flex flex-wrap items-center justify-between gap-8 mb-16 border-b border-gray-100 pb-8">
           <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
@@ -124,7 +122,7 @@ const Blog: React.FC = () => {
           </button>
         </div>
 
-        {/* --- Hero Section (Ամենամեծ բլոկը) --- */}
+        
         <div className="flex flex-col-reverse md:flex-row bg-white rounded-[40px] overflow-hidden mb-16 shadow-sm hover:shadow-xl transition-shadow duration-500 border border-gray-50 min-h-[500px] cursor-pointer group">
           <div className="w-full md:w-[45%] p-10 md:p-16 flex flex-col justify-center">
             <span className="text-[#a70ecd] text-[14px] font-black uppercase tracking-widest mb-6 block">
@@ -149,14 +147,14 @@ const Blog: React.FC = () => {
           </div>
         </div>
 
-        {/* --- Blog Grid --- */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
           {blogItems.map((item, index) => (
             <div 
               key={index} 
               className={`group cursor-pointer flex flex-col ${item.isWide ? 'lg:col-span-3 md:col-span-2 flex-col md:flex-row gap-8 items-center bg-white rounded-[32px] p-6 shadow-sm hover:shadow-xl transition-all' : ''}`}
             >
-              {/* Image Container */}
+              
               <div className={`relative overflow-hidden rounded-[32px] ${item.isWide ? 'w-full md:w-1/2 aspect-[16/9] mb-0' : 'aspect-[4/3] mb-6'} shadow-sm group-hover:shadow-2xl transition-all duration-500`}>
                 <img 
                   src={item.img} 
@@ -166,7 +164,7 @@ const Blog: React.FC = () => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
               </div>
               
-              {/* Text Info */}
+              
               <div className={`px-2 ${item.isWide ? 'w-full md:w-1/2 p-6' : ''}`}>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-[18px] h-[6px] bg-[#1a1a1a]"></div>
@@ -184,24 +182,6 @@ const Blog: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="flex items-center justify-start gap-2 mt-20 pt-10 border-t border-gray-100">
-          {[1, 2, 3, 4, 5, 6].map((num) => (
-            <button 
-              key={num}
-              className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-[16px] transition-all duration-300
-                ${num === 1 
-                  ? 'bg-white text-[#1a1a1a] shadow-lg border border-gray-50 scale-110' 
-                  : 'text-gray-400 hover:text-[#1a1a1a] hover:bg-gray-50'}`}
-            >
-              {num}
-            </button>
-          ))}
-          <button className="ml-4 w-12 h-12 flex items-center justify-center text-[#740fb3] hover:translate-x-2 transition-transform text-[28px] font-light">
-            →
-          </button>
         </div>
       </div>
     </div>

@@ -60,6 +60,7 @@ import CSR from "./components/CSR";
 import Ayl from "./components/Ayl";
 import Two from "./components/Two";
 import Blog from "./components/Blog";
+import Bussines from "./components/Bussines";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -156,6 +157,7 @@ const App: React.FC = () => {
           <Route path="/ayl" element={<Ayl/>} />
           <Route path="/two" element={<Two/>} />
           <Route path="/blog" element={<Blog/>} />
+          <Route path="/bussines" element={<Bussines/>} />
         </Routes>
       </main>
 
