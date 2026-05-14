@@ -101,20 +101,21 @@ const Blog: React.FC = () => {
         
         
         <div className="flex flex-wrap items-center justify-between gap-8 mb-16 border-b border-gray-100 pb-8">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat.name}
-                onClick={() => setActiveCategory(cat.name)}
-                className={`px-6 py-2.5 rounded-full text-[15px] font-bold transition-all duration-300
-                  ${activeCategory === cat.name 
-                    ? 'bg-white text-[#1a1a1a] shadow-[0_4px_15px_rgba(0,0,0,0.08)] border border-gray-50' 
-                    : 'text-gray-400 hover:text-[#1a1a1a]'}`}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
+           <div className="flex flex-wrap gap-1 md:gap-2">
+                {categories.map((cat) => (
+                    <Link
+                          key={cat.name}
+                          to={cat.path}
+                          onClick={() => setActiveCategory(cat.name)}
+                          className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[13px] md:text-[15px] font-bold transition-all tracking-wide inline-block
+                            ${activeCategory === cat.name 
+                              ? 'hover:bg-[#A70ECD] text-black shadow-sm bg-[#f2f2f2]' 
+                              : 'bg-transparent text-gray-500 hover:text-black'}`}
+                          >
+                              {cat.name}
+                        </Link>
+                  ))}
+        </div>
           
           <button className="hidden lg:flex items-center gap-3 bg-[#F4EBFF] text-[#740fb3] px-10 py-4 rounded-full text-[14px] font-black hover:bg-[#eddfff] transition-all uppercase tracking-widest group">
             Արխիվ 
