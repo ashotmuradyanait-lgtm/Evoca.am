@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Bereq: React.FC = () => {
+const Bhing: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Բիզնես');
   
   const categories = [
@@ -12,9 +12,9 @@ const Bereq: React.FC = () => {
 
    const newsItems = [
     {
-      img: "https://www.evoca.am/images-cache/blogs/1/16329967423394/510x383.png",
-      title: "Ֆինանսական ճգնաժամեր",
-      date: "06.07.2020"
+      img: "https://www.evoca.am/images-cache/blogs/1/16336898810327/510x383.png",
+      title: "15 համաշխարհային բիզնեսներ, որոնք ծնվել են ավտոտնակներում և…",
+      date: "18.06.2020"
     },
    ]
 
@@ -110,9 +110,9 @@ const Bereq: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2 md:gap-4 text-gray-500 font-bold text-[14px] md:text-[15px] pb-10 md:pb-20">
            <Link to="/bussines" className="hover:text-black cursor-pointer transition-colors px-1">1</Link>
            <Link to="/berku" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
-           <span className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">3</span>
-           <Link to="/bchors" className="hover:text-black cursor-pointer transition-colors px-1">4</Link>
-           <Link to="/bhing" className="hover:text-black cursor-pointer transition-colors px-1">5</Link>
+           <Link to="/bereq" className="hover:text-black cursor-pointer transition-colors px-1">3</Link>
+           <Link to="/bchors" className="text-black bg-gray-100 px-2.5 md:px-3 py-0.5 md:py-1 rounded cursor-pointer">4</Link>
+           <span className="hover:text-black cursor-pointer transition-colors px-1">5</span>
            <span className="hover:text-black cursor-pointer transition-colors px-1">6</span>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>
@@ -122,4 +122,4 @@ const Bereq: React.FC = () => {
   );
 }
 
-export default Bereq
+export default Bhing

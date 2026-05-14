@@ -112,7 +112,7 @@ const Bussines: React.FC = () => {
            <Link to="/berku" className="hover:text-black cursor-pointer transition-colors px-1">2</Link>
            <Link to="/bereq" className="hover:text-black cursor-pointer transition-colors px-1">3</Link>
            <Link to="/bchors" className="hover:text-black cursor-pointer transition-colors px-1">4</Link>
-           <span className="hover:text-black cursor-pointer transition-colors px-1">5</span>
+           <Link to="/bhing" className="hover:text-black cursor-pointer transition-colors px-1">5</Link>
            <span className="hover:text-black cursor-pointer transition-colors px-1">6</span>
            <span className="text-[#730D8D] text-[20px] md:text-[22px] font-black cursor-pointer ml-1 md:ml-2 hover:translate-x-1 transition-transform">→</span>
         </div>

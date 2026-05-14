@@ -64,6 +64,7 @@ import Berku from "./components/Berku";
 import Bussines from "./components/Bussines";
 import Bereq from "./components/Bereq";
 import Bchors from "./components/Bchors";
+import Bhing from "./components/Bhing";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -164,6 +165,7 @@ const App: React.FC = () => {
           <Route path="/berku" element={<Berku/>} />
           <Route path="/bereq" element={<Bereq/>} />
           <Route path="/bchors" element={<Bchors/>} />
+          <Route path="/bhing" element={<Bhing/>} />
         </Routes>
       </main>
 
