@@ -1,106 +1,106 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+  import React, { useState } from 'react';
+  import { Link } from 'react-router-dom';
 
 
-const Norutyun: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('Բանկային');
-  
-  const categories = [
-    { name: "Բանկային", path: "/bankayin" },
-    { name: "Պրոդուկտներ", path: "/product" },
-    { name: "Նորարարություններ", path: "/nor" },
-    { name: "Կենսակերպ", path: "/kensakerp" },
-    { name: "Մրցանակներ", path: "" },
-    { name: "CSR", path: "" },
-    { name: "Այլ", path: "" }
-  ];
-
-  const newsItems = [
-    {
-      img: "https://www.evoca.am/images-cache/news/1/17545729507567/616x462.png",
-      category: "Կենսակերպ",
-      title: "Վճարիր Evoca Mastercard-ով և մասնակցիր խաղարկությանը",
-      date: "10.04.2026"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/17382449387143/450x295.png",
-      category: "Մրցանակներ",
-      title: "2 նոր մրցանակ Evocabank-ին Global Business & Finance-ից",
-      date: "30.01.2025"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/17373763573222/450x295.jpg",
-      category: "Բանկային",
-      title: "Համագործակցություն Իտալիա-Հայաստան բիզնես ֆորումում",
-      date: "20.01.2025"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/17339403687437/450x295.jpg",
-      category: "Բանկային",
-      title: "Evocabank-ը և IFC-ն հայտարարեցին համագործակցության մասին",
-      date: "11.12.2024"
-    },
-    {
-      img: "https://www.evoca.am/images-cache/news/1/17067716894602/450x295.png",
-      category: "Մրցանակներ",
-      title: "2 նոր մրցանակ Global Business and Finance Magazine-ից",
-      date: "01.02.2024"
-    }
-  ];
-
-  return (
-    <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden mt-20">
-      
+  const Norutyun: React.FC = () => {
+    const [activeCategory, setActiveCategory] = useState('Բանկային');
     
-    
-      <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
-        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
-        <span>›</span>
-        <span className="text-gray-800">Նորություններ</span>
-      </div>
+    const categories = [
+      { name: "Բանկային", path: "/bankayin" },
+      { name: "Պրոդուկտներ", path: "/product" },
+      { name: "Նորարարություններ", path: "/nor" },
+      { name: "Կենսակերպ", path: "/kensakerp" },
+      { name: "Մրցանակներ", path: "" },
+      { name: "CSR", path: "" },
+      { name: "Այլ", path: "" }
+    ];
 
-      <div className="max-w-[1400px] mx-auto px-4 md:px-10">
-        <h1 className="text-[40px] md:text-[68px] font-black text-[#1a1a1a] mb-10 tracking-[-0.04em] leading-none">
-          Նորություններ
-        </h1>
+    const newsItems = [
+      {
+        img: "https://www.evoca.am/images-cache/news/1/17545729507567/616x462.png",
+        category: "Կենսակերպ",
+        title: "Վճարիր Evoca Mastercard-ով և մասնակցիր խաղարկությանը",
+        date: "10.04.2026"
+      },
+      {
+        img: "https://www.evoca.am/images-cache/news/1/17382449387143/450x295.png",
+        category: "Մրցանակներ",
+        title: "2 նոր մրցանակ Evocabank-ին Global Business & Finance-ից",
+        date: "30.01.2025"
+      },
+      {
+        img: "https://www.evoca.am/images-cache/news/1/17373763573222/450x295.jpg",
+        category: "Բանկային",
+        title: "Համագործակցություն Իտալիա-Հայաստան բիզնես ֆորումում",
+        date: "20.01.2025"
+      },
+      {
+        img: "https://www.evoca.am/images-cache/news/1/17339403687437/450x295.jpg",
+        category: "Բանկային",
+        title: "Evocabank-ը և IFC-ն հայտարարեցին համագործակցության մասին",
+        date: "11.12.2024"
+      },
+      {
+        img: "https://www.evoca.am/images-cache/news/1/17067716894602/450x295.png",
+        category: "Մրցանակներ",
+        title: "2 նոր մրցանակ Global Business and Finance Magazine-ից",
+        date: "01.02.2024"
+      }
+    ];
+
+    return (
+      <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden mt-20">
         
-       
-        <div className="flex flex-wrap items-center justify-between gap-6 mb-16">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <Link
-                key={cat.name}
-                to={cat.path}
-                onClick={() => setActiveCategory(cat.name)}
-                className={`px-6 py-2.5 rounded-full text-[15px] font-bold transition-all tracking-wide inline-block
-                  ${activeCategory === cat.name 
-                    ? 'hover:bg-[#A70ECD] text-black shadow-sm' 
-                    : 'bg-transparent text-gray-500 hover:text-black'}`}
-              >
-                {cat.name}
-              </Link>
-            ))}
-          </div>
-          <button className="flex items-center gap-3 bg-[#f3e8ff] text-[#730D8D] px-8 py-3 rounded-full text-[14px] font-black hover:bg-[#ebd5ff] transition-colors uppercase tracking-wider">
-            Բոլորը <span className="text-[24px] leading-none mb-1">›</span>
-          </button>
+      
+      
+        <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+          <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+          <span>›</span>
+          <span className="text-gray-800">Նորություններ</span>
         </div>
 
+        <div className="max-w-[1400px] mx-auto px-4 md:px-10">
+          <h1 className="text-[40px] md:text-[68px] font-black text-[#1a1a1a] mb-10 tracking-[-0.04em] leading-none">
+            Նորություններ
+          </h1>
+          
         
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-28">
-          <div className="flex-1 order-2 lg:order-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-4 h-4 bg-[#e9ff00]"></div>
-              <span className="text-[#a11f81] font-black text-[12px] uppercase tracking-[0.2em]">Մրցանակներ</span>
+          <div className="flex flex-wrap items-center justify-between gap-6 mb-16">
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.name}
+                  to={cat.path}
+                  onClick={() => setActiveCategory(cat.name)}
+                  className={`px-6 py-2.5 rounded-full text-[15px] font-bold transition-all tracking-wide inline-block
+                    ${activeCategory === cat.name 
+                      ? 'hover:bg-[#A70ECD] text-black shadow-sm' 
+                      : 'bg-transparent text-gray-500 hover:text-black'}`}
+                >
+                  {cat.name}
+                </Link>
+              ))}
             </div>
-            <h2 className="text-[32px] md:text-[52px] font-black leading-[1.05] mb-8 tracking-[-0.03em]">
-              Evocabank. Լավագույն ՓՄՁ բանկը Հայաստանում՝ երկրորդ տարին անընդմեջ
-            </h2>
-            <p className="text-[#1a1a1a] text-[18px] leading-[1.6] mb-10 max-w-2xl font-medium opacity-90">
-              Evocabank-ը երկրորդ տարին անընդմեջ արժանանում է «Լավագույն ՓՄՁ բանկը Հայաստանում» միջազգային մրցանակին The Digital Banker-ի կողմից:
-            </p>
-            <div className="text-gray-400 font-bold text-[14px] tracking-widest uppercase">08.05.2026</div>
+            <button className="flex items-center gap-3 bg-[#f3e8ff] text-[#730D8D] px-8 py-3 rounded-full text-[14px] font-black hover:bg-[#ebd5ff] transition-colors uppercase tracking-wider">
+              Բոլորը <span className="text-[24px] leading-none mb-1">›</span>
+            </button>
           </div>
+
+          
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-28">
+            <div className="flex-1 order-2 lg:order-1">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-4 h-4 bg-[#e9ff00]"></div>
+                <span className="text-[#a11f81] font-black text-[12px] uppercase tracking-[0.2em]">Մրցանակներ</span>
+              </div>
+              <h2 className="text-[32px] md:text-[52px] font-black leading-[1.05] mb-8 tracking-[-0.03em]">
+                Evocabank. Լավագույն ՓՄՁ բանկը Հայաստանում՝ երկրորդ տարին անընդմեջ
+              </h2>
+              <p className="text-[#1a1a1a] text-[18px] leading-[1.6] mb-10 max-w-2xl font-medium opacity-90">
+                Evocabank-ը երկրորդ տարին անընդմեջ արժանանում է «Լավագույն ՓՄՁ բանկը Հայաստանում» միջազգային մրցանակին The Digital Banker-ի կողմից:
+              </p>
+              <div className="text-gray-400 font-bold text-[14px] tracking-widest uppercase">08.05.2026</div>
+            </div>
 
           <div className="flex-1 order-1 lg:order-2 relative group w-full">
             <div className="absolute -top-4 -left-4 w-12 h-12 border-t-[7px] border-l-[7px] border-[#e9ff00] z-10"></div>
