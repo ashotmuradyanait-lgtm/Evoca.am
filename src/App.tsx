@@ -70,6 +70,7 @@ import Kens from "./components/Kens";
 import Nerdrum from "./components/Nerdrum";
 import Erkus from "./components/Erkus";
 import Lizing from "./components/Lizing";
+import Hatuk from "./components/Hatuk";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -176,6 +177,7 @@ const App: React.FC = () => {
           <Route path="/nerdrum" element={<Nerdrum/>} />
           <Route path="/erkus" element={<Erkus/>} />
           <Route path="/lizing" element={<Lizing/>} />
+          <Route path="/hatuk" element={<Hatuk/>} />
         </Routes>
       </main>
 
