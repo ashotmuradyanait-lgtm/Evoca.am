@@ -58,14 +58,14 @@ const Biznes: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Բիզնես</span>
         <span>›</span>
-        <span className="cursor-pointer text-gray-800">Հաշիվներ</span>
+        <span className="cursor-pointer text-gray-800">Վարկեր</span>
         <span>›</span>
-        <span className="text-gray-800">Հաշիվների բացում և սպասարկում</span>
+        <span className="text-gray-800">Բիզնես վարկեր</span>
       </div>
 
       
       <div className="max-w-[1400px] mx-auto px-6 mb-10">
-            <h1 className="text-[48px] font-bold text-[#1a1a1a]">Բիզնես վարկեր</h1>
+        <h1 className="text-[48px] font-bold text-[#1a1a1a]">Բիզնես վարկեր</h1>
       </div>
 
        <div className="max-w-[1400px] mx-auto px-6 mb-8">
