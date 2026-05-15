@@ -5,6 +5,7 @@ const Lizing: React.FC = () => {
   
   const [openSections, setOpenSections] = useState<number[]>([]);
 
+
   const toggleSection = (index: number) => {
     setOpenSections(prev => 
       prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
@@ -76,65 +77,69 @@ const Lizing: React.FC = () => {
       title: 'Գյուղատնտեսական տեխնիկայի ձեռքբերման նպատակով',
       isTable: true,
       rows: [
-         { label: 'Արժույթ', value: 'ՀՀ դրամ' },
-         { label: 'Լիզինգառու', value: 'Իրավաբանական անձ, Անհատ Ձեռնարկատեր' },
-         { label: 'Գործունեության ոլորտ', value: 'Գյուղատնտեսություն' },
-         { 
-           label: 'Նպատակ', 
-           value: (
-            <ul className="list-disc pl-5 space-y-1 marker:text-[#6c2db5]">
-              <li>Գյուղատնտեսական տեխնիկայի ձեռքբերում՝</li>
-              <li>տրակտորներ՝ տարբեր մակնիշների</li>
-              <li>կոմբայններ</li>
-              <li>հավաքիչ-մամլիչներ</li>
-              <li>շարքացաններ</li>
-              <li>գութաններ</li>
-              <li>խոտհնձիչներ</li>
-              <li>այլ գյուղատնտեսական տեխնիկա</li>
-            </ul>
-         )},
-         { label: 'Լիզինգի սահմանաչափ', value: '5,100,000-500,000,000 ՀՀ դրամ\n\nԼիզինգի առարկայի արժեքի 20%' },
-         { label: 'Կանխավճար', value: 'Ընդ որում Ծրագրի շրջանակներում նույն լիզինգառուի կողմից ձեռք բերվող լիզինգի առարկաների արժեքների հանրագումարը չպետք է գերազանցի 500 մլն դրամը:' },
-         { label: 'Մարման ժամկետ', value: '36-120 ամիս' }
+          { label: 'Արժույթ', value: 'ՀՀ դրամ' },
+          { label: 'Լիզինգառու', value: 'Իրավաբանական անձ, Անհատ Ձեռնարկատեր' },
+          { label: 'Գործունեության ոլորտ', value: 'Գյուղատնտեսություն' },
+          { 
+            label: 'Նպատակ', 
+            value: (
+             <ul className="list-disc pl-5 space-y-1 marker:text-[#6c2db5]">
+               <li>Գյուղատնտեսական տեխնիկայի ձեռքբերում՝</li>
+               <li>տրակտորներ՝ տարբեր մակնիշների</li>
+               <li>կոմբայններ</li>
+               <li>հավաքիչ-մամլիչներ</li>
+               <li>շարքացաններ</li>
+               <li>գութաններ</li>
+               <li>խոտհնձիչներ</li>
+               <li>այլ գյուղատնտեսական տեխնիկա</li>
+
+             </ul>
+          )},
+          { label: 'Լիզինգի սահմանաչափ', value: '5,100,000-500,000,000 ՀՀ դրամ\n\nԼիզինգի առարկայի արժեքի 20%' },
+          { label: 'Կանխավճար', value: 'Ընդ որում Ծրագրի շրջանակներում նույն լիզինգառուի կողմից ձեռք բերվող լիզինգի առարկաների արժեքների հանրագումարը չպետք է գերազանցի 500 մլն դրամը:' },
+          { label: 'Մարման ժամկետ', value: '36-120 ամիս' }
       ]
     }
   ];
 
   return (
-    <div className="w-full bg-white font-sans">
-     <div className="flex items-center gap-6 pt-14   ">
-           
-           <Link to="/">
-           <img 
-             className="h-[140px] w-[300px] object-contain" 
-             src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
-             alt="Evocabank Logo" 
-           />
-           </Link>
-          
-           
-           <nav className="flex gap-4 text-gray-800 font-medium text-[15px]">
-             <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
-             <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
-             <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
-             <Link to="/dasakan" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
-             <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</p>
-             <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
-             <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
-             <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
-           </nav>
-           <Link to="/evocaonline" className="px-20">
-           <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</Link>
-           </Link>
-         </div>
-      <div className="w-full bg-[#6c2db5] text-white">
-        <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
+    <div className="w-full bg-white font-sans overflow-x-hidden">
+      
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 pt-6 lg:pt-14 px-4 lg:px-6">
+        <Link to="/" className="shrink-0">
+          <img 
+            className="h-[80px] w-[180px] lg:h-[140px] lg:w-[300px] object-contain" 
+            src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
+            alt="Evocabank Logo" 
+          />
+        </Link>
+        
+        <nav className="flex flex-wrap justify-center gap-10 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
+          <Link to="" className="hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
+          <Link to="/lizing" className="hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
+          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
+          <Link to="/dasakan" className="hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
+          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden sm:block">Արժեթղթերի շուկա</p>
+          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Առևտրի ֆինանսավորում</p>
+          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
+        </nav>
+
+        <div className="mt-4 lg:mt-0 lg:px-10">
+          <Link to="/evocaonline" className="inline-block text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl pt-1.5 text-sm font-bold transition-all">
+            EvocaONLINE
+          </Link>
+        </div>
+      </div>
+
+     
+      <div className="w-full bg-[#6c2db5] text-white mt-6">
+        <div className="max-w-[1400px] mx-auto flex items-center h-[50px] lg:h-[60px] px-4 lg:px-6 overflow-x-auto no-scrollbar">
           {subMenuItems.map((item) => (
             <NavLink 
               key={item.name}
               to={item.path}
               className={({ isActive }) => 
-                `h-full flex items-center px-8 transition-colors text-[14px] font-medium
+                `h-full flex items-center px-4 lg:px-8 transition-colors text-[12px] lg:text-[14px] font-medium whitespace-nowrap
                 ${isActive ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
               }
             >
@@ -144,7 +149,8 @@ const Lizing: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+      
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[11px] lg:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Բիզնես</span>
@@ -154,6 +160,7 @@ const Lizing: React.FC = () => {
         <span className="text-gray-800">Evoca Leasing</span>
       </div>
 
+    
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
@@ -163,8 +170,9 @@ const Lizing: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 mb-16">
-        <h1 className="text-[48px] font-bold text-[#1a1a1a] mb-12">Evoca Leasing</h1>
+    
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 mb-16">
+        <h1 className="text-[32px] md:text-[48px] font-bold text-[#1a1a1a] mb-8 md:mb-12">Evoca Leasing</h1>
 
         <div className="flex flex-col border-t border-gray-200">
           {leasingSections.map((section, index) => {
@@ -173,13 +181,13 @@ const Lizing: React.FC = () => {
               <div key={index} className="w-full border-b border-gray-200">
                 <button 
                   onClick={() => toggleSection(index)}
-                  className="w-full flex items-center justify-between py-6 text-left group"
+                  className="w-full flex items-center justify-between py-5 lg:py-6 text-left group"
                 >
-                  <h2 className={`text-[18px] md:text-[20px] font-bold uppercase tracking-wide transition-colors ${isOpen ? 'text-[#6c2db5]' : 'text-[#1a1a1a] group-hover:text-[#6c2db5]'}`}>
+                  <h2 className={`text-[16px] md:text-[20px] font-bold uppercase tracking-wide transition-colors ${isOpen ? 'text-[#6c2db5]' : 'text-[#1a1a1a] group-hover:text-[#6c2db5]'}`}>
                     {section.title}
                   </h2>
                   <svg 
-                    className={`w-6 h-6 transition-all duration-300 ${isOpen ? 'rotate-180 text-[#6c2db5]' : 'text-gray-400 group-hover:text-[#6c2db5]'}`} 
+                    className={`w-5 h-5 lg:w-6 lg:h-6 transition-all duration-300 ${isOpen ? 'rotate-180 text-[#6c2db5]' : 'text-gray-400 group-hover:text-[#6c2db5]'}`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -194,10 +202,10 @@ const Lizing: React.FC = () => {
                       <div className="border-t border-gray-100">
                         {section.rows?.map((row, rIndex) => (
                           <div key={rIndex} className="flex flex-col md:flex-row border-b border-gray-100 last:border-0">
-                            <div className="md:w-[35%] bg-[#f8f9fa] p-4 text-[14px] font-semibold text-[#1a1a1a]">
+                            <div className="md:w-[35%] bg-[#f8f9fa] p-4 text-[13px] lg:text-[14px] font-semibold text-[#1a1a1a]">
                               {row.label}
                             </div>
-                            <div className="md:w-[65%] p-4 text-[14px] text-gray-700 whitespace-pre-line bg-white">
+                            <div className="md:w-[65%] p-4 text-[13px] lg:text-[14px] text-gray-700 whitespace-pre-line bg-white">
                               {row.value}
                             </div>
                           </div>

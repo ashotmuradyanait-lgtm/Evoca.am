@@ -25,15 +25,15 @@ const Biznes: React.FC = () => {
       <nav className="flex gap-4 text-gray-800 font-medium text-[15px]">
         <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
         <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
-        <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
+        <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
         <Link to="/dasakan" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
         <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
         <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
       </nav>
-      <Link to="/evocaonline" className="px-20">
-      <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</Link>
+      <Link to="/evocaonline" className="px-30">
+      <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[40px] w-[180px] hover:bg-[#530498] text-center rounded-3xl p-1">EvocaONLINE</Link>
       </Link>
     </div>
       <div className="w-full bg-[#6c2db5] text-white">
@@ -58,14 +58,14 @@ const Biznes: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Բիզնես</span>
         <span>›</span>
-        <span className="cursor-pointer text-gray-800">Վարկեր</span>
+        <span className="cursor-pointer text-gray-800">Հաշիվներ</span>
         <span>›</span>
-        <span className="text-gray-800">Բիզնես վարկեր</span>
+        <span className="text-gray-800">Հաշիվների բացում և սպասարկում</span>
       </div>
 
       
       <div className="max-w-[1400px] mx-auto px-6 mb-10">
-        <h1 className="text-[48px] font-bold text-[#1a1a1a]">Բիզնես վարկեր</h1>
+            <h1 className="text-[48px] font-bold text-[#1a1a1a]">Բիզնես վարկեր</h1>
       </div>
 
        <div className="max-w-[1400px] mx-auto px-6 mb-8">
