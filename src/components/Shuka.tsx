@@ -14,7 +14,7 @@ const Shuka: React.FC = () => {
     { name: 'Ներդրումային ծառայություններ', path: '' },
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
-    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '' },
+    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '/brepo' },
     { name: 'EvocaINVEST', path: '' },
   ];
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Depozit: React.FC = () => {
+const Brepo: React.FC = () => {
   const subMenuItems = [
     { name: 'Ներդրումային ծառայություններ', path: '/shuka' },
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '' },
-    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '/brepo' },
+    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '' },
     { name: 'EvocaINVEST', path: '' },
   ];
 
@@ -38,7 +38,7 @@ const Depozit: React.FC = () => {
         </div>
       </div>
 
-      {/* Submenu Bar */}
+     
       <div className="w-full bg-[#6c2db5] text-white">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6">
           {subMenuItems.map((item) => (
@@ -64,7 +64,7 @@ const Depozit: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer text-gray-800">Արժեթղթերի շուկա</span>
         <span>›</span>
-        <span className="text-gray-800">ՀԿԴ ծառայություններ</span>
+        <span className="text-gray-800">Ռեպո/Հակադարձ ռեպո գործարքներ</span>
       </div>
 
     
@@ -78,46 +78,51 @@ const Depozit: React.FC = () => {
       </div>
 
       
+     
       <div className="max-w-[1400px] mx-auto px-6 mt-4">
-        
-        <h1 className="text-2xl md:text-[34px] font-black text-[#1a1a1a] mb-8 tracking-tight max-w-[900px] leading-tight">
-          Հայաստանի Կենտրոնական Դեպոզիտարիայի (ՀԿԴ) ծառայություններ
-        </h1>
+        <div className="flex flex-col lg:flex-row gap-12 items-start justify-between">
+          
+         
+          <div className="flex-1 max-w-[800px]">
+            <h1 className="text-2xl md:text-[36px] font-black text-[#1a1a1a] mb-8 tracking-tight">
+              Ռեպո/Հակադարձ ռեպո գործարքներ
+            </h1>
 
-        <div className="flex flex-col gap-6 text-[#4a4a4a] text-[15px] md:text-[16px] leading-relaxed max-w-[1100px] font-normal mb-10">
-          <p>
-            ՀՀ Կենտրոնական Դեպոզիտարիան հաճախորդների սպասարկումն իրականացնում է բացառապես Հաշվի Օպերատորների միջնորդությամբ:
-          </p>
+            <div className="flex flex-col gap-6 text-[#4a4a4a] text-[15px] md:text-[16px] leading-relaxed font-normal">
+              <p>
+                Բանկը Ռեպո/Հակադարձ Ռեպո գործարքներ է կնքում բացառապես Հայաստանի Հանրապետության Կենտրոնական բանկի կողմից գրանցված և լիցենզավորված, մասնագիտացված ընկերությունների հետ (Բանկեր, Ներդրումային ընկերություններ, Ներդրումային ֆոնդեր, Վարկային կազմակերպություններ, Ապահովագրական ընկերություններ):
+              </p>
 
-          <p>
-            Հաշվի Օպերատորը ՀՀ Կենտրոնական Դեպոզիտարիայի հետ կնքված պայմանագրի հիման վրա միջնորդավորում է ՀՀ Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ծառայությունները:
-          </p>
+              <p>
+                Գործարքները կնքվում են ՀՀ պետական գանձապետական և ԿԲ-ի կողմից թողարկված պարտատոմսերով, ինչպես նաև ՀՀ առևտրային բանկերի, վարկային կազմակերպությունների կողմից թողարկված և Հայաստանի Ֆոնդային Բորսայում ցուցակված այլ կորպորատիվ պարտատոմսերով:
+              </p>
 
-          <p>
-            Evocabank-ը, որպես ՀՀ Կենտրոնական Դեպոզիտարիայի Հաշվի Օպերատոր և կարգավորվող շուկայի հաշվարկային համակարգի անդամ (ԿՇՀՀԱ), մատուցում է ռեեստրավարման և պահառության ծառայություններ՝ ապահովելով դրանց մատուցումը ինչպես Բանկի Գլխամասային գրասենյակում, այնպես էլ՝ մասնաճյուղերում:
-          </p>
-        </div>
+              <p>
+                Գործարքի հիմնական պայմանները որոշվում են երկկողմ բանակցությունների արդյունքում:
+              </p>
+            </div>
+          </div>
 
        
-        <div className="flex flex-col gap-4 mt-8">
-          <a 
-            href="https://www.evoca.am/file_manager/Bonds%202026/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D4%BF%D5%A5%D5%B6%D5%BF%D6%80%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D4%B4%D5%A5%D5%BA%D5%B8%D5%A6%D5%AB%D5%BF%D5%A1%D6%80%D5%AB%D5%A1%D5%B5%D5%AB%20%D5%AE%D5%A1%D5%BC%D5%A1%D5%B5%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%B6%D5%A5%D6%80%D5%AB%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B8%D6%80%D5%A4%D5%A1%D5%BE%D5%B8%D6%80%D5%B4%D5%A1%D5%B6%20%D5%BD%D5%A1%D5%AF%D5%A1%D5%A3%D5%B6%D5%A5%D6%80%20%D6%87%20%D5%A4%D6%80%D5%B8%D6%82%D5%B5%D5%A9%D5%B6%D5%A5%D6%80.pdf" 
-            className="text-[#730D8D] hover:text-[#530498] font-bold underline text-[15px] md:text-[16px] transition-colors max-w-max"
-          >
-            Հայաստանի Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության սակագներ
-          </a>
-          
-          <a 
-            href="https://www.evoca.am/file_manager/PDF-FILES/Investment%20Services/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D5%AF%D5%A5%D5%B6%D5%BF%D6%80%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D5%A4%D5%A5%D5%BA%D5%B8%D5%A6%D5%AB%D5%BF%D5%A1%D6%80%D5%AB%D5%A1%D5%B5%D5%AB%20%D5%AF%D5%B8%D5%B2%D5%B4%D5%AB%D6%81%20%D5%B4%D5%A1%D5%BF%D5%B8%D6%82%D6%81%D5%BE%D5%B8%D5%B2%20%D5%AE%D5%A1%D5%BC%D5%A1%D5%B5%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%B6%D5%A5%D6%80%D5%AB%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B8%D6%80%D5%A4%D5%A1%D5%BE%D5%B8%D6%80%D5%B4%D5%A1%D5%B6%20%D5%A3%D5%B8%D6%80%D5%AE%D5%B8%D6%82%D5%B6%D5%A5%D5%B8%D6%82%D5%A9%D5%B5%D5%A1%D5%B6%20%D5%AF%D5%A1%D5%B6%D5%B8%D5%B6%D5%B6%D5%A5%D6%80.pdf" 
-            className="text-[#730D8D] hover:text-[#530498] font-bold underline text-[15px] md:text-[16px] transition-colors max-w-max"
-          >
-            Հայաստանի Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության կանոններ
-          </a>
-        </div>
+          <div className="w-full lg:w-[450px] flex justify-center items-center lg:mt-12">
+            <div className="relative bg-[#f6ebff] rounded-2xl p-6 w-full max-w-[400px] aspect-square flex items-center justify-center overflow-hidden shadow-sm">
+              <img 
+                src="https://www.evoca.am/images-cache/blogs/1/16336923273854/1440x650.png" 
+                alt="Gold Bullion Media" 
+                className="w-full h-full object-contain scale-110 transform rotate-[-5deg]"
+              />
+             
+              <div className="absolute bottom-6 left-6 flex gap-2">
+                <span className="w-4 h-4 bg-gradient-to-tr from-yellow-600 to-yellow-300 rounded-full shadow-inner"></span>
+                <span className="w-6 h-6 bg-gradient-to-tr from-yellow-600 to-yellow-300 rounded-full shadow-inner"></span>
+              </div>
+            </div>
+          </div>
 
+        </div>
       </div>
     </div>
   );
 };
 
-export default Depozit;
+export default Brepo;

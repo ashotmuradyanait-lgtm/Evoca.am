@@ -76,6 +76,7 @@ import Hashiv from "./components/Hashiv";
 import Ararka from "./components/Ararka";
 import Shuka from "./components/Shuka";
 import Depozit from "./components/Depozit";
+import Brepo from "./components/Brepo";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -188,6 +189,7 @@ const App: React.FC = () => {
           <Route path="/ararka" element={<Ararka/>} />
           <Route path="/shuka" element={<Shuka/>} />
           <Route path="/depozit" element={<Depozit/>} />
+          <Route path="/brepo" element={<Brepo/>} />
         </Routes>
       </main>
 
