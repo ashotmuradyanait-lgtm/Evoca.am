@@ -49,9 +49,9 @@ const Dasakan: React.FC = () => {
         <nav className="flex flex-wrap justify-center gap-3 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
           <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
-          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
-          <Link to="/dasakan" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold text-[#6c2db5]">Ավանդներ</Link>
-          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Արժեթղթերի շուկա</p>
+          <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
+          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold text-[#6c2db5]">Ավանդներ</Link>
+          <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Արժեթղթերի շուկա</Link>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden lg:block">Առևտրի ֆինանսավորում</p>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>

@@ -115,11 +115,11 @@ const Lizing: React.FC = () => {
         </Link>
         
         <nav className="flex flex-wrap justify-center gap-10 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
-          <Link to="" className="hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
+          <Link to="/biznes" className="hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
           <Link to="/lizing" className="hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
-          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</p>
+          <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
           <Link to="/dasakan" className="hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
-          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden sm:block">Արժեթղթերի շուկա</p>
+          <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden sm:block">Արժեթղթերի շուկա</Link>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Առևտրի ֆինանսավորում</p>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
         </nav>

@@ -74,6 +74,7 @@ import Hatuk from "./components/Hatuk";
 import Dasakan from "./components/Dasakan";
 import Hashiv from "./components/Hashiv";
 import Ararka from "./components/Ararka";
+import Shuka from "./components/Shuka";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -184,6 +185,7 @@ const App: React.FC = () => {
           <Route path="/dasakan" element={<Dasakan/>} />
           <Route path="/hashiv" element={<Hashiv/>} />
           <Route path="/ararka" element={<Ararka/>} />
+          <Route path="/shuka" element={<Shuka/>} />
         </Routes>
       </main>
 
