@@ -13,7 +13,7 @@ const Hashiv: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Հաշիվների բացում և սպասարկում', path: '' },
-    { name: 'Առարկայազուրկ մետաղական հաշիվներ', path: '' },
+    { name: 'Առարկայազուրկ մետաղական հաշիվներ', path: '/ararka' },
   ];
 
   const accordionData = [
@@ -223,7 +223,6 @@ const Hashiv: React.FC = () => {
                             {section.listItems?.map((item, idx) => (
                               <tr key={idx} className="border border-[#6c2db5] hover:bg-[#6c2db5]/5 transition-colors">
                                 <td className="py-3 px-4 border border-[#6c2db5] w-20 align-middle text-center">
-                                  {/* մեդիա ըստ քո խնդրանքի */}
                                   <img 
                                     src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
                                     alt="Media" 
