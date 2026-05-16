@@ -5,8 +5,11 @@ import { useTranslation } from 'react-i18next';
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [isOnlineAppsOpen, setIsOnlineAppsOpen] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const feedbackRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
@@ -20,25 +23,27 @@ const Header: React.FC = () => {
   ];
 
   const changeLanguage = (lng: string) => {
+    const tryTranslate = () => {
+      const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+      if (select) {
+        select.value = lng;
+        select.dispatchEvent(new Event('change'));
+      } else {
+        setTimeout(tryTranslate, 500);
+      }
+    };
 
-  const tryTranslate = () => {
-    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-    if (select) {
-      select.value = lng;
-      select.dispatchEvent(new Event('change'));
-    } else {
-      setTimeout(tryTranslate, 500);
-    }
+    tryTranslate();
+    setIsLangOpen(false);
   };
-
-  tryTranslate();
-  setIsLangOpen(false);
-};
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOnlineAppsOpen(false);
+      }
+      if (feedbackRef.current && !feedbackRef.current.contains(event.target as Node)) {
+        setIsFeedbackOpen(false);
       }
       if (langRef.current && !langRef.current.contains(event.target as Node)) {
         setIsLangOpen(false);
@@ -76,6 +81,7 @@ const Header: React.FC = () => {
 
         <div className="flex items-center gap-3 lg:gap-6">
           
+          {/* Առցանց հայտեր Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button 
               onClick={() => setIsOnlineAppsOpen(!isOnlineAppsOpen)}
@@ -110,11 +116,42 @@ const Header: React.FC = () => {
             )}
           </div>
 
-          <div className="hidden sm:flex items-center gap-1 cursor-pointer text-[#6c2db5] font-bold text-[12px] lg:text-[14px]">
-            <p className="whitespace-nowrap font-bold">{t('Հետադարձ կապ')}</p>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
+          {/* Հետադարձ կապ Dropdown */}
+          <div className="relative" ref={feedbackRef}>
+            <button 
+              onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
+              className="hidden sm:flex items-center gap-1 cursor-pointer text-[#6c2db5] font-bold text-[12px] lg:text-[14px] outline-none"
+            >
+              <span className="whitespace-nowrap font-bold">{t('Հետադարձ կապ')}</span>
+              <svg 
+                className={`w-4 h-4 transition-transform duration-300 ${isFeedbackOpen ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {isFeedbackOpen && (
+              <div className="absolute right-0 mt-4 w-[240px] bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 z-[60] animate-in fade-in slide-in-from-top-2">
+                <a href='tel:+37410605555' onClick={() => setIsFeedbackOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                  {t('+374 10 605555')}
+                </a>
+                <a href='tel:+37498205555' onClick={() => setIsFeedbackOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px]">
+                  {t('+374 98 205555')}
+                </a>
+                <a href='tel:+37499605555' onClick={() => setIsFeedbackOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px] border-b border-gray-50">
+                  {t('+374 99 605555')}
+                </a>
+                <a href='tel:8444' onClick={() => setIsFeedbackOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px] border-b border-gray-50">
+                  {t('8444')}
+                </a>
+                <a href='#' onClick={() => setIsFeedbackOpen(false)} className="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#6c2db5] transition-colors font-medium text-[14px] border-b border-gray-50">
+                  {t('Պատվիրել զանգ')}
+                </a>
+              </div>
+            )}
           </div>
 
           <div className="flex items-center gap-2 lg:gap-4 text-black">
