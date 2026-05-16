@@ -15,7 +15,7 @@ const Shuka: React.FC = () => {
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
     { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '/brepo' },
-    { name: 'EvocaINVEST', path: '' },
+    { name: 'EvocaINVEST', path: '/inv' },
   ];
 
   const accordionData = [

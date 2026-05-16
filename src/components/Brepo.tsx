@@ -5,9 +5,9 @@ const Brepo: React.FC = () => {
   const subMenuItems = [
     { name: 'Ներդրումային ծառայություններ', path: '/shuka' },
     { name: 'Պարտատոմսեր', path: '/partatoms' },
-    { name: 'ՀԿԴ ծառայություններ', path: '' },
+    { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
     { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '' },
-    { name: 'EvocaINVEST', path: '' },
+    { name: 'EvocaINVEST', path: '/inv' },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Brepo: React.FC = () => {
             alt="Evocabank Logo" 
           />
         </Link>
-        <nav className="flex gap-3 text-gray-800 font-medium text-[15px]">
+        <nav className="flex gap-1 text-gray-800 font-medium text-[15px]">
           <Link to="/biznes" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
           <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
           <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
@@ -103,21 +103,6 @@ const Brepo: React.FC = () => {
             </div>
           </div>
 
-       
-          <div className="w-full lg:w-[450px] flex justify-center items-center lg:mt-12">
-            <div className="relative bg-[#f6ebff] rounded-2xl p-6 w-full max-w-[400px] aspect-square flex items-center justify-center overflow-hidden shadow-sm">
-              <img 
-                src="https://www.evoca.am/images-cache/blogs/1/16336923273854/1440x650.png" 
-                alt="Gold Bullion Media" 
-                className="w-full h-full object-contain scale-110 transform rotate-[-5deg]"
-              />
-             
-              <div className="absolute bottom-6 left-6 flex gap-2">
-                <span className="w-4 h-4 bg-gradient-to-tr from-yellow-600 to-yellow-300 rounded-full shadow-inner"></span>
-                <span className="w-6 h-6 bg-gradient-to-tr from-yellow-600 to-yellow-300 rounded-full shadow-inner"></span>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
