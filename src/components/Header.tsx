@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     { name: t('Անհատ'), path: '/' },
     { name: t('Բիզնես'), path: '/biznes' },
     { name: t('Ակնթարթային վճարումներ'), path: '/providers' },
-    { name: t('Մեր մասին'), path: '/about' },
+    { name: t('Մեր մասին'), path: '/mermasin' },
     { name: t('Նորություններ'), path: '/norutyun' },
     { name: t('Բլոգ'), path: '/blog' },
     { name: t('Կարիերա'), path: '/careers' }
@@ -81,7 +81,6 @@ const Header: React.FC = () => {
 
         <div className="flex items-center gap-3 lg:gap-6">
           
-          {/* Առցանց հայտեր Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button 
               onClick={() => setIsOnlineAppsOpen(!isOnlineAppsOpen)}
@@ -116,7 +115,7 @@ const Header: React.FC = () => {
             )}
           </div>
 
-          {/* Հետադարձ կապ Dropdown */}
+         
           <div className="relative" ref={feedbackRef}>
             <button 
               onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}

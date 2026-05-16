@@ -78,6 +78,8 @@ import Shuka from "./components/Shuka";
 import Depozit from "./components/Depozit";
 import Brepo from "./components/Brepo";
 import Inv from "./components/Inv";
+import Mermasin from "./components/Mermasin";
+import Karuyc from "./components/Karuyc";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -192,6 +194,8 @@ const App: React.FC = () => {
           <Route path="/depozit" element={<Depozit/>} />
           <Route path="/brepo" element={<Brepo/>} />
           <Route path="/inv" element={<Inv/>} />
+          <Route path="/mermasin" element={<Mermasin/>} />
+          <Route path="/karuyc" element={<Karuyc/>} />
         </Routes>
       </main>
 

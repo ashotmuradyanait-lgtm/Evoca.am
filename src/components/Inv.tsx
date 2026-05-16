@@ -68,8 +68,7 @@ const Inv: React.FC = () => {
         <span className="text-gray-800">EvocaINVEST</span>
       </div>
 
-    
-    
+  
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
