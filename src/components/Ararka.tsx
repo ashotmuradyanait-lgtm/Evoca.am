@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Menu from '../pages/Reviews';
+import Reviews from '../pages/Reviews';
 
 const Ararka: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
@@ -142,6 +144,7 @@ const Ararka: React.FC = () => {
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" className="w-5 h-5" alt="PN" /></Link>
         </div>
       </div>
+      <Reviews/>
 
     </div>
   )
