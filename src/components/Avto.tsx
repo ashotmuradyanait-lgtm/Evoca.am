@@ -7,8 +7,8 @@ const Avto: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Վարկեր', path: '/varker' },
-    { name: 'Վարկային պատմություն և սքոր', path: '/varkayin-patmutyun' },
-    { name: 'Կարևոր տեղեկատվություն', path: '/karevvor-texekatvutyun' }
+    { name: 'Վարկային պատմություն և սքոր', path: '/sqor' },
+    { name: 'Կարևոր տեղեկատվություն', path: '/nyut' }
   ];
 
   const filters = [
@@ -17,8 +17,8 @@ const Avto: React.FC = () => {
     { name: 'Անգրավ սպառողական վարկեր', path: '/angrav' },
     { name: 'Հիփոթեքային վարկեր', path: '/hipotek' },
     { name: 'Ավտովարկ', path: '/avto' },
-    { name: 'Լիզինգ', path: '/varker/leasing' },
-    { name: 'Օնլայն վարկեր', path: '/varker/online' }
+    { name: 'Լիզինգ', path: '/leasing' },
+    { name: 'Օնլայն վարկեր', path: '/online' }
   ];
 
   return (
