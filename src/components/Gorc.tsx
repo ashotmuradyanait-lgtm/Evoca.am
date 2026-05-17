@@ -55,7 +55,7 @@ const Gorc: React.FC = () => {
         </Link>
         <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-gray-800 font-medium text-[14px] md:text-[15px]">
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Evoca-ի մասին</Link>
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Սակագներ</Link>
+          <Link to="/sakagin" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Սակագներ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշվետվություններ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հայտարարություններ</Link>
         </nav>
@@ -67,7 +67,7 @@ const Gorc: React.FC = () => {
       </div>
 
      
-      <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
+      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
             <NavLink

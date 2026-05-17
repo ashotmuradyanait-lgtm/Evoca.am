@@ -1,3 +1,4 @@
+import { Link} from 'react-router-dom';
 const Brends = () => {
   const partners = [
     "https://www.evoca.am/images-cache/partners/1/16104594273635/185x80_grayscale.png",
@@ -45,10 +46,12 @@ const Brends = () => {
               <p>Դարձեք Evocabank-ի Գործընկեր և եկեք միասին գնանք դեպի գունեղ նոր իրականություն: Դառնալով Evoca ընտանիքի անդամ՝ Դուք մուտք կգործեք ժամանակակից և յուրահատուկ աշխարհ: Մենք մշտապես բաց ենք հետաքրքիր առաջարկների ու համագործակցությունների համար:</p>
             </div>
             
+          <Link to="/gorc">
             <button className="flex items-center gap-3 bg-[#f0eaff] hover:bg-[#6600cc] text-[#6600cc] hover:text-white px-8 py-3.5 rounded-full transition-all duration-300 group shadow-sm font-bold text-[15px]">
               Բոլոր գործընկերները
               <span className="text-xl group-hover:translate-x-1 transition-transform">›</span>
             </button>
+          </Link>
           </div>
 
          

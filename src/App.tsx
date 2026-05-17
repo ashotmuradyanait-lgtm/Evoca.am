@@ -86,6 +86,7 @@ import Gorc from "./components/Gorc";
 import Mrcanakner from "./components/Mrcanakner";
 import Karciq from "./components/Karciq";
 import Corp from "./components/Corp";
+import Sakagin from "./components/Sakagin";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -208,6 +209,7 @@ const App: React.FC = () => {
           <Route path="/mrcanakner" element={<Mrcanakner/>} />
           <Route path="/karciq" element={<Karciq/>} />
           <Route path="/corp" element={<Corp/>} />
+          <Route path="/sakagin" element={<Sakagin/>} />
         </Routes>
       </main>
 

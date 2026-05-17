@@ -152,7 +152,7 @@ const Xekavar: React.FC = () => {
       </div>
 
       
-      <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
+      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
             <NavLink

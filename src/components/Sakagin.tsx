@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Karuyc: React.FC = () => {
+const Sakagin: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
   
-  const [selectedYear, setSelectedYear] = useState('2025');
 
   const subMenuItems = [
-    { name: 'Ընդհանուր', path: '/mermasin' },
-    { name: 'Կառուցվածք', path: '' },
-    { name: 'Բաժնետերեր', path: '/bazin' },
-    { name: 'Ղեկավարություն', path: '/xekavar' },
-    { name: 'Գործընկերներ', path: '/gorc' },
-    { name: 'Մրցանակներ', path: '/mrcanakner' },
-    { name: 'Կարծիքներ', path: '/karciq' },
-    { name: 'CSR', path: '/corp' },
+    { name: 'Վարկեր ֆիզիկական անձանց', path: '' },
+    { name: 'Վարկեր իրավաբանական անձանց', path: '' },
+    { name: 'Միջնորդավճարների սակագները', path: '' },
+    { name: 'Ավանդների սակագներ', path: '' },
+    { name: 'Արխիվ', path: '' }
   ];
+
 
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
@@ -30,8 +27,8 @@ const Karuyc: React.FC = () => {
         </Link>
         
         <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-gray-800 font-medium text-[14px] md:text-[15px]">
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Evoca-ի մասին</Link>
-          <Link to="/sakagin" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Սակագներ</Link>
+          <Link to="/mermasin" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Evoca-ի մասին</Link>
+          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Սակագներ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշվետվություններ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հայտարարություններ</Link>
         </nav>
@@ -43,7 +40,7 @@ const Karuyc: React.FC = () => {
         </Link>
       </div>
 
-      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto">
+      <div className="w-full bg-[#6c2db5] text-white  overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
             <NavLink 
@@ -67,27 +64,10 @@ const Karuyc: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer text-gray-800">Evoca-ի մասին</span>
         <span>›</span>
-        <span className="text-gray-800">Կառուցվածք</span>
+        <span className="text-gray-800">Ընդհանուր</span>
       </div>
 
-      <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
-              <div className="flex flex-col gap-3">
-                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
-                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/twitter-icon.png" className="w-5 h-5" alt="TW" /></Link>
-                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" className="w-5 h-5" alt="IN" /></Link>
-                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" className="w-5 h-5" alt="PN" /></Link>
-              </div>
-            </div>
-
-      <div className="max-w-[1400px] mx-auto px-6 mb-10">
-        <h1 className="text-[32px] md:text-[48px] font-bold text-[#1a1a1a]">Բանկի կառուցվածքը</h1>
       </div>
-
-      <div>
-        <img className='justify-center pl-30 h-[750px] w-[1250px]' src="https://www.evoca.am/file_manager/structure/Organizational%20Structure-arm.png" alt="" />
-      </div>
-
-        </div>
   )
 }
-export default Karuyc
+export default Sakagin
