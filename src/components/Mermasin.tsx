@@ -11,8 +11,8 @@ const Mermasin: React.FC = () => {
     { name: 'Կառուցվածք', path: '/karuyc' },
     { name: 'Բաժնետերեր', path: '/bazin' },
     { name: 'Ղեկավարություն', path: '/xekavar' },
-    { name: 'Գործընկերներ', path: '' },
-    { name: 'Մրցանակներ', path: '' },
+    { name: 'Գործընկերներ', path: '/gorc' },
+    { name: 'Մրցանակներ', path: '/mrcanakner' },
     { name: 'Կարծիքներ', path: '' },
     { name: 'CSR', path: '' },
   ];
