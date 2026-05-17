@@ -5,13 +5,13 @@ const Bazin: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
   const [selectedYear, setSelectedYear] = useState('2025');
 
-  // Ավելացվել է state՝ ակորդեոնների բաց/փակ լինելը վերահսկելու համար
+
   const [openAccordions, setOpenAccordions] = useState<{ [key: string]: boolean }>({
     capital: false,
     dividends: false,
   });
 
-  // Ֆունկցիա՝ ակորդեոնի վիճակը փոխելու համար
+  
   const toggleAccordion = (key: string) => {
     setOpenAccordions((prev) => ({
       ...prev,
@@ -23,7 +23,7 @@ const Bazin: React.FC = () => {
     { name: 'Ընդհանուր', path: '/mermasin' },
     { name: 'Կառուցվածք', path: '/karuyc' },
     { name: 'Բաժնետերեր', path: '' },
-    { name: 'Ղեկավարություն', path: '' },
+    { name: 'Ղեկավարություն', path: '/xekavar' },
     { name: 'Գործընկերներ', path: '' },
     { name: 'Մրցանակներ', path: '' },
     { name: 'Կարծիքներ', path: '' },
@@ -85,7 +85,7 @@ const Bazin: React.FC = () => {
         </Link>
       </div>
 
-      {/* Submenu */}
+      
       <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -103,7 +103,7 @@ const Bazin: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+     
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -114,7 +114,7 @@ const Bazin: React.FC = () => {
         <span className="text-gray-800">Բաժնետերեր</span>
       </div>
 
-      {/* Social Sidebar */}
+     
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>

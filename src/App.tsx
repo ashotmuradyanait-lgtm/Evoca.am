@@ -81,6 +81,7 @@ import Inv from "./components/Inv";
 import Mermasin from "./components/Mermasin";
 import Karuyc from "./components/Karuyc";
 import Bazin from "./components/Bazin";
+import Xekavar from "./components/Xekavar";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -198,6 +199,7 @@ const App: React.FC = () => {
           <Route path="/mermasin" element={<Mermasin/>} />
           <Route path="/karuyc" element={<Karuyc/>} />
           <Route path="/bazin" element={<Bazin/>} />
+          <Route path="/xekavar" element={<Xekavar/>} />
         </Routes>
       </main>
 

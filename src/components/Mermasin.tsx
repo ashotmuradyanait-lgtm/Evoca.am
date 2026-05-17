@@ -10,7 +10,7 @@ const Mermasin: React.FC = () => {
     { name: 'Ընդհանուր', path: '' },
     { name: 'Կառուցվածք', path: '/karuyc' },
     { name: 'Բաժնետերեր', path: '/bazin' },
-    { name: 'Ղեկավարություն', path: '' },
+    { name: 'Ղեկավարություն', path: '/xekavar' },
     { name: 'Գործընկերներ', path: '' },
     { name: 'Մրցանակներ', path: '' },
     { name: 'Կարծիքներ', path: '' },
