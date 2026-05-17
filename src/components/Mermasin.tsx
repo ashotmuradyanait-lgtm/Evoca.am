@@ -13,8 +13,8 @@ const Mermasin: React.FC = () => {
     { name: 'Ղեկավարություն', path: '/xekavar' },
     { name: 'Գործընկերներ', path: '/gorc' },
     { name: 'Մրցանակներ', path: '/mrcanakner' },
-    { name: 'Կարծիքներ', path: '' },
-    { name: 'CSR', path: '' },
+    { name: 'Կարծիքներ', path: '/karciq' },
+    { name: 'CSR', path: '/corp' },
   ];
 
   const historyData: { [key: string]: string } = {

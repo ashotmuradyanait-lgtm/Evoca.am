@@ -78,8 +78,8 @@ const Xekavar: React.FC = () => {
     { name: 'Ղեկավարություն', path: '' },
     { name: 'Գործընկերներ', path: '/gorc' },
     { name: 'Մրցանակներ', path: '/mrcanakner' },
-    { name: 'Կարծիքներ', path: '' },
-    { name: 'CSR', path: '' },
+    { name: 'Կարծիքներ', path: '/karciq' },
+    { name: 'CSR', path: '/corp' },
   ];
 
   const ProfileCard: React.FC<{

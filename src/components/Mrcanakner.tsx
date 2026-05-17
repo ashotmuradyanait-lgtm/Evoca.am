@@ -4,9 +4,9 @@ import { Link, NavLink } from 'react-router-dom';
 const Mrcanakner: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
   
-  // Էջադրման (Pagination) սթեյթ
+  
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Մեկ էջում 6 քարտ (3x3 դասավորության համար երկու տող)
+  const itemsPerPage = 6; 
 
   const subMenuItems = [
     { name: 'Ընդհանուր', path: '/mermasin' },
@@ -15,11 +15,10 @@ const Mrcanakner: React.FC = () => {
     { name: 'Ղեկավարություն', path: '/xekavar' },
     { name: 'Գործընկերներ', path: '/gorc' },
     { name: 'Մրցանակներ', path: '' },
-    { name: 'Կարծիքներ', path: '' },
-    { name: 'CSR', path: '' },
+    { name: 'Կարծիքներ', path: '/karciq' },
+    { name: 'CSR', path: '/corp' },
   ];
 
-  // Մրցանակների ամբողջական տվյալները՝ ըստ տեսանյութի կառուցվածքի
   const awards = [
     { year: '2025 թ.', title: 'Best AI-Powered Mobile App', subtitle: 'The Digital Banker', logo: 'https://www.evoca.am/images-cache/awards/1/17701876298505/140x65.png' },
     { year: '2025 թ.', title: 'Highest Cashless Achievement', subtitle: 'Visa International', logo: 'https://www.evoca.am/images-cache/awards/1/17696923392309/140x65.png' },
@@ -34,7 +33,7 @@ const Mrcanakner: React.FC = () => {
     { year: '2024 թ.', title: 'Highest Cashless Ratio Achievement', subtitle: 'Visa International', logo: 'https://www.evoca.am/images-cache/awards/1/17310464503321/140x65.png' }
   ];
 
-  // Ընթացիկ էջի հաշվարկ
+  
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentAwards = awards.slice(indexOfFirstItem, indexOfLastItem);
@@ -42,7 +41,7 @@ const Mrcanakner: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Header section (Անփոփոխ) */}
+     
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-6">
         <Link to="/">
           <img 
@@ -66,7 +65,7 @@ const Mrcanakner: React.FC = () => {
         </Link>
       </div>
 
-      {/* Submenu section (Անփոփոխ) */}
+     
       <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -84,7 +83,7 @@ const Mrcanakner: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs section (Անփոփոխ) */}
+      
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -95,14 +94,13 @@ const Mrcanakner: React.FC = () => {
         <span className="text-gray-800">Մրցանակներ</span>
       </div>
 
-      {/* Main Title section (Անփոփոխ) */}
+     
       <div className="max-w-[1400px] mx-auto px-6 mb-10">
         <h1 className="text-[32px] md:text-[48px] font-bold text-[#1a1a1a]">Մրցանակներ</h1>
       </div>
 
-      {/* Awards Grid & Pagination section (Մեդիա հարմարեցումներով և 3 սյունակով) */}
+     
       <div className="max-w-[1400px] mx-auto px-6 pb-20">
-        {/* Մեդիա դիրքեր՝ 1 սյունակ հեռախոսի վրա, 2 սյունակ պլանշետի, 3 սյունակ համակարգչի վրա */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {currentAwards.map((item, index) => (
             <div 
@@ -131,7 +129,7 @@ const Mrcanakner: React.FC = () => {
           ))}
         </div>
 
-        {/* Էջադրման կոճակներ (Pagination) */}
+       
         <div className="flex justify-center items-center gap-2 mt-14">
           <button 
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
