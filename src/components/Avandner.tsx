@@ -14,7 +14,7 @@ const Avandner: React.FC = () => {
     <div className="w-full bg-white">
       <Menu />
       
-      {/* Sub Header */}
+     
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-4 md:px-6 min-w-max">
           {subMenuItems.map((item) => (
@@ -32,7 +32,7 @@ const Avandner: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+      
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[12px] md:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>

@@ -9,7 +9,7 @@ const Mermasin: React.FC = () => {
   const subMenuItems = [
     { name: 'Ընդհանուր', path: '' },
     { name: 'Կառուցվածք', path: '/karuyc' },
-    { name: 'Բաժնետերեր', path: '' },
+    { name: 'Բաժնետերեր', path: '/bazin' },
     { name: 'Ղեկավարություն', path: '' },
     { name: 'Գործընկերներ', path: '' },
     { name: 'Մրցանակներ', path: '' },

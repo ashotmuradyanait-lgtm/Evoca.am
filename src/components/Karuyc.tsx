@@ -9,7 +9,7 @@ const Karuyc: React.FC = () => {
   const subMenuItems = [
     { name: 'Ընդհանուր', path: '/mermasin' },
     { name: 'Կառուցվածք', path: '' },
-    { name: 'Բաժնետերեր', path: '' },
+    { name: 'Բաժնետերեր', path: '/bazin' },
     { name: 'Ղեկավարություն', path: '' },
     { name: 'Գործընկերներ', path: '' },
     { name: 'Մրցանակներ', path: '' },
