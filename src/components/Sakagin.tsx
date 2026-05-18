@@ -8,8 +8,8 @@ const Sakagin: React.FC = () => {
   const subMenuItems = [
     { name: 'Վարկեր ֆիզիկական անձանց', path: '' },
     { name: 'Վարկեր իրավաբանական անձանց', path: '/irav' },
-    { name: 'Միջնորդավճարների սակագները', path: '' },
-    { name: 'Ավանդների սակագներ', path: '' },
+    { name: 'Միջնորդավճարների սակագները', path: '/Mijnord' },
+    { name: 'Ավանդների սակագներ', path: '/avandik' },
     { name: 'Արխիվ', path: '' }
   ];
 

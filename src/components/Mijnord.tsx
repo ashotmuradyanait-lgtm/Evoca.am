@@ -1,85 +1,53 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Irav: React.FC = () => {
+const Mijnord: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
   const subMenuItems = [
     { name: 'Վարկեր ֆիզիկական անձանց', path: '/sakagin' },
-    { name: 'Վարկեր իրավաբանական անձանց', path: '' },
-    { name: 'Միջնորդավճարների սակագները', path: '/mijnord' },
+    { name: 'Վարկեր իրավաբանական անձանց', path: '/irav' },
+    { name: 'Միջնորդավճարների սակագները', path: '' },
     { name: 'Ավանդների սակագներ', path: '/avandik' },
     { name: 'Արխիվ', path: '' }
   ];
 
-  const businessLoansData = [
+ 
+  const commissionsData = [
     {
-      title: 'Բիզնես վարկ',
+      title: 'Բանկային հաշիվների բացում և սպասարկում',
       details: [
-        { label: 'Արժույթ', value: 'ՀՀ դրամ, ԱՄՆ դոլար կամ Եվրո' },
-        { label: 'Նպատակ', value: 'Բիզնեսի զարգացում, կապիտալ ներդրումներ, շրջանառու միջոցների համալրում' },
-        { label: 'Սահմանաչափեր ըստ ոլորտների', value: 'Արդյունաբերություն, Շինարարություն, Առևտուր, Հանրային սնունդ և այլն՝ մինչև 500,000,000 ՀՀ դրամ: Տրանսպորտ և կապ՝ մինչև 1,000,000,000 ՀՀ դրամ: Գյուղատնտեսություն՝ մինչև 350,000,000 ՀՀ դրամ:' },
-        { label: 'Մարման ժամկետ', value: 'Մինչև 10 տարի' }
+        { label: 'ՀՀ դրամով և արտարժույթով հաշիվների բացում', value: 'Անվճար' },
+        { label: 'Հաշիվների սպասարկում (տարեկան)', value: 'Ֆիզ. անձանց համար՝ անվճար, Իրավ. անձանց համար՝ 12,000 ՀՀ դրամ' },
+        { label: 'Փակված հաշվի վերաբացում', value: '1,000 ՀՀ դրամ' },
+        { label: 'Հաշվի ընթացիկ վիճակի մասին տեղեկանքների տրամադրում', value: 'Հայերեն կամ անգլերեն լեզվով՝ 3,000 ՀՀ դրամ' }
       ]
     },
     {
-      title: 'Վարկային գիծ (Իրավաբանական անձանց)',
+      title: 'Դրամական փոխանցումներ',
       details: [
-        { label: 'Արժույթ', value: 'ՀՀ դրամ, ԱՄՆ դոլար, Եվրո' },
-        { label: 'Նպատակ', value: 'Շրջանառու կապիտալի համալրում' },
-        { label: 'Սահմանաչափ', value: 'Մինչև 1,000,000,000 ՀՀ դրամ կամ համարժեք արտարժույթ' },
-        { label: 'Մարման ժամկետ', value: 'Մինչև 5 տարի' },
-        { label: 'Տարեկան տոկոսադրույք', value: 'ՀՀ դրամ՝ սկսած 12.5%-ից, ԱՄՆ դոլար՝ սկսած 8%-ից' }
+        { label: 'ՀՀ տարածքում (ՀՀ դրամով)', value: 'Մինչև ժամը 15:00-ն՝ անվճար, 15:00-ից հետո՝ 0.1% (նվազագույնը 200 ՀՀ դրամ)' },
+        { label: 'Միջազգային փոխանցումներ (SWIFT)՝ ԱՄՆ դոլարով', value: '0.15% (նվազագույնը 7,000 ՀՀ դրամ, առավելագույնը 50,000 ՀՀ դրամ)' },
+        { label: 'Միջազգային փոխանցումներ (SWIFT)՝ Եվրոյով', value: '0.15% (նվազագույնը 9,000 ՀՀ դրամ, առավելագույնը 60,000 ՀՀ դրամ)' },
+        { label: 'Փոխանցման տվյալների փոփոխում կամ չեղարկում', value: '25,000 ՀՀ դրամ' }
       ]
     },
     {
-      title: 'KFW ծրագիր՝ Բիզնեսի կանաչ ֆինանսավորում',
+      title: 'Կանխիկով գործառնություններ (Մուտք և Ելք)',
       details: [
-        { label: 'Վարկատեսակ', value: 'Առևտրային վարկ, լիզինգ' },
-        { label: 'Նպատակ', value: 'Վերականգնվող էներգիայի հիման վրա էլեկտրակայանների (ՎԷԷԿ) կառուցում/վերակառուցում, էներգաարդյունավետության (ԷԱ) ներդրումներ' },
-        { label: 'Արժույթ', value: 'ՀՀ դրամ' },
-        { label: 'Մարման ժամկետ', value: 'Մինչև 120 ամիս (ՎԷԷԿ դեպքում), մինչև 60 ամիս (ԷԱ դեպքում)' },
-        { label: 'Անվանական տոկոսադրույք', value: 'ՎԷԷԿ՝ 9.5%, ԷԱ՝ 10.25%' },
-        { label: 'Փաստացի տոկոսադրույք', value: 'ՎԷԷԿ՝ մինչև 10%, ԷԱ՝ մինչև 10.75%' }
+        { label: 'Կանխիկ միջոցների մուտքագրում հաշվին (ՀՀ դրամ)', value: 'Անվճար' },
+        { label: 'Կանխիկ միջոցների մուտքագրում հաշվին (ԱՄՆ դոլար/Եվրո)', value: 'Համաձայն տվյալ օրվա սակագների (մինչև 1%)' },
+        { label: 'Կանխիկացում Evocabank-ի բանկոմատներից (ARCA, Visa, MasterCard)', value: '0.2% - 0.5%՝ կախված քարտի տեսակից' },
+        { label: 'Կանխիկացում այլ բանկերի բանկոմատներից (ՀՀ տարածքում)', value: '1% (նվազագույնը 500 ՀՀ դրամ)' }
       ]
     },
     {
-      title: 'Աշխատավարձային նախագծի պայմաններ',
+      title: 'Հեռակառավարման համակարգեր (EvocaTouch / EvocaOnline)',
       details: [
-        { label: 'Քարտի տեսակներ', value: 'Ղեկավարներին՝ Visa Gold / MasterCard Gold, Աշխատակիցներին՝ ARCA կամ Visa Classic / MasterCard Standard' },
-        { label: 'Տրամադրման վճար', value: 'Անվճար' },
-        { label: 'Կանխիկացման միջնորդավճար', value: 'Evocabank-ի կետերից՝ 0%, ARCA համակարգի այլ բանկերից՝ 0.8%' },
-        { label: 'Հեռակառավարում', value: 'EvocaTouch և EvocaOnline համակարգերի տրամադրումն անվճար է' }
-      ]
-    },
-    {
-      title: 'Փոքր և միջին բիզնեսի վարկավորում «Լիկվիդ +»',
-      details: [
-        { label: 'Արժույթ', value: 'ՀՀ դրամ, ԱՄՆ դոլար, Եվրո' },
-        { label: 'Նպատակ', value: 'Բիզնեսի զարգացում, կապիտալ ներդրումներ, շրջանառու միջոցների համալրում' },
-        { label: 'Սահմանաչափ', value: 'Մինչև 150,000,000 ՀՀ դրամ կամ համարժեք արտարժույթ' },
-        { label: 'Մարման ժամկետ', value: 'Մինչև 60 ամիս' }
-      ]
-    },
-    {
-      title: 'Evoca GO',
-      details: [
-        { label: 'Արժույթ', value: 'ՀՀ դրամ' },
-        { label: 'Վարկառու', value: 'ՀՀ ռեզիդենտ իրավաբանական անձ կամ ԱՁ (ՓՄՁ-ներ՝ մինչև 250 աշխատակից)' },
-        { label: 'Մարման ժամկետ', value: '24 - 90 ամիս' },
-        { label: 'Անվանական տոկոսադրույք', value: '10.5%' }
-      ]
-    },
-    {
-      title: 'Արագ բիզնես վարկ',
-      details: [
-        { label: 'Արժույթ', value: 'ՀՀ դրամ, ԱՄՆ դոլար, Եվրո' },
-        { label: 'Սահմանաչափ', value: '5,100,000 - 30,000,000 ՀՀ դրամ կամ համարժեք արտարժույթ' },
-        { label: 'Մարման ժամկետ', value: 'Մինչև 60 ամիս' },
-        { label: 'Անվանական տոկոսադրույք', value: 'ՀՀ դրամ՝ 13.5% - 14.5%, ԱՄՆ դոլար՝ 9.5% - 10.5%, Եվրո՝ 8.5% - 9.5%' },
-        { label: 'Փաստացի տոկոսադրույք', value: '8.72% - 17.89%' },
-        { label: 'Ապահովվածություն', value: 'Երաշխավորություն' }
+        { label: 'EvocaTouch հավելվածի ակտիվացում և սպասարկում', value: 'Անվճար' },
+        { label: 'EvocaOnline համակարգի տրամադրում (Իրավ. անձանց)', value: 'Միանվագ 5,000 ՀՀ դրամ, սպասարկումը՝ անվճար' },
+        { label: 'Տոկենի կամ գաղտնաբառի գեներատորի տրամադրում/փոխարինում', value: '10,000 ՀՀ դրամ' }
       ]
     }
   ];
@@ -87,7 +55,7 @@ const Irav: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Header section with full responsiveness */}
+    
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 pt-4 sm:pt-6 md:pt-14 px-4 sm:px-6">
         <Link to="/">
           <img 
@@ -111,8 +79,8 @@ const Irav: React.FC = () => {
         </Link>
       </div>
 
-     
-      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto mt-4 lg:mt-0 hide-scrollbar">
+    
+      <div className="w-full bg-[#6c2db5] text-white overflow-x-auto hide-scrollbar mt-4 lg:mt-0">
         <div className="max-w-[1400px] mx-auto flex items-center h-[50px] md:h-[60px] px-4 sm:px-6 min-w-[850px]">
           {subMenuItems.map((item) => (
             <NavLink 
@@ -137,19 +105,19 @@ const Irav: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer text-gray-800 whitespace-nowrap">Սակագներ</span>
         <span>›</span>
-        <span className="text-gray-800 whitespace-nowrap">Վարկեր իրավաբանական անձանց</span>
+        <span className="text-gray-800 whitespace-nowrap">Միջնորդավճարների սակագները</span>
       </div>
 
-    
+  
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 pb-24 mt-2 md:mt-4">
         
         <h1 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-bold text-[#1a1a1a] mb-6 md:mb-10 leading-snug">
-          Վարկեր իրավաբանական անձանց
+          Միջնորդավճարների սակագները և դրույքները
         </h1>
 
-        {/* Accordions Container */}
+      
         <div className="flex flex-col border-t border-gray-200">
-          {businessLoansData.map((loan, index) => (
+          {commissionsData.map((commission, index) => (
             <div key={index} className="flex flex-col border-b border-gray-200">
               <button 
                 onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
@@ -163,7 +131,7 @@ const Irav: React.FC = () => {
                   )}
                 </div>
                 <h2 className="text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px] font-bold text-[#1a1a1a] group-hover:text-[#6c2db5] transition-colors">
-                  {loan.title}
+                  {commission.title}
                 </h2>
               </button>
               
@@ -171,15 +139,15 @@ const Irav: React.FC = () => {
                 <div className="pl-4 sm:pl-8 md:pl-12 pr-2 pb-6 overflow-x-auto w-full">
                   <table className="w-full text-left border-collapse min-w-[550px] sm:min-w-[650px]">
                     <tbody>
-                      {loan.details.map((detail, i) => (
+                      {commission.details.map((detail, i) => (
                         <tr key={i} className="border-t border-gray-100 first:border-t-0 hover:bg-gray-50/40 transition-colors">
                           <td className="py-3 px-2 sm:px-4 text-[#1a1a1a] w-[40px] align-top font-medium text-[13px] sm:text-[14px]">
                             {i + 1}.
                           </td>
-                          <td className="py-3 px-2 sm:px-4 text-gray-500 w-[180px] sm:w-[240px] align-top font-medium text-[13px] sm:text-[14px]">
+                          <td className="py-3 px-2 sm:px-4 text-gray-500 w-[200px] sm:w-[280px] align-top font-medium text-[13px] sm:text-[14px]">
                             {detail.label}
                           </td>
-                          <td className="py-3 px-2 sm:px-4 text-[#1a1a1a] align-top leading-relaxed text-[13px] sm:text-[14px]">
+                          <td className="py-3 px-2 sm:px-4 text-[#1a1a1a] align-top leading-relaxed text-[13px] sm:text-[14px] font-medium">
                             {detail.value}
                           </td>
                         </tr>
@@ -209,4 +177,4 @@ const Irav: React.FC = () => {
   );
 };
 
-export default Irav;
+export default Mijnord;
