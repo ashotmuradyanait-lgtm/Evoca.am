@@ -92,6 +92,7 @@ import Mijnord from "./components/Mijnord";
 import Avandik from "./components/Avandik";
 import Arxiv from "./components/Arxiv";
 import Hashvetu from "./components/Hashvetu";
+import Finans from "./components/Finans";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -220,6 +221,7 @@ const App: React.FC = () => {
           <Route path="/avandik" element={<Avandik/>} />
           <Route path="/arxiv" element={<Arxiv/>} />
           <Route path="/hashvetu" element={<Hashvetu/>} />
+          <Route path="/finans" element={<Finans/>} />
         </Routes>
       </main>
 

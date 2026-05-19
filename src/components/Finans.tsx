@@ -1,29 +1,15 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Hashvetu: React.FC = () => {
+const Finans: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
   const subMenuItems = [
-    { name: 'Աուդիտորական եզրակացություն', path: '' },
-    { name: 'Ֆինանսական հաշվետվություններ', path: '/finans' },
+    { name: 'Աուդիտորական եզրակացություն', path: '/hashvetu' },
+    { name: 'Ֆինանսական հաշվետվություններ', path: '' },
     { name: 'Ներդրողների համար', path: '' },
     { name: 'Կիսամյակային հաշվետվություն', path: '' },
     { name: 'Տարեկան հաշվետվություն', path: '' }
-  ];
-
-
-  const reports = [
-    { year: 2024, title: '2024 Աուդիտորական եզրակացություն' },
-    { year: 2022, title: '2022 Աուդիտորական եզրակացություն' },
-    { year: 2020, title: '2020 Աուդիտորական եզրակացություն' },
-    { year: 2018, title: '2018 Աուդիտորական եզրակացություն' },
-    { year: 2016, title: '2016 Աուդիտորական եզրակացություն' },
-    { year: 2014, title: '2014 Աուդիտորական եզրակացություն' },
-    { year: 2012, title: '2012 Աուդիտորական եզրակացություն' },
-    { year: 2010, title: '2010 Աուդիտորական եզրակացություն' },
-    { year: 2008, title: '2008 Աուդիտորական եզրակացություն' },
-    { year: 2006, title: '2006 Աուդիտորական եզրակացություն' },
   ];
 
   return (
@@ -83,27 +69,8 @@ const Hashvetu: React.FC = () => {
           Աուդիտորական եզրակացություն
         </h1>
 
-   
-        <div className="flex flex-col gap-6">
-          {reports.map((report) => (
-            <div key={report.year} className="flex flex-row-reverse md:flex-row items-center justify-between border-b border-gray-100 py-6">
-              <div className="text-[24px] md:text-[32px] font-bold text-gray-400 w-24">
-                {report.year}
-              </div>
-              <a href="#" className="flex items-center gap-4 text-[#1a1a1a] hover:text-[#6c2db5] transition-colors font-medium">
-                <img 
-                  src="https://cdn-icons-png.flaticon.com/512/337/337946.png" 
-                  alt="Download" 
-                  className="w-8 h-8 opacity-80"
-                />
-                {report.title}
-              </a>
-            </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
+        </div>
+  )
 }
-
-export default Hashvetu;
+export default Finans
