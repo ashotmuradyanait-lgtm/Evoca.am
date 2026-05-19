@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Nerdrox: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
-  // Խմբավորված տվյալներ՝ 4 հատանոց շարքերով
+  
   const presentationData = [
     {
       year: '2025',
@@ -30,7 +30,7 @@ const Nerdrox: React.FC = () => {
     { name: 'Աուդիտորական եզրակացություն', path: '/hashvetu' },
     { name: 'Ֆինանսական հաշվետվություններ', path: '/finans' },
     { name: 'Ներդրողների համար', path: '' },
-    { name: 'Կիսամյակային հաշվետվություն', path: '' },
+    { name: 'Կիսամյակային հաշվետվություն', path: '/kisamyak' },
     { name: 'Տարեկան հաշվետվություն', path: '' }
   ];
 

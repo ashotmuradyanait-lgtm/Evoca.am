@@ -94,6 +94,7 @@ import Arxiv from "./components/Arxiv";
 import Hashvetu from "./components/Hashvetu";
 import Finans from "./components/Finans";
 import Nerdrox from "./components/Nerdrox";
+import Kisamyak from "./components/Kisamyak";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -224,6 +225,7 @@ const App: React.FC = () => {
           <Route path="/hashvetu" element={<Hashvetu/>} />
           <Route path="/finans" element={<Finans/>} />
           <Route path="/nerdrox" element={<Nerdrox/>} />
+          <Route path="/kisamyak" element={<Kisamyak/>} />
         </Routes>
       </main>
 
