@@ -60,15 +60,103 @@ const Kisamyak: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Մեր մասին</span>
         <span>›</span>
-        <span className="cursor-pointer text-gray-800">Ներդրողների համար</span>
+        <span className="cursor-pointer text-gray-800">Հաշվետվություններ</span>
         <span>›</span>
-        <span className="text-gray-800">Ներդրողների համար</span>
+        <span className="text-gray-800">Կիսամյակային հաշվետվություն</span>
       </div>
+
+      <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
+              <div className="flex flex-col gap-3">
+                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
+                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/twitter-icon.png" className="w-5 h-5" alt="TW" /></Link>
+                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" className="w-5 h-5" alt="IN" /></Link>
+                <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" className="w-5 h-5" alt="PN" /></Link>
+              </div>
+            </div>
 
       <div className="max-w-[1400px] mx-auto px-6 pb-24 mt-4">
         <h1 className="text-[22px] md:text-[28px] lg:text-[32px] font-bold text-[#1a1a1a] mb-12 leading-snug">
-          Ֆինանսական հաշվետվություններ
+          Կիսամյակային հաշվետվություն
         </h1>
+
+         <div className="mt-12 flex flex-col gap-3">
+            <h2 className="text-[24px] md:text-[28px] font-extrabold text-[#222] mb-3">Փաստաթղթեր</h2>
+
+             <a 
+                href="https://www.evoca.am/files/menu/1/17567925915914.pdf" 
+                className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-4 md:p-5 group cursor-pointer"
+            >
+                <div className="mr-4 text-[#6c2db5] flex-shrink-0">
+                <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <circle cx="16" cy="18" r="3" />
+                    <path d="m14 17 2 2 2-2" />
+                </svg>
+                </div>
+                <span className="text-[14px] md:text-[16px] font-bold text-[#222] tracking-tight">Կիսամյակային հաշվետվություն (2025 առաջին կիսամյակ)</span>
+            </a>
+
+            <a 
+                href="https://www.evoca.am/files/menu/1/174764918525.pdf" 
+                className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-4 md:p-5 group cursor-pointer"
+            >
+                <div className="mr-4 text-[#6c2db5] flex-shrink-0">
+                <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <circle cx="16" cy="18" r="3" />
+                    <path d="m14 17 2 2 2-2" />
+                </svg>
+                </div>
+                <span className="text-[14px] md:text-[16px] font-bold text-[#222] tracking-tight">Կիսամյակային հաշվետվություն (2024 առաջին կիսամյակ)</span>
+            </a>
+
+            <a 
+                href="https://www.evoca.am/files/menu/1/1747649098332.pdf" 
+                className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-4 md:p-5 group cursor-pointer"
+            >
+                <div className="mr-4 text-[#6c2db5] flex-shrink-0">
+                <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <circle cx="16" cy="18" r="3" />
+                    <path d="m14 17 2 2 2-2" />
+                </svg>
+                </div>
+                <span className="text-[14px] md:text-[16px] font-bold text-[#222] tracking-tight">Կիսամյակային հաշվետվություն (2023 առաջին կիսամյակ)</span>
+            </a>
+
+            <a 
+                href="https://www.evoca.am/files/menu/1/16599609692824.pdf" 
+                className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-4 md:p-5 group cursor-pointer"
+            >
+                <div className="mr-4 text-[#6c2db5] flex-shrink-0">
+                <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <circle cx="16" cy="18" r="3" />
+                    <path d="m14 17 2 2 2-2" />
+                </svg>
+                </div>
+                <span className="text-[14px] md:text-[16px] font-bold text-[#222] tracking-tight">Կիսամյակային հաշվետվություն (2022 առաջին կիսամյակ)</span>
+            </a>
+
+            <a 
+                href="https://www.evoca.am/files/global_files/1/16488915037172.pdf" 
+                className="flex items-center w-full bg-[#f8f5fd] hover:bg-[#f2ecf9] transition-colors rounded-[12px] p-4 md:p-5 group cursor-pointer"
+            >
+                <div className="mr-4 text-[#6c2db5] flex-shrink-0">
+                <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <circle cx="16" cy="18" r="3" />
+                    <path d="m14 17 2 2 2-2" />
+                </svg>
+                </div>
+                <span className="text-[14px] md:text-[16px] font-bold text-[#222] tracking-tight">Կիսամյակային հաշվետվություն (2021 առաջին կիսամյակ)</span>
+            </a>
+        </div>
 
         </div>
         </div>

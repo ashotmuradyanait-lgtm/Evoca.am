@@ -11,7 +11,7 @@ const Tvayin: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative overflow-hidden">
-      {/* Մեդիա հատված - Ֆոնային վիդեո */}
+      
       <div className="absolute top-0 left-0 w-full h-[500px] z-0 overflow-hidden opacity-20">
         <video 
           autoPlay 
