@@ -96,6 +96,7 @@ import Finans from "./components/Finans";
 import Nerdrox from "./components/Nerdrox";
 import Kisamyak from "./components/Kisamyak";
 import Tarekan from "./components/Tarekan";
+import Hayt from "./components/Hayt";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -228,6 +229,7 @@ const App: React.FC = () => {
           <Route path="/nerdrox" element={<Nerdrox/>} />
           <Route path="/kisamyak" element={<Kisamyak/>} />
           <Route path="/tarekan" element={<Tarekan/>} />
+          <Route path="/hayt" element={<Hayt/>} />
         </Routes>
       </main>
 
