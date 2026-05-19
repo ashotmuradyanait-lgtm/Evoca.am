@@ -9,7 +9,7 @@ const Hashvetu: React.FC = () => {
     { name: 'Ֆինանսական հաշվետվություններ', path: '/finans' },
     { name: 'Ներդրողների համար', path: '/nerdrox' },
     { name: 'Կիսամյակային հաշվետվություն', path: '/kisamyak' },
-    { name: 'Տարեկան հաշվետվություն', path: '' }
+    { name: 'Տարեկան հաշվետվություն', path: '/tarekan' }
   ];
 
 
