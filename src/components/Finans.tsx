@@ -7,12 +7,12 @@ const Finans: React.FC = () => {
   const subMenuItems = [
     { name: 'Աուդիտորական եզրակացություն', path: '/hashvetu' },
     { name: 'Ֆինանսական հաշվետվություններ', path: '' },
-    { name: 'Ներդրողների համար', path: '' },
+    { name: 'Ներդրողների համար', path: '/nerdrox' },
     { name: 'Կիսամյակային հաշվետվություն', path: '' },
     { name: 'Տարեկան հաշվետվություն', path: '' }
   ];
 
-  // Տվյալների զանգված՝ ըստ վիդեոյի կառուցվածքի
+  
   const reportsData = [
     { year: '2025', files: ['1-2025', '2-2025', '3-2025', '4-2025'] },
     { year: '2023', files: ['1-2023', '2-2023', '3-2023', '4-2023'] },
@@ -68,7 +68,7 @@ const Finans: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+      
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -79,13 +79,13 @@ const Finans: React.FC = () => {
         <span className="text-gray-800">Ֆինանսական հաշվետվություններ</span>
       </div>
 
-      {/* Main Content */}
+     
       <div className="max-w-[1400px] mx-auto px-6 pb-24 mt-4">
         <h1 className="text-[22px] md:text-[28px] lg:text-[32px] font-bold text-[#1a1a1a] mb-12 leading-snug">
           Ֆինանսական հաշվետվություններ
         </h1>
 
-        {/* Reports Grid */}
+       
         <div className="space-y-12">
           {reportsData.map((data) => (
             <div key={data.year} className="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-gray-100 pb-8">
