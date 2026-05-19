@@ -90,6 +90,7 @@ import Sakagin from "./components/Sakagin";
 import Irav from "./components/Irav";
 import Mijnord from "./components/Mijnord";
 import Avandik from "./components/Avandik";
+import Arxiv from "./components/Arxiv";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -216,6 +217,7 @@ const App: React.FC = () => {
           <Route path="/irav" element={<Irav/>} />
           <Route path="/mijnord" element={<Mijnord/>} />
           <Route path="/avandik" element={<Avandik/>} />
+          <Route path="/arxiv" element={<Arxiv/>} />
         </Routes>
       </main>
 

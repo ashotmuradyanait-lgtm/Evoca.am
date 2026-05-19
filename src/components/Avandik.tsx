@@ -9,7 +9,7 @@ const Avandik: React.FC = () => {
     { name: 'Վարկեր իրավաբանական անձանց', path: '/irav' },
     { name: 'Միջնորդավճարների սակագները', path: '/mijnord' },
     { name: 'Ավանդների սակագներ', path: '' },
-    { name: 'Արխիվ', path: '' }
+    { name: 'Արխիվ', path: '/arxiv' }
   ];
 
   const depositDetails = [

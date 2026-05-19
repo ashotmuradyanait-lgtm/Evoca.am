@@ -10,7 +10,7 @@ const Sakagin: React.FC = () => {
     { name: 'Վարկեր իրավաբանական անձանց', path: '/irav' },
     { name: 'Միջնորդավճարների սակագները', path: '/Mijnord' },
     { name: 'Ավանդների սակագներ', path: '/avandik' },
-    { name: 'Արխիվ', path: '' }
+    { name: 'Արխիվ', path: '/arxiv' }
   ];
 
   const evocaHomeData = [

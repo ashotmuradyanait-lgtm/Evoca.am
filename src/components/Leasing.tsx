@@ -41,7 +41,7 @@ const Leasing: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Breadcrumbs (Հասցեի շղթա) */}
+      
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -99,7 +99,7 @@ const Leasing: React.FC = () => {
                 ճկուն պայմաններով և մատչելի գնով:  
           </p>
 
-            {/* Թվային տվյալներ */}
+          \
             <div className="flex gap-12">
               <div className="flex flex-col">
                 <span className="text-gray-400 text-[12px] mb-1">Մինչև</span>

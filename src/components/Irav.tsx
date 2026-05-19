@@ -10,7 +10,7 @@ const Irav: React.FC = () => {
     { name: 'Վարկեր իրավաբանական անձանց', path: '' },
     { name: 'Միջնորդավճարների սակագները', path: '/mijnord' },
     { name: 'Ավանդների սակագներ', path: '/avandik' },
-    { name: 'Արխիվ', path: '' }
+    { name: 'Արխիվ', path: 'arxiv' }
   ];
 
   const businessLoansData = [

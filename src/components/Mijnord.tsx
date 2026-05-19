@@ -10,7 +10,7 @@ const Mijnord: React.FC = () => {
     { name: 'Վարկեր իրավաբանական անձանց', path: '/irav' },
     { name: 'Միջնորդավճարների սակագները', path: '' },
     { name: 'Ավանդների սակագներ', path: '/avandik' },
-    { name: 'Արխիվ', path: '' }
+    { name: 'Արխիվ', path: '/arxiv' }
   ];
 
  
