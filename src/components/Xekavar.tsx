@@ -131,13 +131,13 @@ const Xekavar: React.FC = () => {
           />
         </Link>
         <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-gray-800 font-medium text-[14px] md:text-[15px]">
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">
+          <Link to="/mermasin" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">
             Evoca-ի մասին
           </Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">
             Սակագներ
           </Link>
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">
+          <Link to="/hashvetu" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">
             Հաշվետվություններ
           </Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">

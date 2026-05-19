@@ -13,7 +13,7 @@ const Arxiv: React.FC = () => {
     { name: 'Արխիվ', path: '' }
   ];
 
-  // Արխիվի բաժինների տվյալները՝ ըստ տարեթվերի (վիդեոյի օրինակով)
+ 
   const archiveData = {
     varker: {
       title: 'Վարկավորման պայմաններ և սակագներ',
@@ -53,7 +53,7 @@ const Arxiv: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Header */}
+     
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 pt-4 sm:pt-6 md:pt-14 px-4 sm:px-6">
         <Link to="/">
           <img 
@@ -66,7 +66,7 @@ const Arxiv: React.FC = () => {
         <nav className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-gray-800 font-medium text-[13px] sm:text-[14px] md:text-[15px]">
           <Link to="/mermasin" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Evoca-ի մասին</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Սակագներ</Link>
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Հաշվետվություններ</Link>
+          <Link to="/hashvetu" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Հաշվետվություններ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Հայտարարություններ</Link>
         </nav>
 
@@ -77,7 +77,7 @@ const Arxiv: React.FC = () => {
         </Link>
       </div>
 
-      {/* Submenu */}
+     
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto hide-scrollbar mt-4 lg:mt-0">
         <div className="max-w-[1400px] mx-auto flex items-center h-[50px] md:h-[60px] px-4 sm:px-6 min-w-[850px]">
           {subMenuItems.map((item) => (
@@ -95,7 +95,7 @@ const Arxiv: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+    
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-4 md:py-6 flex flex-wrap items-center gap-1.5 sm:gap-2 text-gray-400 text-[11px] sm:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -106,7 +106,7 @@ const Arxiv: React.FC = () => {
         <span className="text-gray-800 whitespace-nowrap">Արխիվ</span>
       </div>
 
-      {/* Social Sidebar */}
+    +
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
@@ -116,14 +116,14 @@ const Arxiv: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Content */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 pb-24 mt-2 md:mt-4">
         
         <h1 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-bold text-[#1a1a1a] mb-6 md:mb-10 leading-snug">
           Արխիվ
         </h1>
 
-        {/* Տարեթվերի ֆիլտրացիայի բլոկ */}
+      
         <div className="flex flex-wrap gap-2 mb-8 border-b border-gray-100 pb-4">
           {years.map((year) => (
             <button
@@ -157,7 +157,7 @@ const Arxiv: React.FC = () => {
                   className="w-full flex items-center justify-between p-5 md:p-6 text-left bg-white font-bold text-[15px] sm:text-[17px] md:text-[18px] text-[#1a1a1a] hover:bg-gray-50/50 transition-colors"
                 >
                   <span>{section.title}</span>
-                  {/* Սլաք (Chevron SVG), որը պտտվում է ըստ վիճակի */}
+                  
                   <svg 
                     className={`w-5 h-5 text-[#6c2db5] transition-transform duration-200 ${openSection === key ? 'rotate-180' : ''}`} 
                     fill="none" 
