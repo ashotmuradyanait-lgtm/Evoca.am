@@ -4,6 +4,28 @@ import { Link, NavLink } from 'react-router-dom';
 const Nerdrox: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
+  // Խմբավորված տվյալներ՝ 4 հատանոց շարքերով
+  const presentationData = [
+    {
+      year: '2025',
+      items: [
+        { title: 'Q1 2025', img: 'https://www.evoca.am/images-cache/presentations/1/1770815788229/310x249.jpg' },
+        { title: 'Q2 2025', img: 'https://www.evoca.am/images-cache/presentations/1/17302985228644/310x249.png' },
+        { title: 'Q3 2025', img: 'https://www.evoca.am/images-cache/presentations/1/17302968217456/310x249.jpg' },
+        { title: 'Q4 2025', img: 'https://www.evoca.am/images-cache/presentations/1/16524487203697/310x249.jpg' },
+      ]
+    },
+    {
+      year: '2024',
+      items: [
+        { title: 'Q1 2024', img: 'https://www.evoca.am/images-cache/presentations/1/16164091530204/310x249.jpg' },
+        { title: 'Q2 2024', img: 'https://www.evoca.am/images-cache/presentations/1/16164099260851/310x249.png' },
+        { title: 'Q3 2024', img: 'https://www.evoca.am/images-cache/presentations/1/1770815788229/310x249.jpg' },
+        { title: 'Q4 2024', img: 'https://www.evoca.am/images-cache/presentations/1/17302985228644/310x249.png' },
+      ]
+    }
+  ];
+
   const subMenuItems = [
     { name: 'Աուդիտորական եզրակացություն', path: '/hashvetu' },
     { name: 'Ֆինանսական հաշվետվություններ', path: '/finans' },
@@ -14,7 +36,6 @@ const Nerdrox: React.FC = () => {
 
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
-     
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-6">
         <Link to="/">
           <img 
@@ -38,7 +59,6 @@ const Nerdrox: React.FC = () => {
         </Link>
       </div>
 
-     
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto mt-6">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -56,25 +76,40 @@ const Nerdrox: React.FC = () => {
         </div>
       </div>
 
-      
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Մեր մասին</span>
         <span>›</span>
-        <span className="cursor-pointer text-gray-800">Հաշվետվություններ</span>
+        <span className="cursor-pointer text-gray-800">Ներդրողների համար</span>
         <span>›</span>
-        <span className="text-gray-800">Ֆինանսական հաշվետվություններ</span>
+        <span className="text-gray-800">Ներդրողների համար</span>
       </div>
 
-     
       <div className="max-w-[1400px] mx-auto px-6 pb-24 mt-4">
         <h1 className="text-[22px] md:text-[28px] lg:text-[32px] font-bold text-[#1a1a1a] mb-12 leading-snug">
           Ֆինանսական հաշվետվություններ
         </h1>
 
+       <a href="https://www.evoca.am/files/presentations/1/17663899054056.pdf">
+        <div className="flex flex-col gap-12">
+          {presentationData.map((group) => (
+            <div key={group.year} className="flex flex-col gap-6">
+              <h2 className="text-[24px] font-bold text-[#1a1a1a]">{group.year}</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {group.items.map((item, idx) => (
+                  <div key={idx} className="flex flex-col gap-3">
+                    <img src={item.img} alt={item.title} className="w-full h-auto object-cover rounded-lg shadow-sm" />
+                    <p className="text-[14px] font-bold text-[#1a1a1a]">{item.title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-        </div>
+        </a>
+      </div>
+    </div>
   )
 }
-export default Nerdrox
+export default Nerdrox;
