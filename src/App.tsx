@@ -101,6 +101,7 @@ import Kariera from "./components/Kariera";
 import Aravel from "./components/Aravel";
 import Hacax from "./components/Hacax";
 import Yndunvel from "./components/Yndunvel";
+import Practic from "./components/Practic";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -238,6 +239,7 @@ const App: React.FC = () => {
           <Route path="/aravel" element={<Aravel/>} />
           <Route path="/hacax" element={<Hacax/>} />
           <Route path="/yndunvel" element={<Yndunvel/>} />
+          <Route path="/practic" element={<Practic/>} />
         </Routes>
       </main>
 
