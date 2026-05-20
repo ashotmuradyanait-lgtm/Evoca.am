@@ -5,12 +5,11 @@ const Practic: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const subMenuItems = [
-    { name: 'Աշխատանք Evoca-ում', path: '/kariera' },
-    { name: 'Ուսումնական պրակտիկա', path: '/practic' },
+    { name: 'Աշխատանք Evoca-ում', path: '' },
+    { name: 'Ուսումնական պրակտիկա', path: '/usum' },
     { name: 'EvocaBRIDGE', path: '' },
   ];
 
-  // Քո տրամադրած 5 նկարները (իկոնաները)
   const features = [
     {
       img: 'https://www.evoca.am/images-cache/applicant_features/1/16194199747856/120x120.png',
@@ -37,7 +36,7 @@ const Practic: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Լոգո և Գլխավոր Նավիգացիա */}
+      
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-6">
         <Link to="/">
           <img 
