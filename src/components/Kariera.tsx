@@ -8,7 +8,7 @@ const Kariera: React.FC = () => {
     { name: 'Մշակույթ', path: '' },
     { name: 'Առավելություններ', path: '/aravel' },
     { name: 'Հաճախ տրվող հարցեր', path: '/hacax' },
-    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
+    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '/yndunvel' },
   ];
 
   const mediaVideos = [

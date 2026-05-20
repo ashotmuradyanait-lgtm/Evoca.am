@@ -6,7 +6,7 @@ const Aravel: React.FC = () => {
     { name: 'Մշակույթ', path: '/kariera' },
     { name: 'Առավելություններ', path: '' },
     { name: 'Հաճախ տրվող հարցեր', path: '/hacax' },
-    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
+    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '/yndunvel' },
   ];
 
   const benefits = [

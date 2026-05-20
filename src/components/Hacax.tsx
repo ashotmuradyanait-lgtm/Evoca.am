@@ -6,7 +6,7 @@ const Hacax: React.FC = () => {
     { name: 'Մշակույթ', path: '/kariera' },
     { name: 'Առավելություններ', path: '/aravel' },
     { name: 'Հաճախ տրվող հարցեր', path: '' },
-    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
+    { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '/yndunvel' },
   ];
 
  
