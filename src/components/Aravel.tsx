@@ -9,7 +9,6 @@ const Aravel: React.FC = () => {
     { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
   ];
 
-  // Քո տրամադրած 9 նկարները (իկոնաները)՝ իրենց համապատասխան անվանումներով
   const benefits = [
     { id: 1, title: 'Բժշկական ապահովագրություն', icon: 'https://www.evoca.am/images-cache/benefits/1/17431437867453/120x120.png' },
     { id: 2, title: 'Ճամփորդական ապահովագրություն', icon: 'https://www.evoca.am/images-cache/benefits/1/1743143856123/120x120.png' },
