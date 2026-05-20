@@ -54,7 +54,8 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="w-full bg-white border-b border-gray-100 pt-4 lg:pt-8 pb-4 px-4 lg:px-6 fixed top-0 left-0 z-50">
+    /* Այստեղ ավելացվել են Tailwind-ի մեդիա հարցումները՝ ներքին էլեմենտները հեռախոսների վրա կատարյալ դարձնելու համար */
+    <header className="w-full bg-white border-b border-gray-100 pt-4 lg:pt-8 pb-4 px-4 lg:px-6 fixed top-0 left-0 z-50 max-sm:pt-3 max-sm:pb-3 max-sm:[&_.absolute.right-0]:right-[-10px] max-sm:[&_.absolute.right-0]:w-[200px] max-sm:[&_span.whitespace-nowrap]:text-[11px] max-sm:[&_.flex.items-center.gap-2]:gap-3">
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
         
         <nav className="hidden lg:flex items-center gap-8">
@@ -115,7 +116,7 @@ const Header: React.FC = () => {
             )}
           </div>
 
-         
+          
           <div className="relative" ref={feedbackRef}>
             <button 
               onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
