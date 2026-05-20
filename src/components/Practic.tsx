@@ -7,7 +7,7 @@ const Practic: React.FC = () => {
   const subMenuItems = [
     { name: 'Աշխատանք Evoca-ում', path: '' },
     { name: 'Ուսումնական պրակտիկա', path: '/usum' },
-    { name: 'EvocaBRIDGE', path: '' },
+    { name: 'EvocaBRIDGE', path: '/bridge' },
   ];
 
   const features = [
@@ -130,7 +130,7 @@ const Practic: React.FC = () => {
         </div>
       </div>
 
-      {/* Ինչպես դիմել (Steps) բաժին */}
+     
       <div className="w-full bg-gray-50 py-16 border-t border-b border-gray-100">
         <div className="max-w-[1100px] mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
@@ -159,7 +159,7 @@ const Practic: React.FC = () => {
         </div>
       </div>
 
-      {/* Դիմումի Հայտ (Form) */}
+     
       <div className="max-w-[800px] mx-auto px-6 py-16">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Ուղարկել պրակտիկայի հայտ</h2>
         <p className="text-center text-gray-600 mb-10 text-sm">
@@ -217,7 +217,7 @@ const Practic: React.FC = () => {
             </div>
           </div>
 
-          {/* Պաշտպանական Ծածկագիր (Captcha) */}
+         
           <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
             <label className="block text-sm font-semibold text-gray-700 mb-3">Պաշտպանական ծածկագիր <span className="text-red-500">*</span></label>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">

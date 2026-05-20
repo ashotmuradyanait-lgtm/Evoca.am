@@ -103,6 +103,7 @@ import Hacax from "./components/Hacax";
 import Yndunvel from "./components/Yndunvel";
 import Practic from "./components/Practic";
 import Usum from "./components/Usum";
+import Bridge from "./components/Bridge";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -241,7 +242,8 @@ const App: React.FC = () => {
           <Route path="/hacax" element={<Hacax/>} />
           <Route path="/yndunvel" element={<Yndunvel/>} />
           <Route path="/practic" element={<Practic/>} />
-          <Route path="/Usum" element={<Usum/>} />
+          <Route path="/usum" element={<Usum/>} />
+          <Route path="/bridge" element={<Bridge/>} />
         </Routes>
       </main>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Usum: React.FC = () => {
-  // Ակորդեոնի բաց/փակ վիճակը կառավարելու համար
+  
   const [openStep, setOpenStep] = useState<number | null>(null);
 
   const toggleStep = (stepIndex: number) => {
@@ -12,10 +12,10 @@ const Usum: React.FC = () => {
   const subMenuItems = [
     { name: 'Աշխատանք Evoca-ում', path: '/practic' },
     { name: 'Ուսումնական պրակտիկա', path: '' },
-    { name: 'EvocaBRIDGE', path: '' },
+    { name: 'EvocaBRIDGE', path: '/bridge' },
   ];
 
-  // Քո տրամադրած 4 գործընկեր համալսարանների նկարները
+ 
   const universities = [
     {
       img: 'https://www.evoca.am/images-cache/partner_universities/1/16192503158745/120x120.jpg',
@@ -84,7 +84,7 @@ const Usum: React.FC = () => {
         </Link>
       </div>
 
-      {/* Ենթամենյու */}
+      
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto mt-6">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -102,7 +102,7 @@ const Usum: React.FC = () => {
         </div>
       </div>
 
-      {/* Լավանդայի/Մանուշակագույն Գրքերով Գլխավոր Բաններ (Hero) */}
+      
       <div className="w-full bg-[#f3effa] py-12 md:py-16 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="max-w-xl">
