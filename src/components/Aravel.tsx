@@ -5,7 +5,7 @@ const Aravel: React.FC = () => {
   const subMenuItems = [
     { name: 'Մշակույթ', path: '/kariera' },
     { name: 'Առավելություններ', path: '' },
-    { name: 'Հաճախ տրվող հարցեր', path: '' },
+    { name: 'Հաճախ տրվող հարցեր', path: '/hacax' },
     { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
   ];
 
@@ -25,7 +25,7 @@ const Aravel: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Լոգո և Նավիգացիա */}
+    
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-6">
         <Link to="/">
           <img 
@@ -47,7 +47,7 @@ const Aravel: React.FC = () => {
         </Link>
       </div>
 
-      {/* Ենթամենյու */}
+      
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto mt-6">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -65,7 +65,7 @@ const Aravel: React.FC = () => {
         </div>
       </div>
 
-      {/* Hero Բաժին (Ըստ երկրորդ վիդեոյի ճամպրուկով դիզայնի) */}
+    
       <div className="relative w-full min-h-[450px] bg-gradient-to-r from-purple-100 via-pink-100 to-white overflow-hidden flex items-center">
         <div className="max-w-[1400px] mx-auto w-full px-6 grid md:grid-cols-2 gap-8 items-center z-10 py-12">
           <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-sm max-w-xl">
@@ -78,12 +78,12 @@ const Aravel: React.FC = () => {
             </p>
           </div>
           
-          {/* Ադապտիվ գրաֆիկական բլոկ (Ճամպրուկ, գլխարկ, երկրագունդ) */}
+          
           <div className="flex justify-center items-center relative">
             <div className="w-[280px] h-[280px] md:w-[420px] md:h-[420px] bg-gradient-to-br from-[#6c2db5] to-[#a25ddc] rounded-[40px] transform rotate-6 flex items-center justify-center shadow-2xl relative">
               <span className="text-white text-8xl md:text-[150px] font-black transform -rotate-6 select-none">Evoca</span>
               
-              {/* Դեկորատիվ տարրեր ճամփորդական թեմայով */}
+             
               <div className="absolute -top-12 -right-6 w-24 h-24 md:w-32 md:h-32 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg transform -rotate-12">
                 <span className="text-3xl md:text-4xl">✈️</span>
               </div>
@@ -98,7 +98,7 @@ const Aravel: React.FC = () => {
         <div className="absolute -left-10 bottom-10 w-60 h-60 border-[12px] border-[#6c2db5] rounded-full opacity-10"></div>
       </div>
 
-      {/* Առավելությունների Ցանց (Grid) */}
+     
       <div className="max-w-[1400px] mx-auto px-6 py-16">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-4">
           Մեր առավելությունները

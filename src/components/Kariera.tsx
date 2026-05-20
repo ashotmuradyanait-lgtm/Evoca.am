@@ -7,7 +7,7 @@ const Kariera: React.FC = () => {
   const subMenuItems = [
     { name: 'Մշակույթ', path: '' },
     { name: 'Առավելություններ', path: '/aravel' },
-    { name: 'Հաճախ տրվող հարցեր', path: '' },
+    { name: 'Հաճախ տրվող հարցեր', path: '/hacax' },
     { name: 'Ինչպես ընդունվել աշխատանքի Evocabank-ում', path: '' },
   ];
 
