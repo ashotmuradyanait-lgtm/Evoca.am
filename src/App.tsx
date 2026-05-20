@@ -98,6 +98,7 @@ import Kisamyak from "./components/Kisamyak";
 import Tarekan from "./components/Tarekan";
 import Hayt from "./components/Hayt";
 import Kariera from "./components/Kariera";
+import Aravel from "./components/Aravel";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -232,6 +233,7 @@ const App: React.FC = () => {
           <Route path="/tarekan" element={<Tarekan/>} />
           <Route path="/hayt" element={<Hayt/>} />
           <Route path="/kariera" element={<Kariera/>} />
+          <Route path="/aravel" element={<Aravel/>} />
         </Routes>
       </main>
 

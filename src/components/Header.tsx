@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     { name: t('Մեր մասին'), path: '/mermasin' },
     { name: t('Նորություններ'), path: '/norutyun' },
     { name: t('Բլոգ'), path: '/blog' },
-    { name: t('Կարիերա'), path: '/careers' }
+    { name: t('Կարիերա'), path: '/kariera' }
   ];
 
   const changeLanguage = (lng: string) => {
