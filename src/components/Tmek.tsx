@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
-const Tas: React.FC = () => {
+const Tmek: React.FC = () => {
   const [activeTab, setActiveTab] = useState('about'); 
 
   const subMenuItems = [
@@ -43,7 +43,7 @@ const Tas: React.FC = () => {
           <span>›</span>
           <span className="hover:text-gray-600">Վարկեր</span>
           <span>›</span>
-          <span className="text-gray-800 font-medium">Հողամասի ձեռքբերման վարկ</span>
+          <span className="text-gray-800 font-medium">Միկրովերանորոգման վարկ Բանկի ռեսուրսներով</span>
         </div>
         
         <Link to="/varker" className="flex items-center gap-2 text-gray-600 hover:text-[#6c2db5] transition-colors font-medium text-[14px] bg-gray-100 px-4 py-2 rounded-full w-fit">
@@ -56,15 +56,15 @@ const Tas: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-             Հողամասի ձեռքբերման վարկ
+             Միկրովերանորոգման վարկ Բանկի ռեսուրսներով
             </h1>
             <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
-              Փնտրո՞ւմ ես հողատարածք՝ քո երազանքների տունը կառուցելու, հանգստի գոտի ստեղծելու կամ այլ նպատակների համար։ Դու արդեն գտել ես այն։
+              Պլանավորո՞ւմ ես բնակարանի վերանորոգում։ Ստացիր Evocabank-ի միկրովերանորոգման վարկ և օգտվիր պետական սուբսիդավորման հնարավորությունից։
             </p>
           </div>
           <div className="flex-1 w-full max-w-[560px]">
             <img 
-              src="https://www.evoca.am/images-cache/loans/1/17421922764367/415x261.jpg" 
+              src="https://www.evoca.am/images-cache/loans/1/17461652642369/415x261.png" 
               alt="Bicycle Loan Hero" 
               className="w-full h-auto object-contain rounded-3xl"
             />
@@ -131,19 +131,17 @@ const Tas: React.FC = () => {
                 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
                    <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">80. մլն ֏</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">5. մլն ֏</p>
                    <p className="text-gray-800 font-bold mt-2">Գումար</p>
                 </div>
 
-                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
-                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">240 ամիս</p>
-                   <p className="text-gray-800 font-bold mt-2">Մարման ժամկետ</p>
+                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow mt-5">
+                   <p className="text-[#6c2db5] text-[28px] font-black">60 ամիս</p>
+                   <p className="text-gray-800 font-bold mt-2">ժամկետ</p>
                 </div>
 
-                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
-                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">սկսած</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">14%-ից</p>
+                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow mt-5">
+                   <p className="text-[#6c2db5] text-[28px] font-black">17%</p>
                    <p className="text-gray-800 font-bold mt-2">Տոկոսադրույք</p>
                 </div>
 
@@ -156,4 +154,4 @@ const Tas: React.FC = () => {
     </div>
   );
 };
-export default Tas;
+export default Tmek;
