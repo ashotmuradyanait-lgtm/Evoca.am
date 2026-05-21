@@ -120,6 +120,7 @@ import Hat from "./components/Hat";
 import Part from "./components/Part";
 import Arevtur from "./components/Arevtur";
 import Fakt from "./components/Fakt";
+import Akre from "./components/Akre";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -277,6 +278,7 @@ const App: React.FC = () => {
           <Route path="/part" element={<Part/>} />
           <Route path="/arevtur" element={<Arevtur/>} />
           <Route path="/fakt" element={<Fakt/>} />
+          <Route path="/akre" element={<Akre/>} />
         </Routes>
       </main>
 

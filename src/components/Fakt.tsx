@@ -7,9 +7,33 @@ const Fakt: React.FC = () => {
   const subMenuItems = [
     { name: 'Երաշխիք', path: '/arevtur' },
     { name: 'Ֆակտորինգային ֆինանսավորում', path: '' },
-    { name: 'Ակրեդիտիվ', path: '' },
+    { name: 'Ակրեդիտիվ', path: '/akre' },
     { name: 'Ինկասո', path: '' },
   ];
+
+  const newsItems = [
+  {
+    image: 'https://www.evoca.am/images-cache/news/1/17782305453949/439x320.png',
+    category: 'Մրցանակներ',
+    categoryColor: '#e7d321', 
+    title: 'Evocabank-ը՝ լավագույն ՓՄՁ բանկը Հայաստանում՝ երկրորդ տարին…',
+    date: '08.05.2026',
+  },
+  {
+    image: 'https://www.evoca.am/images-cache/news/1/17780463751358/439x320.png',
+    category: 'Բանկային',
+    categoryColor: '#784BDD', 
+    title: 'Evocabank-ը  և Proparco-AFD-ն ստորագրել են 20միլիոն եվրոյի...',
+    date: '06.05.2026',
+  },
+  {
+    image: 'https://www.evoca.am/images-cache/news/1/1776423301974/439x320.png',
+    category: 'Կենսակերպ',
+    categoryColor: '#BEE553', 
+    title: 'Evocabank-ը մասնակցում է CCF 2026-ին',
+    date: '17.04.2026',
+  },
+];
 
   return (
     <div className="w-full bg-white font-sans text-gray-800 antialiased selection:bg-[#6c2db5] selection:text-white">
@@ -80,7 +104,7 @@ const Fakt: React.FC = () => {
         </div>
       </div>
 
-      {/* NEW CONTENT FROM VIDEO */}
+     
       <div className="max-w-[1000px] mx-auto px-4 md:px-6 pb-20 text-[15px] leading-relaxed text-gray-700">
         <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-6">Ֆակտորինգային ֆինանսավորում</h1>
         
@@ -175,32 +199,80 @@ const Fakt: React.FC = () => {
             </tbody>
           </table>
         </div>
-
-        {/* PROMO CARDS */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-gray-50 p-4 flex flex-col justify-between">
-            <div>
-              <span className="text-xs font-bold text-white bg-red-500 px-2 py-1 rounded-full uppercase">Glovo</span>
-              <h4 className="font-bold mt-2 text-[16px]">Glovo-ն արդեն Evoca-ում</h4>
-              <p className="text-xs text-gray-500 mt-1">Պատվիրեք ձեր նախընտրած բրենդներից հատուկ պայմաններով։</p>
-            </div>
-            <img src="https://img.freepik.com/free-vector/delivery-staff-ride-motorcycles-yellow-background_1150-34879.jpg" className="w-full h-32 object-cover rounded-xl mt-4" alt="Glovo Promo" />
-          </div>
-
-          <div className="border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-gray-50 p-4 flex flex-col justify-between">
-            <div>
-              <span className="text-xs font-bold text-white bg-[#6c2db5] px-2 py-1 rounded-full uppercase">Globbing</span>
-              <h4 className="font-bold mt-2 text-[16px]">GLOBBING-ՈՒՄ ՎՃԱՐԻՐ</h4>
-              <p className="text-xs text-gray-500 mt-1">Evoca Visa բիզնես քարտով և ստացիր քեշբեքներ կամ արտոնություններ։</p>
-            </div>
-            <div className="bg-[#f3f4f6] rounded-xl p-2 flex items-center justify-center mt-4 h-32">
-              <span className="text-3xl">🦒</span>
-              <span className="font-bold ml-2 text-purple-900">GLOBBING</span>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <section className="bg-[#F8F9FB] py-16 font-sans relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#784BDD]/5 rounded-full blur-[100px] -z-0" />
+            
+            <div className="max-w-[1440px] mx-auto px-10 relative z-10">
+              
+              <div className="flex items-center justify-between mb-12">
+                <h2 className="text-4xl font-black text-[#1A1A1A] tracking-tight">
+                  Վերջին նորությունները
+                </h2>
+              <Link to="/norutyun">
+                <button className="flex items-center gap-2 bg-[#F3EEFF] text-[#6600CC] px-7 py-3 rounded-full hover:bg-[#6600CC] hover:text-white transition-all duration-300 font-bold shadow-sm">
+                  Բոլոր նորությունները
+                  <span className="text-xl font-bold">›</span>
+                </button>
+              </Link>
+              </div>
+      
+            
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {newsItems.map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-white rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col group cursor-pointer border border-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
+                  >
+                    
+                    
+                    <div className="relative aspect-[439/320] overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                     
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                   
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-50 group-hover:scale-100">
+                          <div className="bg-white/90 p-4 rounded-full shadow-xl">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6600CC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                          </div>
+                      </div>
+                    </div>
+      
+                    <div className="p-8 flex-grow flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <div style={{ backgroundColor: item.categoryColor }} className="w-1.5 h-6 rounded-full" />
+                          <span className="text-gray-500 text-[13px] font-semibold tracking-wide uppercase">
+                            {item.category}
+                          </span>
+                        </div>
+      
+                        <h3 className="text-[19px] font-bold text-[#1A1A1A] leading-tight mb-8 line-clamp-3 group-hover:text-[#6600CC] transition-colors">
+                          {item.title}
+                        </h3>
+                      </div>
+      
+                      <div className="flex items-center justify-between">
+                        <div className="text-[#C2C2C2] text-sm font-medium">
+                          {item.date}
+                        </div>
+                       
+                        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
+                            <span className="text-[#6600CC] font-bold">Կարդալ ավելին ›</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
     </div>
   );
 };

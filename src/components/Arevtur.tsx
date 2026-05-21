@@ -7,7 +7,7 @@ const Arevtur: React.FC = () => {
   const subMenuItems = [
     { name: 'Երաշխիք', path: '' },
     { name: 'Ֆակտորինգային ֆինանսավորում', path: '/fakt' },
-    { name: 'Ակրեդիտիվ', path: '' },
+    { name: 'Ակրեդիտիվ', path: '/akre' },
     { name: 'Ինկասո', path: '' },
   ];
 
