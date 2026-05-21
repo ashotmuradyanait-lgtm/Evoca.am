@@ -105,6 +105,7 @@ import Practic from "./components/Practic";
 import Usum from "./components/Usum";
 import Bridge from "./components/Bridge";
 import Mek from "./components/Mek";
+import Myus from "./components/Myus";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -247,6 +248,7 @@ const App: React.FC = () => {
           <Route path="/usum" element={<Usum/>} />
           <Route path="/bridge" element={<Bridge/>} />
           <Route path="/mek" element={<Mek/>} />
+          <Route path="/myus" element={<Myus/>} />
         </Routes>
       </main>
 
