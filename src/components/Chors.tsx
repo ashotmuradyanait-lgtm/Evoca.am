@@ -56,15 +56,15 @@ const Ereq: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-              Բնակարանային հիփոթեքային վարկեր Բանկի ռեսուրսով
+              Գույքի գրավով ապահովված անհատական վարկ (վարկունակության գնահատմամբ)
             </h1>
             <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
-              Ձեռք բերեք Ձեր նախընտրած բնակարանը հիփոթեքային վարկավորման միջոցով։
+              Շտապ գումա՞ր է անհրաժեշտ ընթացիկ ծախսերը հոգալու համար, և ցածր տոկոսադրույքով վարկատեսա՞կ ես փնտրում։ Արի՛ Evocabank։
             </p>
           </div>
           <div className="flex-1 w-full max-w-[560px]">
             <img 
-              src="https://www.evoca.am/images-cache/loans/1/1614244906092/415x261.jpg" 
+              src="https://www.evoca.am/images-cache/loans/1/16142566831396/415x261.jpg" 
               alt="Bicycle Loan Hero" 
               className="w-full h-auto object-contain rounded-3xl"
             />
@@ -106,7 +106,7 @@ const Ereq: React.FC = () => {
               </p>
               
               <div className="bg-[#fcfaff] p-6 rounded-2xl border-l-4 border-[#6c2db5] mt-8">
-                 <h4 className="font-bold text-[#1a1a1a] mb-4">Բնակարանային հիփոթեքային վարկեր Բանկի ռեսուրսով</h4>
+                 <h4 className="font-bold text-[#1a1a1a] mb-4">Գույքի գրավով ապահովված անհատական վարկ (վարկունակության գնահատմամբ)</h4>
                  <ul className="list-none space-y-3">
                     <li className="flex items-start gap-3">
                        <span className="text-[#6c2db5] font-bold">•</span>
@@ -131,20 +131,26 @@ const Ereq: React.FC = () => {
                 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
                    <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">80 մլն ֏</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">100 մլն ֏</p>
                    <p className="text-gray-800 font-bold mt-2">Գումար</p>
                 </div>
 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
                    <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">240 ամիս</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">24-120 ամիս</p>
                    <p className="text-gray-800 font-bold mt-2">Ժամկետ</p>
                 </div>
 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
-                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Սկսած</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">13.2%</p>
-                   <p className="text-gray-800 font-bold mt-2">Տոկոսադրույքից</p>
+                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">շարժական գույքի գրավադրման դեպքում</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">60 ամիս</p>
+                   <p className="text-gray-800 font-bold mt-2">Վարկի մարման ժամկետը</p>
+                </div>
+
+                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
+                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">սկսած</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">15%-ից</p>
+                   <p className="text-gray-800 font-bold mt-2">Տոկոսադրույք</p>
                 </div>
 
              </div>
