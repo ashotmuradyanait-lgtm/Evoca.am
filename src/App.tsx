@@ -110,6 +110,7 @@ import Ereq from "./components/Ereq";
 import Chors from "./components/Chors";
 import Hing from "./components/Hing";
 import Vec from "./components/Vec";
+import Yot from "./components/Yot";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -257,6 +258,7 @@ const App: React.FC = () => {
           <Route path="/chors" element={<Chors/>} />
           <Route path="/hing" element={<Hing/>} />
           <Route path="/vec" element={<Vec/>} />
+          <Route path="/yot" element={<Yot/>} />
         </Routes>
       </main>
 
