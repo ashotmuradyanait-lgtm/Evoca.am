@@ -7,8 +7,8 @@ const Pos: React.FC = () => {
   const subMenuItems = [
     { name: 'V-POS Տերմինալ', path: '/digital' },
     { name: 'POS Տերմինալ', path: '' },
-    { name: 'Սակագներ', path: '' },
-    { name: 'Տերմինալի տեղադրման հայտ', path: '' },
+    { name: 'Սակագներ', path: '/sak' },
+    { name: 'Տերմինալի տեղադրման հայտ', path: '/terminal' },
     { name: 'Evoca Mobile POS՝ mPOS', path: '' },
   ];
 

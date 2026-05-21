@@ -125,6 +125,7 @@ import Inkaso from "./components/Inkaso";
 import Digital from "./components/Digital";
 import Pos from "./components/Pos";
 import Sak from "./components/Sak";
+import Terminal from "./components/Terminal";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -287,6 +288,7 @@ const App: React.FC = () => {
           <Route path="/digital" element={<Digital/>} />
           <Route path="/pos" element={<Pos/>} />
           <Route path="/sak" element={<Sak/>} />
+          <Route path="/terminal" element={<Terminal/>} />
         </Routes>
       </main>
 
