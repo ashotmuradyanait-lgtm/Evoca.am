@@ -141,13 +141,20 @@ const Bankayin: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden">
       
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-4 md:py-6 flex items-center gap-2 text-gray-400 text-[11px] md:text-[13px]">
-        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
-        <span>›</span>
-        <span className="text-gray-800">Նորություններ</span>
-        <span>›</span>
-        <span className="text-gray-800 font-bold">Բանկային</span>
-      </div>
+      <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+              <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+              <span>›</span>
+              <span className="text-gray-800">Նորություններ</span>
+              <span>›</span>
+              <span className="text-gray-800 font-bold">Պրոդուկտներ</span>
+            </div>
+            <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+                    <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+                    <span>›</span>
+                    <span className="text-gray-800">Նորություններ</span>
+                    <span>›</span>
+                    <span className="text-gray-800 font-bold">Պրոդուկտներ</span>
+                  </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10">
         <h1 className="text-[32px] sm:text-[40px] md:text-[68px] font-black text-[#1a1a1a] mb-6 md:mb-10 tracking-[-0.04em] leading-tight md:leading-none">
