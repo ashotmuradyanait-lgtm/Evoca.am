@@ -113,6 +113,7 @@ import Vec from "./components/Vec";
 import Yot from "./components/Yot";
 import Ut from "./components/Ut";
 import Iny from "./components/Iny";
+import Tas from "./components/Tas";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -263,6 +264,7 @@ const App: React.FC = () => {
           <Route path="/yot" element={<Yot/>} />
           <Route path="/ut" element={<Ut/>} />
           <Route path="/iny" element={<Iny/>} />
+          <Route path="/tas" element={<Tas/>} />
         </Routes>
       </main>
 
