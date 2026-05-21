@@ -149,6 +149,13 @@ const Product: React.FC = () => {
         <span>›</span>
         <span className="text-gray-800 font-bold">Պրոդուկտներ</span>
       </div>
+      <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center gap-2 text-gray-400 text-[13px]">
+        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
+        <span>›</span>
+        <span className="text-gray-800">Նորություններ</span>
+        <span>›</span>
+        <span className="text-gray-800 font-bold">Պրոդուկտներ</span>
+      </div>
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-10">
         <h1 className="text-[40px] md:text-[68px] font-black text-[#1a1a1a] mb-10 tracking-[-0.04em] leading-none">
