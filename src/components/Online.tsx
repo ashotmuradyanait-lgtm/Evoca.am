@@ -111,7 +111,6 @@ const Online: React.FC = () => {
             </div>
           </div>
 
-          {/* Կոճակ */}
           <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
             Մանրամասն
             <span className="text-[18px]">›</span>
@@ -189,7 +188,7 @@ const Online: React.FC = () => {
         <div className="flex flex-col justify-between flex-grow py-2">
           <div>
             <h2 className="text-[28px] font-bold  text-[#1a1a1a] mb-4">
-             Online և Տեղում Ապառիկ
+             Տեղում Ապառիկ
             </h2>
             <p className="text-gray-600 text-[15px] leading-relaxed max-w-[800px] mb-8">
             Ցանկանու՞մ ես ձեռք բերել քո ցանկալի ապրանքը կամ օգտվել որևէ ծառայությունից, բայց չունես <br />

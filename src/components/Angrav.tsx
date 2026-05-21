@@ -181,7 +181,7 @@ const Angrav: React.FC = () => {
             </div>
           </div>
 
-          {/* Կոճակ */}
+          
           <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
             Մանրամասն
             <span className="text-[18px]">›</span>
@@ -296,7 +296,7 @@ const Angrav: React.FC = () => {
     </div>
 
 
-        <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
         
         <div className="w-[415px] h-[261px] shrink-0">
@@ -463,7 +463,7 @@ const Angrav: React.FC = () => {
 
 
 
-         <div className="max-w-[1400px] mx-auto px-6 mb-8">
+      <div className="max-w-[1400px] mx-auto px-6 mb-8">
       <div className="flex bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-6 gap-8 hover:shadow-md transition-shadow">
         
         <div className="w-[415px] h-[261px] shrink-0">
