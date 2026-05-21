@@ -14,7 +14,7 @@ const Lizing: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Evoca Leasing', path: '' },
-    { name: 'Հատուկ առաջարկ', path: '/hatuk' },
+    { name: 'Հատուկ առաջարկ', path: '/hat' },
   ];
 
   const leasingSections = [
