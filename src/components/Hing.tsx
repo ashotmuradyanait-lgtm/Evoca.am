@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
-const Chors: React.FC = () => {
+const Hing: React.FC = () => {
   const [activeTab, setActiveTab] = useState('about'); 
 
   const subMenuItems = [
@@ -43,7 +43,7 @@ const Chors: React.FC = () => {
           <span>›</span>
           <span className="hover:text-gray-600">Վարկեր</span>
           <span>›</span>
-          <span className="text-gray-800 font-medium">Հեծանիվի ձեռքբերման վարկ</span>
+          <span className="text-gray-800 font-medium">Action</span>
         </div>
         
         <Link to="/varker" className="flex items-center gap-2 text-gray-600 hover:text-[#6c2db5] transition-colors font-medium text-[14px] bg-gray-100 px-4 py-2 rounded-full w-fit">
@@ -56,15 +56,15 @@ const Chors: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-              Գույքի գրավով ապահովված անհատական վարկ (վարկունակության գնահատմամբ)
+              Action
             </h1>
             <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
-              Շտապ գումա՞ր է անհրաժեշտ ընթացիկ ծախսերը հոգալու համար, և ցածր տոկոսադրույքով վարկատեսա՞կ ես փնտրում։ Արի՛ Evocabank։
+              Action online վարկ կարող ես ստանալ EvocaTOUCH հավելվածի միջոցով՝ 24/7 ռեժիմով, ցանկացած վայրից և ցանկացած ժամի։
             </p>
           </div>
           <div className="flex-1 w-full max-w-[560px]">
             <img 
-              src="https://www.evoca.am/images-cache/loans/1/16142566831396/415x261.jpg" 
+              src="https://www.evoca.am/images-cache/loans/1/16994456305602/415x261.png" 
               alt="Bicycle Loan Hero" 
               className="w-full h-auto object-contain rounded-3xl"
             />
@@ -131,26 +131,14 @@ const Chors: React.FC = () => {
                 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
                    <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">100 մլն ֏</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">10 մլն ֏</p>
                    <p className="text-gray-800 font-bold mt-2">Գումար</p>
                 </div>
 
                 <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
                    <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">Մինչև</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">24-120 ամիս</p>
-                   <p className="text-gray-800 font-bold mt-2">Ժամկետ</p>
-                </div>
-
-                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
-                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">շարժական գույքի գրավադրման դեպքում</p>
                    <p className="text-[#6c2db5] text-[28px] font-black">60 ամիս</p>
-                   <p className="text-gray-800 font-bold mt-2">Վարկի մարման ժամկետը</p>
-                </div>
-
-                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
-                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">սկսած</p>
-                   <p className="text-[#6c2db5] text-[28px] font-black">15%-ից</p>
-                   <p className="text-gray-800 font-bold mt-2">Տոկոսադրույք</p>
+                   <p className="text-gray-800 font-bold mt-2">Մարման ժամկետ</p>
                 </div>
 
              </div>
@@ -162,4 +150,4 @@ const Chors: React.FC = () => {
     </div>
   );
 };
-export default Chors;
+export default Hing;
