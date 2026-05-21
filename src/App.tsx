@@ -117,6 +117,7 @@ import Tas from "./components/Tas";
 import Tmek from "./components/Tmek";
 import Terku from "./components/Terku";
 import Hat from "./components/Hat";
+import Part from "./components/Part";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -271,6 +272,7 @@ const App: React.FC = () => {
           <Route path="/tmek" element={<Tmek/>} />
           <Route path="/terku" element={<Terku/>} />
           <Route path="/hat" element={<Hat/>} />
+          <Route path="/part" element={<Part/>} />
         </Routes>
       </main>
 
