@@ -123,6 +123,8 @@ import Fakt from "./components/Fakt";
 import Akre from "./components/Akre";
 import Inkaso from "./components/Inkaso";
 import Digital from "./components/Digital";
+import Pos from "./components/Pos";
+import Sak from "./components/Sak";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -283,6 +285,8 @@ const App: React.FC = () => {
           <Route path="/akre" element={<Akre/>} />
           <Route path="/inkaso" element={<Inkaso/>} />
           <Route path="/digital" element={<Digital/>} />
+          <Route path="/pos" element={<Pos/>} />
+          <Route path="/sak" element={<Sak/>} />
         </Routes>
       </main>
 

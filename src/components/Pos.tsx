@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Digital: React.FC = () => {
+const Pos: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
   const subMenuItems = [
-    { name: 'V-POS Տերմինալ', path: '' },
-    { name: 'POS Տերմինալ', path: '/pos' },
+    { name: 'V-POS Տերմինալ', path: '/digital' },
+    { name: 'POS Տերմինալ', path: '' },
     { name: 'Սակագներ', path: '' },
     { name: 'Տերմինալի տեղադրման հայտ', path: '' },
     { name: 'Evoca Mobile POS՝ mPOS', path: '' },
@@ -15,6 +15,7 @@ const Digital: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans text-gray-800 antialiased selection:bg-[#6c2db5] selection:text-white">
       
+    
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 md:pt-14 px-4 max-w-[1400px] mx-auto">
         <Link to="/">
           <img 
@@ -42,7 +43,7 @@ const Digital: React.FC = () => {
         </Link>
       </div>
 
-      
+     
       <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-4 md:px-6 whitespace-nowrap">
           {subMenuItems.map((item, index) => (
@@ -60,7 +61,6 @@ const Digital: React.FC = () => {
         </div>
       </div>
 
-     
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-6 flex items-center gap-2 text-gray-400 text-[12px] md:text-[13px] overflow-x-auto whitespace-nowrap">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -68,10 +68,10 @@ const Digital: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Դիջիթալ</span>
         <span>›</span>
-        <span className="text-gray-800 font-medium">V-POS Տերմինալ</span>
+        <span className="text-gray-800 font-medium">POS Տերմինալ</span>
       </div>
 
-      
+     
       <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
         <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
@@ -81,125 +81,107 @@ const Digital: React.FC = () => {
         </div>
       </div>
 
-     
+      
       <div className="max-w-[1100px] mx-auto px-4 md:px-6 pb-20 text-[15px] leading-relaxed text-gray-700">
         
-      
+        
         <div className="flex flex-col md:flex-row items-center gap-8 my-8">
           <div className="w-full md:w-1/2">
-            <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-4">V-POS Տերմինալ</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-4">POS Տերմինալ</h1>
             <p className="text-base font-medium text-gray-950 mb-3">
-              V-POS (Virtual Point of Sale) վիրտուալ վճարային տերմինալը ժամանակակից, ապահով և հեշտ լուծում է առցանց վաճառք իրականացնող բիզնեսների համար:
+              POS տերմինալը սարքավորում կամ վճարային համակարգ է, որն ապահովում է առևտրի և սպասարկման կետերում անկանխիկ վճարումներ ընդունելու, ինչպես նաև այդ գործարքներին առնչվող այլ գործառույթներ կատարելու այսօր կարևոր նախապայման է Ձեր գնորդների համար:
             </p>
             <p className="mb-4">
-              Արագ և հարմարավետ վճարումներ կատարելը այսօր կարևոր նախապայման է հաճախորդների համար:
+              Ձեր հաճախորդները կկարողանան գնումներ կատարել <strong className="text-[#6c2db5]">իրենց միջազգային VISA, MasterCard և տեղական ArCa վճարային քարտերով</strong>:
             </p>
             <p className="mb-4">
-              Evocabank-ը կկազմակերպի Ձեր կայքում V-POS տերմինալի տեղադրումը: Այն հնարավորություն կտա Ձեզ <strong className="text-[#6c2db5]">խուսափել հավելյալ ծրագրային ծախսերից</strong>, սերտիֆիկացումից և հետագա ծրագրային ապահովումից:
-            </p>
-            <p className="mb-4">
-              Ձեր հաճախորդները կկարողանան գնումներ կատարել <strong className="text-[#6c2db5]">Ձեր կայքից</strong> ու վճարել դրանց համար իրենց միջազգային Visa, MasterCard և տեղական ArCa վճարային քարտերով:
-            </p>
-            <p className="font-semibold text-gray-900">
               Ծառայությունը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում:
+            </p>
+            <p className="font-semibold mb-4">
+              Ինչու՞ տեղադրել Evocabank-ի POS տերմինալը՝
+            </p>
+            <p className="mb-4">
+              Evocabank-ի POS-ով կատարված վաճառքներից կգանձվեն <strong className="text-[#6c2db5]">նվազագույն միջնորդավճարներ</strong>՝ հատուկ Ձեր բիզնեսի համար։ Վիրտուալ սպասարկման կետի գրանցման համար անհրաժեշտ POS, ՀԴՄ-POS, mPOS, VENDISTA տերմինալների տեղադրման <strong className="text-[#6c2db5]">ստանդարտ սակագներն ու պայմաններն են</strong>՝
             </p>
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <img 
-              src="https://www.evoca.am/images-cache/menu/1/16158111599306/780x585.jpg" 
-              alt="V-POS Terminal Illustration" 
+              src="https://www.evoca.am/images-cache/menu/1/16158085302978/780x585.jpg" 
+              alt="POS Terminal Illustration" 
               className="w-full max-w-[450px] rounded-2xl shadow-sm object-cover"
             />
           </div>
         </div>
 
         
-        <div className="bg-purple-50 border-l-4 border-[#6c2db5] p-5 my-8 rounded-r-2xl">
-          <h3 className="font-bold text-[#6c2db5] text-[16px] mb-2">Ինչու՞ տեղադրել Evocabank-ի V-POS տերմինալը՝</h3>
-          <ul className="list-disc pl-5 space-y-1.5 text-sm text-gray-800">
-            <li>Առցանց վաճառքների շնորհիվ <strong className="text-[#6c2db5]">կաճեն Ձեր եկամուտները</strong></li>
-            <li>Evocabank-ի V-POS-ով կատարված վաճառքներից կգանձվեն <strong className="text-[#6c2db5]">նվազագույն միջնորդավճարներ</strong>՝ հատուկ Ձեր բիզնեսի համար</li>
-            <li>Վիրտուալ սպասարկման կետի գրանցման համար անհրաժեշտ V-POS տերմինալների տեղադրման ստանդարտ սակագներն են՝</li>
-          </ul>
+        <div className="bg-purple-50 border-l-4 border-[#6c2db5] p-5 my-6 rounded-r-2xl text-sm">
+          <p className="font-medium text-gray-900">
+            * Եթե վաճառակետի գործունեության տեսակը չի համընկնում ԿԲ կողմից ներկայացված ստորև տեսակի կոդին կամ գերազանցում է տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը՝
+          </p>
         </div>
 
-     
-        <h2 className="text-xl font-bold text-[#6c2db5] mt-10 mb-4">V-POS Տերմինալի Սակագներ</h2>
+       
         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm mb-12">
           <table className="w-full text-left border-collapse text-[14px]">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
-                <th className="p-4 font-semibold text-gray-700">Քարտային համակարգեր</th>
-                <th className="p-4 font-semibold text-gray-700 text-center">Միջնորդավճար</th>
+                <th className="p-4 font-semibold text-gray-700">Գործարքի տեսակ</th>
+                <th className="p-4 font-semibold text-gray-700 text-center">Արքա /ArCa/ վճարային համակարգի քարտերով կատարված գործարքների դեպքում</th>
+                <th className="p-4 font-semibold text-gray-700 text-center">Արքա համակարգի անդամ հանդիսացող բանկերի թողարկված MasterCard, Visa, Upay քարտերի դեպքում</th>
+                <th className="p-4 font-semibold text-gray-700 text-center">Ոչ Արքա համակարգի անդամ հանդիսացող բանկերի թողարկված MasterCard, Visa, Upay քարտերի դեպքում</th>
+                <th className="p-4 font-semibold text-gray-700 text-center">QR կոդով վճարման դեպքում</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Արքա / ArCa / վճարային համակարգի քարտերով գործարքների դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1.50%</td>
+            <tbody className="divide-y divide-gray-200 text-center">
+              <tr className="hover:bg-gray-50 transition-colors">
+                <td className="p-4 text-left font-medium bg-gray-50">Գանձվող գումարի չափ</td>
+                <td className="p-4 font-bold text-gray-900">1.5 %</td>
+                <td className="p-4 font-bold text-gray-900">1.7 %</td>
+                <td className="p-4 font-bold text-gray-900">3.0 %</td>
+                <td className="p-4 font-bold text-gray-900">1 %</td>
               </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">ՀՀ տարածքում գործող բանկերի կողմից թողարկված MasterCard, Visa քարտերի դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1.90%</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Արտասահմանյան բանկերի կողմից թողարկված MasterCard, Visa քարտերի դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">3.00%</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">QR կոդով վճարման դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1%</td>
+              <tr className="hover:bg-gray-50 transition-colors">
+                <td className="p-4 text-left font-medium bg-gray-50">Ամսական անկանխիկ շրջանառության նվազագույն չափ (ՀՀ դրամ)</td>
+                <td colSpan={2} className="p-4 text-left text-xs text-gray-600 font-medium">
+                  Բանկի կողմից տրամադրված POS տերմինալով՝ <span className="font-bold text-gray-900">10,000</span><br />
+                  Բանկի կողմից տրամադրված ՀԴՄ-POS տերմինալով՝ <span className="font-bold text-gray-900">7,000</span><br />
+                  Տնտեսվարողի սեփական ՀԴՄ-POS տերմինալով՝ <span className="font-bold text-gray-900">3,000</span>
+                </td>
+                <td colSpan={2} className="p-4 text-center text-xs text-gray-500 font-medium">
+                  mPOS և VENDISTA տերմինալների մասով ամսական միջնորդավճարների նվազագույն չափ չի սահմանվում
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p className="text-xs text-gray-500 mb-10">
-          * Կայքերում անվտանգությունն ապահովելու նպատակով գործում են ժամանակակից 3D Secure Code (Verified by Visa, MasterCard Identity Check) անվտանգության համակարգերը:
-        </p>
-
-        <hr className="my-12 border-gray-200" />
-
        
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8 my-12">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-bold text-[#6c2db5] mb-4">Վարկ POS տերմինալի շրջանառության հիման վրա</h2>
-            <p className="mb-4">
-              Եթե Դուք փոքր և միջին բիզնես եք իրականացնում և ունեք անկանխիկ գործարքներ, ապա այս բիզնես վարկը հենց Ձեզ համար է։ Մեզ մոտ փոքր և միջին բիզնեսներն ունեն հնարավորություն ձևակերպել արագ բիզնես վարկեր իրենց հրատապ ֆինանսական խնդիրները լուծելու համար։
-            </p>
-            <h3 className="font-bold text-gray-900 mb-2">Ովքե՞ր կարող են դիմել՝</h3>
-            <ul className="list-disc pl-5 space-y-2 mb-4 text-sm">
-              <li>ՀՀ ռեզիդենտ իրավաբանական անձինք և անհատ ձեռնարկատերեր, ովքեր գրանցված գործունեություն են ծավալում առնվազն 12 ամիս:</li>
-              <li>Այն հաճախորդները, ովքեր Evocabank-ի հետ ունեն կնքված POS տերմինալի համագործակցության առնվազն 6 ամսվա պայմանագիր:</li>
-            </ul>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img 
-              src="https://www.evoca.am/file_manager/pos2-600x315.jpg" 
-              alt="POS Terminal Promo" 
-              className="w-full max-w-[450px] rounded-2xl shadow-sm object-cover"
-            />
-          </div>
-        </div>
-
-        
-        <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 my-8">
-          <h2 className="text-xl font-bold text-[#6c2db5] mb-3">Օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա</h2>
-          <p className="mb-4 text-sm">
-            Evocabank-ում կարող եք ձեռք բերել բիզնես օվերդրաֆտ՝ առանց ավելորդ թղթաբանության և ժամանակի կորստի։ Եթե կան կարճամակետ ֆինանսական խնդիրներ կամ պարզապես ցանկանում եք ավելի զարգացնել Ձեր բիզնեսը, ապա մեզ մոտ շատ արագ և պարզ տարբերակով կարող եք ձևակերպել բիզնես օվերդրաֆտ։
+        <div className="bg-purple-50 rounded-2xl p-6 md:p-8 border border-purple-100 my-8">
+          <h2 className="text-xl font-bold text-[#6c2db5] mb-3">Վարկ POS տերմինալի շրջանառության հիման վրա</h2>
+          <p className="mb-4 text-sm text-gray-800">
+            Եթե Դուք փոքր և միջին բիզնես եք իրականացնում և ունեք անկանխիկ գործարքներ, ապա այս բիզնես վարկը հենց Ձեզ համար է։ Մեզ մոտ փոքր և միջին բիզնեսներն ունեն հնարավորություն ձևակերպել արագ բիզնես վարկեր իրենց հրատապ ֆինանսական խնդիրները լուծելու համար։
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link to="#" className="inline-flex justify-center items-center text-white bg-[#6c2db5] hover:bg-[#530498] px-6 py-2 rounded-full font-medium text-sm transition-colors shadow-sm">
-              Տերմինալի տեղադրման հայտ
+          <div className="flex flex-wrap gap-4 mt-6">
+            <Link to="#" className="inline-flex justify-center items-center text-white bg-[#6c2db5] hover:bg-[#530498] px-6 py-2.5 rounded-full font-medium text-sm transition-colors shadow-sm">
+              Լրացրեք հայտը հենց հիմա
             </Link>
-            <Link to="#" className="inline-flex justify-center items-center text-[#6c2db5] border border-[#6c2db5] hover:bg-purple-50 px-6 py-2 rounded-full font-medium text-sm transition-colors">
+            <Link to="#" className="inline-flex justify-center items-center text-[#6c2db5] border border-[#6c2db5] hover:bg-purple-100 px-6 py-2.5 rounded-full font-medium text-sm transition-colors">
               Իմանալ ավելին
             </Link>
           </div>
         </div>
+
+       
+        <div className="border border-gray-100 shadow-sm p-6 rounded-2xl my-8">
+          <h3 className="font-bold text-gray-900 text-base mb-3">Ի՞նչ է սպասվում հայտը լրացնելուց հետո․</h3>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
+            <li>Մեր մասնագետը <strong className="text-gray-900">1 աշխատանքային օրվա ընթացքում</strong> կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը։</li>
+            <li>Պայմանագրի ստորագրումից հետո POS կամ V-POS տերմինալը <strong className="text-[#6c2db5]">կտեղադրվի Ձեր բիզնեսի կայքում կամ վաճառակետում</strong>։</li>
+          </ul>
+        </div>
       </div>
 
-      <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-hidden font-sans bg-gray-50">
+       <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-hidden font-sans bg-gray-50">
       <div className="relative w-full bg-[#6600cc] min-h-[600px] lg:min-h-[650px] rounded-tl-[60px] sm:rounded-tl-[120px] rounded-br-[60px] sm:rounded-br-[120px] flex items-center p-6 sm:p-10 md:p-16 shadow-[0_20px_50px_rgba(102,0,204,0.3)] overflow-hidden">
         
         
@@ -329,4 +311,4 @@ const Digital: React.FC = () => {
   );
 };
 
-export default Digital;
+export default Pos;
