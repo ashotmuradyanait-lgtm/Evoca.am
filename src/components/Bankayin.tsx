@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Menu from '../pages/Menu';
+
 
 const Bankayin: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('Բանկային');
@@ -139,7 +141,7 @@ const Bankayin: React.FC = () => {
 
   return (
     <div className="w-full bg-white font-sans text-[#1a1a1a] overflow-x-hidden">
-      
+      <Menu/>
       
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-4 md:py-6 flex items-center gap-2 text-gray-400 text-[11px] md:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
