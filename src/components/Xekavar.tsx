@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Xekavar: React.FC = () => {
-  // Սրանով պահում ենք ընտրված ղեկավարի տվյալները (եթե null է, ցույց է տալիս ամբողջ ցուցակը)
   const [selectedMember, setSelectedMember] = useState<any | null>(null);
 
   const councilMembers = [
@@ -113,7 +112,6 @@ const Xekavar: React.FC = () => {
     { name: 'CSR', path: '/corp' },
   ];
 
-  // Կոմպակտ Քարտի բաղադրիչը՝ նկարին սեղմելու հնարավորությամբ (onClick)
   const ProfileCard: React.FC<{
     member: any;
   }> = ({ member }) => (
@@ -152,7 +150,6 @@ const Xekavar: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
-      {/* Գլխավոր Հեդեր */}
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-4 md:pt-14 px-6">
         <Link to="/">
           <img
@@ -174,7 +171,7 @@ const Xekavar: React.FC = () => {
         </Link>
       </div>
 
-      {/* Ենթամենյու */}
+    
       <div className="w-full bg-[#6c2db5] text-white overflow-x-auto mt-4">
         <div className="max-w-[1400px] mx-auto flex items-center h-[55px] md:h-[60px] px-6 min-w-[800px]">
           {subMenuItems.map((item) => (
@@ -192,7 +189,7 @@ const Xekavar: React.FC = () => {
         </div>
       </div>
 
-      {/* Breadcrumbs */}
+    
       <div className="max-w-[1400px] mx-auto px-6 py-4 md:py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[12px] md:text-[13px]">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
@@ -209,21 +206,21 @@ const Xekavar: React.FC = () => {
         )}
       </div>
 
-      {/* ԲՈՎԱՆԴԱԿՈՒԹՅԱՆ ՓՈՓՈԽՎՈՂ ՀԱՏՎԱԾԸ */}
+      
       <div className="max-w-[1400px] mx-auto px-6 pb-16">
         
         {selectedMember ? (
-          /* ՏԱՐԲԵՐԱԿ Ա. ԱՆՀԱՏԱԿԱՆ ՏԵՂԵԿՈՒԹՅԱՆ ԷՋ (Երբ սեղմել են նկարին) */
+          
           <div className="mt-4 animate-fadeIn">
             <button 
-              onClick={() => setSelectedMember(null)} // Հետ է տանում ընդհանուր ցուցակ
+              onClick={() => setSelectedMember(null)} 
               className="text-sm font-semibold text-gray-500 hover:text-[#6c2db5] transition-colors mb-8 inline-flex items-center gap-1"
             >
               ← Վերադառնալ ղեկավարության ցանկին
             </button>
             
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-              {/* Նկարի բլոկ */}
+             
               <div 
                 className={`w-[260px] h-[260px] p-4 rounded-3xl flex items-center justify-center shadow-md shrink-0 ${
                   selectedMember.purpleBg ? 'bg-[#6c2db5]' : 'bg-[#f8f9fa]'
@@ -233,7 +230,7 @@ const Xekavar: React.FC = () => {
                 <img src={selectedMember.imageUrl} alt={selectedMember.name} className="w-full h-full object-cover rounded-2xl" />
               </div>
 
-              {/* Տեքստային բլոկ */}
+             
               <div className="space-y-4 text-center lg:text-left">
                 <h1 className="text-2xl md:text-4xl font-extrabold text-gray-950">{selectedMember.name}</h1>
                 {selectedMember.qualifications && (
@@ -248,11 +245,11 @@ const Xekavar: React.FC = () => {
             </div>
           </div>
         ) : (
-          /* ՏԱՐԲԵՐԱԿ Բ. ԳԼԽԱՎՈՐ ՑՈՒՑԱԿԸ (Սկզբնական էջը) */
+          
           <>
             <h1 className="text-[28px] md:text-[48px] font-bold text-[#1a1a1a] mb-8">Ղեկավարություն</h1>
 
-            {/* Խորհուրդ */}
+            
             <div className="mb-12">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {councilMembers.map((member) => (
@@ -261,7 +258,7 @@ const Xekavar: React.FC = () => {
               </div>
             </div>
 
-            {/* Աուդիտ կոմիտե */}
+          
             <div className="mb-12">
               <h2 className="text-[18px] md:text-[24px] font-bold text-[#1a1a1a] mb-6 border-l-4 border-[#6c2db5] pl-4">Աուդիտ կոմիտե</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -271,7 +268,7 @@ const Xekavar: React.FC = () => {
               </div>
             </div>
 
-            {/* Այլ ղեկավարներ */}
+           
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {otherManagers.map((manager) => (

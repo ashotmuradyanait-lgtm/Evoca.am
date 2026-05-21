@@ -7,7 +7,7 @@ const Spasarkum: React.FC = () => {
     { name: 'Քարտեր', path: '/qarter' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '' },
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '/social' },
-    { name: 'Evoca Benefits', path: '' }
+    { name: 'Evoca Benefits', path: '/benefits' }
   ];
 
   

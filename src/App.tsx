@@ -129,6 +129,7 @@ import Terminal from "./components/Terminal";
 import Mpos from "./components/Mpos";
 import Aylq from "./components/Aylq";
 import Poxel from "./components/Poxel";
+import Benefits from './components/Benefits';
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -295,6 +296,7 @@ const App: React.FC = () => {
           <Route path="/mpos" element={<Mpos/>} />
           <Route path="/aylq" element={<Aylq/>} />
           <Route path="/poxel" element={<Poxel/>} />
+          <Route path="/benefits" element={<Benefits/>} />
         </Routes>
       </main>
 

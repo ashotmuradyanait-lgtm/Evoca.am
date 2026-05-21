@@ -7,7 +7,7 @@ const Social: React.FC = () => {
     { name: 'Քարտեր', path: '/qarter' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '/spasarkum' },
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '' },
-    { name: 'Evoca Benefits', path: '' }
+    { name: 'Evoca Benefits', path: '/benefits' }
   ];    
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">

@@ -7,7 +7,7 @@ const Qarter: React.FC = () => {
     { name: 'Քարտեր', path: '' },
     { name: 'Քարտերի տրամադրում և սպասարկում', path: '/spasarkum' },
     { name: 'Սոցիալական ապահովության վճարային քարտեր', path: '/social' },
-    { name: 'Evoca Benefits', path: '' }
+    { name: 'Evoca Benefits', path: '/benefits' }
   ];    
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-20 relative">
