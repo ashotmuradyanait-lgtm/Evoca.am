@@ -118,6 +118,8 @@ import Tmek from "./components/Tmek";
 import Terku from "./components/Terku";
 import Hat from "./components/Hat";
 import Part from "./components/Part";
+import Arevtur from "./components/Arevtur";
+import Fakt from "./components/Fakt";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -273,6 +275,8 @@ const App: React.FC = () => {
           <Route path="/terku" element={<Terku/>} />
           <Route path="/hat" element={<Hat/>} />
           <Route path="/part" element={<Part/>} />
+          <Route path="/arevtur" element={<Arevtur/>} />
+          <Route path="/fakt" element={<Fakt/>} />
         </Routes>
       </main>
 
