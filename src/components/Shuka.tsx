@@ -12,7 +12,7 @@ const Shuka: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Ներդրումային ծառայություններ', path: '' },
-    { name: 'Պարտատոմսեր', path: '/partatoms' },
+    { name: 'Պարտատոմսեր', path: '/part' },
     { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
     { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '/brepo' },
     { name: 'EvocaINVEST', path: '/inv' },

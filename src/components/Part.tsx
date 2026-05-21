@@ -12,8 +12,8 @@ const Part: React.FC = () => {
   const subMenuItems = [
     { name: 'Ներդրումային ծառայություններ', path: '/arzetxter' },
     { name: 'Պարտատոմսեր', path: '' },
-    { name: 'ՀԿԴ ծառայություններ', path: '/hkd' },
-    { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/repo' },
+    { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
+    { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/brepo' },
     { name: 'EvocaINVEST', path: '/invest' },
   ];
 

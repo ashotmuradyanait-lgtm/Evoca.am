@@ -12,7 +12,7 @@ const Arzetxter: React.FC = () => {
 
   const subMenuItems = [
     { name: 'Ներդրումային ծառայություններ', path: '' },
-    { name: 'Պարտատոմսեր', path: '/part' },
+    { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/hkd' },
     { name: 'Ռեպո/Հակադարձ Ռեպո գործարքներ', path: '/repo' },
     { name: 'EvocaINVEST', path: '/invest' },
