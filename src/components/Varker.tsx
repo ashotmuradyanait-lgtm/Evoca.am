@@ -75,7 +75,7 @@ const Varker: React.FC = () => {
         ))}
       </div>
 
-      {/* 1. Հեծանիվի ձեռքբերման վարկ */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -132,7 +132,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Ֆիզիկական անձանց տրանսպորտային միջոցների լիզինգ */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -183,7 +183,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. Բնակարանային հիփոթեքային վարկեր */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -234,7 +234,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. Գույքի գրավով ապահովված անհատական վարկ */}
+  
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -294,7 +294,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 5. Action */}
+   
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -338,7 +338,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 6. EvocaHOME */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -389,7 +389,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 7. Հիփոթեքային վարկ ԼՂ-ից բռնի տեղահանված ընտանիքներին */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -440,7 +440,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 8. Անհատական վարկ «Ներդրումային» */}
+  
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -490,7 +490,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 9. Ավտոկայանատեղիի ձեռքբերման վարկ */}
+    
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -540,7 +540,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 10. Հողամասի ձեռքբերման վարկ */}
+     
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -591,7 +591,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 11. Միկրովերանորոգման վարկ Բանկի ռեսուրսներով */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
@@ -640,7 +640,7 @@ const Varker: React.FC = () => {
         </div>
       </div>
 
-      {/* 12. EvocaPower */}
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 mb-8">
         <div className="flex flex-col lg:flex-row bg-white rounded-[20px] shadow-sm overflow-hidden border border-gray-100 p-4 sm:p-6 gap-6 lg:gap-8 hover:shadow-md transition-shadow">
           
