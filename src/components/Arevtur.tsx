@@ -56,7 +56,7 @@ const newsItems = [
           <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</Link>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
           <Link to="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</Link>
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
+          <Link to="/aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
         </nav>
         
         <Link to="/evocaonline" className="mt-4 md:mt-0 flex justify-center items-center">

@@ -1,78 +1,54 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Dasakan: React.FC = () => {
-  const [openSections, setOpenSections] = useState<number[]>([1]);
-
-  const toggleSection = (index: number) => {
-    setOpenSections(prev => 
-      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-    );
-  };
+const Poxel: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState('');
 
   const subMenuItems = [
-    { name: 'Դասական ավանդ', path: '/dasakan' },
-  ];
-
-  const accordionData = [
-    {
-      id: 1,
-      title: "Ընդհանուր տեղեկատվություն",
-      content: (
-        <div className="space-y-4 text-[#4a4a4a] text-[15px] leading-relaxed">
-          <p>Դասական ավանդն ընդունում ենք ֆիզիկական և իրավաբանական անձանցից (այդ թվում՝ անհատ ձեռնարկատերերից):</p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>Արժույթը՝ ՀՀ դրամ, ԱՄՆ դոլար, Եվրո և ՌԴ ռուբլի:</li>
-            <li>Տևողությունը՝ 91-ից մինչև 1095 օր:</li>
-            <li>Նվազագույն գումարը՝ 25,000 ՀՀ դրամ կամ համարժեք արտարժույթ:</li>
-          </ul>
-        </div>
-      )
-    },
-    { id: 2, title: "Տոկոսագումարների հաշվարկման և վճարման կարգը", content: "..." },
-    { id: 3, title: "Տարեկան տոկոսային եկամտաբերություն", content: "..." },
-    { id: 4, title: "Այլ պայմաններ", content: "..." }
+    { name: 'Պահատուփեր', path: '/aylq' },
+    { name: 'Փոխանցումներ', path: '' },
   ];
 
   return (
-    <div className="w-full bg-[#f9f9f9] font-sans min-h-screen pb-20 overflow-x-hidden">
-    
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-2 pt-4 lg:pt-14 px-4 lg:px-6 max-w-[1400px] mx-auto">
-        <Link to="/" className="shrink-0">
+    <div className="w-full bg-white font-sans text-gray-800 antialiased selection:bg-[#6c2db5] selection:text-white">
+      
+      {/* Գլխավոր Հեդեր (Ադապտացված մեդիա դասերով) */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6 pt-6 lg:pt-14 px-4 max-w-[1400px] mx-auto">
+        <Link to="/" className="flex justify-center lg:justify-start w-full lg:w-auto">
           <img 
-            className="h-[80px] w-[180px] lg:h-[140px] lg:w-[300px] object-contain" 
+            className="h-[60px] sm:h-[80px] md:h-[100px] lg:h-[140px] w-[160px] sm:w-[200px] md:w-[250px] lg:w-[300px] object-contain" 
             src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
             alt="Evocabank Logo" 
           />
         </Link>
         
-        <nav className="flex flex-wrap justify-center gap-3 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
-          <Link to="/biznes" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
-          <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
-          <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
-          <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold text-[#6c2db5]">Ավանդներ</Link>
-          <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Արժեթղթերի շուկա</Link>
-          <Link to="/arevtur" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden lg:block">Առևտրի ֆինանսավորում</Link>
-          <Link to="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</Link>
-          <Link to="/aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
+        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-6 text-gray-800 font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] w-full lg:w-auto px-2">
+          <Link to="/biznes" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Վարկեր</Link>
+          <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Լիզինգ</Link>
+          <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Հաշիվներ</Link>
+          <Link to="/dasakan" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Ավանդներ</Link>
+          <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Արժեթղթերի շուկա</Link>
+          <Link to="/arevtur" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Առևտրի ֆինանսավորում</Link>
+          <Link to="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Դիջիթալ</Link>
+          <Link to="/aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold whitespace-nowrap">Այլ</Link>
         </nav>
-
-        <div className="lg:px-10">
-          <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[35px] w-[150px] hover:bg-[#530498] flex items-center justify-center rounded-3xl text-[14px] font-bold transition-all">
+        
+        <Link to="/evocaonline" className="mt-2 lg:mt-0 flex justify-center items-center w-full lg:w-auto">
+          <span className="text-white bg-[#6c2db5] h-[38px] sm:h-[40px] w-[160px] sm:w-[180px] hover:bg-[#530498] flex items-center justify-center rounded-3xl font-medium transition-colors text-center text-[13px] sm:text-[14px]">
             EvocaONLINE
-          </Link>
-        </div>
-      </div>      
-      
-    
-      <div className="w-full bg-[#6c2db5] text-white mt-6 lg:mt-10">
-        <div className="max-w-[1400px] mx-auto flex items-center h-[50px] lg:h-[60px] px-4 lg:px-6 overflow-x-auto no-scrollbar">
-          {subMenuItems.map((item) => (
+          </span>
+        </Link>
+      </div>
+
+      {/* Ենթամենյու */}
+      <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto scrollbar-none">
+        <div className="max-w-[1400px] mx-auto flex items-center h-[50px] sm:h-[60px] px-4 md:px-6 whitespace-nowrap">
+          {subMenuItems.map((item, index) => (
             <NavLink 
-              key={item.name}
+              key={index}
               to={item.path}
               className={({ isActive }) => 
-                `h-full flex items-center px-4 lg:px-8 transition-colors text-[12px] lg:text-[14px] font-medium whitespace-nowrap
+                `h-full flex items-center px-3 sm:px-5 md:px-8 transition-colors text-[12px] sm:text-[13px] md:text-[14px] font-medium tracking-wide
                 ${isActive ? 'bg-[#530498]' : 'hover:bg-[#530498]'}`
               }
             >
@@ -82,83 +58,73 @@ const Dasakan: React.FC = () => {
         </div>
       </div>
 
-    
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 py-4 lg:py-6 flex flex-wrap items-center gap-2 text-gray-400 text-[11px] lg:text-[13px]">
-        <Link to="/" className="hover:text-gray-600 transition-colors">🏠</Link>
+      {/* Breadcrumbs */}
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-4 sm:py-6 flex items-center gap-2 text-gray-400 text-[11px] sm:text-[12px] md:text-[13px] overflow-x-auto whitespace-nowrap">
+        <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
-        <span className="hover:text-gray-600 cursor-pointer">Բիզնես</span>
+        <span className="cursor-pointer hover:text-gray-600">Բիզնես</span>
         <span>›</span>
-        <span className="hover:text-gray-600 cursor-pointer">Ավանդներ</span>
+        <span className="cursor-pointer hover:text-gray-600">Այլ</span>
         <span>›</span>
-        <span className="text-gray-800">Դասական ավանդ</span>
+        <span className="text-gray-800 font-medium">Փոխանցումներ</span>
       </div>
 
      
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 mb-8 lg:mb-12">
-        <div className="bg-white rounded-[24px] lg:rounded-[32px] overflow-hidden flex flex-col md:flex-row items-center shadow-sm border border-gray-100">
-          <div className="flex-1 p-8 lg:p-20 order-2 md:order-1">
-            <h1 className="text-[32px] lg:text-[56px] font-bold text-[#2d2d2d] mb-4 lg:mb-6 leading-tight">
-              Դասական <br className="hidden lg:block" /> ավանդ
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mt-6">
+          
+         
+          <div className="w-full lg:w-1/2 space-y-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Դրամական <span className="text-[#6c2db5]">փոխանցումներ</span>
             </h1>
-            <p className="text-[#4a4a4a] text-[15px] lg:text-[18px] mb-6 lg:mb-8 max-w-[500px] leading-relaxed">
-              Ապահովեք Ձեր դրամական միջոցների կայուն աճն ու պահպանումը բարձր եկամտաբերությամբ՝ ներդնելով Դասական ավանդ։
+            <p className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed font-medium">
+              Արագ, ապահով և հարմարավետ դրամական փոխանցումներ Հայաստանում և ամբողջ աշխարհում:
             </p>
-            <div className="flex flex-col gap-3 lg:gap-4 text-[#6c2db5] font-medium text-[14px] lg:text-[16px]">
-              <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 bg-[#6c2db5] rounded-full shrink-0"></span>
-                Ավանդների ընդունում ֆիզիկական և իրավաբանական անձանցից
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 bg-[#6c2db5] rounded-full shrink-0"></span>
-                Անվճար միջազգային քարտ՝ ավանդի ներդրման դեպքում
-              </div>
+            <div className="text-sm md:text-base text-gray-500 space-y-4 leading-relaxed">
+              <p>
+                Evocabank-ն իրականացնում է միջազգային դրամական փոխանցումներ տարբեր վճարահաշվարկային համակարգերի միջոցով, ինչը թույլ է տալիս վայրկյանների ընթացքում գումար ուղարկել կամ ստանալ աշխարհի ցանկացած կետից:
+              </p>
+              <p>
+                Դուք կարող եք փոխանցումներ կատարել ինչպես բանկի մասնաճյուղերում, այնպես էլ առանց բանկ այցելելու՝ **EvocaTOUCH** հավելվածի միջոցով՝ օրվա ցանկացած ժամի:
+              </p>
+              <p className="font-semibold text-gray-700">
+                Մեր համակարգերն են՝ SWIFT, MoneyGram, Unistream և այլ հանրահայտ արագ փոխանցման տեսակներ:
+              </p>
+            </div>
+            
+          
+            <div className="pt-4">
+              <Link to="/evocaonline" className="inline-flex items-center justify-center text-white bg-[#6c2db5] h-[46px] px-8 hover:bg-[#530498] rounded-3xl font-bold transition-all shadow-md text-sm">
+                Կատարել փոխանցում
+              </Link>
             </div>
           </div>
-          <div className="flex-1 relative w-full h-[300px] md:h-full min-h-[350px] lg:min-h-[500px] order-1 md:order-2">
-            <img 
-              src="https://www.evoca.am/images-cache/menu/1/1615568375393/780x585.jpg" 
-              alt="Classic Deposit" 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+
+          
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="relative w-full max-w-[540px] rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.01] duration-300">
+              <img 
+                src="https://www.evoca.am/images-cache/menu/1/161163847135/780x585.jpg" 
+                alt="Evocabank Money Transfers" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
+
         </div>
       </div>
 
-  
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
-        <h2 className="text-[22px] lg:text-[28px] font-bold text-[#6c2db5] mb-6 lg:mb-8">Անհրաժեշտ տեղեկատվություն</h2>
-        <div className="flex flex-col gap-3 lg:gap-4">
-          {accordionData.map((section) => (
-            <div key={section.id} className="bg-white rounded-xl lg:rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-              <button 
-                onClick={() => toggleSection(section.id)}
-                className="w-full flex items-center justify-between p-5 lg:p-6 text-left transition-colors hover:bg-gray-50"
-              >
-                <span className="text-[16px] lg:text-[18px] font-semibold text-[#2d2d2d] pr-4">{section.title}</span>
-                <span className={`text-xl lg:text-2xl text-[#6c2db5] transform transition-transform duration-300 ${openSections.includes(section.id) ? 'rotate-180' : ''}`}>
-                  ▾
-                </span>
-              </button>
-              {openSections.includes(section.id) && (
-                <div className="p-5 lg:p-6 pt-0 border-t border-gray-50">
-                  <div className="text-[14px] lg:text-[15px]">
-                    {section.content}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-2xl bg-white py-6 px-3 shadow-lg z-50">
-        <div className="flex flex-col gap-4">
+      
+      <div className="fixed left-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col border border-l-0 border-gray-200 rounded-r-xl bg-white py-4 px-3 shadow-sm z-50">
+        <div className="flex flex-col gap-3">
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/fb-icon.png" className="w-5 h-5" alt="FB" /></Link>
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/twitter-icon.png" className="w-5 h-5" alt="TW" /></Link>
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" className="w-5 h-5" alt="IN" /></Link>
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" className="w-5 h-5" alt="PN" /></Link>
         </div>
       </div>
+
        <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-hidden font-sans bg-gray-50">
       <div className="relative w-full bg-[#6600cc] min-h-[600px] lg:min-h-[650px] rounded-tl-[60px] sm:rounded-tl-[120px] rounded-br-[60px] sm:rounded-br-[120px] flex items-center p-6 sm:p-10 md:p-16 shadow-[0_20px_50px_rgba(102,0,204,0.3)] overflow-hidden">
         
@@ -285,8 +251,9 @@ const Dasakan: React.FC = () => {
         }
       `}} />
     </div>
+
     </div>
   );
 };
 
-export default Dasakan;
+export default Poxel;

@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Digital: React.FC = () => {
+const Aylq: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
   const subMenuItems = [
-    { name: 'V-POS Տերմինալ', path: '' },
-    { name: 'POS Տերմինալ', path: '/pos' },
-    { name: 'Սակագներ', path: '/sak' },
-    { name: 'Տերմինալի տեղադրման հայտ', path: '/terminal' },
-    { name: 'Evoca Mobile POS՝ mPOS', path: '/mpos' },
+    { name: 'Պահատուփեր', path: '' },
+    { name: 'Փոխանցումներ', path: '/poxel' },
   ];
 
   return (
     <div className="w-full bg-white font-sans text-gray-800 antialiased selection:bg-[#6c2db5] selection:text-white">
+      
       
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 md:pt-14 px-4 max-w-[1400px] mx-auto">
         <Link to="/">
@@ -42,7 +40,7 @@ const Digital: React.FC = () => {
         </Link>
       </div>
 
-      
+     
       <div className="w-full bg-[#6c2db5] text-white mt-6 overflow-x-auto">
         <div className="max-w-[1400px] mx-auto flex items-center h-[60px] px-4 md:px-6 whitespace-nowrap">
           {subMenuItems.map((item, index) => (
@@ -60,15 +58,100 @@ const Digital: React.FC = () => {
         </div>
       </div>
 
-     
+      
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-6 flex items-center gap-2 text-gray-400 text-[12px] md:text-[13px] overflow-x-auto whitespace-nowrap">
         <Link to="/" className="cursor-pointer hover:text-gray-600">🏠</Link>
         <span>›</span>
         <span className="cursor-pointer hover:text-gray-600">Բիզնես</span>
         <span>›</span>
-        <span className="cursor-pointer hover:text-gray-600">Դիջիթալ</span>
+        <span className="cursor-pointer hover:text-gray-600">Այլ</span>
         <span>›</span>
-        <span className="text-gray-800 font-medium">V-POS Տերմինալ</span>
+        <span className="text-gray-800 font-medium">Պահատուփեր</span>
+      </div>
+
+      
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 pb-20">
+        
+       
+        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-10 mt-6">
+          
+          
+          <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Անհատական <span className="text-[#6c2db5]">պահատուփեր</span>
+            </h1>
+            <p className="text-[15px] md:text-[16px] text-gray-600 leading-relaxed font-medium">
+              Ռեզիդենտ և ոչ ռեզիդենտ անձանց արժեքավոր իրերը պահպանելու հուսալի և շուրջօրյա հսկվող անհատական տարածք։
+            </p>
+            <div className="text-sm md:text-base text-gray-500 space-y-4 leading-relaxed">
+              <p>
+                Պահատուփերի պարունակությունը միայն Ձեր գաղտնիքն է: Դրանցում կարող եք պահել Ձեզ համար արժեքավոր ցանկացած իր (դրամ, արժեթղթեր, թանկարժեք մետաղներ և քարեր, ոսկերչական իրեր, արվեստի գործեր, ֆոտո և տեսաժապավեններ, մագնիսական կրիչներ և այլն):
+              </p>
+              <p>
+                Պահատուփերը գտնվում են առանձնացված տարածքում՝ շուրջօրյա հսկողության ներքո: Դրանք զինված են պաշտպանական հուսալի համակարգերով։
+              </p>
+            </div>
+          </div>
+
+          
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="relative w-full max-w-[550px] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:scale-[1.01]">
+              <img 
+                src="https://www.evoca.am/images-cache/menu/1/16154664725996/780x585.jpg" 
+                alt="Evocabank Safe Boxes" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        
+        <div className="mt-16 space-y-8">
+          <div className="border-l-4 border-[#6c2db5] pl-4 py-1">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900">Վարձակալության տարեկան սակագներ</h2>
+          </div>
+
+         
+          <div className="w-full overflow-x-auto rounded-xl border border-gray-100 shadow-sm">
+            <table className="w-full text-left border-collapse text-sm md:text-base">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-100 text-gray-700 font-semibold">
+                  <th className="py-4 px-6">Ժամկետ</th>
+                  <th className="py-4 px-6">Փոքր պահատուփ</th>
+                  <th className="py-4 px-6">Միջին պահատուփ</th>
+                  <th className="py-4 px-6">Մեծ պահատուփ</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-gray-600 font-medium">
+                <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="py-4 px-6">1 ամիս</td>
+                  <td className="py-4 px-6">5,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">7,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">10,000 ՀՀ դրամ</td>
+                </tr>
+                <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="py-4 px-6">3 ամիս</td>
+                  <td className="py-4 px-6">7,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">10,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">12,000 ՀՀ դրամ</td>
+                </tr>
+                <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="py-4 px-6">6 ամիս</td>
+                  <td className="py-4 px-6">10,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">15,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">20,000 ՀՀ դրամ</td>
+                </tr>
+                <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="py-4 px-6">12 ամիս</td>
+                  <td className="py-4 px-6">15,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">20,000 ՀՀ դրամ</td>
+                  <td className="py-4 px-6">25,000 ՀՀ դրամ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
 
       
@@ -78,124 +161,6 @@ const Digital: React.FC = () => {
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/twitter-icon.png" className="w-5 h-5" alt="TW" /></Link>
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/linkedin-icon.png" className="w-5 h-5" alt="IN" /></Link>
           <Link to="#" className="hover:opacity-70 transition-opacity"><img src="https://www.evoca.am/img/social-icons/pinterest-icon.png" className="w-5 h-5" alt="PN" /></Link>
-        </div>
-      </div>
-
-     
-      <div className="max-w-[1100px] mx-auto px-4 md:px-6 pb-20 text-[15px] leading-relaxed text-gray-700">
-        
-      
-        <div className="flex flex-col md:flex-row items-center gap-8 my-8">
-          <div className="w-full md:w-1/2">
-            <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-4">V-POS Տերմինալ</h1>
-            <p className="text-base font-medium text-gray-950 mb-3">
-              V-POS (Virtual Point of Sale) վիրտուալ վճարային տերմինալը ժամանակակից, ապահով և հեշտ լուծում է առցանց վաճառք իրականացնող բիզնեսների համար:
-            </p>
-            <p className="mb-4">
-              Արագ և հարմարավետ վճարումներ կատարելը այսօր կարևոր նախապայման է հաճախորդների համար:
-            </p>
-            <p className="mb-4">
-              Evocabank-ը կկազմակերպի Ձեր կայքում V-POS տերմինալի տեղադրումը: Այն հնարավորություն կտա Ձեզ <strong className="text-[#6c2db5]">խուսափել հավելյալ ծրագրային ծախսերից</strong>, սերտիֆիկացումից և հետագա ծրագրային ապահովումից:
-            </p>
-            <p className="mb-4">
-              Ձեր հաճախորդները կկարողանան գնումներ կատարել <strong className="text-[#6c2db5]">Ձեր կայքից</strong> ու վճարել դրանց համար իրենց միջազգային Visa, MasterCard և տեղական ArCa վճարային քարտերով:
-            </p>
-            <p className="font-semibold text-gray-900">
-              Ծառայությունը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում:
-            </p>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img 
-              src="https://www.evoca.am/images-cache/menu/1/16158111599306/780x585.jpg" 
-              alt="V-POS Terminal Illustration" 
-              className="w-full max-w-[450px] rounded-2xl shadow-sm object-cover"
-            />
-          </div>
-        </div>
-
-        
-        <div className="bg-purple-50 border-l-4 border-[#6c2db5] p-5 my-8 rounded-r-2xl">
-          <h3 className="font-bold text-[#6c2db5] text-[16px] mb-2">Ինչու՞ տեղադրել Evocabank-ի V-POS տերմինալը՝</h3>
-          <ul className="list-disc pl-5 space-y-1.5 text-sm text-gray-800">
-            <li>Առցանց վաճառքների շնորհիվ <strong className="text-[#6c2db5]">կաճեն Ձեր եկամուտները</strong></li>
-            <li>Evocabank-ի V-POS-ով կատարված վաճառքներից կգանձվեն <strong className="text-[#6c2db5]">նվազագույն միջնորդավճարներ</strong>՝ հատուկ Ձեր բիզնեսի համար</li>
-            <li>Վիրտուալ սպասարկման կետի գրանցման համար անհրաժեշտ V-POS տերմինալների տեղադրման ստանդարտ սակագներն են՝</li>
-          </ul>
-        </div>
-
-     
-        <h2 className="text-xl font-bold text-[#6c2db5] mt-10 mb-4">V-POS Տերմինալի Սակագներ</h2>
-        <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-sm mb-12">
-          <table className="w-full text-left border-collapse text-[14px]">
-            <thead>
-              <tr className="bg-gray-50 border-b border-gray-200">
-                <th className="p-4 font-semibold text-gray-700">Քարտային համակարգեր</th>
-                <th className="p-4 font-semibold text-gray-700 text-center">Միջնորդավճար</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Արքա / ArCa / վճարային համակարգի քարտերով գործարքների դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1.50%</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">ՀՀ տարածքում գործող բանկերի կողմից թողարկված MasterCard, Visa քարտերի դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1.90%</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Արտասահմանյան բանկերի կողմից թողարկված MasterCard, Visa քարտերի դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">3.00%</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">QR կոդով վճարման դեպքում</td>
-                <td className="p-4 text-center font-bold text-gray-900">1%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p className="text-xs text-gray-500 mb-10">
-          * Կայքերում անվտանգությունն ապահովելու նպատակով գործում են ժամանակակից 3D Secure Code (Verified by Visa, MasterCard Identity Check) անվտանգության համակարգերը:
-        </p>
-
-        <hr className="my-12 border-gray-200" />
-
-       
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8 my-12">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-bold text-[#6c2db5] mb-4">Վարկ POS տերմինալի շրջանառության հիման վրա</h2>
-            <p className="mb-4">
-              Եթե Դուք փոքր և միջին բիզնես եք իրականացնում և ունեք անկանխիկ գործարքներ, ապա այս բիզնես վարկը հենց Ձեզ համար է։ Մեզ մոտ փոքր և միջին բիզնեսներն ունեն հնարավորություն ձևակերպել արագ բիզնես վարկեր իրենց հրատապ ֆինանսական խնդիրները լուծելու համար։
-            </p>
-            <h3 className="font-bold text-gray-900 mb-2">Ովքե՞ր կարող են դիմել՝</h3>
-            <ul className="list-disc pl-5 space-y-2 mb-4 text-sm">
-              <li>ՀՀ ռեզիդենտ իրավաբանական անձինք և անհատ ձեռնարկատերեր, ովքեր գրանցված գործունեություն են ծավալում առնվազն 12 ամիս:</li>
-              <li>Այն հաճախորդները, ովքեր Evocabank-ի հետ ունեն կնքված POS տերմինալի համագործակցության առնվազն 6 ամսվա պայմանագիր:</li>
-            </ul>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-center">
-            <img 
-              src="https://www.evoca.am/file_manager/pos2-600x315.jpg" 
-              alt="POS Terminal Promo" 
-              className="w-full max-w-[450px] rounded-2xl shadow-sm object-cover"
-            />
-          </div>
-        </div>
-
-        
-        <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 my-8">
-          <h2 className="text-xl font-bold text-[#6c2db5] mb-3">Օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա</h2>
-          <p className="mb-4 text-sm">
-            Evocabank-ում կարող եք ձեռք բերել բիզնես օվերդրաֆտ՝ առանց ավելորդ թղթաբանության և ժամանակի կորստի։ Եթե կան կարճամակետ ֆինանսական խնդիրներ կամ պարզապես ցանկանում եք ավելի զարգացնել Ձեր բիզնեսը, ապա մեզ մոտ շատ արագ և պարզ տարբերակով կարող եք ձևակերպել բիզնես օվերդրաֆտ։
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link to="#" className="inline-flex justify-center items-center text-white bg-[#6c2db5] hover:bg-[#530498] px-6 py-2 rounded-full font-medium text-sm transition-colors shadow-sm">
-              Տերմինալի տեղադրման հայտ
-            </Link>
-            <Link to="#" className="inline-flex justify-center items-center text-[#6c2db5] border border-[#6c2db5] hover:bg-purple-50 px-6 py-2 rounded-full font-medium text-sm transition-colors">
-              Իմանալ ավելին
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -325,8 +290,9 @@ const Digital: React.FC = () => {
         }
       `}} />
     </div>
+
     </div>
   );
 };
 
-export default Digital;
+export default Aylq;

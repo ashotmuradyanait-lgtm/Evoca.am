@@ -95,13 +95,6 @@ const Mpos: React.FC = () => {
                 Ակտիվացնելու համար անհրաժեշտ է միայն NFC ընթերցող Android սմարթֆոն և Evoca-ի mPOS հավելվածը։
               </p>
             </div>
-            
-         
-            <div className="pt-4">
-              <Link to="/terminal" className="inline-flex items-center justify-center text-white bg-[#6c2db5] h-[46px] px-8 hover:bg-[#530498] rounded-3xl font-bold transition-all shadow-md hover:shadow-lg text-sm">
-                Դիմել հիմա
-              </Link>
-            </div>
           </div>
 
          

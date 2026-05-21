@@ -127,6 +127,8 @@ import Pos from "./components/Pos";
 import Sak from "./components/Sak";
 import Terminal from "./components/Terminal";
 import Mpos from "./components/Mpos";
+import Aylq from "./components/Aylq";
+import Poxel from "./components/Poxel";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -291,6 +293,8 @@ const App: React.FC = () => {
           <Route path="/sak" element={<Sak/>} />
           <Route path="/terminal" element={<Terminal/>} />
           <Route path="/mpos" element={<Mpos/>} />
+          <Route path="/aylq" element={<Aylq/>} />
+          <Route path="/poxel" element={<Poxel/>} />
         </Routes>
       </main>
 

@@ -92,8 +92,9 @@ const Hat: React.FC = () => {
                   <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
                   <Link to="/dasakan" className="hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
                   <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden sm:block">Արժեթղթերի շուկա</Link>
-                  <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Առևտրի ֆինանսավորում</p>
-                  <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
+                  <Link to="/arevtur" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold hidden md:block">Առևտրի ֆինանսավորում</Link>
+                  <Link to ="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</Link>
+                  <Link to ="/Aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
                 </nav>
         
                 <div className="mt-4 lg:mt-0 lg:px-10">
