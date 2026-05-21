@@ -104,6 +104,7 @@ import Yndunvel from "./components/Yndunvel";
 import Practic from "./components/Practic";
 import Usum from "./components/Usum";
 import Bridge from "./components/Bridge";
+import Mek from "./components/Mek";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -115,6 +116,7 @@ import Brends from "./pages/Brends";
 import News from "./pages/News";
 import Money from "./pages/Money";
 import Reviews from "./pages/Reviews";
+
 
 const App: React.FC = () => {
   const { t } = useTranslation(); 
@@ -244,6 +246,7 @@ const App: React.FC = () => {
           <Route path="/practic" element={<Practic/>} />
           <Route path="/usum" element={<Usum/>} />
           <Route path="/bridge" element={<Bridge/>} />
+          <Route path="/mek" element={<Mek/>} />
         </Routes>
       </main>
 
