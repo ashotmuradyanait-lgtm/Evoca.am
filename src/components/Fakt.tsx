@@ -8,7 +8,7 @@ const Fakt: React.FC = () => {
     { name: 'Երաշխիք', path: '/arevtur' },
     { name: 'Ֆակտորինգային ֆինանսավորում', path: '' },
     { name: 'Ակրեդիտիվ', path: '/akre' },
-    { name: 'Ինկասո', path: '' },
+    { name: 'Ինկասո', path: 'inkaso' },
   ];
 
   const newsItems = [
@@ -54,7 +54,7 @@ const Fakt: React.FC = () => {
           <Link to="/dasakan" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Ավանդներ</Link>
           <Link to="/shuka" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</Link>
           <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</p>
-          <p className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</p>
+          <Link to="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
         </nav>
         

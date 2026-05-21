@@ -121,6 +121,8 @@ import Part from "./components/Part";
 import Arevtur from "./components/Arevtur";
 import Fakt from "./components/Fakt";
 import Akre from "./components/Akre";
+import Inkaso from "./components/Inkaso";
+import Digital from "./components/Digital";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -279,6 +281,8 @@ const App: React.FC = () => {
           <Route path="/arevtur" element={<Arevtur/>} />
           <Route path="/fakt" element={<Fakt/>} />
           <Route path="/akre" element={<Akre/>} />
+          <Route path="/inkaso" element={<Inkaso/>} />
+          <Route path="/digital" element={<Digital/>} />
         </Routes>
       </main>
 

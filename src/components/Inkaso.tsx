@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Akre: React.FC = () => {
+const Inkaso: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('');
 
   const subMenuItems = [
     { name: 'Երաշխիք', path: '/arevtur' },
     { name: 'Ֆակտորինգային ֆինանսավորում', path: '/fakt' },
-    { name: 'Ակրեդիտիվ', path: '' },
-    { name: 'Ինկասո', path: '/inkaso' },
+    { name: 'Ակրեդիտիվ', path: '/akre' },
+    { name: 'Ինկասո', path: '' },
   ];
 
   const newsItems = [
@@ -91,7 +91,7 @@ const Akre: React.FC = () => {
         <span>›</span>
         <span className="cursor-pointer text-gray-800">Առևտրի ֆինանսավորում</span>
         <span>›</span>
-        <span className="text-gray-800 font-medium">Ակրեդիտիվ</span>
+        <span className="text-gray-800 font-medium">Ինկասո</span>
       </div>
 
       
@@ -106,74 +106,38 @@ const Akre: React.FC = () => {
 
      
       <div className="max-w-[1000px] mx-auto px-4 md:px-6 pb-20 text-[15px] leading-relaxed text-gray-700">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-6">Ակրեդիտիվ</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-[#6c2db5] mb-6">Ինկասո</h1>
         
-        <p className="mb-4">
-          <strong className="text-[#6c2db5]">Փաստաթղթային ակրեդիտիվը (Letter of Credit կամ L/C)</strong> մեր գրավոր պարտավորությունն է (որը թողարկվում է Ձեր դիմումի և հանձնարարության հիման վրա), վճարել որոշակի գումար ապրանք վաճառողին՝ վերջինիս կողմից ակրեդիտիվի պայմաններին համապատասխան փաստաթղթեր ներկայացնելու դեպքում։
+        <p className="mb-4 text-lg font-medium text-gray-900">
+          Ինկասոն միջազգային առևտրում հաշվարկների ստացման և պարտքերի մարման արագ, պարզ ու արդյունավետ գործիք է:
         </p>
+        
         <p className="mb-6">
-          Ակրեդիտիվները թողարկվում են Առևտրի միջազգային պալատի մշակած միասնական կանոնների համաձայն (կախված առևտրային գործարքի պայմաններից և առանձնահատկություններից)։
+          Այն հարմար է, եթե Դուք վստահելի հարաբերություններ ունեք և մեջտեղում մատակարարվող ապրանքների փաստաթղթերը, վճարի դիմաց, փոխանցվում են բանկի միջոցով գնորդին: Ընդ որում, մենք վճարման որևէ պարտավորություն չենք ստանձնում, այլ կատարում ենք միայն դրամական միջոցների հանձնարարականների (միջնորդի) դեր:
         </p>
 
-        <h2 className="text-xl font-bold text-[#6c2db5] mt-8 mb-4">Ակրեդիտիվի թողարկման հիմնական պայմանները՝</h2>
-        <ul className="list-disc pl-5 space-y-3 mb-8">
-          <li>Անհրաժեշտ է Ձեր հաշվին բացել ակրեդիտիվի ծածկույթ, որն ամրագրվում է Ձեր հատուկ ծածկույթի հաշվին։</li>
-          <li>Հատուկ ծածկույթի հաշվի ռեժիմը, հաշվի մնացորդի նկատմամբ հաշվարկվող տոկոսադրույքը և մյուս պայմանները սահմանվում են պայմանագրային կարգով։</li>
-          <li>Ձեր սեփական միջոցների մասնակի առկայության կամ բացակայության դեպքում դիտարկում ենք <strong className="text-[#6c2db5]">վարկային գիծ</strong> տրամադրելու հնարավորությունը։</li>
-        </ul>
+        <h2 className="text-xl font-bold text-[#6c2db5] mt-8 mb-4">Ինկասոյով հաշվարկների հիմնական ձևերն են՝</h2>
+        
+        <div className="space-y-6 mb-8">
+          <div className="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <h3 className="font-bold text-[#6c2db5] text-[16px] mb-2">Փաստաթղթեր վճարման դիմաց</h3>
+            <p className="text-sm text-gray-600 font-medium mb-1">(Documents Against Payment կամ D/P)</p>
+            <p>Փաստաթղթերը տրամադրում ենք գնորդին միայն նրա կողմից ապրանքների դիմաց վճարելուց հետո:</p>
+          </div>
 
-        <blockquote className="bg-purple-50 border-l-4 border-[#6c2db5] p-4 text-[14px] mb-8 rounded-r-lg">
-          Փաստաթղթային ակրեդիտիվների թողարկման վերաբերյալ լրացուցիչ տեղեկությունների և խորհրդատվության համար կարող եք դիմել մեր Գլխամասային գրասենյակ՝ <strong className="text-[#6c2db5]">«Միջազգային և արտարժութային գործառնություններ»</strong> բաժին։
+          <div className="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <h3 className="font-bold text-[#6c2db5] text-[16px] mb-2">Փաստաթղթեր ակցեպտի դիմաց</h3>
+            <p className="text-sm text-gray-600 font-medium mb-1">(Documents Against Acceptance կամ D/A)</p>
+            <p>Փաստաթղթերը տրամադրում ենք գնորդին ապրանքների դիմաց հետագայում վճարելու պայմանով (վճարումների հետաձգման մուրհակի (վեկսելի) ակցեպտի դեպքում): Ինկասոյի այս ձևը կիրառվում է, երբ գնորդն ու վաճառողը պայմանավորվածություն ունեն վճարման հետաձգման վերաբերյալ:</p>
+          </div>
+        </div>
+
+        <blockquote className="bg-purple-50 border-l-4 border-[#6c2db5] p-4 text-[14px] mb-12 rounded-r-lg">
+          Ինկասո գործառնությունների վերաբերյալ լրացուցիչ տեղեկությունների և խորհրդատվություն ստանալու համար կարող եք դիմել մեր Գլխամասային գրասենյակ՝ <strong className="text-[#6c2db5]">«Միջազգային և արտարժութային գործառնությունների»</strong> բաժին:
         </blockquote>
+    </div>
 
-        <h2 className="text-xl font-bold text-[#6c2db5] mb-4">Սակագներ</h2>
-        <div className="overflow-x-auto border border-gray-200 rounded-lg shadow-sm mb-12">
-          <table className="w-full text-left border-collapse text-[14px]">
-            <thead>
-              <tr className="bg-gray-50 border-b border-gray-200">
-                <th className="p-4 font-semibold text-gray-700 w-2/3">Ծառայության տեսակ</th>
-                <th className="p-4 font-semibold text-gray-700">Սակագին</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Ակրեդիտիվի ծանուցում</td>
-                <td className="p-4">50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Ակրեդիտիվի թողարկում</td>
-                <td className="p-4">0.15% նվազագույնը՝ 50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Ակրեդիտիվի հաստատում</td>
-                <td className="p-4">0.15% նվազագույնը՝ 50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Փաստաթղթերի ստացում և նեգոցիացիա</td>
-                <td className="p-4">0.15% նվազագույնը՝ 50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Փաստաթղթերի ընդունում, ստուգում, առաքում</td>
-                <td className="p-4">0.15% նվազագույնը՝ 50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Ակրեդիտիվի պայմանների փոփոխում</td>
-                <td className="p-4">50,000 ՀՀ դրամ</td>
-              </tr>
-              <tr>
-                <td className="p-4 bg-gray-50 font-medium">Ակրեդիտիվի չեղարկում</td>
-                <td className="p-4">0.15% նվազագույնը՝ 50,000 ՀՀ դրամ</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p className="text-xs text-gray-500 mb-12">
-          * Գործառնություններով և սակագներով սահմանված վճարներից բացի՝ գանձում ենք մեր փաստացի կատարած ծախսերի գումարը։
-        </p>
-        </div>
-
-           <section className="bg-[#F8F9FB] py-16 font-sans relative overflow-hidden">
+       <section className="bg-[#F8F9FB] py-16 font-sans relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#784BDD]/5 rounded-full blur-[100px] -z-0" />
             
             <div className="max-w-[1440px] mx-auto px-10 relative z-10">
@@ -249,4 +213,4 @@ const Akre: React.FC = () => {
   );
 };
 
-export default Akre;
+export default Inkaso;
