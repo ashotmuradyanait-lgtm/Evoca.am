@@ -10,7 +10,7 @@ const Sak: React.FC = () => {
     { name: 'POS Տերմինալ', path: '/pos' },
     { name: 'Սակագներ', path: '' },
     { name: 'Տերմինալի տեղադրման հայտ', path: '/terminal' },
-    { name: 'Evoca Mobile POS՝ mPOS', path: '' },
+    { name: 'Evoca Mobile POS՝ mPOS', path: '/mpos' },
   ];
 
   

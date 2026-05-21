@@ -9,7 +9,7 @@ const Pos: React.FC = () => {
     { name: 'POS Տերմինալ', path: '' },
     { name: 'Սակագներ', path: '/sak' },
     { name: 'Տերմինալի տեղադրման հայտ', path: '/terminal' },
-    { name: 'Evoca Mobile POS՝ mPOS', path: '' },
+    { name: 'Evoca Mobile POS՝ mPOS', path: '/mpos' },
   ];
 
   return (

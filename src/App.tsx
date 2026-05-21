@@ -126,6 +126,7 @@ import Digital from "./components/Digital";
 import Pos from "./components/Pos";
 import Sak from "./components/Sak";
 import Terminal from "./components/Terminal";
+import Mpos from "./components/Mpos";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -289,6 +290,7 @@ const App: React.FC = () => {
           <Route path="/pos" element={<Pos/>} />
           <Route path="/sak" element={<Sak/>} />
           <Route path="/terminal" element={<Terminal/>} />
+          <Route path="/mpos" element={<Mpos/>} />
         </Routes>
       </main>
 

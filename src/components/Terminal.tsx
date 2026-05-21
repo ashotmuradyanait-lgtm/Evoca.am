@@ -22,7 +22,7 @@ const Terminal: React.FC = () => {
     { name: 'POS Տերմինալ', path: '/pos' },
     { name: 'Սակագներ', path: '/sak' },
     { name: 'Տերմինալի տեղադրման հայտ', path: '' },
-    { name: 'Evoca Mobile POS՝ mPOS', path: '' },
+    { name: 'Evoca Mobile POS՝ mPOS', path: '/mpos' },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
