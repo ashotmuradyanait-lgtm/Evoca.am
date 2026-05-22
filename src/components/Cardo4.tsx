@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
-const Cardo3: React.FC = () => {
+const Cardo4: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Բոլորը');
   const [activeTab, setActiveTab] = useState('about'); 
 
@@ -56,15 +56,15 @@ const Cardo3: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-              Digital Gift Card
+              Visa Infinite
             </h1>
             <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
-            Սիրելի մարդկանց համար նվեր ընտրելը պատասխանատու ու հաճելի գործ է, բայց նաև ժամանակատար ու նյարդայնացնող, հատկապես երբ չգիտես՝ կհավանի՞, թե՞ ոչ։ Մենք առաջարկում ենք իդեալական նվերի տարբերակ։
+              Visa Infinite-ը Visa վճարային համակարգի ամենաբարձր դասի քարտն է։
             </p>
           </div>
           <div className="flex-1 w-full max-w-[560px]">
             <img 
-              src="https://www.evoca.am/images-cache/cards/1/17282986912132/415x261.png" 
+              src="https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png" 
               alt="Bicycle Loan Hero" 
               className="w-full h-auto object-contain rounded-3xl"
             />
@@ -125,6 +125,39 @@ const Cardo3: React.FC = () => {
               </div>
             </div>
           </div>
+
+         
+          <div className="lg:w-5/12">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow mt-5">
+                   <p className="text-[#6c2db5] text-[28px] font-black">1%</p>
+                   <p className="text-gray-800 font-bold mt-2">Cashback արտասահմանում <br />
+                    իրականացրած վճարումների <br />
+                     համար</p>
+                </div>
+
+                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow mt-5">
+                   <p className="text-[#6c2db5] text-[28px] font-black">1.2%</p>
+                   <p className="text-gray-800 font-bold mt-2">Lounge Key սրահներ քեզ և <br />
+                    հյուրերիդ համար</p>
+                </div>
+
+                <div className="bg-white border border-gray-100 p-6 rounded-[24px] shadow-sm hover:shadow-md transition-shadow">
+                   <p className="text-gray-400 text-[12px] uppercase font-bold mb-2">min 2,500 ֏</p>
+                   <p className="text-[#6c2db5] text-[28px] font-black">1.5%</p>
+                   <p className="text-gray-800 font-bold mt-2">Fast track-ից օգտվելու հնարավորություն քեզ և հյուրերիդ համար</p>
+                </div>
+
+                <div className="bg-[#6c2db5] p-6 rounded-[24px] text-white mt-5"> 
+                   <p className="text-white text-[28px] font-black">100․000֏</p>
+                   <p className="text-white font-bold mt-2 leading-tight">Քարտի տարեկան <br />
+                    սպասարկում</p>
+                </div>
+
+             </div>
+          </div>
+
         </div>
       </div>
 
@@ -132,4 +165,4 @@ const Cardo3: React.FC = () => {
   );
 };
 
-export default Cardo3;
+export default Cardo4;
