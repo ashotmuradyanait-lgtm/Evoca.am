@@ -105,7 +105,7 @@ const Lizing: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans overflow-x-hidden">
       
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 pt-6 lg:pt-14 px-4 lg:px-6">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between lg:pt-14 ">
         <Link to="/" className="shrink-0">
           <img 
             className="h-[80px] w-[180px] lg:h-[140px] lg:w-[300px] object-contain" 

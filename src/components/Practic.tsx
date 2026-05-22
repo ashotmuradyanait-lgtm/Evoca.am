@@ -37,7 +37,7 @@ const Practic: React.FC = () => {
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
       
       
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-6">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pt-2 md:pt-14 px-4">
         <Link to="/">
           <img 
             className="h-[80px] md:h-[140px] w-[200px] md:w-[300px] object-contain" 
@@ -46,7 +46,7 @@ const Practic: React.FC = () => {
           />
         </Link>
         
-        <nav className="flex flex-wrap justify-center gap-2 md:gap-6 text-gray-800 font-medium text-[14px] md:text-[15px]">
+        <nav className="flex flex-wrap justify-center  md:gap-6 mr-120 text-gray-800 font-medium text-[14px] md:text-[15px]">
           <Link to="/kariera" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Evoca լայֆ</Link>
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Աշխատանք և պրակտիկա</Link>
         </nav>
