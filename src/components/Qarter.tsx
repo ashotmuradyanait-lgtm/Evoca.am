@@ -1083,10 +1083,13 @@ const Qarter: React.FC = () => {
              Հաճելին, հետաքրքիրն ու օգտակարը մեկ նվեր քարտում։
             </p>
           </div>
+
+        <Link to="/cardo20">
           <button className="flex items-center gap-2 bg-[#f2ecf9] text-[#6c2db5] px-8 py-3 rounded-full w-fit font-bold hover:bg-[#e8dff5] transition-colors mt-6 text-[14px]">
             Մանրամասն
             <span className="text-[18px]">›</span>
           </button>
+        </Link>
         </div>
       </div>
     </div>
