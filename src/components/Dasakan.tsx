@@ -37,7 +37,7 @@ const Dasakan: React.FC = () => {
   return (
     <div className="w-full bg-[#f9f9f9] font-sans min-h-screen pb-20 overflow-x-hidden">
     
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-2 pt-4 lg:pt-14 px-4 lg:px-6 max-w-[1400px] mx-auto">
+      <div className="flex items-center gap-6 pt-14">
         <Link to="/" className="shrink-0">
           <img 
             className="h-[80px] w-[180px] lg:h-[140px] lg:w-[300px] object-contain" 
@@ -46,7 +46,7 @@ const Dasakan: React.FC = () => {
           />
         </Link>
         
-        <nav className="flex flex-wrap justify-center gap-3 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
+        <nav className="flex gap-3 text-gray-800 font-medium text-[15px]">
           <Link to="/biznes" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
           <Link to="/lizing" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
           <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>

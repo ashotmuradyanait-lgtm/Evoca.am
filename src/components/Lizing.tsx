@@ -105,7 +105,7 @@ const Lizing: React.FC = () => {
   return (
     <div className="w-full bg-white font-sans overflow-x-hidden">
       
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between lg:pt-14 ">
+      <div className="flex items-center gap-6 pt-14">
         <Link to="/" className="shrink-0">
           <img 
             className="h-[80px] w-[180px] lg:h-[140px] lg:w-[300px] object-contain" 
@@ -114,7 +114,7 @@ const Lizing: React.FC = () => {
           />
         </Link>
         
-        <nav className="flex flex-wrap justify-center gap-10 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
+        <nav className="flex gap-3 text-gray-800 font-medium text-[15px]">
           <Link to="/biznes" className="hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
           <Link to="/lizing" className="hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
           <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>
