@@ -145,6 +145,7 @@ import Cardo12 from "./components/Cardo12";
 import Cardo13 from "./components/Cardo13";
 import Cardo14 from "./components/Cardo14";
 import Cardo15 from "./components/Cardo15";
+import Cardo16 from "./components/Cardo16";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -326,7 +327,7 @@ const App: React.FC = () => {
           <Route path="/cardo12" element={<Cardo12/>} />
           <Route path="/cardo13" element={<Cardo13/>} />
           <Route path="/cardo14" element={<Cardo14/>} />
-          <Route path="/cardo15" element={<Cardo15/>} />
+          <Route path="/cardo16" element={<Cardo16/>} />
         </Routes>
       </main>
 
