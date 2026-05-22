@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Menu from '../pages/Menu';
 
-const Cardo11: React.FC = () => {
+const Cardo18: React.FC = () => {
   const [activeTab, setActiveTab] = useState('about'); 
 
    const subMenuItems = [
@@ -55,15 +55,15 @@ const Cardo11: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] sm:text-[40px] md:text-[52px] font-extrabold text-[#1a1a1a] leading-tight mb-6">
-              4U.am Gift card
+              Dalma Gift Card
             </h1>
             <p className="text-gray-600 text-[16px] md:text-[18px] leading-relaxed max-w-[600px]">
-            Երբ ժամանակակիցն ու կրեատիվը հանդիպում են, ստեղծվում է իդեալական նվեր։
+            Նվեր ընտրելն այլևս դժվար չէ:
             </p>
           </div>
           <div className="flex-1 w-full max-w-[560px]">
             <img 
-              src="https://www.evoca.am/images-cache/cards/1/17485032554482/415x261.png" 
+              src="https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png" 
               alt="Bicycle Loan Hero" 
               className="w-full h-auto object-contain rounded-3xl"
             />
@@ -131,4 +131,4 @@ const Cardo11: React.FC = () => {
   );
 };
 
-export default Cardo11;
+export default Cardo18;
