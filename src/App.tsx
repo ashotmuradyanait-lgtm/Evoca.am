@@ -130,6 +130,9 @@ import Mpos from "./components/Mpos";
 import Aylq from "./components/Aylq";
 import Poxel from "./components/Poxel";
 import Benefits from './components/Benefits';
+import Cardo from "./components/Cardo";
+import Cardo2 from "./components/Cardo2";
+import Cardo3 from "./components/Cardo3";
 import Menu from "./pages/Menu";
 import Anhat from "./pages/Anhat";
 import HeroSlider from "./pages/HeroSlider";
@@ -297,6 +300,9 @@ const App: React.FC = () => {
           <Route path="/aylq" element={<Aylq/>} />
           <Route path="/poxel" element={<Poxel/>} />
           <Route path="/benefits" element={<Benefits/>} />
+          <Route path="/cardo" element={<Cardo/>} />
+          <Route path="/cardo2" element={<Cardo2/>} />
+          <Route path="/cardo3" element={<Cardo3/>} />
         </Routes>
       </main>
 
