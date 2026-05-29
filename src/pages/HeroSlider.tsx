@@ -12,6 +12,7 @@ interface Slide {
   title: string;
   description: string;
   buttonText: string;
+  link: string; 
   image: string;
   bgColor: string;
   uiColor: string;
@@ -24,6 +25,7 @@ const slides: Slide[] = [
     title: "Evoca Travel Card",
     description: "Այս քարտն իր բազմաթիվ առավելություններով կդառնա քո ճամփորդական անբաժան ընկերը",
     buttonText: "Իմանալ ավելին",
+    link: "/cardo",
     image: "https://www.evoca.am/images-cache/sliders/1/17480089224912/4012c7541d8db15b5666bb0e4f4bdf7a-576x486.png",
     bgColor: "#d1d5d8", 
     uiColor: "#212121",
@@ -34,6 +36,7 @@ const slides: Slide[] = [
     title: "Evoca Աշխատավարձային Նախագիծ",
     description: "Բեր աշխատավարձդ Evoca: Տար շատ ավելին...",
     buttonText: "Իմանալ ավելին",
+    link: "/salary",
     image: "https://www.evoca.am/images-cache/sliders/1/17740137222872/7152cafab4609e8483a365f79ecf04cb-577x486.png",
     bgColor: "#6a3db5", 
     uiColor: "#ffffff",
@@ -44,6 +47,7 @@ const slides: Slide[] = [
     title: "Կարճ հեռախոսահամար՝ 8444",
     description: "Բարի գալուստ, Evocabank: Մենք սպասում ենք Ձեր զանգին...",
     buttonText: "Իմանալ ավելին",
+    link: "/contact",
     image: "https://www.evoca.am/images-cache/sliders/1/17612202124044/b74e87ec0e83aa10cb128d41f0ada026-577x486.png",
     bgColor: "#000000", 
     uiColor: "#ffffff",
@@ -54,6 +58,7 @@ const slides: Slide[] = [
     title: "Visa Vision",
     description: "Ձեռք բեր Visa Vision քարտ քո նախընտրած գույնով, դիզայնով ու ոճով և օգտվիր բազմաթիվ առավելություններից",
     buttonText: "Իմանալ ավելին",
+    link: "/visa-vision",
     image: "https://www.evoca.am/images-cache/sliders/1/16856146843579/345dd727d7ee28e2cd6ec180e5d65740-577x486.jpg",
     bgColor: "#282b30", 
     uiColor: "#ffffff",
@@ -64,6 +69,7 @@ const slides: Slide[] = [
     title: "Visa Infinite",
     description: "Ձեռք բեր Visa վճարային համակարգի ամենաբարձր դասի քարտը հենց հիմա",
     buttonText: "Իմանալ ավելին",
+    link: "/visa-infinite",
     image: "https://www.evoca.am/images-cache/sliders/1/17737433784078/126c54e244e880fd563d8af43979486c-577x485.png",
     bgColor: "#030303", 
     uiColor: "#ffffff",
@@ -74,6 +80,7 @@ const slides: Slide[] = [
     title: "Հիփոթեքային վարկեր Evocabank-ում՝ ամենահարմար պայմաններով",
     description: "Ձեռք բեր քո երազանքի բնակարանը՝ ցածր տոկոսադրույքով:",
     buttonText: "Իմանալ ավելին",
+    link: "/mortgage",
     image: "https://www.evoca.am/images-cache/sliders/1/16178035964191/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg",
     bgColor: "rgb(230, 220, 255)", 
     uiColor: "#212121", 
@@ -84,6 +91,7 @@ const slides: Slide[] = [
     title: "UnionPay Gold",
     description: "Ամբողջ աշխարհում քո արագ և հարմար վճարումների ուղեկիցը",
     buttonText: "Իմանալ ավելին",
+    link: "/unionpay",
     image: "https://www.evoca.am/images-cache/sliders/1/17262130779724/2fee1054871280f57daf5204f901c563-577x486.png",
     bgColor: "#b2a36e", 
     uiColor: "#ffffff",
@@ -94,6 +102,7 @@ const slides: Slide[] = [
     title: "Օնլայն ավանդ EvocaTOUCH հավելվածով",
     description: "Դի՛ր ավանդ Evocabank-ում՝ բարձր, շա՜տ բարձր տոկոսներով:",
     buttonText: "Ծանոթանալ պայմաններին",
+    link: "/deposits",
     image: "https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg",
     bgColor: "#f8d4f9", 
     uiColor: "#212121",
@@ -141,15 +150,15 @@ const HeroSlider = () => {
                       {slide.description}
                     </p>
 
-                    <button 
-                      className="px-10 lg:px-14 py-3 lg:py-4 rounded-full font-black text-[13px] lg:text-[15px] uppercase shadow-2xl transition-all hover:scale-105 active:scale-95 mb-10 lg:mb-0"
+                    <a 
+                      href={slide.link}
+                      className="inline-block px-10 lg:px-14 py-3 lg:py-4 rounded-full font-black text-[13px] lg:text-[15px] uppercase shadow-2xl transition-all hover:scale-105 active:scale-95 mb-10 lg:mb-0 text-center"
                       style={{ backgroundColor: slide.btnBg, color: slide.btnText }}
                     >
                       {slide.buttonText}
-                    </button>
+                    </a>
                   </div>
 
-                 
                   <div className={`flex-1 flex justify-center lg:justify-end transition-all duration-1000 ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
                     <img 
                       src={slide.image} 

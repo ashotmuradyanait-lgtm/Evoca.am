@@ -6,7 +6,7 @@ const Inv: React.FC = () => {
     { name: 'Ներդրումային ծառայություններ', path: '/shuka' },
     { name: 'Պարտատոմսեր', path: '/partatoms' },
     { name: 'ՀԿԴ ծառայություններ', path: '/depozit' },
-    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: 'brepo' },    
+    { name: 'Ռեպո/Հակադարձ ռեպո գործարքներ', path: '/brepo' },    
     { name: 'EvocaINVEST', path: '' },
   ];
 
@@ -30,7 +30,7 @@ const Inv: React.FC = () => {
           <Link to="" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Արժեթղթերի շուկա</Link>
           <Link to="/arevtur" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Առևտրի ֆինանսավորում</Link>
           <Link to="/digital" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Դիջիթալ</Link>
-          <Link to=".aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
+          <Link to="/aylq" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Այլ</Link>
         </nav>
         <div className="px-30">
           <Link to="/evocaonline" className="text-white bg-[#6c2db5] h-[40px] w-[180px] hover:bg-[#530498] text-center rounded-3xl p-1 inline-block pt-1.5">
