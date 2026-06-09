@@ -67,10 +67,11 @@ const Video = () => {
               </p>
             </div>
             
+          <a href="https://online.evoca.am/InternetBank/MainForm.wgx">
             <button className="bg-white text-[#6600cc] px-8 md:px-12 py-3 md:py-4 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest shadow-xl active:scale-95 transition-transform">
               Դառնալ հաճախորդ
             </button>
-
+          </a>
             <div className="pt-4 md:pt-8 flex flex-col items-center lg:items-start gap-6">
               <div className="flex items-center gap-4 md:gap-5">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-2xl flex items-center justify-center p-1.5 md:p-2 shadow-xl">

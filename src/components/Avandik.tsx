@@ -39,7 +39,6 @@ const Avandik: React.FC = () => {
 
   return (
     <div className="w-full bg-white font-sans antialiased text-[#1a1a1a]">
-      {/* Header */}
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 py-6 px-6">
         <Link to="/"><img className="h-[80px] w-[200px] object-contain" src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" alt="Logo" /></Link>
         <nav className="flex gap-8 font-bold text-[15px]">
