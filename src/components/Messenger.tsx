@@ -15,7 +15,7 @@ const storage = getStorage();
 
 const Messenger = () => {
   const [currentUser, setCurrentUser] = useState<any>(null);
-  const [authMode,] = useState<'login' | 'register'>('login');
+  const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -81,35 +81,34 @@ const Messenger = () => {
     return () => unsub();
   }, [currentUser, selectedUser]);
 
- 
-const handleAuth = async (e: React.FormEvent) => {
-  e.preventDefault();
-  try {34
-    if (authMode === 'register') {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
-      let avatarUrl = "";
-      if (avatarFile) {
-        const avatarRef = ref(storage, `avatars/${res.user.uid}`);
-        await uploadBytes(avatarRef, avatarFile);
-        avatarUrl = await getDownloadURL(avatarRef);
+  const handleAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      if (authMode === 'register') {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        let avatarUrl = "";
+        if (avatarFile) {
+          const avatarRef = ref(storage, `avatars/${res.user.uid}`);
+          await uploadBytes(avatarRef, avatarFile);
+          avatarUrl = await getDownloadURL(avatarRef);
+        }
+        await updateProfile(res.user, { displayName: name, photoURL: avatarUrl });
+        await setDoc(doc(db, "users", res.user.uid), { 
+          uid: res.user.uid, 
+          displayName: name, 
+          email: email, 
+          photoURL: avatarUrl, 
+          status: 'online', 
+          lastSeen: serverTimestamp() 
+        });
+      } else {
+        await signInWithEmailAndPassword(auth, email, password);
       }
-      await updateProfile(res.user, { displayName: name, photoURL: avatarUrl });
-      await setDoc(doc(db, "users", res.user.uid), { 
-        uid: res.user.uid, 
-        displayName: name, 
-        email: email, 
-        photoURL: avatarUrl, 
-        status: 'online', 
-        lastSeen: serverTimestamp() 
-      });
-    } else {
-      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error: any) { 
+      console.error("Auth Error:", error.code, error.message);
+      alert("Սխալ՝ " + error.message); 
     }
-  } catch (error: any) { 
-    console.error("Auth Error:", error.code, error.message);
-    alert("Սխալ՝ " + error.message); 
-  }
-};
+  };
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -117,7 +116,6 @@ const handleAuth = async (e: React.FormEvent) => {
 
     const chatId = [currentUser.uid, selectedUser.uid].sort().join('_');
     const textToSend = newMessage;
-    
     
     const tempMessage = { id: Date.now().toString(), senderId: currentUser.uid, text: textToSend, createdAt: { toDate: () => new Date() } };
     setMessages((prev) => [...prev, tempMessage]);
@@ -182,6 +180,9 @@ const handleAuth = async (e: React.FormEvent) => {
         <input type="email" placeholder="Էլ. հասցե" required className="border p-3 rounded outline-none" onChange={e => setEmail(e.target.value)} />
         <input type="password" placeholder="Գաղտնաբառ" required className="border p-3 rounded outline-none" onChange={e => setPassword(e.target.value)} />
         <button type="submit" className="bg-[#6400dc] text-white p-3 rounded font-bold">{authMode === 'login' ? 'Մտնել' : 'Գրանցվել'}</button>
+        <button type="button" className="text-sm text-blue-500 underline" onClick={() => setAuthMode(authMode === 'login' ? 'register' : 'login')}>
+          {authMode === 'login' ? 'Դեռ հաշիվ չունե՞ք։ Գրանցվել' : 'Արդեն ունե՞ք հաշիվ։ Մուտք'}
+        </button>
       </form>
     </div>
   );
@@ -201,7 +202,7 @@ const handleAuth = async (e: React.FormEvent) => {
            <div className="flex-1 overflow-y-auto">
              {users.map(u => (
                 <div key={u.uid} onClick={() => setSelectedUser(u)} className={`p-4 border-b cursor-pointer flex items-center gap-3 ${selectedUser?.uid === u.uid ? 'bg-purple-100' : ''}`}>
-                  {u.photoURL ? <img src={u.photoURL} className="w-10 h-10 rounded-full" /> : <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white">{u.displayName?.[0].toUpperCase()}</div>}
+                  {u.photoURL ? <img src={u.photoURL} className="w-10 h-10 rounded-full" /> : <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white">{u.displayName?.[0]?.toUpperCase()}</div>}
                   <span className="font-medium">{u.displayName}</span>
                 </div>
              ))}
