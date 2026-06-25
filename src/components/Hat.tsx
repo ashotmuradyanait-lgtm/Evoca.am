@@ -84,9 +84,9 @@ const Hat: React.FC = () => {
                     src="https://myreloc.com/wp-content/uploads/2022/07/evocabank.png" 
                     alt="Evocabank Logo" 
                   />
-                </Link>
+                </Link> 
                 
-                <nav className="flex flex-wrap justify-center gap-10 lg:gap-3 text-gray-800 font-medium text-[13px] lg:text-[15px]">
+                <nav className="flex gap-2 text-gray-800 font-medium text-[15px]">
                   <Link to="/biznes" className="hover:text-[#6c2db5] transition-colors font-bold">Վարկեր</Link>
                   <Link to="/lizing" className="hover:text-[#6c2db5] transition-colors font-bold">Լիզինգ</Link>
                   <Link to="/hashiv" className="cursor-pointer hover:text-[#6c2db5] transition-colors font-bold">Հաշիվներ</Link>

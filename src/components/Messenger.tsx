@@ -15,7 +15,7 @@ const storage = getStorage();
 
 const Messenger = () => {
   const [currentUser, setCurrentUser] = useState<any>(null);
-  const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
+  const [authMode,] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -81,26 +81,35 @@ const Messenger = () => {
     return () => unsub();
   }, [currentUser, selectedUser]);
 
-  const handleAuth = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      if (authMode === 'register') {
-        const res = await createUserWithEmailAndPassword(auth, email, password);
-        let avatarUrl = "";
-        if (avatarFile) {
-          const avatarRef = ref(storage, `avatars/${res.user.uid}`);
-          await uploadBytes(avatarRef, avatarFile);
-          avatarUrl = await getDownloadURL(avatarRef);
-        }
-        await updateProfile(res.user, { displayName: name, photoURL: avatarUrl });
-        await setDoc(doc(db, "users", res.user.uid), { 
-          uid: res.user.uid, displayName: name, email: email, photoURL: avatarUrl, status: 'online', lastSeen: serverTimestamp() 
-        });
-      } else {
-        await signInWithEmailAndPassword(auth, email, password);
+ 
+const handleAuth = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {34
+    if (authMode === 'register') {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      let avatarUrl = "";
+      if (avatarFile) {
+        const avatarRef = ref(storage, `avatars/${res.user.uid}`);
+        await uploadBytes(avatarRef, avatarFile);
+        avatarUrl = await getDownloadURL(avatarRef);
       }
-    } catch (error: any) { alert(error.message); }
-  };
+      await updateProfile(res.user, { displayName: name, photoURL: avatarUrl });
+      await setDoc(doc(db, "users", res.user.uid), { 
+        uid: res.user.uid, 
+        displayName: name, 
+        email: email, 
+        photoURL: avatarUrl, 
+        status: 'online', 
+        lastSeen: serverTimestamp() 
+      });
+    } else {
+      await signInWithEmailAndPassword(auth, email, password);
+    }
+  } catch (error: any) { 
+    console.error("Auth Error:", error.code, error.message);
+    alert("Սխալ՝ " + error.message); 
+  }
+};
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,7 +118,7 @@ const Messenger = () => {
     const chatId = [currentUser.uid, selectedUser.uid].sort().join('_');
     const textToSend = newMessage;
     
-    // Optimistic UI
+    
     const tempMessage = { id: Date.now().toString(), senderId: currentUser.uid, text: textToSend, createdAt: { toDate: () => new Date() } };
     setMessages((prev) => [...prev, tempMessage]);
     
